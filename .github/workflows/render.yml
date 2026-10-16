@@ -1,4 +1,4 @@
-# 카드뉴스 렌더링: 앱 스크립트가 초안 JSON을 보내면 실제 크롬으로 PNG를 만들어 저장소에 올림
+﻿# 카드뉴스 렌더링: 앱 스크립트가 초안 JSON을 보내면 실제 크롬으로 PNG를 만들어 저장소에 올림
 # 호출: POST https://api.github.com/repos/{owner}/{repo}/dispatches
 #       { "event_type": "render", "client_payload": { "draft": { ...초안 JSON... } } }
 name: render-cards
@@ -22,7 +22,7 @@ jobs:
       - name: 한글 글꼴(대체용) 설치
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
       - name: 렌더러 준비
-        run: npm ci || npm install && npx playwright-core install chromium
+        run: npm ci && npx playwright-core install --with-deps chromium
       - name: 초안 저장
         if: github.event_name == 'repository_dispatch'
         run: echo '${{ toJson(github.event.client_payload.draft) }}' > draft.json
