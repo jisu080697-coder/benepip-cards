@@ -1,0 +1,35 @@
+/* BenePip 카드뉴스 템플릿 · 1080×1350 (인스타 세로형) 기준 */
+@import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
+:root {
+  --ink: #13213b; --ink-2: #333d4b; --faint: #8b95a1; --line: #e5e8ee;
+  --primary: #2455f5; --primary-soft: #eaf0ff;
+  --grad-text: linear-gradient(90deg, #2455f5, #7a5cff 52%, #18a0fb);
+  --grad-card: linear-gradient(135deg, #f7f9ff 0%, #c9d8ff 34%, #d9ccff 62%, #ffe0cc 100%);
+}
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; }
+body { font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif; -webkit-font-smoothing: antialiased; color: var(--ink); }
+
+.card { position: relative; width: 1080px; height: 1350px; padding: 96px 92px 84px; display: flex; flex-direction: column; background: #fff; }
+.hd { display: flex; justify-content: space-between; align-items: center; }
+.hd img { height: 64px; }
+.tag { font-size: 40px; font-weight: 700; color: var(--primary); background: var(--primary-soft); border-radius: 999px; padding: 12px 34px; letter-spacing: -.02em; }
+.pg { position: absolute; right: 84px; bottom: 70px; font-size: 40px; font-weight: 600; color: var(--faint); }
+em { font-style: normal; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* 표지 */
+.cover { background: var(--grad-card); }
+.cover .tag { background: rgba(255, 255, 255, .72); }
+.cover h1 { margin-top: 220px; font-size: 112px; line-height: 1.24; font-weight: 800; letter-spacing: -.045em; word-break: keep-all; }
+.cover .sub { margin-top: 56px; font-size: 54px; font-weight: 500; color: var(--ink-2); letter-spacing: -.03em; word-break: keep-all; }
+.cover .swipe { margin-top: auto; font-size: 44px; font-weight: 600; color: var(--ink); opacity: .55; }
+
+/* 본문 */
+.body .bar { width: 104px; height: 18px; border-radius: 9px; background: var(--primary); margin: 150px 0 52px; }
+.body h2 { font-size: 84px; line-height: 1.3; font-weight: 800; letter-spacing: -.045em; word-break: keep-all; }
+.body p { margin-top: 52px; font-size: 52px; line-height: 1.6; color: var(--ink-2); font-weight: 500; letter-spacing: -.03em; white-space: pre-line; word-break: keep-all; }
+
+/* 마지막 CTA */
+.last .cta { margin-top: auto; align-self: flex-start; background: var(--primary); color: #fff; font-size: 46px; font-weight: 700; border-radius: 999px; padding: 34px 58px; letter-spacing: -.02em; }
+.last .risk { margin-top: 40px; font-size: 34px; line-height: 1.5; color: var(--faint); padding-right: 140px; word-break: keep-all; }
