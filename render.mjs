@@ -12,7 +12,18 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 // 따옴표('…' "…" “…”) 구간을 그라데이션 강조, 없으면 첫 숫자 강조 (화면 시안과 같은 규칙)
 const hl = t => { const s = String(t ?? '').replace(/'([^'\n]{1,24})'|"([^"\n]{1,24})"/, (m, a, b) => '“' + (a || b) + '”'); const m = s.match(/“[^”]+”/) || s.match(/\$?\d[\d,.]*%?/); if (!m) return esc(s); return esc(s.slice(0, m.index)) + '<em>' + esc(m[0]) + '</em>' + esc(s.slice(m.index + m[0].length)); };
 
+// 본문 텍스트 → 템플릿별 구조 (화면 시안 cardParts 와 같은 규칙)
+const lines = b => String(b ?? '').split('\n').map(x => x.trim()).filter(Boolean);
+const items = b => lines(b).map(x => x.replace(/^([-•·✓✔]|\d+[.)])\s*/, ''));
+const rows = b => lines(b).map(x => x.split('|').map(y => y.trim()));
+const hd = d => `<div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>`;
+
 const LAYOUT = {
+  stat: (c, d) => { const l = lines(c.b); return `<div class="card body stat">${hd(d)}<div class="bar"></div><h2>${esc(c.t)}</h2><div class="num">${esc(l[0] || '')}</div><p>${esc(l.slice(1).join('\n'))}</p>`; },
+  check: (c, d) => `<div class="card body check">${hd(d)}<div class="bar"></div><h2>${esc(c.t)}</h2><ul class="list">${items(c.b).map(x => `<li><span class="ic">✓</span><span>${esc(x)}</span></li>`).join('')}</ul>`,
+  steps: (c, d) => `<div class="card body steps">${hd(d)}<div class="bar"></div><h2>${esc(c.t)}</h2><ul class="list">${items(c.b).map((x, i) => `<li><span class="ic">${i + 1}</span><span>${esc(x)}</span></li>`).join('')}</ul>`,
+  compare: (c, d) => { const r = rows(c.b), head = r.length && r[0][0] === '' ? r.shift() : null;
+    return `<div class="card body compare">${hd(d)}<div class="bar"></div><h2>${esc(c.t)}</h2><table class="cmp">${head ? `<tr>${head.map(x => `<th>${esc(x)}</th>`).join('')}</tr>` : ''}${r.map(x => `<tr>${x.map(y => `<td>${esc(y)}</td>`).join('')}</tr>`).join('')}</table>`; },
   cover: (c, d) => `<div class="card cover"><div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>
     <h1>${hl(c.t)}</h1><div class="sub">${esc(c.b)}</div><div class="swipe">넘겨서 보기 →</div>`,
   body: (c, d) => `<div class="card body"><div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>
@@ -33,7 +44,8 @@ const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, de
 const files = [];
 for (let i = 0; i < draft.cards.length; i++) {
   const c = draft.cards[i], n = draft.cards.length;
-  const kind = c.layout || (i === 0 ? 'cover' : i === n - 1 ? 'last' : 'body');
+  // 표지·마지막 장은 고정, 가운데 장만 템플릿 선택 (없거나 모르는 값이면 기본 본문)
+  const kind = i === 0 ? 'cover' : i === n - 1 ? 'last' : (LAYOUT[c.layout] && !['cover', 'last'].includes(c.layout) ? c.layout : 'body');
   const html = pageHtml(LAYOUT[kind](c, draft) + `<div class="pg">${i + 1} / ${n}</div></div>`);
   const tmp = join(tplDir, `_tmp_${i}.html`);
   writeFileSync(tmp, html);
