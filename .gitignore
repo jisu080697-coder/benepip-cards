@@ -2,3 +2,4 @@ node_modules/
 out/
 draft.json
 templates/_tmp_*.html
+_probe.mjs
