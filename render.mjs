@@ -10,7 +10,8 @@ const here = dirname(fileURLToPath(import.meta.url));
 const tplDir = join(here, 'templates');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 // 따옴표('…' "…" “…”) 구간을 그라데이션 강조, 없으면 첫 숫자 강조 (화면 시안과 같은 규칙)
-const glue = t => String(t ?? '').replace(/ (\S)(?= |\n|$)/g, '\u00a0$1');
+// 꾸미는 한 글자 말(이 세 가지 · 두 번 · 첫 입금)은 뒷말에, 그 밖의 한 글자 말(전 · 꼭 · 더)은 앞말에 붙여 줄이 그 사이에서 안 바뀌게
+const glue = t => String(t ?? '').replace(/(?<=^|[ \n\u00a0])([이그저한두세네몇첫각새옛온]) (?=\S)/g, '$1\u00a0').replace(/ (\S)(?= |\n|$)/g, '\u00a0$1');
 const tt = t => esc(glue(t)).replace(/\n/g, '<br>');
 const hl = t => { const s = glue(t).replace(/'([^'\n]{1,24})'|"([^"\n]{1,24})"/, (m, a, b) => '“' + (a || b) + '”'); const m = s.match(/“[^”]+”/) || s.match(/\$?\d[\d,.]*%?/); if (!m) return esc(s); const pre = s.slice(0, m.index), post = s.slice(m.index + m[0].length), lead = pre.match(/\S*$/)[0], tail = post.match(/^\S*/)[0]; return esc(pre.slice(0, pre.length - lead.length)) + '<span class="nw">' + esc(lead) + '<em>' + esc(m[0]) + '</em>' + esc(tail) + '</span>' + esc(post.slice(tail.length)); };
 const hlt = t => hl(t).replace(/\n/g, '<br>');
