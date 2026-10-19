@@ -28,7 +28,8 @@ const outDir = resolve(outArg || join(here, 'out', draft.id));
 mkdirSync(outDir, { recursive: true });
 
 const browser = await chromium.launch(process.env.CI ? {} : { channel: 'msedge', headless: false, args: ['--headless=new'] });
-const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
+// 인스타가 그대로 쓰는 최대 크기(1440×1800) · JPEG(인스타 API는 JPEG만 받음)
+const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 4 / 3 });
 const files = [];
 for (let i = 0; i < draft.cards.length; i++) {
   const c = draft.cards[i], n = draft.cards.length;
@@ -38,8 +39,8 @@ for (let i = 0; i < draft.cards.length; i++) {
   writeFileSync(tmp, html);
   await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  const file = join(outDir, `${String(i + 1).padStart(2, '0')}.png`);
-  await page.screenshot({ path: file, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
+  const file = join(outDir, `${String(i + 1).padStart(2, '0')}.jpg`);
+  await page.screenshot({ path: file, type: 'jpeg', quality: 95, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
   files.push(file);
   rmSync(tmp);
 }
