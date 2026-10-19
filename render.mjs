@@ -10,7 +10,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const tplDir = join(here, 'templates');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 // 따옴표('…' "…" “…”) 구간을 그라데이션 강조, 없으면 첫 숫자 강조 (화면 시안과 같은 규칙)
-const hl = t => { const s = String(t ?? '').replace(/'([^'\n]{1,24})'|"([^"\n]{1,24})"/, (m, a, b) => '“' + (a || b) + '”'); const m = s.match(/“[^”]+”/) || s.match(/\$?\d[\d,.]*%?/); if (!m) return esc(s); return esc(s.slice(0, m.index)) + '<em>' + esc(m[0]) + '</em>' + esc(s.slice(m.index + m[0].length)); };
+const hl = t => { const s = String(t ?? '').replace(/'([^'\n]{1,24})'|"([^"\n]{1,24})"/, (m, a, b) => '“' + (a || b) + '”'); const m = s.match(/“[^”]+”/) || s.match(/\$?\d[\d,.]*%?/); if (!m) return esc(s); const pre = s.slice(0, m.index), post = s.slice(m.index + m[0].length), lead = pre.match(/\S*$/)[0], tail = post.match(/^\S*/)[0]; return esc(pre.slice(0, pre.length - lead.length)) + '<span class="nw">' + esc(lead) + '<em>' + esc(m[0]) + '</em>' + esc(tail) + '</span>' + esc(post.slice(tail.length)); };
 
 // 본문 텍스트 → 템플릿별 구조 (화면 시안 cardParts 와 같은 규칙)
 const lines = b => String(b ?? '').split('\n').map(x => x.trim()).filter(Boolean);

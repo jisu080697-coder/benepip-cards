@@ -51,3 +51,8 @@ em { font-style: normal; background: var(--grad-text); -webkit-background-clip: 
 .cmp td { padding: 30px 24px; border-top: 3px solid var(--line); line-height: 1.4; font-weight: 600; color: var(--ink); word-break: keep-all; vertical-align: top; }
 .cmp td:first-child { color: var(--faint); font-weight: 600; width: 30%; padding-left: 0; }
 .cmp th:first-child { padding-left: 0; }
+
+/* 줄바꿈: 제목은 줄 길이를 고르게, 강조 구간과 붙은 조사는 한 덩어리로 */
+h1, h2 { text-wrap: balance; }
+p, .sub, .list li, .cmp td { text-wrap: pretty; }
+.nw { white-space: nowrap; }
