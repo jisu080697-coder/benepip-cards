@@ -9,8 +9,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const tplDir = join(here, 'templates');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-// “따옴표” 구간을 그라데이션 강조, 없으면 첫 숫자 강조
-const hl = t => { const e = esc(t); return /“[^”]+”/.test(e) ? e.replace(/(“[^”]+”)/, '<em>$1</em>') : e.replace(/(\$?\d[\d,.]*%?)/, '<em>$1</em>'); };
+// 따옴표('…' "…" “…”) 구간을 그라데이션 강조, 없으면 첫 숫자 강조 (화면 시안과 같은 규칙)
+const hl = t => { const s = String(t ?? '').replace(/'([^'\n]{1,24})'|"([^"\n]{1,24})"/, (m, a, b) => '“' + (a || b) + '”'); const m = s.match(/“[^”]+”/) || s.match(/\$?\d[\d,.]*%?/); if (!m) return esc(s); return esc(s.slice(0, m.index)) + '<em>' + esc(m[0]) + '</em>' + esc(s.slice(m.index + m[0].length)); };
 
 const LAYOUT = {
   cover: (c, d) => `<div class="card cover"><div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>
