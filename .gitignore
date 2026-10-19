@@ -3,3 +3,4 @@ out/
 draft.json
 templates/_tmp_*.html
 _probe.mjs
+_shot.mjs
