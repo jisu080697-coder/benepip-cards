@@ -58,7 +58,7 @@ var BPCards = (function () {
   var kindOf = function (d, i) {
     var n = d.cards.length, L = d.cards[i].layout === 'compare' ? 'table' : d.cards[i].layout;   // 예전 초안의 비교표는 표로
     if (i === 0) return coverType(d);
-    if (i === n - 1) return isEnd(L) ? L : 'e-sum';
+    if (i === n - 1) return isEnd(L) || L === 'body' ? L : 'e-sum';   // 형식이 안 맞아 기본 장으로 바뀐 마지막 장
     return isBody(L) ? L : 'body';
   };
 
