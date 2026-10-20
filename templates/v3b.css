@@ -169,3 +169,6 @@
 .P.dark .tl i { background: var(--navy); }
 .P.dark .tl span { color: rgba(255, 255, 255, .72); }
 .P.dark .look p { color: #fff; }
+
+/* 체크리스트: 보조 글이 길어도 항목 이름이 두 줄로 꺾이지 않게 */
+.P .list em { max-width: 46%; text-align: right; font-size: 32px; line-height: 1.35; word-break: keep-all; }
