@@ -21,6 +21,10 @@ const lines = b => String(b ?? '').split('\n').map(x => x.trim()).filter(Boolean
 const items = b => lines(b).map(x => x.replace(/^([-•·✓✔]|\d+[.)])\s*/, ''));
 const rows = b => lines(b).map(x => x.split('|').map(y => y.trim()));
 const hd = d => `<div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>`;
+// 주제군별 디자인 (화면 시안 THEME_OF 와 같은 이름) · 어두운 표지는 흰 로고
+const THEME_OF = { '거래비용·페이백': 'pay', '혜택·적용 조건': 'benefit', '플랫폼 활용': 'platform', '브로커 이용 가이드': 'guide', '경제 캘린더·이벤트': 'cal', '베네핍 이용 안내': 'bene' };
+const DARK_COVER = ['platform', 'cal', 'bene'];
+const coverLogo = d => { const t = THEME_OF[d.group]; return t === 'bene' ? 'benepip-logo-allwhite.png' : DARK_COVER.includes(t) ? 'benepip-logo-white.png' : 'benepip-logo.png'; };
 
 const LAYOUT = {
   stat: (c, d) => { const l = lines(c.b); return `<div class="card body stat">${hd(d)}<div class="bar"></div><h2>${tt(c.t)}</h2><div class="num">${esc(l[0] || '')}</div><p>${esc(l.slice(1).join('\n'))}</p>`; },
@@ -28,14 +32,14 @@ const LAYOUT = {
   steps: (c, d) => `<div class="card body steps">${hd(d)}<div class="bar"></div><h2>${tt(c.t)}</h2><ul class="list">${items(c.b).map((x, i) => `<li><span class="ic">${i + 1}</span><span>${esc(x)}</span></li>`).join('')}</ul>`,
   compare: (c, d) => { const r = rows(c.b), head = r.length && r[0][0] === '' ? r.shift() : null;
     return `<div class="card body compare">${hd(d)}<div class="bar"></div><h2>${tt(c.t)}</h2><table class="cmp">${head ? `<tr>${head.map(x => `<th>${esc(x)}</th>`).join('')}</tr>` : ''}${r.map(x => `<tr>${x.map(y => `<td>${esc(y)}</td>`).join('')}</tr>`).join('')}</table>`; },
-  cover: (c, d) => `<div class="card cover"><div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>
+  cover: (c, d) => `<div class="card cover"><div class="hd"><img src="${coverLogo(d)}"><span class="tag">${esc(d.group)}</span></div>
     <h1>${hlt(c.t)}</h1><div class="sub">${esc(c.b)}</div><div class="swipe">넘겨서 보기 →</div>`,
   body: (c, d) => `<div class="card body"><div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>
     <div class="bar"></div><h2>${tt(c.t)}</h2><p>${esc(c.b)}</p>`,
   last: (c, d) => `<div class="card body last"><div class="hd"><img src="benepip-logo.png"><span class="tag">${esc(d.group)}</span></div>
     <div class="bar"></div><h2>${tt(c.t)}</h2><p>${esc(c.b)}</p><span class="cta">${esc(d.cta || '18개 브로커 조건 비교 · 프로필 링크')}</span><div class="risk">${esc(d.disclaimer)}</div>`,
 };
-const pageHtml = inner => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><base href="${pathToFileURL(tplDir).href}/"><link rel="stylesheet" href="card.css"></head><body>${inner}</body></html>`;
+const pageHtml = (inner, d) => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><base href="${pathToFileURL(tplDir).href}/"><link rel="stylesheet" href="card.css"></head><body class="t-${THEME_OF[d.group] || 'pay'}">${inner}</body></html>`;
 
 const [, , input, outArg] = process.argv;
 const draft = JSON.parse(readFileSync(input, 'utf8'));
@@ -50,7 +54,7 @@ for (let i = 0; i < draft.cards.length; i++) {
   const c = draft.cards[i], n = draft.cards.length;
   // 표지·마지막 장은 고정, 가운데 장만 템플릿 선택 (없거나 모르는 값이면 기본 본문)
   const kind = i === 0 ? 'cover' : i === n - 1 ? 'last' : (LAYOUT[c.layout] && !['cover', 'last'].includes(c.layout) ? c.layout : 'body');
-  const html = pageHtml(LAYOUT[kind](c, draft) + `<div class="pg">${i + 1} / ${n}</div></div>`);
+  const html = pageHtml(LAYOUT[kind](c, draft) + `<div class="pg">${i + 1} / ${n}</div></div>`, draft);
   const tmp = join(tplDir, `_tmp_${i}.html`);
   writeFileSync(tmp, html);
   await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });

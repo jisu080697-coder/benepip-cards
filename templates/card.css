@@ -56,3 +56,27 @@ em { font-style: normal; background: var(--grad-text); -webkit-background-clip: 
 h1, h2 { text-wrap: balance; }
 p, .sub, .list li, .cmp td { text-wrap: pretty; }
 .nw { white-space: nowrap; }
+
+/* ── 주제군별 디자인 (body 에 t-주제군 클래스) ── 표지 배경·글자색·강조색만 바꾸고 구조는 같음 */
+.cover { background: var(--cover-bg, var(--grad-card)); color: var(--cover-ink, var(--ink)); }
+.cover .sub { color: var(--cover-sub, var(--ink-2)); }
+.cover .swipe { color: var(--cover-ink, var(--ink)); }
+.cover .tag { background: var(--cover-tag-bg, rgba(255, 255, 255, .72)); color: var(--cover-tag-ink, var(--primary)); }
+.cover em { background: var(--cover-em, var(--grad-text)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cover .pg { color: var(--cover-pg, var(--faint)); }
+
+/* 혜택·적용 조건: 민트 */
+.t-benefit { --primary: #0e9f8e; --primary-soft: #e2f6f2; --grad-text: linear-gradient(90deg, #0e9f8e, #1fb5c9 55%, #2f7fe8); --grad-card: linear-gradient(135deg, #f3fffb 0%, #c6f0e4 38%, #cde6ff 74%, #eafff5 100%); }
+/* 브로커 이용 가이드: 살구 */
+.t-guide { --primary: #e8641c; --primary-soft: #fff0e5; --grad-text: linear-gradient(90deg, #e8641c, #f39a0b 55%, #e5508a); --grad-card: linear-gradient(135deg, #fff9f2 0%, #ffdfc6 40%, #ffd2d9 76%, #fff3df 100%); }
+/* 플랫폼 활용(MT4·MT5): 어두운 트레이딩 화면 */
+.t-platform { --primary: #12a150; --primary-soft: #e5f6ec; --grad-text: linear-gradient(90deg, #12a150, #0ea5a4 60%, #2563eb);
+  --cover-bg: radial-gradient(circle at 88% 12%, rgba(34, 197, 94, .30), transparent 42%), radial-gradient(circle at 8% 92%, rgba(37, 99, 235, .38), transparent 48%), linear-gradient(160deg, #0b1322 0%, #111d33 100%);
+  --cover-ink: #fff; --cover-sub: rgba(255, 255, 255, .72); --cover-tag-bg: rgba(255, 255, 255, .12); --cover-tag-ink: #b7f5cf; --cover-em: linear-gradient(90deg, #4ade80, #a3e635); --cover-pg: rgba(255, 255, 255, .5); }
+/* 경제 캘린더·이벤트: 짙은 남색 + 금색 (리포트 느낌) */
+.t-cal { --primary: #b7811a; --primary-soft: #fbf2df; --grad-text: linear-gradient(90deg, #b7811a, #d99b1f 60%, #8a5a0b);
+  --cover-bg: radial-gradient(circle at 85% 10%, rgba(245, 196, 81, .28), transparent 40%), repeating-linear-gradient(0deg, rgba(255, 255, 255, .045) 0 2px, transparent 2px 135px), repeating-linear-gradient(90deg, rgba(255, 255, 255, .045) 0 2px, transparent 2px 135px), linear-gradient(165deg, #0d1a33 0%, #13254a 100%);
+  --cover-ink: #fff; --cover-sub: rgba(255, 255, 255, .74); --cover-tag-bg: rgba(245, 196, 81, .16); --cover-tag-ink: #f5c451; --cover-em: linear-gradient(90deg, #f7d27a, #f5b544); --cover-pg: rgba(255, 255, 255, .5); }
+/* 베네핍 이용 안내: 브랜드 파랑 */
+.t-bene { --cover-bg: radial-gradient(circle at 90% 8%, rgba(255, 255, 255, .22), transparent 40%), linear-gradient(140deg, #2455f5 0%, #3b6bff 55%, #6a5cff 100%);
+  --cover-ink: #fff; --cover-sub: rgba(255, 255, 255, .82); --cover-tag-bg: rgba(255, 255, 255, .18); --cover-tag-ink: #fff; --cover-em: linear-gradient(90deg, #ffffff, #cfe0ff); --cover-pg: rgba(255, 255, 255, .6); }
