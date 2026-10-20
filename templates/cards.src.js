@@ -97,12 +97,15 @@ var BPCards = (function () {
     },
     'c-balance': function (c, d) {
       var r = rowsOf(c.b); if (r.length < 2) return plainCover(c, d);
-      var a = num(r[0][1]), b = num(r[1][1]), sum = a + b, cur = /\$/.test(r[0][1] + r[1][1]) ? '$' : '', pa = sum ? Math.round(a / sum * 100) : 50;
+      // 한 줄 = 항목 · 금액 · 설명 (금액은 숫자가 든 칸, 순서가 바뀌어도 찾음)
+      var row = function (x) { var k = -1; for (var j = 0; j < x.length; j++) if (k < 0 && /\d/.test(x[j])) k = j; var amt = k >= 0 ? x[k] : ''; return { lab: k === 0 ? x[0] : x[0] + (amt ? ' ' + amt : ''), amt: amt, desc: x.filter(function (y, j) { return j !== 0 && j !== k; }).join(' · ') }; };
+      var A = row(r[0]), Bq = row(r[1]);
+      var a = num(A.amt), b = num(Bq.amt), sum = a + b, cur = /\$/.test(A.amt + Bq.amt) ? '$' : '', pa = sum ? Math.round(a / sum * 100) : 50;
       var amt = cur + sum.toLocaleString('en-US', { minimumFractionDigits: cur ? 2 : 0, maximumFractionDigits: 2 });
       return '<div class="k CF">' + logo() + '<div class="kicker">' + esc(c.k || d.group || '') + '</div><h1>' + hi(c.t) + '</h1>' +
-        '<div class="uic bal"><div class="cap"><span>계좌 잔고</span><span>' + esc(c.n || '예시') + '</span></div><div class="amt">' + esc(amt) + '</div>' +
+        '<div class="uic bal"><div class="cap"><span>계좌 잔고</span><span>' + esc(c.n || '예시') + '</span></div>' + (sum ? '<div class="amt">' + esc(amt) + '</div>' : '') +
         '<div class="stack"><s class="cr" style="width:' + pa + '%"></s><s class="pf" style="width:' + (100 - pa) + '%"></s></div>' +
-        '<div class="leg"><div>' + esc(r[0][0] + ' ' + r[0][1]) + '<span>' + esc(r[0][2] || '') + '</span></div><div class="p">' + esc(r[1][0] + ' ' + r[1][1]) + '<span>' + esc(r[1][2] || '') + '</span></div></div></div></div>';
+        '<div class="leg"><div>' + esc(A.lab) + '<span>' + esc(A.desc) + '</span></div><div class="p">' + esc(Bq.lab) + '<span>' + esc(Bq.desc) + '</span></div></div></div></div>';
     },
     'c-num': function (c, d) {
       var p = lines(c.b), big = p[0] && p[0].length <= 3 ? p[0] : '';
@@ -242,7 +245,8 @@ var BPCards = (function () {
     if (!k || k.dataset.fit) return; k.dataset.fit = '1';
     var limit = 1350 - (k.classList.contains('has-risk') ? 200 : 130);
     var parts = [].slice.call(k.children).filter(function (e) { return !/^(logo|pg|src|risk|rn|art|corner|save)$/.test(e.className.split(' ')[0]) && getComputedStyle(e).position !== 'absolute'; });
-    var bottom = function () { return Math.max.apply(null, parts.map(function (e) { return e.offsetTop + e.offsetHeight; }).concat([0])); };
+    var box = k.getBoundingClientRect(), scale = box.height / 1350 || 1;
+    var bottom = function () { return Math.max.apply(null, parts.map(function (e) { return (e.getBoundingClientRect().bottom - box.top) / scale; }).concat([0])); };
     for (var z = 1; z > 0.72 && bottom() > limit; z -= 0.04) parts.forEach(function (e) { e.style.zoom = z.toFixed(2); });
   };
   var fitAll = function (root) { [].forEach.call((root || document).querySelectorAll('.v3c .k.P'), fit); };
