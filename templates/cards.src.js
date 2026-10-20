@@ -197,6 +197,46 @@ var BPCards = (function () {
     return '<div class="k P ' + cls + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
   };
 
+  // 형식 예시 (관리 화면 '형식 예시 보기' 팝업 · 숫자는 모두 예시)
+  var SAMPLES = {
+    'c-report': { g: '경제 캘린더·이벤트', c: { t: '이번 주 밤에\n차트 볼 날은 “사흘”', b: '수 | 영국 CPI | 15:00\n목 | 미국 실업수당 | 21:30\n금 | 미국 PMI | 22:45', n: '10월 넷째 주 · 한국 시간' } },
+    'c-edit': { g: '플랫폼 활용', c: { k: 'MT5 처음 켰다면', t: '0.5랏으로 20pip,\n“원화로 얼마”일까?', b: '플랫폼 활용 · 계산 3단계', icon: 'calculator' } },
+    'c-receipt': { g: '거래비용·페이백', c: { k: '페이백 계산 사례', t: '한 달 30랏 거래하면\n“페이백은 얼마?”', b: '10월 페이백 내역\n거래량 | 30랏\n랏당 페이백 | $3\n합계 | $90.00', n: '예시' } },
+    'c-issue': { g: '거래비용·페이백', c: { k: '페이백 적립 체크', t: '페이백 신청했는데\n“적립이 안 된다면?”', b: '베네핍 · 페이백 내역\n9월 넷째 주 | 스탠다드 | $12.40 | 적립 완료\n10월 첫째 주 | 로우 스프레드 | $0.00 | 확인 필요\n10월 둘째 주 | 스탠다드 | — | 집계 중' } },
+    'c-balance': { g: '혜택·적용 조건', c: { k: '혜택·적용 조건', t: '가입 크레딧으로\n번 수익, “출금\n가능할까?”', b: '크레딧 | $100 | 출금 안 돼요\n수익 | $30 | 조건 채우면 가능' } },
+    'c-num': { g: '브로커 이용 가이드', c: { t: '해외 브로커 출금이\n“늦어지는 이유”', b: '3\n인증\n입금 수단\n증거금' } },
+    'c-state': { g: '베네핍 이용 안내', c: { k: '베네핍 이용 안내', t: '페이백 적립 전,\n“UID 연결”이\n필요한 이유', b: 'UID 연결 전 | 거래해도 적립되지 않아요 | 누구의 거래인지 알 수 없어서\nUID 연결 후 | 그날 거래부터 적립돼요 | 브로커가 회원으로 인식' } },
+    'c-plain': { g: '', c: { k: '머리말', t: '기본 표지\n“제목”만 크게', b: '아래 상자 첫 줄\n작은 설명' } },
+    body: { k: '기본', t: '내 거래도\n“페이백 대상”일까요?', b: '적용되는 계좌 유형과 거래 상품을 확인하세요.\n최소 거래량이나 제외되는 거래 조건도 함께 살펴보세요.' },
+    big: { t: '페이백은 수익이 아니라\n“거래 비용을 줄이는”\n쪽에 가까워요', b: '거래 결과와 상관없이 거래량 기준으로 쌓여요.' },
+    vs: { k: '헷갈리는 것', t: 'UID와 계좌번호,\n“뭐가 달라요?”', b: 'UID | 회원 번호 | 계좌번호 | MT5 로그인\n뜻 | 회원 한 명당 하나 | 계좌마다 하나\n어디에 | 회원 페이지 프로필 | 계좌 목록' },
+    table: { k: '저장용 계산표', t: '자주 쓰는 랏,\n“달러로 미리” 보기', b: 'EUR/USD | 10pip | 50pip\n0.01랏 | $1 | $5\n0.1랏 | $10 | $50\n1랏 | *$100 | *$500' },
+    steps: { k: '계산 3단계', t: '랏 → 달러 → “원화”', b: '내 랏 크기 확인 | MT5 거래 탭의 볼륨\n움직인 pip 수 곱하기 | 랏 × pip × 10달러\n그날 환율 곱하기 | 원화로 바꿔 보기' },
+    flow: { k: '어디서 막혔을까', t: '위에서부터\n“순서대로” 확인', b: 'UID가 연결돼 있나요? | 연결부터 하기\n그 계좌도 대상인가요? | 대상 계좌 확인\n지급일이 지났나요? | 다음 지급일 대기\n모두 예라면 베네핍에 문의' },
+    stat: { k: '기준 숫자', t: 'EUR/USD 1랏,\n1pip 움직이면', b: '10달러\n가격이 0.0001 움직이면 10달러가 변해요.\n0.1랏 | 1달러\n*1랏 | 10달러' },
+    calc: { k: '예시로 계산', t: '0.5랏으로\n“20pip” 움직였다면', b: '랏 × pip × 10달러 | 0.5 × 20 × 10\n× 환율 (예시) | 1,380원\n원화로 | 약 138,000원' },
+    ui: { k: '어디서 찾나요', t: '회원 페이지\n“프로필”에 있어요', b: '내 프로필\n이름 | HONG GILDONG\n*회원 번호 (UID) | 8123 4567\n인증 상태 | 승인', n: '메뉴 이름은 브로커마다 달라요.' },
+    qa: { k: '자주 묻는 것', t: '연결하다가\n막히는 순간', b: 'UID를 넣었는데 확인 중이에요 | 브로커 쪽 확인이 필요해요.\n계좌를 새로 만들면 다시 연결하나요? | 같은 UID 아래 계좌면 그대로예요.' },
+    warn: { k: '놓치기 쉬운 것', t: '크레딧이\n“사라지는” 경우', b: '사용 기한이 지났어요 | 지급일부터 세는 곳이 많아요\n조건 전에 출금을 신청했어요 | 크레딧이 한꺼번에 빠질 수 있어요' },
+    event: { k: '수요일 · 영국', t: '영국 “소비자물가”\n(CPI) 발표', b: '10/21 수 | 15:00\n영향 통화 | GBP\n중요도 | 높음\n- 파운드 쌍 스프레드가 넓어지는지' },
+    check: { k: '발표 시간대 체크', t: '큰 발표 앞뒤로\n“이 세 가지”만 점검', b: '스프레드 확대 | 발표 직후\n증거금 여유 | 급변 대비\n대기 주문 위치 | 미끄러짐' },
+    reason: { t: '인증이\n“승인이 아니에요”', b: '하나라도 검토 중이면 출금이 잠겨요.\n신분증 | 승인\n주소 증명 | 검토 중' },
+    route: { k: '수단별 순서', t: '어디로\n“먼저” 돌아올까', b: '카드로 입금한 금액 | 카드로 먼저 환불 | 입금액까지만\n그 위의 수익 | 해외 송금 | 본인 명의만' },
+    'e-checks': { k: '캡처해두고 체크', t: '문의하기 전\n여기까지 했나요?', b: 'UID 연결 날짜 확인 | 그 전 거래는 적립 안 돼요\n계좌 유형 확인 | ECN은 다를 수 있어요\n거래 내역 캡처 | 같이 보내면 빨라요' },
+    'e-msg': { k: '그래도 늦어진다면', t: '고객센터에\n“이렇게” 보내세요', b: 'Hello, I requested a withdrawal on [10/20] (ID [123456]). Could you tell me the current status? Thank you.', n: '밑줄 친 곳만 내 정보로 바꿔요.' },
+    'e-timeline': { k: '예시로 보면', t: '언제 연결했는지가\n“적립 시작일”이에요', b: '10/1 | 가입\n10/5 | 첫 거래\n*10/8 | UID 연결\n10/9 | 거래\n전: 10/5 거래는 적립 안 됨\n후: 10/9 거래부터 적립' },
+    'e-fill': { k: '내 숫자로', t: '캡처해두고\n“빈칸”만 채워 보세요', b: '한 달 거래량 (랏)\n× 랏당 페이백 ($)\n= 한 달 페이백' },
+    'e-sum': { k: '한 장 요약', t: '이번 주\n“표시해 둘 시간”', b: '수 15:00 | 영국 CPI\n목 21:30 | 미국 실업수당\n금 22:45 | 미국 PMI' }
+  };
+  // 예시 카드 한 장 (where: 'cover' | 'body' | 'end')
+  var sample = function (L, where) {
+    var cv = { t: '표지', b: '' }, s = SAMPLES[L];
+    if (!s) return '';
+    if (where === 'cover') return card({ group: s.g, cards: [Object.assign({ layout: L }, s.c)] }, 0);
+    var c = Object.assign({ layout: L }, s);
+    return where === 'end' ? card({ group: '', cards: [cv, c] }, 1) : card({ group: '', cards: [cv, c, { t: '끝', b: '' }] }, 1);
+  };
+
   // 넘치면 글자 크기를 조금씩 줄여 맞춤 (렌더러·미리보기 공통, 화면에 붙인 뒤 호출)
   var fit = function (k) {
     if (!k || k.dataset.fit) return; k.dataset.fit = '1';
@@ -207,6 +247,6 @@ var BPCards = (function () {
   };
   var fitAll = function (root) { [].forEach.call((root || document).querySelectorAll('.v3c .k.P'), fit); };
 
-  return { card: card, fit: fit, fitAll: fitAll, kindOf: kindOf, coverType: coverType, COVER_OF: COVER_OF, COVER_ALT: COVER_ALT, COVERS: COVERS, BODY: BODY, ENDS: ENDS, HINT: HINT, esc: esc };
+  return { card: card, sample: sample, SAMPLES: SAMPLES, fit: fit, fitAll: fitAll, kindOf: kindOf, coverType: coverType, COVER_OF: COVER_OF, COVER_ALT: COVER_ALT, COVERS: COVERS, BODY: BODY, ENDS: ENDS, HINT: HINT, esc: esc };
 })();
 if (typeof globalThis !== 'undefined') globalThis.BPCards = BPCards;
