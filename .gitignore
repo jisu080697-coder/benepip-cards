@@ -4,3 +4,9 @@ draft.json
 templates/_tmp_*.html
 _probe.mjs
 _shot.mjs
+_sample.mjs
+_icons.mjs
+_pastel.mjs
+_glass.mjs
+_sets.mjs
+_sets2.mjs

@@ -1,0 +1,171 @@
+/* BenePip 카드 v3.2 · 반복 줄이기용 추가 표지·본문·마지막 장 (v3.css 위에 얹음)
+   - 표지: 아이콘 대신 앱 화면 조각 · 큰 숫자 · 영수증 · 잔고 화면
+   - 마지막 장: 요약 외에 체크 칸 · 문의 문장 · 타임라인 · 계산표 · 빈칸 계산 */
+
+/* 공통 앱 화면 조각 */
+.uic { background: #fff; border-radius: 40px; box-shadow: 0 40px 90px rgba(19, 33, 59, .16), inset 0 0 0 2px #eef0f3; padding: 40px 46px; color: var(--navy); }
+.uic .cap { display: flex; justify-content: space-between; font-size: 30px; font-weight: 700; color: var(--gray-500); padding-bottom: 24px; border-bottom: 2px solid #f2f4f6; }
+.pill { display: inline-block; padding: 8px 20px; border-radius: 22px; font-size: 30px; font-weight: 700; white-space: nowrap; }
+.pill.ok { background: var(--blue-soft); color: var(--blue); }
+.pill.wait { background: var(--gray-100); color: var(--gray-500); }
+.pill.chk { background: #fff0f1; color: var(--red); }
+.lrow { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 2px solid #f2f4f6; gap: 20px; }
+.lrow:last-child { border-bottom: none; }
+.lrow b { display: block; font-size: 38px; font-weight: 700; letter-spacing: -.03em; }
+.lrow small { display: block; margin-top: 6px; font-size: 30px; color: var(--gray-500); font-weight: 600; }
+.lrow .r { text-align: right; }
+.lrow .r strong { display: block; font-size: 40px; font-weight: 800; margin-bottom: 8px; }
+.lrow.hl { margin: 10px -22px; padding: 28px 22px; border: none; border-radius: 26px; background: #fff7f7; box-shadow: inset 0 0 0 3px #ffd5d8; }
+
+/* 표지 Q: 질문형 제목 + 기울어진 앱 내역 (아이콘 없음) */
+.CQ { background: #fff; }
+.CQ .kicker { margin-top: 70px; }
+.CQ h1 { margin-top: 22px; font-size: 96px; }
+.CQ .uic { position: absolute; left: 80px; right: 70px; top: 700px; transform: rotate(-2.5deg); }
+
+/* 표지 N: 아주 큰 숫자 + 이유 꼬리표 (타이포만) */
+.CN { background: var(--blue-mist); }
+.CN .corner { position: absolute; right: 0; top: 0; width: 300px; height: 300px; }
+.CN .eyebrow { font-size: 34px; font-weight: 800; line-height: 1.1; text-transform: uppercase; }
+.CN h1 { margin-top: 130px; font-size: 96px; }
+.CN h1 b { color: var(--blue); }
+.CN .bign { position: absolute; left: 50px; bottom: -110px; font-size: 820px; line-height: 1; font-weight: 800; letter-spacing: -.06em; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.CN .tags { position: absolute; right: 96px; bottom: 200px; display: flex; flex-direction: column; align-items: flex-end; gap: 20px; }
+.CN .tags span { background: #fff; border-radius: 34px; padding: 22px 38px; font-size: 42px; font-weight: 800; letter-spacing: -.03em; box-shadow: 0 16px 40px rgba(19, 33, 59, .1); }
+.CN .tags span:nth-child(2) { margin-right: 60px; } .CN .tags span:nth-child(3) { margin-right: 20px; }
+.CN .logo { position: absolute; right: 96px; bottom: 90px; }
+
+/* 표지 D: 랜딩 그라데이션 + 연결 전/후 상태 카드 겹침 */
+.CD { background: var(--grad-card); }
+.CD .kicker { margin-top: 70px; }
+.CD h1 { margin-top: 22px; font-size: 96px; }
+.CD h1 b { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.CD .st { position: absolute; border-radius: 40px; padding: 40px 46px; width: 760px; }
+.CD .st .lb { display: flex; align-items: center; gap: 14px; font-size: 32px; font-weight: 800; }
+.CD .st .lb i { width: 24px; height: 24px; border-radius: 50%; background: var(--gray-300); }
+.CD .st b { display: block; margin-top: 18px; font-size: 46px; font-weight: 800; letter-spacing: -.04em; }
+.CD .st span { display: block; margin-top: 10px; font-size: 34px; font-weight: 600; color: var(--gray-500); }
+.CD .st.off { left: 96px; top: 720px; background: rgba(255, 255, 255, .55); transform: rotate(-3deg); color: var(--gray-500); }
+.CD .st.off b { color: var(--gray-500); }
+.CD .st.on { left: 230px; top: 960px; background: #fff; transform: rotate(2deg); box-shadow: 0 40px 90px rgba(36, 85, 245, .22); }
+.CD .st.on .lb { color: var(--blue); } .CD .st.on .lb i { background: var(--blue); }
+
+/* 표지 F: 잔고 화면 (크레딧 / 수익 나눠 보기) */
+.CF { background: var(--blue-soft); }
+.CF .kicker { margin-top: 70px; }
+.CF h1 { margin-top: 22px; font-size: 94px; }
+.CF .uic { position: absolute; left: 96px; right: 96px; bottom: 96px; padding: 46px 50px; }
+.bal .amt { margin-top: 26px; font-size: 100px; font-weight: 800; letter-spacing: -.04em; }
+.bal .stack { margin-top: 30px; display: flex; height: 70px; border-radius: 35px; overflow: hidden; }
+.bal .stack s { display: block; height: 100%; }
+.bal .stack .cr { background: repeating-linear-gradient(135deg, #dfe4ec 0 14px, #eef1f5 14px 28px); }
+.bal .stack .pf { background: var(--blue); }
+.bal .leg { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.bal .leg div { font-size: 34px; font-weight: 700; }
+.bal .leg div span { display: block; margin-top: 6px; font-size: 32px; color: var(--gray-500); font-weight: 600; }
+.bal .leg .p { color: var(--blue); } .bal .leg .p span { color: var(--blue); opacity: .75; }
+
+/* 표지 G: 파랑 + 영수증 (합계는 가려서 궁금하게) */
+.CG { background: var(--blue); color: #fff; }
+.CG .kicker { margin-top: 70px; color: rgba(255, 255, 255, .78); }
+.CG h1 { margin-top: 22px; font-size: 96px; }
+.CG h1 b { color: #fff; box-shadow: inset 0 -26px 0 rgba(255, 255, 255, .22); }
+.rcpt { background: #fff; color: var(--navy); border-radius: 30px; padding: 50px 54px; }
+.rcpt h4 { font-size: 36px; font-weight: 800; text-align: center; }
+.rcpt .d { margin-top: 8px; text-align: center; font-size: 30px; color: var(--gray-500); font-weight: 600; }
+.rcpt .ln { display: flex; justify-content: space-between; padding: 24px 0; border-top: 3px dashed #e5e8eb; font-size: 38px; font-weight: 600; letter-spacing: -.03em; }
+.rcpt .ln span { color: var(--gray-500); }
+.rcpt .ln:first-of-type { margin-top: 30px; }
+.rcpt .tot { font-size: 50px; font-weight: 800; }
+.rcpt .tot b { color: var(--blue); }
+.rcpt .tot b.blur { filter: blur(13px); }
+.CG .rcpt { position: absolute; right: 90px; left: 200px; top: 740px; transform: rotate(3deg); box-shadow: 0 50px 100px rgba(10, 25, 90, .35); }
+
+/* 본문: 한 문장 장 (리듬 바꾸기용) */
+.P.big { background: var(--blue-mist); }
+.P.big .stmt { margin-top: auto; font-size: 96px; line-height: 1.32; font-weight: 800; letter-spacing: -.05em; word-break: keep-all; }
+.P.big .stmt b { color: var(--blue); }
+.P.big .stmt-sub { margin-top: 44px; margin-bottom: 70px; font-size: 42px; line-height: 1.55; color: var(--gray-700); font-weight: 500; letter-spacing: -.03em; word-break: keep-all; }
+
+/* 본문: 순서대로 묻기 (예/아니오) */
+.flow { margin-top: 44px; display: grid; gap: 0; }
+.flow .fr { display: grid; grid-template-columns: 1fr 330px; gap: 18px; align-items: stretch; }
+.flow .fq { background: var(--gray-100); border-radius: 30px; padding: 26px 36px; font-size: 37px; font-weight: 700; letter-spacing: -.03em; word-break: keep-all; display: flex; align-items: center; }
+.flow .fa { background: var(--blue-soft); border-radius: 30px; padding: 20px 28px; font-size: 32px; font-weight: 700; color: var(--blue); letter-spacing: -.03em; word-break: keep-all; display: flex; flex-direction: column; justify-content: center; }
+.flow .fa small { font-size: 28px; color: var(--gray-500); font-weight: 700; }
+.flow .yes { padding: 6px 0 6px 60px; font-size: 32px; font-weight: 700; color: var(--gray-500); }
+.flow .end { background: var(--blue); color: #fff; border-radius: 30px; padding: 28px 36px; font-size: 40px; font-weight: 800; letter-spacing: -.03em; }
+
+/* 본문: 이유 장 (뒤에 큰 번호) */
+.P.rs .rn { position: absolute; right: 60px; top: 40px; font-size: 400px; line-height: 1; font-weight: 800; letter-spacing: -.06em; color: var(--blue-soft); }
+.P.rs h2 { margin-top: 150px; position: relative; }
+.P.rs .desc { position: relative; }
+.P.rs .uic { margin-top: 56px; box-shadow: 0 24px 60px rgba(19, 33, 59, .1), inset 0 0 0 2px #eef0f3; }
+.route { margin-top: 56px; display: grid; gap: 20px; }
+.route div { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: center; }
+.route span { background: var(--gray-100); border-radius: 28px; padding: 30px 32px; font-size: 36px; font-weight: 700; letter-spacing: -.03em; word-break: keep-all; }
+.route span:last-child { background: var(--blue-soft); color: var(--blue); }
+.route i { font-style: normal; text-align: center; font-size: 44px; color: var(--gray-500); font-weight: 800; }
+.route small { display: block; margin-top: 6px; font-size: 30px; color: var(--gray-500); font-weight: 600; }
+
+/* 마지막 장: 체크 칸 (캡처용) */
+.checks { margin-top: 56px; border-radius: 40px; border: 4px dashed #dfe3e8; padding: 20px 48px; }
+.checks > div { display: flex; align-items: center; gap: 32px; padding: 28px 0; border-bottom: 2px solid #f2f4f6; }
+.checks > div:last-child { border-bottom: none; }
+.checks i { width: 60px; height: 60px; flex-shrink: 0; border-radius: 16px; border: 5px solid var(--gray-300); }
+.checks b { display: block; font-size: 42px; font-weight: 800; letter-spacing: -.03em; }
+.checks span { display: block; margin-top: 6px; font-size: 32px; color: var(--gray-500); font-weight: 600; }
+
+/* 마지막 장: 문의 문장 */
+.msg { margin-top: 56px; background: var(--gray-100); border-radius: 40px 40px 40px 12px; padding: 48px 52px; font-size: 39px; line-height: 1.6; font-weight: 600; letter-spacing: -.01em; }
+.msg u { text-decoration: none; background: var(--blue-soft); color: var(--blue); border-radius: 12px; padding: 0 12px; font-weight: 800; }
+.msg-ko { margin-top: 30px; font-size: 34px; line-height: 1.55; color: var(--gray-500); font-weight: 600; letter-spacing: -.03em; word-break: keep-all; }
+
+/* 마지막 장: 가로 타임라인 (연결 전/후) */
+.tl { margin-top: 80px; display: grid; grid-template-columns: repeat(4, 1fr); position: relative; }
+.tl::before { content: ''; position: absolute; left: 22px; right: 22px; top: 20px; height: 6px; background: linear-gradient(90deg, var(--gray-300) 0 50%, var(--blue) 50% 100%); border-radius: 3px; }
+.tl div { position: relative; padding-right: 14px; }
+.tl i { display: block; width: 46px; height: 46px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 7px var(--gray-300); }
+.tl div.on i { box-shadow: inset 0 0 0 7px var(--blue); } .tl div.key i { background: var(--blue); box-shadow: none; }
+.tl b { display: block; margin-top: 26px; font-size: 40px; font-weight: 800; }
+.tl span { display: block; margin-top: 8px; font-size: 32px; line-height: 1.4; font-weight: 600; color: var(--gray-700); word-break: keep-all; }
+.tl-span { margin-top: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tl-span div { border-radius: 28px; padding: 30px 32px; font-size: 34px; font-weight: 700; line-height: 1.4; word-break: keep-all; }
+.tl-span .a { background: var(--gray-100); color: var(--gray-500); }
+.tl-span .b { background: var(--blue); color: #fff; }
+
+/* 마지막 장: 빈칸 계산 */
+.fill { margin-top: 60px; display: grid; gap: 22px; }
+.fill > div { display: flex; align-items: center; justify-content: space-between; background: #fff; border-radius: 34px; padding: 34px 44px; font-size: 42px; font-weight: 700; letter-spacing: -.03em; box-shadow: inset 0 0 0 2px #e5e8eb; }
+.fill > div > span { color: var(--gray-500); font-weight: 800; margin-right: 18px; }
+.fill u { text-decoration: none; display: inline-block; width: 230px; height: 76px; border-radius: 20px; border: 4px dashed var(--blue-mid); vertical-align: middle; margin: 0 10px; }
+.fill > div.tot { background: var(--blue); color: #fff; box-shadow: none; }
+.fill > div.tot u { border-color: rgba(255, 255, 255, .7); }
+.fill > div.tot > span { color: rgba(255, 255, 255, .7); }
+
+/* 어두운 세트 표 */
+.P.dark .tbl { box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .12); }
+.P.dark .tbl span { border-color: rgba(255, 255, 255, .08); }
+.P.dark .tbl div:first-child span { background: rgba(255, 255, 255, .06); color: rgba(255, 255, 255, .6); }
+.P.dark .tbl .hi { color: #8fb4ff; }
+.P .tbl.c4 div { grid-template-columns: 1fr 1fr 1fr; }
+
+/* ── 자동 제작용 보완 (cards.src.js) ── */
+.P .logo + h2 { margin-top: 80px; }
+.CP .logo + h1 { margin-top: 90px; }
+.P .risk { position: absolute; left: 96px; right: 230px; bottom: 78px; font-size: 26px; line-height: 1.45; color: var(--mute); font-weight: 500; letter-spacing: -.02em; word-break: keep-all; }
+.P.has-risk .src { bottom: 170px; }
+.P.sum .risk { color: rgba(255, 255, 255, .72); }
+.P .ui { color: var(--navy); }
+.P.dark .ui { --mute: #6b7684; --c: #2455f5; --soft: #eaf0ff; --sub: #333d4b; }
+.P.dark .fill > div { background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .12); }
+.P.dark .checks { border-color: rgba(255, 255, 255, .2); }
+.P.dark .checks > div { border-color: rgba(255, 255, 255, .08); }
+.P.dark .msg { background: rgba(255, 255, 255, .06); }
+.P.dark .msg u { background: rgba(91, 127, 255, .2); color: #8fb4ff; }
+.P.dark .flow .fq, .P.dark .route span:first-child, .P.dark .tl-span .a { background: rgba(255, 255, 255, .08); color: rgba(255, 255, 255, .8); }
+.P.dark .route span:last-child { color: #8fb4ff; }
+.P.dark .rn { color: rgba(255, 255, 255, .06); }
+.P.dark .tl i { background: var(--navy); }
+.P.dark .tl span { color: rgba(255, 255, 255, .72); }
+.P.dark .look p { color: #fff; }
