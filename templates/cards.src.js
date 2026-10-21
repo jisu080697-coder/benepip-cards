@@ -139,7 +139,7 @@ var BPCards = (function () {
     },
     steps: function (c) {
       var r = lines(c.b).map(cells);
-      return '<h2>' + hi(c.t) + '</h2><div class="steps">' + r.map(function (x, k) { return '<div' + (k === 0 ? ' class="on"' : '') + '><i>' + (k + 1) + '</i><div><b>' + esc(x[0]) + '</b>' + (x[1] ? '<span>' + esc(x[1]) + '</span>' : '') + '</div></div>'; }).join('') + '</div>' + note(c);
+      return '<h2>' + hi(c.t) + '</h2><div class="steps">' + r.map(function (x, k) { return '<div' + (k === 0 ? ' class="on"' : '') + '><i>0' + (k + 1) + '</i><div><b>' + esc(x[0]) + '</b>' + (x[1] ? '<span>' + esc(x[1]) + '</span>' : '') + '</div></div>'; }).join('') + '</div>' + note(c);
     },
     flow: function (c) {
       var l = lines(c.b), q = l.filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), end = l.filter(function (x) { return x.indexOf('|') < 0; })[0];

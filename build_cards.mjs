@@ -9,7 +9,7 @@ const read = f => readFileSync(join(tpl, f), 'utf8');
 const glassSrc = read('glassicons.mjs').replace(/^export /gm, '');
 const { GLASS_CSS } = await import('./templates/glassicons.mjs');
 const strip = css => css.replace(/@import[^;]+;/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
-const css = strip(read('palette.css')) + strip(read('v3.css')) + strip(read('v3b.css')) + GLASS_CSS + '\n.art .gi{width:100%;height:100%}';
+const css = strip(read('palette.css')) + strip(read('v3.css')) + strip(read('v3b.css')) + strip(read('v4.css')) + GLASS_CSS + '\n.art .gi{width:100%;height:100%}';
 
 // 관리 화면용: 모든 규칙을 .v3c 안으로 (화면의 다른 스타일과 섞이지 않게)
 const scoped = css.replace(/([^{}]+)\{([^{}]*)\}/g, (m, sel, body) => {
