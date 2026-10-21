@@ -204,11 +204,12 @@ var BPCards = (function () {
   // 장식: 반짝이 · 손그림 화살표 · 빈 곳을 채우는 사물 · 저장 도장 (보일지는 fit 이 공간을 보고 정함)
   var OBJ = { body: 'bulb', big: 'target', vs: 'exchange', table: 'doc', steps: 'target', flow: 'search', stat: 'chart', qa: 'chat', warn: 'bell', event: 'clock', check: 'check', reason: 'search', route: 'exchange', myth: 'bulb', 'e-msg': 'chat', 'e-timeline': 'calendar', 'e-fill': 'calculator' };
   // 구성 변형 고르기 (디자인은 그대로, 배치만 레퍼런스 참고) · 같은 형식이라도 장 번호에 따라 섞음
-  var cmpOf = function (c, L, i) {
+  var cmpOf = function (c, L, i, d) {
     var ls = lines(c.b), n = ls.length, longest = Math.max.apply(null, ls.map(function (x) { return x.length; }).concat([0])), total = ls.join('').length;
     if (L === 'stat' || L === 'myth') return 'cmp-center';
     if (L === 'big') return i % 2 ? 'cmp-center' : '';
     if (L === 'calc') return 'cmp-bottom';
+    if (L === 'event') { var k = 0; for (var j = 1; j < i; j++) if ((d.cards[j] || {}).layout === 'event') k++; return k % 2 ? 'cmp-ev2' : ''; }
     if ((L === 'check' || L === 'e-checks') && n >= 3 && n <= 4 && longest <= 30) return 'cmp-grid';
     if (L === 'body' && n <= 3 && total <= 80 && (c.icon || OBJ[L])) return 'cmp-right';
     return '';
@@ -228,7 +229,7 @@ var BPCards = (function () {
     var n = d.cards.length, c = d.cards[i] || {}, L = kindOf(d, i);
     if (i === 0) return (COVER[L] || plainCover)(c, d);
     var last = i === n - 1, dark = DARK[d.group] && L !== 'e-sum';
-    var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : ''), cmp = cmpOf(c, L, i);
+    var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : ''), cmp = cmpOf(c, L, i, d);
     var ph = c.img && /^https?:/.test(c.img) && /^(body|big|qa|warn|check|myth)$/.test(L) ? '<div class="photo" style="background-image:url(' + esc(c.img) + ')"></div>' : '';
     if (ph) cmp = '';
     var risk = last && d.disclaimer ? '<div class="risk">' + esc(d.disclaimer) + '</div>' : '';
