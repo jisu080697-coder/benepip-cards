@@ -159,7 +159,7 @@ var BPCards = (function () {
       var last = r.pop();
       return '<div class="k CG">' + logo(1) + '<div class="kicker">' + esc(c.k || d.group || '') + '</div><h1>' + hi(c.t) + '</h1>' +
         '<div class="rcpt"><h4>' + esc(p[0] || '내역') + '</h4><div class="d">' + esc(c.n || '예시') + '</div>' +
-        r.map(function (x) { return '<div class="ln"><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') +
+        r.map(function (x) { return '<div class="ln"><span>' + esc(x[0]) + '</span>' + esc(x.slice(1).join(' · ')) + '</div>'; }).join('') +
         '<div class="ln tot"><span>' + esc(last[0]) + '</span><b class="blur">' + esc(last[1] || '') + '</b></div></div></div>';
     },
     'c-issue': function (c, d) {
@@ -181,7 +181,7 @@ var BPCards = (function () {
         '<div class="leg"><div>' + esc(A.lab) + '<span>' + esc(A.desc) + '</span></div><div class="p">' + esc(Bq.lab) + '<span>' + esc(Bq.desc) + '</span></div></div></div></div>';
     },
     'c-num': function (c, d) {
-      var p = lines(c.b), big = p[0] && p[0].length <= 3 ? p[0] : '';
+      var p = lines(c.b), m0 = String(p[0] || '').match(/^\d{1,2}/), big = m0 ? m0[0] : '';
       return '<div class="k CN"><svg class="corner" viewBox="0 0 300 300"><path d="M300 0v300L120 0z" fill="#13213b"/><path d="M300 40v220L160 40z" fill="#2455f5"/></svg>' +
         '<div class="eyebrow">BenePip<br>Broker Guide</div>' + (c.k ? '<div class="kicker" style="margin-top:90px">' + esc(c.k) + '</div>' : '') + '<h1' + (c.k ? ' style="margin-top:22px"' : '') + '>' + hi(c.t) + '</h1>' +
         (big ? '<div class="bign">' + esc(big) + '</div><div class="tags">' + p.slice(1, 4).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>'
@@ -200,7 +200,7 @@ var BPCards = (function () {
   var desc = function (s) { return s ? '<div class="desc">' + txt(s) + '</div>' : ''; };
   var LAY = {
     body: function (c) { var l = lines(String(c.b || '').replace(/\s*\|\s*/g, ' · ')); return '<h2>' + hi(c.t) + '</h2>' + (l[0] ? '<div class="lead">' + hi(l[0]) + '</div>' : '') + (l.length > 1 ? '<div class="pts">' + l.slice(1).map(function (x) { return '<div>' + txt(x) + '</div>'; }).join('') + '</div>' : '') + note(c); },
-    big: function (c) { return '<div class="stmt">' + hi(c.t) + '</div>' + (c.b ? '<div class="stmt-sub">' + txt(c.b) + '</div>' : '') + note(c); },
+    big: function (c) { var sb = String(c.b || '').replace(/\s*\|\s*/g, ' · '); return '<div class="stmt">' + hi(c.t) + '</div>' + (sb ? '<div class="stmt-sub">' + txt(sb) + '</div>' : '') + note(c); },
     vs: function (c) {
       var r = rowsOf(c.b); if (r.length < 2) return LAY.body(c);
       var h = r.shift(); if (h.length === 3 && /^(항목|구분|기준|비교)$/.test(h[0])) h = [h[1], '', h[2], ''];
@@ -222,7 +222,7 @@ var BPCards = (function () {
     stat: function (c) {
       var l = plainOf(c.b), r = rowsOf(c.b), big = l[0] || '', m = big.match(/^([$₩]?[\d.,]+)(.*)$/), max = Math.max.apply(null, r.map(function (x) { return num(x[1]); }).concat([1]));
       return '<h2>' + hi(c.t) + '</h2><div class="stat"><span class="n">' + esc(m ? m[1] : big) + '</span><span class="u">' + esc(m ? m[2].trim() : '') + '</span></div>' + (l[1] ? '<div class="stat-cap">' + txt(l.slice(1).join('\n')) + '</div>' : '') +
-        (r.length ? '<div class="bars">' + r.map(function (x) { var s = star(x[0]); return '<div' + (s[0] ? ' class="on"' : '') + '><span>' + esc(s[1]) + '</span><s style="width:' + Math.max(4, Math.round(num(x[1]) / max * 100)) + '%"></s><em>' + esc(x[1] || '') + '</em></div>'; }).join('') + '</div>' : '') + note(c);
+        (r.length && r.every(function (x) { return /\d/.test(x[1] || ''); }) ? '<div class="bars">' + r.map(function (x) { var s = star(x[0]); return '<div' + (s[0] ? ' class="on"' : '') + '><span>' + esc(s[1]) + '</span><s style="width:' + Math.max(4, Math.round(num(x[1]) / max * 100)) + '%"></s><em>' + esc(x[1] || '') + '</em></div>'; }).join('') + '</div>' : '') + note(c);
     },
     calc: function (c) {
       var r = rowsOf(c.b); if (!r.length) return LAY.body(c);
@@ -264,7 +264,7 @@ var BPCards = (function () {
     },
     route: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="route">' + rowsOf(c.b).map(function (x) { return '<div><span>' + esc(x[0]) + '</span><i>→</i><span>' + esc(x[1] || '') + (x[2] ? '<small>' + esc(x[2]) + '</small>' : '') + '</span></div>'; }).join('') + '</div>' + note(c); },
     myth: function (c) {
-      var l = lines(c.b).map(function (x) { return x.replace(/^(오해|사실|MYTH|FACT)\s*[:|]\s*/i, ''); });
+      var l = lines(c.b).map(function (x) { return x.replace(/^(오해|사실|MYTH|FACT)\s*[:|]\s*/i, '').replace(/\s*\|\s*/g, ' · '); });
       return '<h2>' + hi(c.t) + '</h2><div class="myth"><div><div class="lb"><span class="tg"></span>오해</div><p>' + txt(l[0] || '') + '</p></div><div class="fact"><div class="lb"><span class="tg"></span>사실</div><p>' + txt(l[1] || '') + '</p></div></div>' + (l[2] ? '<div class="myth-sub">' + txt(l.slice(2).join('\n')) + '</div>' : '') + note(c);
     },
     'e-checks': function (c) { return '<h2>' + hi(c.t) + '</h2><div class="checks">' + lines(c.b).map(cells).map(function (x) { return '<div><i></i><div><b>' + esc(x[0]) + '</b>' + (x[1] ? '<span>' + esc(x[1]) + '</span>' : '') + '</div></div>'; }).join('') + '</div>' + note(c); },
