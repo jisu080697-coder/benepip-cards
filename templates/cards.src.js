@@ -64,8 +64,9 @@ var BPCards = (function () {
 
   // ── 표지 ──
   var plainCover = function (c, d) {
-    var p = lines(c.b);
-    return '<div class="k T1 CP">' + logo() + (c.k ? '<div class="kicker">' + esc(c.k) + '</div>' : '') + '<h1>' + hi(c.t) + '</h1>' +
+    var p = lines(String(c.b || '').replace(/\s*\|\s*/g, ' · '));
+    var art = { '혜택·적용 조건': 'gift', '거래비용·페이백': 'coin', '플랫폼 활용': 'chart', '브로커 이용 가이드': 'wallet', '베네핍 이용 안내': 'shield', '경제 캘린더·이벤트': 'calendar' }[d.group] || c.icon;
+    return '<div class="k T1 CP">' + (art ? '<div class="art">' + icon(c.icon || art) + '</div>' : '') + logo() + (c.k ? '<div class="kicker">' + esc(c.k) + '</div>' : '') + '<h1>' + hi(c.t) + '</h1>' +
       (p.length ? '<div class="box"><div><b>' + txt(p[0]) + '</b>' + (p[1] ? '<span>' + txt(p[1]) + '</span>' : '') + '</div><i>›</i></div>' : '') + '</div>';
   };
   var COVER = {
@@ -104,7 +105,7 @@ var BPCards = (function () {
       // 한 줄 = 항목 · 금액 · 설명 (금액은 숫자가 든 칸, 순서가 바뀌어도 찾음)
       var row = function (x) { var k = -1; for (var j = 0; j < x.length; j++) if (k < 0 && /\d/.test(x[j])) k = j; var amt = k >= 0 ? x[k] : ''; return { lab: k === 0 ? x[0] : x[0] + (amt ? ' ' + amt : ''), amt: amt, desc: x.filter(function (y, j) { return j !== 0 && j !== k; }).join(' · ') }; };
       var A = row(r[0]), Bq = row(r[1]);
-      var a = num(A.amt), b = num(Bq.amt), sum = a + b, cur = /\$/.test(A.amt + Bq.amt) ? '$' : '', pa = sum ? Math.round(a / sum * 100) : 50;
+      var a = num(A.amt), b = num(Bq.amt), sum = a + b, cur = /\$|달러/.test(A.amt + Bq.amt) ? '$' : /원|₩/.test(A.amt + Bq.amt) ? '₩' : '', pa = sum ? Math.round(a / sum * 100) : 50;
       var amt = cur + sum.toLocaleString('en-US', { minimumFractionDigits: cur ? 2 : 0, maximumFractionDigits: 2 });
       return '<div class="k CF">' + logo() + '<div class="kicker">' + esc(c.k || d.group || '') + '</div><h1>' + hi(c.t) + '</h1>' +
         '<div class="uic bal"><div class="cap"><span>계좌 잔고</span><span>' + esc(c.n || '예시') + '</span></div>' + (sum ? '<div class="amt">' + esc(amt) + '</div>' : '') +
@@ -134,7 +135,7 @@ var BPCards = (function () {
     big: function (c) { return '<div class="stmt">' + hi(c.t) + '</div>' + (c.b ? '<div class="stmt-sub">' + txt(c.b) + '</div>' : '') + note(c); },
     vs: function (c) {
       var r = rowsOf(c.b); if (r.length < 2) return LAY.body(c);
-      var h = r.shift(); if (h.length === 3) h = [h[1], '', h[2], ''];
+      var h = r.shift(); if (h.length === 3 && /^(항목|구분|기준|비교)$/.test(h[0])) h = [h[1], '', h[2], ''];
       var col = function (k, on) { return '<div' + (on ? ' class="on"' : '') + '><h3>' + esc(h[k * 2] || '') + '<small>' + esc(h[k * 2 + 1] || '') + '</small></h3>' + r.map(function (x) { return '<p><em>' + esc(x[0]) + '</em>' + esc(x[k + 1] || '') + '</p>'; }).join('') + '</div>'; };
       return '<h2>' + hi(c.t) + '</h2><div class="vs">' + col(0, 1) + col(1, 0) + '</div>' + note(c);
     },
@@ -207,7 +208,7 @@ var BPCards = (function () {
     var ls = lines(c.b), n = ls.length, longest = Math.max.apply(null, ls.map(function (x) { return x.length; }).concat([0])), total = ls.join('').length;
     if (L === 'stat' || L === 'myth') return 'cmp-center';
     if (L === 'big') return i % 2 ? 'cmp-center' : '';
-    if (L === 'ui' || L === 'calc') return 'cmp-bottom';
+    if (L === 'calc') return 'cmp-bottom';
     if ((L === 'check' || L === 'e-checks') && n >= 3 && n <= 4 && longest <= 30) return 'cmp-grid';
     if (L === 'body' && n <= 3 && total <= 80 && (c.icon || OBJ[L])) return 'cmp-right';
     return '';

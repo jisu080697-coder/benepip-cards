@@ -94,3 +94,9 @@
 .P.has-photo .lead { margin-top: 44px; }
 .P.has-photo .stmt { margin-top: 56px; }
 .P.has-photo .pts, .P.has-photo .list, .P.has-photo .warn, .P.has-photo .qa, .P.has-photo .myth { margin-top: 40px; }
+
+/* 기본 표지: 오른쪽 아래 그림 · 발표 장 값 칸 줄바꿈 없이 */
+.CP .art { width: 520px; height: 520px; right: 60px; top: auto; bottom: 230px; }
+.P .ev .what div { gap: 16px; align-items: baseline; }
+.P .ev .what div span { white-space: nowrap; }
+.P .ev .what div { font-size: 32px; }
