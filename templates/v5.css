@@ -1,54 +1,62 @@
-/* BenePip 카드 v5 본문 · 2차 레퍼런스(선택 상자 강조·빛 번짐·스티커·도장·사물) 반영
-   v4(선 구분) 위에 장식 층을 얹음 · 모서리 표식은 뺌 */
+/* BenePip 카드 본문 구성 변형 · 디자인은 기존 틀(v3·v4) 그대로, 레퍼런스의 "배치"만 참고
+   cmp-center: 가운데 정렬 (큰 숫자 · 오해 vs 사실 · 한 문장 일부)
+   cmp-right : 오른쪽 정렬 글 + 왼쪽 아래 큰 사물 (짧은 기본 장)
+   cmp-bottom: 위에 화면 조각, 아래에 제목 (앱 화면 · 계산 상자)
+   cmp-grid  : 2칸 타일 (항목 3~4개 체크리스트) */
 .P::before, .P::after { display: none !important; }
 
-/* 배경: 흰 바탕 + 파랑·보라 빛 번짐 */
-.P:not(.dark):not(.sum) { background-color: #fff; background-image: radial-gradient(circle at 96% 4%, rgba(91, 127, 255, .20), rgba(91, 127, 255, 0) 30%), radial-gradient(circle at 2% 98%, rgba(122, 92, 255, .14), rgba(122, 92, 255, 0) 34%); }
-.P.soft:not(.dark) { background-color: #f4f7ff; }
-.P.dark { background-image: radial-gradient(circle at 96% 4%, rgba(91, 127, 255, .28), rgba(91, 127, 255, 0) 32%); }
+/* 가운데 */
+.P.cmp-center { align-items: center; text-align: center; }
+.P.cmp-center .logo { align-self: flex-start; }
+.P.cmp-center .head { justify-content: center; width: 100%; }
+.P.cmp-center h2, .P.cmp-center .stat-cap, .P.cmp-center .stmt, .P.cmp-center .stmt-sub, .P.cmp-center .myth-sub { text-align: center; width: 100%; }
+.P.cmp-center .stat { justify-content: center; margin-top: 90px; }
+.P.cmp-center .stat .n { font-size: 260px; }
+.P.cmp-center .bars, .P.cmp-center .myth { width: 100%; text-align: left; }
+.P.big.cmp-center .stmt { margin-top: auto; }
+.P.big.cmp-center .stmt-sub { margin-bottom: auto; }
 
-/* 머리말: 살짝 기울어진 스티커 */
-.P .head { margin-top: 70px; }
-.P .chip { display: inline-block; background: var(--navy) !important; color: #fff !important; padding: 12px 22px; border-radius: 10px; font-size: 32px; transform: rotate(-3deg); box-shadow: 0 10px 24px rgba(19, 33, 59, .18); }
-.P.dark .chip { background: #fff !important; color: var(--navy) !important; }
-.P.sum .chip { background: #fff !important; color: var(--blue) !important; }
-.P .head .chip + .chip { background: var(--blue) !important; transform: rotate(2deg); margin-left: 6px; }
-.P .head .chip + .chip::before { content: none; }
-.P .head + h2 { margin-top: 34px; }
+/* 오른쪽 정렬 + 왼쪽 아래 사물 */
+.P.cmp-right { align-items: flex-end; text-align: right; }
+.P.cmp-right .logo { align-self: flex-start; }
+.P.cmp-right .head { justify-content: flex-end; width: 100%; }
+.P.cmp-right h2 { text-align: right; }
+.P.cmp-right .lead, .P.cmp-right .pts, .P.cmp-right .desc { max-width: 640px; text-align: right; }
+.P.cmp-right .pts div { padding: 30px 40px 30px 0; }
+.P.cmp-right .pts div::before { left: auto; right: 0; }
+.P.cmp-right .obj { display: block; position: absolute; left: -70px; bottom: 90px; width: 480px; height: 480px; transform: rotate(-8deg); pointer-events: none; }
+.P.cmp-right .obj .gi { width: 100%; height: 100%; }
+.P .obj { display: none; }
 
-/* 제목: 굵게 + 핵심어는 선택 상자(연파랑 + 모서리 점) */
-.P h2 { font-weight: 800; letter-spacing: -.05em; }
-.P h2 b, .P .lead b, .P .stmt b { position: relative; color: var(--navy); background: #dbe6ff; padding: 0 14px; margin: 0 4px; box-shadow: inset 0 0 0 2px rgba(36, 85, 245, .55); }
-.P h2 b::before, .P h2 b::after, .P .stmt b::before, .P .stmt b::after { content: ''; position: absolute; width: 16px; height: 16px; background: #fff; border: 4px solid var(--blue); box-sizing: border-box; }
-.P h2 b::before, .P .stmt b::before { left: -8px; top: -8px; }
-.P h2 b::after, .P .stmt b::after { right: -8px; bottom: -8px; }
-.P.dark h2 b, .P.dark .lead b { color: #fff; background: rgba(91, 127, 255, .35); box-shadow: inset 0 0 0 2px rgba(143, 180, 255, .8); }
-.P.dark h2 b::before, .P.dark h2 b::after { background: var(--navy); border-color: #8fb4ff; }
-.P.sum h2 b { color: var(--blue); background: #fff; box-shadow: none; }
-.P.sum h2 b::before, .P.sum h2 b::after { background: var(--blue); border-color: #fff; }
+/* 위에 화면, 아래에 제목 */
+.P.cmp-bottom .ui, .P.cmp-bottom .calc { order: 1; margin-top: 70px; }
+.P.cmp-bottom .head { order: 2; margin-top: auto; }
+.P.cmp-bottom h2 { order: 3; }
+.P.cmp-bottom .head + h2 { margin-top: 24px; }
+.P.cmp-bottom .logo + h2 { margin-top: auto; }
+.P.cmp-bottom .ui-tip { order: 4; margin-top: 24px; margin-bottom: 60px; }
+.P.cmp-bottom.L-calc h2 { margin-bottom: 70px; }
 
-/* 장식: 반짝이 · 손그림 화살표 · 사물 · 도장 */
-.P .spark { position: absolute; right: 110px; top: 96px; width: 130px; height: 110px; pointer-events: none; }
-.P .arrow { position: absolute; width: 210px; height: 150px; right: 104px; display: none; pointer-events: none; }
-.P .obj { position: absolute; right: -60px; bottom: 40px; width: 420px; height: 420px; transform: rotate(10deg); display: none; pointer-events: none; }
-.P .obj .gi { width: 100%; height: 100%; }
-.P .stamp { position: absolute; right: 96px; bottom: 150px; width: 210px; height: 210px; border-radius: 50%; border: 6px solid var(--blue); color: var(--blue); display: grid; place-items: center; text-align: center; font-size: 34px; font-weight: 800; line-height: 1.15; transform: rotate(-14deg); opacity: .92; box-shadow: inset 0 0 0 8px #fff, inset 0 0 0 11px var(--blue); background: rgba(255, 255, 255, .7); pointer-events: none; display: none; }
-.P .stamp small { display: block; font-size: 22px; letter-spacing: .12em; font-weight: 800; }
-.P.sum .stamp { border-color: #fff; color: #fff; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 8px var(--blue), inset 0 0 0 11px #fff; }
+/* 2칸 타일 */
+.P.cmp-grid .list, .P.cmp-grid .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: none; margin-top: 64px; }
+.P.cmp-grid .list > div, .P.cmp-grid .checks > div { flex-direction: column; align-items: flex-start; gap: 18px; background: var(--gray-100); border-radius: 32px; padding: 40px 36px; border: none; min-height: 270px; }
+.P.cmp-grid.soft .list > div, .P.cmp-grid.soft .checks > div { background: #fff; }
+.P.cmp-grid.dark .list > div, .P.cmp-grid.dark .checks > div { background: rgba(255, 255, 255, .06); }
+.P.cmp-grid .list em { padding-left: 0; flex-basis: auto; }
+.P.cmp-grid .checks b { font-size: 42px; }
 
-/* 오해 vs 사실 */
-.P .myth { margin-top: 70px; display: grid; gap: 30px; }
-.P .myth > div { position: relative; border-radius: 34px; padding: 40px 46px; background: #fff; box-shadow: 0 24px 60px rgba(19, 33, 59, .12), inset 0 0 0 2px #eef0f3; }
-.P .myth > div:first-child { transform: rotate(-1.6deg); }
-.P .myth > div.fact { background: var(--blue); color: #fff; transform: rotate(1.2deg); box-shadow: 0 30px 70px rgba(36, 85, 245, .3); }
-.P .myth .lb { display: flex; align-items: center; gap: 18px; font-size: 40px; font-weight: 800; letter-spacing: .02em; }
-.P .myth .tg { width: 96px; height: 52px; border-radius: 26px; background: #d5dae2; position: relative; }
-.P .myth .tg::after { content: ''; position: absolute; left: 6px; top: 6px; width: 40px; height: 40px; border-radius: 50%; background: #fff; }
+/* 오해 vs 사실 (기존 틀 색·상자) */
+.P .myth { margin-top: 70px; display: grid; gap: 24px; }
+.P .myth > div { border-radius: 36px; padding: 40px 46px; background: var(--gray-100); }
+.P.soft .myth > div:first-child { background: #fff; }
+.P .myth > div.fact { background: var(--blue); color: #fff; }
+.P .myth .lb { display: flex; align-items: center; gap: 18px; font-size: 38px; font-weight: 800; }
+.P .myth .tg { width: 92px; height: 50px; border-radius: 25px; background: #d5dae2; position: relative; flex-shrink: 0; }
+.P .myth .tg::after { content: ''; position: absolute; left: 6px; top: 6px; width: 38px; height: 38px; border-radius: 50%; background: #fff; }
 .P .myth .fact .tg { background: #fff; }
 .P .myth .fact .tg::after { left: auto; right: 6px; background: var(--blue); }
-.P .myth p { margin-top: 20px; font-size: 44px; line-height: 1.45; font-weight: 700; letter-spacing: -.035em; word-break: keep-all; }
+.P .myth p { margin-top: 18px; font-size: 44px; line-height: 1.45; font-weight: 700; letter-spacing: -.035em; word-break: keep-all; color: inherit; }
 .P .myth > div:first-child p { color: var(--gray-500); text-decoration: line-through; text-decoration-color: rgba(240, 68, 82, .7); text-decoration-thickness: 4px; }
+.P .myth .fact p { color: #fff; }
 .P .myth-sub { margin-top: 40px; font-size: 38px; line-height: 1.5; color: var(--sub); font-weight: 500; word-break: keep-all; }
-.P.dark .myth > div:first-child { background: rgba(255, 255, 255, .08); box-shadow: none; }
-
-.P .myth p { color: inherit; } .P .myth .fact p { color: #fff; } .P .myth > div:first-child p { color: var(--gray-500); }
+.P.dark .myth > div:first-child { background: rgba(255, 255, 255, .08); }

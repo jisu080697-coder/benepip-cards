@@ -195,13 +195,19 @@ var BPCards = (function () {
 
   // 장식: 반짝이 · 손그림 화살표 · 빈 곳을 채우는 사물 · 저장 도장 (보일지는 fit 이 공간을 보고 정함)
   var OBJ = { body: 'bulb', big: 'target', vs: 'exchange', table: 'doc', steps: 'target', flow: 'search', stat: 'chart', qa: 'chat', warn: 'warning', event: 'clock', check: 'check', reason: 'search', route: 'exchange', myth: 'bulb', 'e-msg': 'chat', 'e-timeline': 'calendar', 'e-fill': 'calculator' };
-  var SPARK = '<svg class="spark" viewBox="0 0 130 110"><path d="M80 6c4 26 12 34 38 38-26 4-34 12-38 38-4-26-12-34-38-38 26-4 34-12 38-38z" fill="#5b7fff"/><path d="M26 60c2 13 6 17 19 19-13 2-17 6-19 19-2-13-6-17-19-19 13-2 17-6 19-19z" fill="#a9c6ff"/></svg>';
-  var ARROW = ['<svg class="arrow" viewBox="0 0 210 150"><path d="M196 10c-40 6-96 24-120 62-14 22-14 44-6 60" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M48 112l22 26 24-24" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    '<svg class="arrow" viewBox="0 0 210 150"><path d="M190 14c-30 30-70 20-92 46-18 22 4 40-18 66" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M60 114l18 18 26-14" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'];
-  var deco = function (c, L, i, dark) {
+  // 구성 변형 고르기 (디자인은 그대로, 배치만 레퍼런스 참고) · 같은 형식이라도 장 번호에 따라 섞음
+  var cmpOf = function (c, L, i) {
+    var n = lines(c.b).length;
+    if (L === 'stat' || L === 'myth') return 'cmp-center';
+    if (L === 'big') return i % 2 ? 'cmp-center' : '';
+    if (L === 'ui' || L === 'calc') return 'cmp-bottom';
+    if ((L === 'check' || L === 'e-checks') && n >= 3 && n <= 4) return 'cmp-grid';
+    if (L === 'body' && n <= 3 && (c.icon || OBJ[L])) return 'cmp-right';
+    return '';
+  };
+  var deco = function (c, L, dark, cmp) {
     var ob = c.icon || OBJ[L];
-    return SPARK + (i % 2 === 0 ? ARROW[(i / 2) % 2] : '') + (ob ? '<div class="obj">' + icon(ob, { dark: dark, glass: i % 3 === 0 }) + '</div>' : '') +
-      (/^e-(checks|fill|sum)$/.test(L) ? '<div class="stamp"><div><small>SAVE</small>저장해두기</div></div>' : '');
+    return cmp === 'cmp-right' && ob ? '<div class="obj">' + icon(ob, { dark: dark }) + '</div>' : '';
   };
 
   // 카드 한 장 HTML (1080×1350)
@@ -210,9 +216,9 @@ var BPCards = (function () {
     var n = d.cards.length, c = d.cards[i] || {}, L = kindOf(d, i);
     if (i === 0) return (COVER[L] || plainCover)(c, d);
     var last = i === n - 1, dark = DARK[d.group] && L !== 'e-sum';
-    var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : '');
+    var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : ''), cmp = cmpOf(c, L, i);
     var risk = last && d.disclaimer ? '<div class="risk">' + esc(d.disclaimer) + '</div>' : '';
-    return '<div class="k P ' + cls + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + deco(c, L, i, dark || L === 'e-sum') + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
+    return '<div class="k P ' + cls + ' ' + cmp + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + deco(c, L, dark || L === 'e-sum', cmp) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
   };
 
   // 형식 예시 (관리 화면 '형식 예시 보기' 팝업 · 숫자는 모두 예시)
@@ -267,12 +273,10 @@ var BPCards = (function () {
     var inner = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
     for (var z = 1; z > 0.7 && bottom() > limit; z -= 0.04) inner.forEach(function (e) { e.style.zoom = (z - 0.04).toFixed(2); });
     if (bottom() > limit) parts.forEach(function (e) { if (!e.style.zoom) e.style.zoom = '0.9'; });
-    // 내용이 아주 짧으면 오른쪽 아래에 사물을 두고, 그만큼 키울 수 있는 높이를 줄임
-    var obj = k.querySelector('.obj'), stamp = k.querySelector('.stamp'), arrow = k.querySelector('.arrow'), h2 = k.querySelector('h2'), cap = limit;
-    if (obj && !stamp && !k.classList.contains('L-big') && bottom() < 760) { obj.style.display = 'block'; cap = 880; }
-    if (stamp && bottom() < 960) { stamp.style.display = 'grid'; cap = Math.min(cap, 950); }
+    // 구성별: 왼쪽 아래 사물이 있으면 그 위까지만 키움 · 위아래로 나눈 구성은 키우지 않음
+    var cmpd = /cmp-(center|right|bottom|grid)/.test(k.className), cap = k.classList.contains('cmp-right') ? 900 : limit;
     // 내용이 짧아 아래가 비면 제목 아래 내용을 키움 (한 문장 장은 아래 정렬이라 제외)
-    if (z === 1 && !k.classList.contains('L-big') && bottom() < cap * 0.86) {
+    if (z === 1 && !k.classList.contains('L-big') && !k.classList.contains('cmp-bottom') && bottom() < cap * 0.86) {
       var body = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
       for (var g = 1.04; g <= 1.36; g += 0.04) {
         body.forEach(function (e) { e.style.zoom = g.toFixed(2); });
@@ -282,7 +286,7 @@ var BPCards = (function () {
     // 키운 뒤에도 아래가 많이 남으면 내용을 제목과 바닥 사이 가운데 쪽으로
     if (!k.classList.contains('L-big')) {
       var rest = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); }), free = limit - bottom();
-      if (cap === limit && rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
+      if (!cmpd && rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
     }
   };
   // 제목이 짧아 오른쪽이 비면 손그림 화살표 (제목 끝 → 내용)
