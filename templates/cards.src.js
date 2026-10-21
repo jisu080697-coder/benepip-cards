@@ -200,7 +200,7 @@ var BPCards = (function () {
   };
 
   // 장식: 반짝이 · 손그림 화살표 · 빈 곳을 채우는 사물 · 저장 도장 (보일지는 fit 이 공간을 보고 정함)
-  var OBJ = { body: 'bulb', big: 'target', vs: 'exchange', table: 'doc', steps: 'target', flow: 'search', stat: 'chart', qa: 'chat', warn: 'warning', event: 'clock', check: 'check', reason: 'search', route: 'exchange', myth: 'bulb', 'e-msg': 'chat', 'e-timeline': 'calendar', 'e-fill': 'calculator' };
+  var OBJ = { body: 'bulb', big: 'target', vs: 'exchange', table: 'doc', steps: 'target', flow: 'search', stat: 'chart', qa: 'chat', warn: 'bell', event: 'clock', check: 'check', reason: 'search', route: 'exchange', myth: 'bulb', 'e-msg': 'chat', 'e-timeline': 'calendar', 'e-fill': 'calculator' };
   // 구성 변형 고르기 (디자인은 그대로, 배치만 레퍼런스 참고) · 같은 형식이라도 장 번호에 따라 섞음
   var cmpOf = function (c, L, i) {
     var ls = lines(c.b), n = ls.length, longest = Math.max.apply(null, ls.map(function (x) { return x.length; }).concat([0])), total = ls.join('').length;
@@ -212,7 +212,7 @@ var BPCards = (function () {
     return '';
   };
   var SPOT = { body: 1, warn: 1, qa: 1, steps: 1, check: 1, flow: 1, route: 1 };
-  var VARY = { body: ['bulb', 'target', 'search', 'doc'], warn: ['warning', 'lock'], qa: ['chat', 'bulb'], steps: ['target', 'key'], check: ['check', 'shield'] };
+  var VARY = { body: ['bulb', 'target', 'search', 'doc'], warn: ['bell', 'shield'], qa: ['chat', 'bulb'], steps: ['target', 'key'], check: ['check', 'shield'] };
   var deco = function (c, L, dark, cmp, i) {
     var ob = c.icon || (VARY[L] ? VARY[L][(i || 0) % VARY[L].length] : OBJ[L]);
     if (!ob) return '';
