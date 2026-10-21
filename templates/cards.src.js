@@ -71,15 +71,14 @@ var BPCards = (function () {
   };
   var COVER = {
     'c-plain': plainCover,
+    // 표지: 제목 + 날짜 범위 + 지표 이름만 (자세한 시각은 가운데 장에서 · 피드백: 표지 정보 과다)
     'c-report': function (c, d) {
-      // 첫 칸이 요일 대신 날짜(10/21)여도 요일로 바꿔 읽음
-      var wd = function (x) { var m = String(x || '').match(/(\d{1,2})\s*[.\x2f]\s*(\d{1,2})/); if (!m) return String(x || '').replace(/[^월화수목금토일]/g, '').charAt(0) || String(x || '').charAt(0); return '일월화수목금토'.charAt(new Date(new Date().getFullYear(), +m[1] - 1, +m[2]).getDay()); };
-      var r = rowsOf(c.b).map(function (y) { y = y.slice(); y[0] = wd(y[0]); return y; }), days = ['월', '화', '수', '목', '금'];
-      var cell = function (dd) { var x = r.filter(function (y) { return y[0].charAt(0) === dd; }); return '<div' + (x.length ? ' class="on"' : '') + '><b>' + dd + '</b><span>' + (x.length ? x.length + '건' : '—') + '</span></div>'; };
-      var evs = r.slice(0, 4).map(function (y) { var tm = String(y[2] || '').match(/\d{1,2}:\d{2}/); return '<div><b>' + esc(y[0].charAt(0)) + '</b><span>' + esc(tm ? tm[0] : (y[2] || '')) + '</span><em>' + esc(y[1] || '') + '</em></div>'; }).join('');
-      return '<div class="k T6 CR"><div class="mast"><span class="t">BenePip Weekly</span><span class="d">' + esc(c.n || '한국 시간') + '</span></div>' +
-        '<div class="kicker">' + esc(c.k || '이번 주 경제 캘린더') + '</div><h1>' + hi(c.t) + '</h1><div class="week">' + days.map(cell).join('') + '</div>' +
-        (evs ? '<div class="evs">' + evs + '</div>' : '') + '<div class="art">' + icon(c.icon || 'calendar') + '</div><div class="note">넘겨서 발표별 확인할 것 보기 →</div></div>';
+      var r = rowsOf(c.b), names = [];
+      r.forEach(function (y) { var x = (y[1] || y[0] || '').trim(); if (x && names.indexOf(x) < 0) names.push(x); });
+      return '<div class="k T6 CR2"><div class="mast"><span class="t">BenePip Weekly</span><span class="d">한국 시간</span></div>' +
+        '<div class="kicker">' + esc(c.k || '이번 주 경제 캘린더') + '</div><h1>' + hi(c.t) + '</h1>' + (c.n ? '<div class="range">' + esc(c.n) + '</div>' : '') +
+        '<div class="names">' + names.slice(0, 5).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>' +
+        '<div class="art">' + icon(c.icon || 'calendar') + '</div><div class="note">넘겨서 지표별로 보기 →</div></div>';
     },
     'c-edit': function (c, d) {
       return '<div class="k T4">' + logo(1) + '<div class="kicker">' + esc(c.k || d.group || '') + '</div><h1>' + hi(c.t) + '</h1>' +
@@ -170,8 +169,22 @@ var BPCards = (function () {
     event: function (c) {
       var l = lines(c.b), w = cells(l[0] || ''), tm = String(w[1] || '').match(/\d{1,2}:\d{2}/) || String(c.b || '').match(/\d{1,2}:\d{2}/); w[1] = tm ? tm[0] : '';
       if (!/\d/.test(w[0] || '')) { var dt = String(c.b || '').match(/\d{1,2}\x2f\d{1,2}(\s*\(?[월화수목금토일]\)?)?/); w[0] = dt ? dt[0] : ''; }
-      var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); });
-      return '<h2>' + hi(c.t) + '</h2><div class="ev"><div class="when"><small>' + esc(w[0] || '') + '</small><b>' + esc(w[1] || '') + '</b><span>한국 시간</span></div><div class="what">' + r.slice(0, 4).map(function (x) { return '<div><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '</div></div>' +
+      var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); }).slice(0, 2);
+      var get = function (k) { for (var i = 0; i < r.length; i++) if (k.test(r[i][0])) return r[i]; return null; };
+      var fc = get(/예상/), pv = get(/이전/), base = get(/기준/), viz = '';
+      var nv = function (x) { var m = String(x || '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+      if (fc && pv && nv(fc[1]) != null && nv(pv[1]) != null) {
+        var a = nv(pv[1]), b = nv(fc[1]), base50 = base && nv(base[1]) != null ? nv(base[1]) : null;
+        if (base50 != null) {   // 기준선이 있는 지표 (PMI 등): 게이지
+          var lo = Math.min(a, b, base50) - 5, hi2 = Math.max(a, b, base50) + 5, pos = function (v) { return Math.round((v - lo) / (hi2 - lo) * 100); };
+          viz = '<div class="gauge"><div class="bar"><i class="base" style="left:' + pos(base50) + '%"><em>' + esc(String(base50)) + '</em></i><i class="pv" style="left:' + pos(a) + '%"></i><i class="fc" style="left:' + pos(b) + '%"></i></div><div class="leg"><span class="pv">이전 ' + esc(pv[1]) + '</span><span class="fc">예상 ' + esc(fc[1]) + '</span><span>' + esc(base50 + ' 위 = 확장 · 아래 = 위축') + '</span></div></div>';
+        } else {   // 물가·고용 등: 이전 → 예상 막대
+          var mx = Math.max(Math.abs(a), Math.abs(b)) || 1;
+          viz = '<div class="cmpbar"><div><span>이전</span><s style="width:' + Math.max(8, Math.round(Math.abs(a) / mx * 100)) + '%"></s><b>' + esc(pv[1]) + '</b></div><div class="on"><span>예상</span><s style="width:' + Math.max(8, Math.round(Math.abs(b) / mx * 100)) + '%"></s><b>' + esc(fc[1]) + '</b></div></div>';
+        }
+      }
+      var info = r.filter(function (x) { return !(viz && /예상|이전|기준/.test(x[0])); }).slice(0, 3);
+      return '<h2>' + hi(c.t) + '</h2><div class="ev"><div class="when"><small>' + esc(w[0] || '') + '</small><b>' + esc(w[1] || '') + '</b><span>한국 시간</span></div><div class="what' + (info.length <= 1 ? ' one' : '') + '">' + info.map(function (x) { return '<div><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '</div></div>' + viz +
         (look.length ? '<div class="look"><h4>발표 전후로 볼 것</h4>' + look.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('') + '</div>' : '') + note(c);
     },
     check: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="list">' + lines(c.b).map(cells).map(function (x) { return '<div><i>✓</i>' + esc(x[0]) + (x[1] ? '<em>' + esc(x[1]) + '</em>' : '') + '</div>'; }).join('') + '</div>' + note(c); },

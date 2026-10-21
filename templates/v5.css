@@ -109,3 +109,35 @@
 /* 요약 장: 보조 글을 항목 아래 큰 글씨로 */
 .P.sum .recap div { flex-wrap: wrap; row-gap: 6px; }
 .P.sum .recap em { flex-basis: 100%; margin-left: 0; padding-left: 94px; font-size: 34px; opacity: .8; white-space: normal; }
+
+/* 경제 캘린더 표지 v2: 제목 + 날짜 범위 + 지표 이름 칩 */
+.CR2 .kicker { margin-top: 90px; }
+.CR2 h1 { margin-top: 24px; font-size: 96px; }
+.CR2 .range { margin-top: 30px; font-size: 44px; font-weight: 700; color: var(--gray-700); letter-spacing: -.03em; }
+.CR2 .names { margin-top: 56px; display: flex; flex-wrap: wrap; gap: 16px; max-width: 760px; }
+.CR2 .names span { background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 16px 30px; font-size: 38px; font-weight: 800; letter-spacing: -.03em; }
+.CR2 .art { width: 400px !important; height: 400px !important; right: 30px !important; top: auto !important; bottom: 110px; transform: rotate(8deg); }
+/* 발표 장 그림: 이전 → 예상 막대 */
+.P .cmpbar { margin-top: 40px; display: grid; gap: 22px; }
+.P .cmpbar div { display: grid; grid-template-columns: 110px 1fr 190px; align-items: center; gap: 22px; font-size: 38px; font-weight: 800; }
+.P .cmpbar span { color: var(--mute); font-size: 34px; }
+.P .cmpbar s { display: block; height: 56px; border-radius: 16px; background: var(--gray-300); }
+.P .cmpbar .on s { background: var(--c); }
+.P .cmpbar b { text-align: right; } .P .cmpbar .on b { color: var(--c); }
+/* 발표 장 그림: 기준선 게이지 (PMI 등) */
+.P .gauge { margin-top: 44px; }
+.P .gauge .bar { position: relative; height: 28px; border-radius: 14px; background: linear-gradient(90deg, #ffd9dc, var(--blue-soft) 50%, #cfdcff); margin: 60px 10px 0; }
+.P .gauge i { position: absolute; top: 50%; width: 44px; height: 44px; margin-left: -22px; margin-top: -22px; border-radius: 50%; box-shadow: 0 6px 16px rgba(19, 33, 59, .2); }
+.P .gauge i.pv { background: var(--gray-300); border: 6px solid #fff; }
+.P .gauge i.fc { background: var(--blue); border: 6px solid #fff; }
+.P .gauge i.base { width: 6px; height: 80px; margin-left: -3px; margin-top: -40px; border-radius: 3px; background: var(--navy); box-shadow: none; }
+.P .gauge i.base em { position: absolute; top: -50px; left: 50%; transform: translateX(-50%); font-style: normal; font-size: 32px; font-weight: 800; }
+.P .gauge .leg { margin-top: 34px; display: flex; gap: 26px; flex-wrap: wrap; font-size: 32px; font-weight: 700; color: var(--mute); }
+.P .gauge .leg .fc { color: var(--blue); } .P .gauge .leg .pv { color: var(--gray-700); }
+/* 볼 것: 최대 2줄 · 큰 글씨 */
+.P .look p { font-size: 40px; }
+
+/* 정보가 한 줄뿐이면 크게 가운데 */
+.P .ev .what.one { display: flex; flex-direction: column; justify-content: center; }
+.P .ev .what.one div { flex-direction: column; align-items: flex-start; gap: 10px; font-size: 54px; font-weight: 800; letter-spacing: -.04em; }
+.P .ev .what.one div span { font-size: 32px; font-weight: 700; }
