@@ -113,7 +113,7 @@ var BPCards = (function () {
     },
     'c-num': function (c, d) {
       var p = lines(c.b), m0 = String(p[0] || '').match(/^\d{1,2}/), big = m0 ? m0[0] : '';
-      return '<div class="k CN"><svg class="corner" viewBox="0 0 300 300"><path d="M300 0v300L120 0z" fill="#13213b"/><path d="M300 40v220L160 40z" fill="#2455f5"/></svg>' +
+      return '<div class="k CN">' +
         '<div class="eyebrow">BenePip<br>Broker Guide</div>' + (c.k ? '<div class="kicker" style="margin-top:90px">' + esc(c.k) + '</div>' : '') + '<h1' + (c.k ? ' style="margin-top:22px"' : '') + '>' + hi(c.t) + '</h1>' +
         (big ? '<div class="bign">' + esc(big) + '</div><div class="tags">' + p.slice(1, 4).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>'
           : '<div class="art" style="position:absolute;width:520px;height:520px;left:96px;bottom:120px">' + icon(c.icon || 'wallet') + '</div>') + logo() + '</div>';

@@ -11,7 +11,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const tplDir = join(here, 'templates');
 await import('./templates/cards.bundle.js');
 const BP = globalThis.BPCards;
-const FONT = 'https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css';
+const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
 const pageHtml = inner => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><base href="${pathToFileURL(tplDir).href}/"><link rel="stylesheet" href="${FONT}"><style>${BP.css}</style><script src="cards.bundle.js"></script></head><body>${inner}</body></html>`;
 
 const [, , input, outArg] = process.argv;

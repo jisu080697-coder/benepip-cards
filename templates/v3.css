@@ -1,9 +1,9 @@
 /* BenePip 카드 v3 · 레퍼런스(토스·네이버·오픈서베이·롱블랙) 톤 · 단색 배경 + 일러스트 + 앱 화면 조각 · 1080×1350 */
 @import url('palette.css');
-@import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 * { box-sizing: border-box; margin: 0; }
 html, body { width: 1080px; height: 1350px; overflow: hidden; }
-body { font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif; -webkit-font-smoothing: antialiased; color: var(--ink); --ink: var(--navy); --sub: var(--gray-700); --mute: var(--gray-500); --c: var(--blue); --soft: var(--blue-soft); --paper: var(--blue-mist); }
+body { font-family: 'Pretendard Variable', Pretendard, sans-serif; -webkit-font-smoothing: antialiased; color: var(--ink); --ink: var(--navy); --sub: var(--gray-700); --mute: var(--gray-500); --c: var(--blue); --soft: var(--blue-soft); --paper: var(--blue-mist); }
 .k { position: relative; width: 1080px; height: 1350px; padding: 100px 96px 90px; display: flex; flex-direction: column; background: #fff; overflow: hidden; }
 .k .logo { height: 54px; width: auto; align-self: flex-start; }
 .kicker { font-size: 38px; font-weight: 700; color: var(--c); letter-spacing: -.02em; }
