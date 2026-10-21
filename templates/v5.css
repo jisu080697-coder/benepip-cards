@@ -192,3 +192,5 @@
 .P .ui, .P.rs .uic, .P .calc { margin-right: 0; padding-right: 48px; }
 .P .calc { border-radius: 40px; padding-right: 52px; }
 .P .gauge { margin-top: 24px; } .P .gauge .bar { margin-top: 52px; } .P .gauge .leg { margin-top: 22px; row-gap: 6px; }
+/* 본문 상자는 기울이지 않고 정면으로 (표지 카드·그림 아이콘의 기울임은 유지) */
+.P .ui, .P.rs .uic { transform: none; }
