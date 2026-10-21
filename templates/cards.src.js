@@ -225,8 +225,10 @@ var BPCards = (function () {
     if (i === 0) return (COVER[L] || plainCover)(c, d);
     var last = i === n - 1, dark = DARK[d.group] && L !== 'e-sum';
     var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : ''), cmp = cmpOf(c, L, i);
+    var ph = c.img && /^https?:/.test(c.img) && /^(body|big|qa|warn|check|myth)$/.test(L) ? '<div class="photo" style="background-image:url(' + esc(c.img) + ')"></div>' : '';
+    if (ph) cmp = '';
     var risk = last && d.disclaimer ? '<div class="risk">' + esc(d.disclaimer) + '</div>' : '';
-    return '<div class="k P ' + cls + ' ' + cmp + (SPOT[L] && !cmp && (c.icon || OBJ[L]) ? ' has-spot' : '') + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + deco(c, L, dark || L === 'e-sum', cmp, i) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
+    return '<div class="k P ' + cls + ' ' + cmp + (c.img && ph ? ' has-photo' : SPOT[L] && !cmp && (c.icon || OBJ[L]) ? ' has-spot' : '') + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + (ph ? (L === 'big' ? ph + LAY[L](c, d, i) : LAY[L](c, d, i).replace('</h2>', '</h2>' + ph)) : LAY[L](c, d, i)) + (ph ? '' : deco(c, L, dark || L === 'e-sum', cmp, i)) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
   };
 
   // 형식 예시 (관리 화면 '형식 예시 보기' 팝업 · 숫자는 모두 예시)

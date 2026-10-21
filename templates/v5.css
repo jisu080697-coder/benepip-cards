@@ -87,3 +87,10 @@
 
 .P .ev .when b { white-space: nowrap; font-size: 88px; }
 .CR .evs { max-width: 560px; } .CR .art { width: 330px !important; height: 330px !important; right: 24px !important; bottom: 130px; }
+
+/* ── 사진 (Pexels) · 제목 아래 사진, 그 아래 글 (HP·7린지 구성) ── */
+.P .photo { margin-top: 48px; height: 500px; border-radius: 36px; background: #e9eef8 center / cover no-repeat; flex-shrink: 0; }
+.P.big .photo { margin-top: 70px; height: 560px; }
+.P.has-photo .lead { margin-top: 44px; }
+.P.has-photo .stmt { margin-top: 56px; }
+.P.has-photo .pts, .P.has-photo .list, .P.has-photo .warn, .P.has-photo .qa, .P.has-photo .myth { margin-top: 40px; }
