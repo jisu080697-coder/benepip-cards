@@ -199,7 +199,7 @@ var BPCards = (function () {
   var note = function (c) { return c.n ? '<div class="src">' + txt(c.n) + '</div>' : ''; };
   var desc = function (s) { return s ? '<div class="desc">' + txt(s) + '</div>' : ''; };
   var LAY = {
-    body: function (c) { var l = lines(c.b); return '<h2>' + hi(c.t) + '</h2>' + (l[0] ? '<div class="lead">' + hi(l[0]) + '</div>' : '') + (l.length > 1 ? '<div class="pts">' + l.slice(1).map(function (x) { return '<div>' + txt(x) + '</div>'; }).join('') + '</div>' : '') + note(c); },
+    body: function (c) { var l = lines(String(c.b || '').replace(/\s*\|\s*/g, ' · ')); return '<h2>' + hi(c.t) + '</h2>' + (l[0] ? '<div class="lead">' + hi(l[0]) + '</div>' : '') + (l.length > 1 ? '<div class="pts">' + l.slice(1).map(function (x) { return '<div>' + txt(x) + '</div>'; }).join('') + '</div>' : '') + note(c); },
     big: function (c) { return '<div class="stmt">' + hi(c.t) + '</div>' + (c.b ? '<div class="stmt-sub">' + txt(c.b) + '</div>' : '') + note(c); },
     vs: function (c) {
       var r = rowsOf(c.b); if (r.length < 2) return LAY.body(c);
@@ -236,7 +236,8 @@ var BPCards = (function () {
     qa: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="qa">' + rowsOf(c.b).map(function (x) { return '<p class="q">' + esc(x[0]) + '</p><p class="a">' + esc(x[1] || '') + '</p>'; }).join('') + '</div>' + note(c); },
     warn: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="warn">' + lines(c.b).map(cells).map(function (x) { return '<div>' + esc(x[0]) + (x[1] ? '<em>' + esc(x[1]) + '</em>' : '') + '</div>'; }).join('') + '</div>' + note(c); },
     event: function (c) {
-      var l = lines(c.b), w = cells(l[0] || ''), tm = String(w[1] || '').match(/\d{1,2}:\d{2}/); if (tm) w[1] = tm[0];
+      var l = lines(c.b), w = cells(l[0] || ''), tm = String(w[1] || '').match(/\d{1,2}:\d{2}/) || String(c.b || '').match(/\d{1,2}:\d{2}/); w[1] = tm ? tm[0] : '';
+      if (!/\d/.test(w[0] || '')) { var dt = String(c.b || '').match(/\d{1,2}\x2f\d{1,2}(\s*\(?[월화수목금토일]\)?)?/); w[0] = dt ? dt[0] : ''; }
       var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); });
       return '<h2>' + hi(c.t) + '</h2><div class="ev"><div class="when"><small>' + esc(w[0] || '') + '</small><b>' + esc(w[1] || '') + '</b><span>한국 시간</span></div><div class="what">' + r.slice(0, 4).map(function (x) { return '<div><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '</div></div>' +
         (look.length ? '<div class="look"><h4>발표 전후로 볼 것</h4>' + look.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('') + '</div>' : '') + note(c);
