@@ -199,7 +199,8 @@ var BPCards = (function () {
     big: function (c) { return '<div class="stmt">' + hi(c.t) + '</div>' + (c.b ? '<div class="stmt-sub">' + txt(c.b) + '</div>' : '') + note(c); },
     vs: function (c) {
       var r = rowsOf(c.b); if (r.length < 2) return LAY.body(c);
-      var h = r.shift(), col = function (k, on) { return '<div' + (on ? ' class="on"' : '') + '><h3>' + esc(h[k * 2] || '') + '<small>' + esc(h[k * 2 + 1] || '') + '</small></h3>' + r.map(function (x) { return '<p><em>' + esc(x[0]) + '</em>' + esc(x[k + 1] || '') + '</p>'; }).join('') + '</div>'; };
+      var h = r.shift(); if (h.length === 3) h = [h[1], '', h[2], ''];
+      var col = function (k, on) { return '<div' + (on ? ' class="on"' : '') + '><h3>' + esc(h[k * 2] || '') + '<small>' + esc(h[k * 2 + 1] || '') + '</small></h3>' + r.map(function (x) { return '<p><em>' + esc(x[0]) + '</em>' + esc(x[k + 1] || '') + '</p>'; }).join('') + '</div>'; };
       return '<h2>' + hi(c.t) + '</h2><div class="vs">' + col(0, 1) + col(1, 0) + '</div>' + note(c);
     },
     table: function (c) {
@@ -231,7 +232,8 @@ var BPCards = (function () {
     qa: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="qa">' + rowsOf(c.b).map(function (x) { return '<p class="q">' + esc(x[0]) + '</p><p class="a">' + esc(x[1] || '') + '</p>'; }).join('') + '</div>' + note(c); },
     warn: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="warn">' + lines(c.b).map(cells).map(function (x) { return '<div>' + esc(x[0]) + (x[1] ? '<em>' + esc(x[1]) + '</em>' : '') + '</div>'; }).join('') + '</div>' + note(c); },
     event: function (c) {
-      var l = lines(c.b), w = cells(l[0] || ''), r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); });
+      var l = lines(c.b), w = cells(l[0] || ''), tm = String(w[1] || '').match(/\d{1,2}:\d{2}/); if (tm) w[1] = tm[0];
+      var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); });
       return '<h2>' + hi(c.t) + '</h2><div class="ev"><div class="when"><small>' + esc(w[0] || '') + '</small><b>' + esc(w[1] || '') + '</b><span>한국 시간</span></div><div class="what">' + r.slice(0, 4).map(function (x) { return '<div><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '</div></div>' +
         (look.length ? '<div class="look"><h4>발표 전후로 볼 것</h4>' + look.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('') + '</div>' : '') + note(c);
     },
@@ -266,12 +268,12 @@ var BPCards = (function () {
   var OBJ = { body: 'bulb', big: 'target', vs: 'exchange', table: 'doc', steps: 'target', flow: 'search', stat: 'chart', qa: 'chat', warn: 'warning', event: 'clock', check: 'check', reason: 'search', route: 'exchange', myth: 'bulb', 'e-msg': 'chat', 'e-timeline': 'calendar', 'e-fill': 'calculator' };
   // 구성 변형 고르기 (디자인은 그대로, 배치만 레퍼런스 참고) · 같은 형식이라도 장 번호에 따라 섞음
   var cmpOf = function (c, L, i) {
-    var n = lines(c.b).length;
+    var ls = lines(c.b), n = ls.length, longest = Math.max.apply(null, ls.map(function (x) { return x.length; }).concat([0])), total = ls.join('').length;
     if (L === 'stat' || L === 'myth') return 'cmp-center';
     if (L === 'big') return i % 2 ? 'cmp-center' : '';
     if (L === 'ui' || L === 'calc') return 'cmp-bottom';
-    if ((L === 'check' || L === 'e-checks') && n >= 3 && n <= 4) return 'cmp-grid';
-    if (L === 'body' && n <= 3 && (c.icon || OBJ[L])) return 'cmp-right';
+    if ((L === 'check' || L === 'e-checks') && n >= 3 && n <= 4 && longest <= 30) return 'cmp-grid';
+    if (L === 'body' && n <= 3 && total <= 80 && (c.icon || OBJ[L])) return 'cmp-right';
     return '';
   };
   var deco = function (c, L, dark, cmp) {
