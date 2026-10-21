@@ -141,3 +141,35 @@
 .P .ev .what.one { display: flex; flex-direction: column; justify-content: center; }
 .P .ev .what.one div { flex-direction: column; align-items: flex-start; gap: 10px; font-size: 54px; font-weight: 800; letter-spacing: -.04em; }
 .P .ev .what.one div span { font-size: 32px; font-weight: 700; }
+
+/* ── 하네스 1차 (AI 심사 21세트 평균 5.6 · 1순위 지적 "휴대폰에서 보조 글씨가 작다") → 글씨 크기 기본값 올림 ── */
+.P .desc, .P .stat-cap, .P .stmt-sub, .P .myth-sub, .P .ui-tip, .P .msg-ko { font-size: 42px; }
+.P .lead { font-size: 54px; }
+.P .pts div { font-size: 42px; }
+.P .src, .P .risk { font-size: 30px; }
+.P .list div { font-size: 46px; } .P .list em { font-size: 38px; }
+.P .steps b { font-size: 50px; } .P .steps span { font-size: 40px; }
+.P .tbl span { font-size: 40px; padding: 30px 18px 30px 0; } .P .tbl div:first-child span { font-size: 34px; }
+.P .vs h3 { font-size: 50px; } .P .vs h3 small { font-size: 34px; } .P .vs p { font-size: 42px; } .P .vs p em { font-size: 34px; }
+.P .warn div { font-size: 44px; } .P .warn em { font-size: 38px; }
+.P .checks b { font-size: 46px; } .P .checks span { font-size: 38px; }
+.P .qa p { font-size: 42px; }
+.P .ui .row { font-size: 40px; } .P .ui .bar { font-size: 34px; }
+.P .calc div { font-size: 42px; } .P .calc .eq { font-size: 54px; }
+.P .look p { font-size: 42px; } .P .look h4 { font-size: 36px; }
+.P .ev .what div { font-size: 38px; } .P .ev .what div span { font-size: 34px; }
+.P .flow .fq { font-size: 42px; } .P .flow .fa { font-size: 36px; } .P .flow .fa small { font-size: 32px; }
+.P .bars div { font-size: 38px; } .P .cmpbar div { font-size: 42px; } .P .gauge .leg { font-size: 36px; }
+.P .route span { font-size: 40px; } .P .route small { font-size: 34px; }
+.P .tl b { font-size: 44px; } .P .tl span { font-size: 36px; } .P .tl-span div { font-size: 38px; }
+.P .fill > div { font-size: 46px; }
+.P.sum .recap div { font-size: 46px; } .P.sum .recap em { font-size: 38px; }
+.P .myth p { font-size: 46px; }
+.P .chip { font-size: 36px; }
+/* 표지 보조 글씨 */
+.uic .cap { font-size: 34px; } .lrow b { font-size: 42px; } .lrow small { font-size: 34px; }
+.rcpt .ln { font-size: 42px; } .rcpt .d { font-size: 34px; }
+.bal .leg div { font-size: 38px; } .bal .leg div span { font-size: 34px; }
+.CD .st span { font-size: 38px; }
+.CN .tags span { font-size: 46px; }
+.box b { font-size: 44px; } .box span { font-size: 36px; }
