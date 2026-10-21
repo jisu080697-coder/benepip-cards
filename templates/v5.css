@@ -157,7 +157,7 @@
 .P .ui .row { font-size: 40px; } .P .ui .bar { font-size: 34px; }
 .P .calc div { font-size: 42px; } .P .calc .eq { font-size: 54px; }
 .P .look p { font-size: 42px; } .P .look h4 { font-size: 36px; }
-.P .ev .what div { font-size: 38px; } .P .ev .what div span { font-size: 34px; }
+.P .ev .what:not(.one) div { font-size: 38px; } .P .ev .what:not(.one) div span { font-size: 34px; }
 .P .flow .fq { font-size: 42px; } .P .flow .fa { font-size: 36px; } .P .flow .fa small { font-size: 32px; }
 .P .bars div { font-size: 38px; } .P .cmpbar div { font-size: 42px; } .P .gauge .leg { font-size: 36px; }
 .P .route span { font-size: 40px; } .P .route small { font-size: 34px; }
@@ -173,3 +173,11 @@
 .CD .st span { font-size: 38px; }
 .CN .tags span { font-size: 46px; }
 .box b { font-size: 44px; } .box span { font-size: 36px; }
+
+/* ── 하네스 2차 (시안 점검) · 표·단계·체크의 회색 보조 글씨, 하단 메모 ── */
+.P .steps span { font-size: 42px; } .P .tbl div:first-child span { font-size: 36px; }
+.P .checks span, .P .warn em, .P .list em, .P .recap em { font-size: 40px; }
+.P .route small, .P .vs p em, .P .vs h3 small { font-size: 36px; }
+.P > .src { font-size: 32px; }
+.P .look p:only-of-type { font-size: 50px; font-weight: 800; line-height: 1.4; }
+.P .ev .what.one div { font-size: 54px; } .P .ev .what.one div span { font-size: 34px; }

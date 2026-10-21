@@ -44,7 +44,7 @@ var BPCards = (function () {
     stat: '첫 줄 = 큰 숫자(예: 5랏) · 둘째 줄 = 설명 · 다음 줄 "항목 | 값" 막대 (앞에 * = 강조)',
     calc: '한 줄 = "항목 | 값" · 마지막 줄 = 결과', ui: '첫 줄 = 화면 이름 · 다음 줄 "항목 | 값" (앞에 * = 강조) · 메모 = 아래 설명',
     qa: '한 줄 = "질문 | 답" (2개)', warn: '한 줄 = "주의할 점 | 이유" (2~3개)',
-    event: '첫 줄 "날짜 요일 | 시각" · "항목 | 값" 2~4줄 · "- 볼 것" 1~2줄',
+    event: '첫 줄 "날짜 요일 | 시각" · "항목 | 값" 2~4줄 · "- 볼 것" 1줄',
     check: '한 줄 = "항목 | 보조" (3~4개)', reason: '첫 줄 = 설명 · 다음 줄 "항목 | 상태" (선택)', route: '한 줄 = "출발 | 도착 | 보조"', myth: '첫 줄 = 흔한 오해 · 둘째 줄 = 사실 · 셋째 줄(선택) = 짧은 설명',
     'e-checks': '한 줄 = "체크 항목 | 보조" (3~4개)', 'e-msg': '본문 = 그대로 보낼 문장 ([ ] 는 바꿀 곳) · 메모 = 설명',
     'e-timeline': '"날짜 | 일" 4줄 (기준 날짜 앞에 *) · "전: …" "후: …" 줄로 아래 두 칸', 'e-fill': '한 줄 = 빈칸 항목 · 마지막 줄 = 결과', 'e-sum': '한 줄 = "요약 | 보조" (3~4개)'
@@ -169,7 +169,7 @@ var BPCards = (function () {
     event: function (c) {
       var l = lines(c.b), w = cells(l[0] || ''), tm = String(w[1] || '').match(/\d{1,2}:\d{2}/) || String(c.b || '').match(/\d{1,2}:\d{2}/); w[1] = tm ? tm[0] : '';
       if (!/\d/.test(w[0] || '')) { var dt = String(c.b || '').match(/\d{1,2}\x2f\d{1,2}(\s*\(?[월화수목금토일]\)?)?/); w[0] = dt ? dt[0] : ''; }
-      var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); }).slice(0, 2);
+      var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); }).slice(0, 1);
       var get = function (k) { for (var i = 0; i < r.length; i++) if (k.test(r[i][0])) return r[i]; return null; };
       var fc = get(/예상/), pv = get(/이전/), base = get(/기준/), viz = '';
       var nv = function (x) { var m = String(x || '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
@@ -315,6 +315,8 @@ var BPCards = (function () {
     if (!k.classList.contains('L-big')) {
       var rest = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); }), free = limit - bottom();
       if (!cmpd && rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
+      free = limit - bottom();
+      if (!cmpd && parts.length && free > 300) parts[0].style.marginTop = (parseFloat(getComputedStyle(parts[0]).marginTop) + Math.min(free * 0.45, 320)) + 'px';
     }
   };
   // 제목이 짧아 오른쪽이 비면 손그림 화살표 (제목 끝 → 내용)
