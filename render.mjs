@@ -28,7 +28,7 @@ for (let i = 0; i < draft.cards.length; i++) {
   writeFileSync(tmp, pageHtml(BP.card(draft, i)));
   await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  await page.evaluate(() => window.BPCards && window.BPCards.fit(document.querySelector('.k.P')));
+  await page.evaluate(() => { const k = document.querySelector('.k.P'); if (window.BPCards && k) { window.BPCards.fit(k); window.BPCards.arrowFit(k); } });
   const file = join(outDir, `${String(i + 1).padStart(2, '0')}.jpg`);
   await page.screenshot({ path: file, type: 'jpeg', quality: 95, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
   files.push(file);

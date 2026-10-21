@@ -25,7 +25,7 @@ var BPCards = (function () {
   var COVER_ALT = { '거래비용·페이백': ['c-issue'] };   // 문제 상황 주제일 때만 쓰는 보조 표지
   var ICON_OF = { '플랫폼 활용': 'chart', '경제 캘린더·이벤트': 'calendar' };
   var DARK = { '플랫폼 활용': 1 };                      // 본문까지 남색으로 이어지는 주제군
-  var BODY = [['body', '기본 (제목 + 설명)'], ['big', '한 문장 크게'], ['vs', '두 칸 비교'], ['table', '표'], ['steps', '순서'], ['flow', '예/아니오 흐름'], ['stat', '큰 숫자 + 막대'], ['calc', '계산 상자'], ['ui', '앱 화면 조각'], ['qa', '묻고 답하기'], ['warn', '주의'], ['event', '발표 상세'], ['check', '체크리스트'], ['reason', '이유 (큰 번호)'], ['route', '경로 (→)']];
+  var BODY = [['body', '기본 (제목 + 설명)'], ['big', '한 문장 크게'], ['vs', '두 칸 비교'], ['table', '표'], ['steps', '순서'], ['flow', '예/아니오 흐름'], ['stat', '큰 숫자 + 막대'], ['calc', '계산 상자'], ['ui', '앱 화면 조각'], ['qa', '묻고 답하기'], ['warn', '주의'], ['event', '발표 상세'], ['check', '체크리스트'], ['reason', '이유 (큰 번호)'], ['route', '경로 (→)'], ['myth', '오해 vs 사실']];
   var ENDS = [['e-checks', '캡처용 체크 칸'], ['e-msg', '바로 쓰는 문장'], ['e-timeline', '전·후 타임라인'], ['e-fill', '빈칸 계산'], ['e-sum', '한 장 요약 (파랑)'], ['steps', '다음 행동 순서'], ['table', '저장용 표'], ['calc', '계산 상자']];
   var COVERS = [['c-report', '주간 리포트'], ['c-edit', '남색 에디토리얼'], ['c-receipt', '영수증'], ['c-issue', '질문 + 앱 내역'], ['c-balance', '잔고 화면'], ['c-num', '큰 숫자'], ['c-state', '상태 카드'], ['c-plain', '기본 표지']];
   var HINT = {
@@ -45,7 +45,7 @@ var BPCards = (function () {
     calc: '한 줄 = "항목 | 값" · 마지막 줄 = 결과', ui: '첫 줄 = 화면 이름 · 다음 줄 "항목 | 값" (앞에 * = 강조) · 메모 = 아래 설명',
     qa: '한 줄 = "질문 | 답" (2개)', warn: '한 줄 = "주의할 점 | 이유" (2~3개)',
     event: '첫 줄 "날짜 요일 | 시각" · "항목 | 값" 2~4줄 · "- 볼 것" 1~2줄',
-    check: '한 줄 = "항목 | 보조" (3~4개)', reason: '첫 줄 = 설명 · 다음 줄 "항목 | 상태" (선택)', route: '한 줄 = "출발 | 도착 | 보조"',
+    check: '한 줄 = "항목 | 보조" (3~4개)', reason: '첫 줄 = 설명 · 다음 줄 "항목 | 상태" (선택)', route: '한 줄 = "출발 | 도착 | 보조"', myth: '첫 줄 = 흔한 오해 · 둘째 줄 = 사실 · 셋째 줄(선택) = 짧은 설명',
     'e-checks': '한 줄 = "체크 항목 | 보조" (3~4개)', 'e-msg': '본문 = 그대로 보낼 문장 ([ ] 는 바꿀 곳) · 메모 = 설명',
     'e-timeline': '"날짜 | 일" 4줄 (기준 날짜 앞에 *) · "전: …" "후: …" 줄로 아래 두 칸', 'e-fill': '한 줄 = 빈칸 항목 · 마지막 줄 = 결과', 'e-sum': '한 줄 = "요약 | 보조" (3~4개)'
   };
@@ -173,6 +173,10 @@ var BPCards = (function () {
       return '<div class="rn">' + no + '</div><h2>' + hi(c.t) + '</h2>' + desc(p.join('\n')) + (r.length ? '<div class="uic">' + r.map(function (x) { return '<div class="lrow"><b>' + esc(x[0]) + '</b>' + (x[1] ? pill(x[1]) : '') + '</div>'; }).join('') + '</div>' : '') + note(c);
     },
     route: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="route">' + rowsOf(c.b).map(function (x) { return '<div><span>' + esc(x[0]) + '</span><i>→</i><span>' + esc(x[1] || '') + (x[2] ? '<small>' + esc(x[2]) + '</small>' : '') + '</span></div>'; }).join('') + '</div>' + note(c); },
+    myth: function (c) {
+      var l = lines(c.b).map(function (x) { return x.replace(/^(오해|사실|MYTH|FACT)\s*[:|]\s*/i, ''); });
+      return '<h2>' + hi(c.t) + '</h2><div class="myth"><div><div class="lb"><span class="tg"></span>오해</div><p>' + txt(l[0] || '') + '</p></div><div class="fact"><div class="lb"><span class="tg"></span>사실</div><p>' + txt(l[1] || '') + '</p></div></div>' + (l[2] ? '<div class="myth-sub">' + txt(l.slice(2).join('\n')) + '</div>' : '') + note(c);
+    },
     'e-checks': function (c) { return '<h2>' + hi(c.t) + '</h2><div class="checks">' + lines(c.b).map(cells).map(function (x) { return '<div><i></i><div><b>' + esc(x[0]) + '</b>' + (x[1] ? '<span>' + esc(x[1]) + '</span>' : '') + '</div></div>'; }).join('') + '</div>' + note(c); },
     'e-msg': function (c) { return '<h2>' + hi(c.t) + '</h2><div class="msg">' + esc(c.b).replace(/\[([^\]\n]{1,30})\]/g, '<u>$1</u>').replace(/\n/g, '<br>') + '</div>' + (c.n ? '<div class="msg-ko">' + txt(c.n) + '</div>' : ''); },
     'e-timeline': function (c) {
@@ -189,6 +193,17 @@ var BPCards = (function () {
     'e-sum': function (c) { return '<h2>' + hi(c.t) + '</h2><div class="recap">' + lines(c.b).map(cells).map(function (x, k) { return '<div><i>' + (k + 1) + '</i>' + esc(x[0]) + (x[1] ? '<em>' + esc(x[1]) + '</em>' : '') + '</div>'; }).join('') + '</div>'; }
   };
 
+  // 장식: 반짝이 · 손그림 화살표 · 빈 곳을 채우는 사물 · 저장 도장 (보일지는 fit 이 공간을 보고 정함)
+  var OBJ = { body: 'bulb', big: 'target', vs: 'exchange', table: 'doc', steps: 'target', flow: 'search', stat: 'chart', qa: 'chat', warn: 'warning', event: 'clock', check: 'check', reason: 'search', route: 'exchange', myth: 'bulb', 'e-msg': 'chat', 'e-timeline': 'calendar', 'e-fill': 'calculator' };
+  var SPARK = '<svg class="spark" viewBox="0 0 130 110"><path d="M80 6c4 26 12 34 38 38-26 4-34 12-38 38-4-26-12-34-38-38 26-4 34-12 38-38z" fill="#5b7fff"/><path d="M26 60c2 13 6 17 19 19-13 2-17 6-19 19-2-13-6-17-19-19 13-2 17-6 19-19z" fill="#a9c6ff"/></svg>';
+  var ARROW = ['<svg class="arrow" viewBox="0 0 210 150"><path d="M196 10c-40 6-96 24-120 62-14 22-14 44-6 60" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M48 112l22 26 24-24" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    '<svg class="arrow" viewBox="0 0 210 150"><path d="M190 14c-30 30-70 20-92 46-18 22 4 40-18 66" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M60 114l18 18 26-14" stroke="#2455f5" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'];
+  var deco = function (c, L, i, dark) {
+    var ob = c.icon || OBJ[L];
+    return SPARK + (i % 2 === 0 ? ARROW[(i / 2) % 2] : '') + (ob ? '<div class="obj">' + icon(ob, { dark: dark, glass: i % 3 === 0 }) + '</div>' : '') +
+      (/^e-(checks|fill|sum)$/.test(L) ? '<div class="stamp"><div><small>SAVE</small>저장해두기</div></div>' : '');
+  };
+
   // 카드 한 장 HTML (1080×1350)
   var card = function (d, i, opt) {
     opt = opt || {};
@@ -197,7 +212,7 @@ var BPCards = (function () {
     var last = i === n - 1, dark = DARK[d.group] && L !== 'e-sum';
     var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : '');
     var risk = last && d.disclaimer ? '<div class="risk">' + esc(d.disclaimer) + '</div>' : '';
-    return '<div class="k P ' + cls + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
+    return '<div class="k P ' + cls + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + deco(c, L, i, dark || L === 'e-sum') + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
   };
 
   // 형식 예시 (관리 화면 '형식 예시 보기' 팝업 · 숫자는 모두 예시)
@@ -225,6 +240,7 @@ var BPCards = (function () {
     check: { k: '발표 시간대 체크', t: '큰 발표 앞뒤로\n“이 세 가지”만 점검', b: '스프레드 확대 | 발표 직후\n증거금 여유 | 급변 대비\n대기 주문 위치 | 미끄러짐' },
     reason: { t: '인증이\n“승인이 아니에요”', b: '하나라도 검토 중이면 출금이 잠겨요.\n신분증 | 승인\n주소 증명 | 검토 중' },
     route: { k: '수단별 순서', t: '어디로\n“먼저” 돌아올까', b: '카드로 입금한 금액 | 카드로 먼저 환불 | 입금액까지만\n그 위의 수익 | 해외 송금 | 본인 명의만' },
+    myth: { k: '흔한 오해', t: '페이백 받으면\n\u201c거래 비용\u201d이 늘어난다?', b: '페이백을 받으면 스프레드가 넓어진다\n스프레드·수수료는 그대로, 브로커 몫 일부를 돌려받는 구조예요\n계좌 유형별 스프레드는 브로커 페이지에서 같은 기준으로 비교할 수 있어요.' },
     'e-checks': { k: '캡처해두고 체크', t: '문의하기 전\n여기까지 했나요?', b: 'UID 연결 날짜 확인 | 그 전 거래는 적립 안 돼요\n계좌 유형 확인 | ECN은 다를 수 있어요\n거래 내역 캡처 | 같이 보내면 빨라요' },
     'e-msg': { k: '그래도 늦어진다면', t: '고객센터에\n“이렇게” 보내세요', b: 'Hello, I requested a withdrawal on [10/20] (ID [123456]). Could you tell me the current status? Thank you.', n: '밑줄 친 곳만 내 정보로 바꿔요.' },
     'e-timeline': { k: '예시로 보면', t: '언제 연결했는지가\n“적립 시작일”이에요', b: '10/1 | 가입\n10/5 | 첫 거래\n*10/8 | UID 연결\n10/9 | 거래\n전: 10/5 거래는 적립 안 됨\n후: 10/9 거래부터 적립' },
@@ -244,29 +260,40 @@ var BPCards = (function () {
   var fit = function (k) {
     if (!k || k.dataset.fit) return; k.dataset.fit = '1';
     var limit = 1350 - (k.classList.contains('has-risk') ? 200 : 115);
-    var parts = [].slice.call(k.children).filter(function (e) { return !/^(logo|pg|src|risk|rn|art|corner|save)$/.test(e.className.split(' ')[0]) && getComputedStyle(e).position !== 'absolute'; });
+    var parts = [].slice.call(k.children).filter(function (e) { return !/^(logo|pg|src|risk|rn|art|corner|save|spark|arrow|obj|stamp)$/.test(String(e.className.baseVal != null ? e.className.baseVal : e.className).split(' ')[0]) && getComputedStyle(e).position !== 'absolute'; });
     var box = k.getBoundingClientRect(), scale = box.height / 1350 || 1;
     var bottom = function () { return Math.max.apply(null, parts.map(function (e) { return (e.getBoundingClientRect().bottom - box.top) / scale; }).concat([0])); };
     // 넘치면 제목 아래 내용만 줄임 (제목 크기는 장마다 같게) · 그래도 넘치면 제목까지
     var inner = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
     for (var z = 1; z > 0.7 && bottom() > limit; z -= 0.04) inner.forEach(function (e) { e.style.zoom = (z - 0.04).toFixed(2); });
     if (bottom() > limit) parts.forEach(function (e) { if (!e.style.zoom) e.style.zoom = '0.9'; });
+    // 내용이 아주 짧으면 오른쪽 아래에 사물을 두고, 그만큼 키울 수 있는 높이를 줄임
+    var obj = k.querySelector('.obj'), stamp = k.querySelector('.stamp'), arrow = k.querySelector('.arrow'), h2 = k.querySelector('h2'), cap = limit;
+    if (obj && !stamp && !k.classList.contains('L-big') && bottom() < 760) { obj.style.display = 'block'; cap = 880; }
+    if (stamp && bottom() < 960) { stamp.style.display = 'grid'; cap = Math.min(cap, 950); }
     // 내용이 짧아 아래가 비면 제목 아래 내용을 키움 (한 문장 장은 아래 정렬이라 제외)
-    if (z === 1 && !k.classList.contains('L-big') && bottom() < limit * 0.86) {
+    if (z === 1 && !k.classList.contains('L-big') && bottom() < cap * 0.86) {
       var body = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
       for (var g = 1.04; g <= 1.36; g += 0.04) {
         body.forEach(function (e) { e.style.zoom = g.toFixed(2); });
-        if (bottom() > limit * 0.96) { body.forEach(function (e) { e.style.zoom = (g - 0.04).toFixed(2); }); break; }
+        if (bottom() > cap * 0.96) { body.forEach(function (e) { e.style.zoom = (g - 0.04).toFixed(2); }); break; }
       }
     }
     // 키운 뒤에도 아래가 많이 남으면 내용을 제목과 바닥 사이 가운데 쪽으로
     if (!k.classList.contains('L-big')) {
       var rest = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); }), free = limit - bottom();
-      if (rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
+      if (cap === limit && rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
     }
   };
-  var fitAll = function (root) { [].forEach.call((root || document).querySelectorAll('.v3c .k.P'), fit); };
+  // 제목이 짧아 오른쪽이 비면 손그림 화살표 (제목 끝 → 내용)
+  var arrowFit = function (k) {
+    var a = k.querySelector('.arrow'), h = k.querySelector('h2'); if (!a || !h || k.classList.contains('L-big')) return;
+    var box = k.getBoundingClientRect(), sc = box.height / 1350 || 1, r = h.getBoundingClientRect();
+    var range = document.createRange(); range.selectNodeContents(h); var tr = range.getBoundingClientRect();
+    if ((tr.right - box.left) / sc < 1080 - 360) { a.style.top = ((r.bottom - box.top) / sc - 120) + 'px'; a.style.display = 'block'; }
+  };
+  var fitAll = function (root) { [].forEach.call((root || document).querySelectorAll('.v3c .k.P'), function (k) { var first = !k.dataset.fit; fit(k); if (first) arrowFit(k); }); };
 
-  return { card: card, sample: sample, SAMPLES: SAMPLES, fit: fit, fitAll: fitAll, kindOf: kindOf, coverType: coverType, COVER_OF: COVER_OF, COVER_ALT: COVER_ALT, COVERS: COVERS, BODY: BODY, ENDS: ENDS, HINT: HINT, esc: esc };
+  return { card: card, arrowFit: arrowFit, sample: sample, SAMPLES: SAMPLES, fit: fit, fitAll: fitAll, kindOf: kindOf, coverType: coverType, COVER_OF: COVER_OF, COVER_ALT: COVER_ALT, COVERS: COVERS, BODY: BODY, ENDS: ENDS, HINT: HINT, esc: esc };
 })();
 if (typeof globalThis !== 'undefined') globalThis.BPCards = BPCards;
