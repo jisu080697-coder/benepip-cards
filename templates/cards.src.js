@@ -193,7 +193,7 @@ var BPCards = (function () {
       for (var k = 1; k <= i; k++) if ((d.cards[k] || {}).layout === 'reason') no++;
       return '<div class="rn">' + no + '</div><h2>' + hi(c.t) + '</h2>' + desc(p.join('\n')) + (r.length ? '<div class="uic">' + r.map(function (x) { return '<div class="lrow"><b>' + esc(x[0]) + '</b>' + (x[1] ? pill(x[1]) : '') + '</div>'; }).join('') + '</div>' : '') + note(c);
     },
-    route: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="route">' + rowsOf(c.b).map(function (x) { return '<div><span>' + esc(x[0]) + '</span><i>→</i><span>' + esc(x[1] || '') + (x[2] ? '<small>' + esc(x[2]) + '</small>' : '') + '</span></div>'; }).join('') + '</div>' + note(c); },
+    route: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="route">' + rowsOf(c.b).map(function (x) { return '<div><span>' + esc(x[0]).replace(/(\S+·)/g, '<b style="white-space:nowrap;font:inherit;color:inherit">$1</b><wbr>') + '</span><i>→</i><span>' + esc(x[1] || '').replace(/(\S+·)/g, '<b style="white-space:nowrap;font:inherit;color:inherit">$1</b><wbr>') + (x[2] ? '<small>' + esc(x[2]) + '</small>' : '') + '</span></div>'; }).join('') + '</div>' + note(c); },
     myth: function (c) {
       var l = lines(c.b).map(function (x) { return x.replace(/^(오해|사실|MYTH|FACT)\s*[:|]\s*/i, '').replace(/\s*\|\s*/g, ' · '); });
       return '<h2>' + hi(c.t) + '</h2><div class="myth"><div><div class="lb"><span class="tg"></span>오해</div><p>' + txt(l[0] || '') + '</p></div><div class="fact"><div class="lb"><span class="tg"></span>사실</div><p>' + txt(l[1] || '') + '</p></div></div>' + (l[2] ? '<div class="myth-sub">' + txt(l.slice(2).join('\n')) + '</div>' : '') + note(c);

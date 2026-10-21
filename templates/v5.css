@@ -181,3 +181,10 @@
 .P > .src { font-size: 32px; }
 .P .look p:only-of-type { font-size: 50px; font-weight: 800; line-height: 1.4; }
 .P .ev .what.one div { font-size: 54px; } .P .ev .what.one div span { font-size: 34px; }
+/* ── 디테일 다듬기 (시안 점검) ── */
+/* 짧은 칸에서 마지막 단어만 다음 줄로 떨어지는 것 막기 */
+.k .route span, .k .tl-span div, .k .uic .lrow b, .k .what div, .k .look p, .k .stmt-sub, .k .desc { text-wrap: balance; }
+/* 이유 장: 흐린 큰 번호가 예시 상자 뒤에 가려지면 오른쪽 위로 */
+.P.rs:has(.uic) .rn { top: 150px; bottom: auto; font-size: 340px; }
+/* 게이지 범례: 기준 설명은 한 줄 따로 */
+.P .gauge .leg span:last-child { flex-basis: 100%; }
