@@ -60,3 +60,30 @@
 .P .myth .fact p { color: #fff; }
 .P .myth-sub { margin-top: 40px; font-size: 38px; line-height: 1.5; color: var(--sub); font-weight: 500; word-break: keep-all; }
 .P.dark .myth > div:first-child { background: rgba(255, 255, 255, .08); }
+
+/* ── 줄바꿈: 단어 중간에서 끊지 않고, 줄 길이를 고르게 ── */
+.k, .k * { word-break: keep-all; overflow-wrap: break-word; }
+.k h1, .k h2, .k .lead, .k .stmt, .k .stat-cap, .k .kicker { text-wrap: balance; }
+.k p, .k .desc, .k .pts div, .k .list div, .k .steps span, .k .warn div, .k .warn em, .k .myth-sub, .k .stmt-sub, .k .ui-tip, .k .msg-ko, .k .look p, .k em { text-wrap: pretty; }
+.P .vs p { color: inherit; }
+.P.dark .vs p em { color: rgba(255, 255, 255, .55); }
+
+/* ── 작은 그림 (기본·주의·묻고답하기·순서 장 오른쪽 위) ── */
+.P .spot { position: absolute; right: 80px; top: 120px; width: 230px; height: 230px; pointer-events: none; }
+.P .spot .gi { width: 100%; height: 100%; }
+.P.has-spot h2 { max-width: 660px; }
+.P.has-spot .head { max-width: 640px; }
+
+/* ── 경제 캘린더 표지: 요일 칸은 표시만, 발표는 줄 목록, 그림은 오른쪽 아래 ── */
+.CR .week { margin-top: 56px; }
+.CR .week div { min-height: 150px; padding: 26px 22px; }
+.CR .week span { font-size: 30px; margin-top: 14px; }
+.CR .evs { margin-top: 30px; border-top: 4px solid var(--navy); max-width: 620px; }
+.CR .evs div { display: grid; grid-template-columns: 70px 140px 1fr; align-items: center; padding: 26px 0; border-bottom: 2px solid #e5e8eb; font-size: 38px; font-weight: 700; letter-spacing: -.03em; }
+.CR .evs b { color: var(--blue); font-weight: 800; }
+.CR .evs span { color: var(--gray-700); font-weight: 800; }
+.CR .evs em { font-style: normal; }
+.CR .art { width: 380px !important; height: 380px !important; right: 30px !important; top: auto !important; bottom: 120px; transform: rotate(8deg); }
+
+.P .ev .when b { white-space: nowrap; font-size: 88px; }
+.CR .evs { max-width: 560px; } .CR .art { width: 330px !important; height: 330px !important; right: 24px !important; bottom: 130px; }

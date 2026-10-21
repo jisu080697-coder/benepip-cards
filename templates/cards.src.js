@@ -72,9 +72,11 @@ var BPCards = (function () {
     'c-plain': plainCover,
     'c-report': function (c, d) {
       var r = rowsOf(c.b), days = ['월', '화', '수', '목', '금'];
-      var cell = function (dd) { var x = r.filter(function (y) { return y[0].charAt(0) === dd; }); return x.length ? '<div class="on"><b>' + dd + '</b><span>' + x.map(function (y) { return esc(y[1] || '') + (y[2] ? '<br>' + esc(y[2]) : ''); }).join('<br>') + '</span></div>' : '<div><b>' + dd + '</b><span>—</span></div>'; };
-      return '<div class="k T6"><div class="mast"><span class="t">BenePip Weekly</span><span class="d">' + esc(c.n || '한국 시간') + '</span></div><div class="art">' + icon(c.icon || 'calendar') + '</div>' +
-        '<div class="kicker">' + esc(c.k || '이번 주 경제 캘린더') + '</div><h1>' + hi(c.t) + '</h1><div class="week">' + days.map(cell).join('') + '</div><div class="note">넘겨서 발표별 확인할 것 보기 →</div></div>';
+      var cell = function (dd) { var x = r.filter(function (y) { return y[0].charAt(0) === dd; }); return '<div' + (x.length ? ' class="on"' : '') + '><b>' + dd + '</b><span>' + (x.length ? x.length + '건' : '—') + '</span></div>'; };
+      var evs = r.slice(0, 4).map(function (y) { var tm = String(y[2] || '').match(/\d{1,2}:\d{2}/); return '<div><b>' + esc(y[0].charAt(0)) + '</b><span>' + esc(tm ? tm[0] : (y[2] || '')) + '</span><em>' + esc(y[1] || '') + '</em></div>'; }).join('');
+      return '<div class="k T6 CR"><div class="mast"><span class="t">BenePip Weekly</span><span class="d">' + esc(c.n || '한국 시간') + '</span></div>' +
+        '<div class="kicker">' + esc(c.k || '이번 주 경제 캘린더') + '</div><h1>' + hi(c.t) + '</h1><div class="week">' + days.map(cell).join('') + '</div>' +
+        (evs ? '<div class="evs">' + evs + '</div>' : '') + '<div class="art">' + icon(c.icon || 'calendar') + '</div><div class="note">넘겨서 발표별 확인할 것 보기 →</div></div>';
     },
     'c-edit': function (c, d) {
       return '<div class="k T4">' + logo(1) + '<div class="kicker">' + esc(c.k || d.group || '') + '</div><h1>' + hi(c.t) + '</h1>' +
@@ -207,9 +209,13 @@ var BPCards = (function () {
     if (L === 'body' && n <= 3 && total <= 80 && (c.icon || OBJ[L])) return 'cmp-right';
     return '';
   };
-  var deco = function (c, L, dark, cmp) {
-    var ob = c.icon || OBJ[L];
-    return cmp === 'cmp-right' && ob ? '<div class="obj">' + icon(ob, { dark: dark }) + '</div>' : '';
+  var SPOT = { body: 1, warn: 1, qa: 1, steps: 1, check: 1, flow: 1, route: 1 };
+  var VARY = { body: ['bulb', 'target', 'search', 'doc'], warn: ['warning', 'lock'], qa: ['chat', 'bulb'], steps: ['target', 'key'], check: ['check', 'shield'] };
+  var deco = function (c, L, dark, cmp, i) {
+    var ob = c.icon || (VARY[L] ? VARY[L][(i || 0) % VARY[L].length] : OBJ[L]);
+    if (!ob) return '';
+    if (cmp === 'cmp-right') return '<div class="obj">' + icon(ob, { dark: dark }) + '</div>';
+    return SPOT[L] && !cmp ? '<div class="spot">' + icon(ob, { dark: dark }) + '</div>' : '';
   };
 
   // 카드 한 장 HTML (1080×1350)
@@ -220,7 +226,7 @@ var BPCards = (function () {
     var last = i === n - 1, dark = DARK[d.group] && L !== 'e-sum';
     var cls = L === 'e-sum' ? 'sum' : dark ? 'dark' : L === 'big' ? 'big' : L === 'reason' ? 'rs' + (i % 2 ? '' : ' soft') : (i % 3 === 2 ? 'soft' : ''), cmp = cmpOf(c, L, i);
     var risk = last && d.disclaimer ? '<div class="risk">' + esc(d.disclaimer) + '</div>' : '';
-    return '<div class="k P ' + cls + ' ' + cmp + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + deco(c, L, dark || L === 'e-sum', cmp) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
+    return '<div class="k P ' + cls + ' ' + cmp + (SPOT[L] && !cmp && (c.icon || OBJ[L]) ? ' has-spot' : '') + ' L-' + L + (risk ? ' has-risk' : '') + '">' + logo(L === 'e-sum' || dark) + (L === 'big' ? '' : head(c)) + LAY[L](c, d, i) + deco(c, L, dark || L === 'e-sum', cmp, i) + risk + '<div class="pg">' + (i + 1) + ' / ' + n + '</div></div>';
   };
 
   // 형식 예시 (관리 화면 '형식 예시 보기' 팝업 · 숫자는 모두 예시)
