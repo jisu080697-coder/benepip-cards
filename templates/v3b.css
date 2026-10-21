@@ -172,3 +172,30 @@
 
 /* 체크리스트: 보조 글이 길어도 항목 이름이 두 줄로 꺾이지 않게 */
 .P .list em { max-width: 46%; text-align: right; font-size: 32px; line-height: 1.35; word-break: keep-all; }
+
+/* 기본 장: 핵심 문장 + 항목 상자 (글만 있는 장이 문서처럼 보이지 않게) */
+.P .lead { margin-top: 56px; font-size: 50px; line-height: 1.45; font-weight: 700; letter-spacing: -.04em; word-break: keep-all; }
+.P .lead b { color: var(--c); }
+.P .pts { margin-top: 40px; background: var(--gray-100); border-radius: 36px; padding: 16px 48px; }
+.P .pts div { position: relative; padding: 30px 0 30px 40px; font-size: 40px; line-height: 1.5; font-weight: 600; color: var(--sub); border-top: 2px solid #e5e8eb; word-break: keep-all; letter-spacing: -.03em; }
+.P .pts div:first-child { border-top: none; }
+.P .pts div::before { content: ''; position: absolute; left: 0; top: 52px; width: 14px; height: 14px; border-radius: 50%; background: var(--c); }
+.P.soft .pts { background: #fff; }
+.P.dark .pts { background: rgba(255, 255, 255, .06); }
+.P.dark .pts div { border-color: rgba(255, 255, 255, .08); }
+
+/* 휴대폰에서 읽히게: 보조 글자 키우기 */
+.P .list div { font-size: 46px; } .P .list em { font-size: 34px; }
+.P .steps b { font-size: 50px; } .P .steps span { font-size: 38px; }
+.P .tbl span { font-size: 37px; padding: 32px 30px; } .P .tbl div:first-child span { font-size: 32px; }
+.P .warn div { font-size: 40px; } .P .warn em { font-size: 34px; }
+.P .checks b { font-size: 44px; } .P .checks span { font-size: 34px; }
+.P .vs p { font-size: 38px; } .P .vs p em { font-size: 31px; }
+
+/* 체크리스트: 보조 글은 항목 아래에 (오른쪽 작은 회색 글은 휴대폰에서 안 읽힘) */
+.P .list div { flex-wrap: wrap; row-gap: 6px; }
+.P .list em { flex-basis: 100%; max-width: none; margin-left: 0; padding-left: 88px; text-align: left; font-size: 34px; line-height: 1.4; color: var(--mute); }
+
+.P .list div { padding: 26px 0; }
+
+.P .list div { font-size: 44px; padding: 24px 0; } .P .list em { font-size: 33px; }

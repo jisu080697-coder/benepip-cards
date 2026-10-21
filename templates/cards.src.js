@@ -126,7 +126,7 @@ var BPCards = (function () {
   var note = function (c) { return c.n ? '<div class="src">' + txt(c.n) + '</div>' : ''; };
   var desc = function (s) { return s ? '<div class="desc">' + txt(s) + '</div>' : ''; };
   var LAY = {
-    body: function (c) { return '<h2>' + hi(c.t) + '</h2>' + desc(lines(c.b).join('\n')) + note(c); },
+    body: function (c) { var l = lines(c.b); return '<h2>' + hi(c.t) + '</h2>' + (l[0] ? '<div class="lead">' + hi(l[0]) + '</div>' : '') + (l.length > 1 ? '<div class="pts">' + l.slice(1).map(function (x) { return '<div>' + txt(x) + '</div>'; }).join('') + '</div>' : '') + note(c); },
     big: function (c) { return '<div class="stmt">' + hi(c.t) + '</div>' + (c.b ? '<div class="stmt-sub">' + txt(c.b) + '</div>' : '') + note(c); },
     vs: function (c) {
       var r = rowsOf(c.b); if (r.length < 2) return LAY.body(c);
@@ -243,11 +243,27 @@ var BPCards = (function () {
   // 넘치면 글자 크기를 조금씩 줄여 맞춤 (렌더러·미리보기 공통, 화면에 붙인 뒤 호출)
   var fit = function (k) {
     if (!k || k.dataset.fit) return; k.dataset.fit = '1';
-    var limit = 1350 - (k.classList.contains('has-risk') ? 200 : 130);
+    var limit = 1350 - (k.classList.contains('has-risk') ? 200 : 115);
     var parts = [].slice.call(k.children).filter(function (e) { return !/^(logo|pg|src|risk|rn|art|corner|save)$/.test(e.className.split(' ')[0]) && getComputedStyle(e).position !== 'absolute'; });
     var box = k.getBoundingClientRect(), scale = box.height / 1350 || 1;
     var bottom = function () { return Math.max.apply(null, parts.map(function (e) { return (e.getBoundingClientRect().bottom - box.top) / scale; }).concat([0])); };
-    for (var z = 1; z > 0.72 && bottom() > limit; z -= 0.04) parts.forEach(function (e) { e.style.zoom = z.toFixed(2); });
+    // 넘치면 제목 아래 내용만 줄임 (제목 크기는 장마다 같게) · 그래도 넘치면 제목까지
+    var inner = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
+    for (var z = 1; z > 0.7 && bottom() > limit; z -= 0.04) inner.forEach(function (e) { e.style.zoom = (z - 0.04).toFixed(2); });
+    if (bottom() > limit) parts.forEach(function (e) { if (!e.style.zoom) e.style.zoom = '0.9'; });
+    // 내용이 짧아 아래가 비면 제목 아래 내용을 키움 (한 문장 장은 아래 정렬이라 제외)
+    if (z === 1 && !k.classList.contains('L-big') && bottom() < limit * 0.86) {
+      var body = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
+      for (var g = 1.04; g <= 1.36; g += 0.04) {
+        body.forEach(function (e) { e.style.zoom = g.toFixed(2); });
+        if (bottom() > limit * 0.96) { body.forEach(function (e) { e.style.zoom = (g - 0.04).toFixed(2); }); break; }
+      }
+    }
+    // 키운 뒤에도 아래가 많이 남으면 내용을 제목과 바닥 사이 가운데 쪽으로
+    if (!k.classList.contains('L-big')) {
+      var rest = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); }), free = limit - bottom();
+      if (rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
+    }
   };
   var fitAll = function (root) { [].forEach.call((root || document).querySelectorAll('.v3c .k.P'), fit); };
 
