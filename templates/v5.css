@@ -188,3 +188,7 @@
 .P.rs:has(.uic) .rn { top: 150px; bottom: auto; font-size: 340px; }
 /* 게이지 범례: 기준 설명은 한 줄 따로 */
 .P .gauge .leg span:last-child { flex-basis: 100%; }
+/* 상자가 카드 오른쪽 밖으로 삐져나가지 않게 (좌우 여백 같게) */
+.P .ui, .P.rs .uic, .P .calc { margin-right: 0; padding-right: 48px; }
+.P .calc { border-radius: 40px; padding-right: 52px; }
+.P .gauge { margin-top: 24px; } .P .gauge .bar { margin-top: 52px; } .P .gauge .leg { margin-top: 22px; row-gap: 6px; }
