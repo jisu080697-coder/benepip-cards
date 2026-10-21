@@ -72,7 +72,7 @@ var BPCards = (function () {
     'c-plain': plainCover,
     'c-report': function (c, d) {
       // 첫 칸이 요일 대신 날짜(10/21)여도 요일로 바꿔 읽음
-      var wd = function (x) { var m = String(x || '').match(/(\d{1,2})\s*[\/.]\s*(\d{1,2})/); if (!m) return String(x || '').replace(/[^월화수목금토일]/g, '').charAt(0) || String(x || '').charAt(0); return '일월화수목금토'.charAt(new Date(new Date().getFullYear(), +m[1] - 1, +m[2]).getDay()); };
+      var wd = function (x) { var m = String(x || '').match(/(\d{1,2})\s*[.\x2f]\s*(\d{1,2})/); if (!m) return String(x || '').replace(/[^월화수목금토일]/g, '').charAt(0) || String(x || '').charAt(0); return '일월화수목금토'.charAt(new Date(new Date().getFullYear(), +m[1] - 1, +m[2]).getDay()); };
       var r = rowsOf(c.b).map(function (y) { y = y.slice(); y[0] = wd(y[0]); return y; }), days = ['월', '화', '수', '목', '금'];
       var cell = function (dd) { var x = r.filter(function (y) { return y[0].charAt(0) === dd; }); return '<div' + (x.length ? ' class="on"' : '') + '><b>' + dd + '</b><span>' + (x.length ? x.length + '건' : '—') + '</span></div>'; };
       var evs = r.slice(0, 4).map(function (y) { var tm = String(y[2] || '').match(/\d{1,2}:\d{2}/); return '<div><b>' + esc(y[0].charAt(0)) + '</b><span>' + esc(tm ? tm[0] : (y[2] || '')) + '</span><em>' + esc(y[1] || '') + '</em></div>'; }).join('');
