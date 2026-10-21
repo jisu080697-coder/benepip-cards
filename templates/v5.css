@@ -50,3 +50,5 @@
 .P .myth > div:first-child p { color: var(--gray-500); text-decoration: line-through; text-decoration-color: rgba(240, 68, 82, .7); text-decoration-thickness: 4px; }
 .P .myth-sub { margin-top: 40px; font-size: 38px; line-height: 1.5; color: var(--sub); font-weight: 500; word-break: keep-all; }
 .P.dark .myth > div:first-child { background: rgba(255, 255, 255, .08); box-shadow: none; }
+
+.P .myth p { color: inherit; } .P .myth .fact p { color: #fff; } .P .myth > div:first-child p { color: var(--gray-500); }
