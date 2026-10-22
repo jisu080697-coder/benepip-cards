@@ -304,13 +304,7 @@ var BPCards = (function () {
     // 구성별: 왼쪽 아래 사물이 있으면 그 위까지만 키움 · 위아래로 나눈 구성은 키우지 않음
     var cmpd = /cmp-(center|right|bottom|grid)/.test(k.className), cap = k.classList.contains('cmp-right') ? 900 : limit;
     // 글씨는 키우지 않음 (모든 장 같은 크기 체계) · 남는 공간은 아래에서 가운데 쪽으로 정리
-    // 아래가 많이 남으면 내용을 제목과 바닥 사이 가운데 쪽으로
-    if (!k.classList.contains('L-big')) {
-      var rest = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); }), free = limit - bottom();
-      if (!cmpd && rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
-      free = limit - bottom();
-      if (!cmpd && parts.length && free > 300) parts[0].style.marginTop = (parseFloat(getComputedStyle(parts[0]).marginTop) + Math.min(free * 0.45, 320)) + 'px';
-    }
+    // 내용은 띄우지 않고 제목 바로 아래부터 (장마다 시작 높이가 같게 · 남는 공간은 품질 관문이 내용으로 채움)
   };
   // 제목이 짧아 오른쪽이 비면 손그림 화살표 (제목 끝 → 내용)
   var arrowFit = function (k) {

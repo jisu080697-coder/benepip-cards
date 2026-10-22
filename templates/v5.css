@@ -227,3 +227,6 @@
 .P.has-risk .steps > div { padding-top: 22px !important; padding-bottom: 22px !important; }
 /* 큰 숫자 표지: 숫자가 아래로 잘리지 않게 카드 안에 다 보이도록 */
 .CN .bign { font-size: 600px !important; line-height: .78 !important; bottom: 80px !important; left: 70px !important; padding-top: 40px; }
+
+/* 2칸 타일: 항목이 홀수면 마지막 칸을 가로로 꽉 채움 (빈 칸 안 남게) */
+.P.cmp-grid .list > div:last-child:nth-child(odd), .P.cmp-grid .checks > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
