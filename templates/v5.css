@@ -225,3 +225,5 @@
 /* 예시 화면(앱 화면 흉내) 안 글씨는 보조 크기 · 위험 고지가 붙는 마지막 단계 장은 줄 간격만 좁힘 */
 .P .ui .row { font-size: 36px !important; }
 .P.has-risk .steps > div { padding-top: 22px !important; padding-bottom: 22px !important; }
+/* 큰 숫자 표지: 숫자가 아래로 잘리지 않게 카드 안에 다 보이도록 */
+.CN .bign { font-size: 600px !important; line-height: .78 !important; bottom: 80px !important; left: 70px !important; padding-top: 40px; }
