@@ -1,0 +1,195 @@
+{
+ "day": "2026-10-22",
+ "avg": 7.3,
+ "pass": 6,
+ "total": 6,
+ "top": {},
+ "rows": [
+  {
+   "id": "n1792634278635i",
+   "group": "분류 필요",
+   "recipe": "레시피 id",
+   "topic": "MT4·MT5, 차트 분석 위한 핵심 기능 활용 가이드",
+   "layouts": [
+    "c-plain",
+    "body",
+    "body",
+    "body",
+    "body",
+    "body",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792634280783",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/05.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/06.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792634278635i/v1792634280783/07.jpg"
+   ]
+  },
+  {
+   "id": "n1792637986205i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "나에게 맞는 브로커, 선택 기준과 확인 사항",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792637989551",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792637986205i/v1792637989551/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792637986205i/v1792637989551/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792637986205i/v1792637989551/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792637986205i/v1792637989551/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792637986205i/v1792637989551/05.jpg"
+   ]
+  },
+  {
+   "id": "n1792639789281i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "브로커 계정, 보안 설정 강화로 자산 보호하기",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 7,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792639794189",
+     "score": 7,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792639789281i/v1792639794189/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792639789281i/v1792639794189/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792639789281i/v1792639794189/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792639789281i/v1792639794189/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792639789281i/v1792639794189/05.jpg"
+   ]
+  },
+  {
+   "id": "n1792652348849i",
+   "group": "혜택·적용 조건",
+   "recipe": "credit",
+   "topic": "입금 보너스, 출금하면 사라질까?",
+   "layouts": [
+    "c-plain",
+    "table",
+    "warn",
+    "steps"
+   ],
+   "state": "통과",
+   "score": 7,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792652352370",
+     "score": 7,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792652348849i/v1792652352370/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792652348849i/v1792652352370/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792652348849i/v1792652352370/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792652348849i/v1792652352370/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792659642256i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "첫 출금 전에 준비할 서류는?",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 7,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792659644083",
+     "score": 7,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659642256i/v1792659644083/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659642256i/v1792659644083/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659642256i/v1792659644083/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659642256i/v1792659644083/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659642256i/v1792659644083/05.jpg"
+   ]
+  },
+  {
+   "id": "n1792659683793i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "UID 연결이 됐는지 어디서 확인할까?",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "통과",
+   "score": 7,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792659686291",
+     "score": 7,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659683793i/v1792659686291/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659683793i/v1792659686291/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659683793i/v1792659686291/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792659683793i/v1792659686291/04.jpg"
+   ]
+  }
+ ]
+}
