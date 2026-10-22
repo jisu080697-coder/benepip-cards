@@ -194,3 +194,7 @@
 .P .gauge { margin-top: 24px; } .P .gauge .bar { margin-top: 52px; } .P .gauge .leg { margin-top: 22px; row-gap: 6px; }
 /* 본문 상자는 기울이지 않고 정면으로 (표지 카드·그림 아이콘의 기울임은 유지) */
 .P .ui, .P.rs .uic { transform: none; }
+
+/* 외부 피드백: 하단 안내 문구·메모 글씨 키움 (휴대폰 가독성) */
+.P > .src, .P .src { font-size: 36px; line-height: 1.4; }
+.P .risk { font-size: 32px; line-height: 1.45; }
