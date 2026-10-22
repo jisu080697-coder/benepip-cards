@@ -198,3 +198,30 @@
 /* 외부 피드백: 하단 안내 문구·메모 글씨 키움 (휴대폰 가독성) */
 .P > .src, .P .src { font-size: 36px; line-height: 1.4; }
 .P .risk { font-size: 32px; line-height: 1.45; }
+
+/* ══ 글씨 크기 체계 (모든 장 공통 · 들쭉날쭉 방지) ══
+   표지 제목 96 · 장 제목 80 · 본문 44 · 보조 설명 36 · 메모 34 · 위험 고지 30 · 쪽 번호 32 */
+.k:not(.P) h1 { font-size: 96px !important; }
+.P h2 { font-size: 80px !important; }
+/* 본문 44: 설명 문단과 항목의 주 문장 */
+.P .desc, .P .stmt-sub, .P .myth-sub, .P .ui-tip, .P .lead, .P .pts div,
+.P .list div, .P .steps b, .P .checks b, .P .warn div, .P .route span, .P.sum .recap div, .P .fill > div,
+.P .tbl div:not(:first-child) span, .P .vs p, .P .qa p, .P .calc div, .P .look p, .P .bars div, .P .cmpbar div,
+.P .myth p, .P .tl b, .P .flow .fq, .P .ui .row, .P .msg-ko, .P .lrow b, .P .ev .what div { font-size: 44px !important; }
+/* 보조 36: 항목 아래 작은 설명 · 표 머리글 · 범례 */
+.P .list em, .P .steps span, .P .checks span, .P .warn em, .P .route small, .P.sum .recap em, .P .vs h3 small, .P .vs p em,
+.P .tbl div:first-child span, .P .look h4, .P .tl span, .P .tl-span div, .P .flow .fa, .P .flow .fa small, .P .gauge .leg,
+.P .ev .what div span, .P .ui .bar, .P .chip, .P .stat-cap { font-size: 36px !important; }
+/* 메모·고지·쪽 번호 */
+.P > .src, .P .src { font-size: 34px !important; }
+.P .risk { font-size: 30px !important; }
+.P .pg { font-size: 32px !important; }
+.P .ev .what.one div { font-size: 54px !important; }
+/* 강조 숫자 (단계 번호 등)도 한 크기로 */
+.P .steps i { font-size: 60px !important; }
+.P .msg { font-size: 40px !important; }
+/* 기준선 게이지가 있는 발표 장: 위아래 여백만 줄여 글씨 크기는 그대로 */
+.P .ev + .gauge { margin-top: 16px; } .P .gauge + .look { margin-top: 18px; padding-top: 22px; }
+/* 예시 화면(앱 화면 흉내) 안 글씨는 보조 크기 · 위험 고지가 붙는 마지막 단계 장은 줄 간격만 좁힘 */
+.P .ui .row { font-size: 36px !important; }
+.P.has-risk .steps > div { padding-top: 22px !important; padding-bottom: 22px !important; }

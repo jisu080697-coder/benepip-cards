@@ -303,15 +303,8 @@ var BPCards = (function () {
     if (bottom() > limit) parts.forEach(function (e) { if (!e.style.zoom) e.style.zoom = '0.9'; });
     // 구성별: 왼쪽 아래 사물이 있으면 그 위까지만 키움 · 위아래로 나눈 구성은 키우지 않음
     var cmpd = /cmp-(center|right|bottom|grid)/.test(k.className), cap = k.classList.contains('cmp-right') ? 900 : limit;
-    // 내용이 짧아 아래가 비면 제목 아래 내용을 키움 (한 문장 장은 아래 정렬이라 제외)
-    if (z === 1 && !k.classList.contains('L-big') && !k.classList.contains('cmp-bottom') && bottom() < cap * 0.86) {
-      var body = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
-      for (var g = 1.04; g <= 1.36; g += 0.04) {
-        body.forEach(function (e) { e.style.zoom = g.toFixed(2); });
-        if (bottom() > cap * 0.96) { body.forEach(function (e) { e.style.zoom = (g - 0.04).toFixed(2); }); break; }
-      }
-    }
-    // 키운 뒤에도 아래가 많이 남으면 내용을 제목과 바닥 사이 가운데 쪽으로
+    // 글씨는 키우지 않음 (모든 장 같은 크기 체계) · 남는 공간은 아래에서 가운데 쪽으로 정리
+    // 아래가 많이 남으면 내용을 제목과 바닥 사이 가운데 쪽으로
     if (!k.classList.contains('L-big')) {
       var rest = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); }), free = limit - bottom();
       if (!cmpd && rest.length && free > 140 && !/^(desc|lead)$/.test(rest[0].className)) rest[0].style.marginTop = (parseFloat(getComputedStyle(rest[0]).marginTop) + Math.min(free * 0.4, 200)) + 'px';
