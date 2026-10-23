@@ -33,7 +33,7 @@ const availW = (t, s) => {
 };
 // 오른쪽에 붙은 값 칸 (상자 오른쪽 끝·화면 오른쪽 여백에 닿은 너비 자동 칸): 오른쪽 끝을 고정하고 왼쪽으로 늘어남
 const boxOf = (t, s) => (t.rects || []).filter(r => r.fill && r.x <= s.x + 1 && r.y <= s.y + 1 && r.x + r.w >= s.x + s.w - 1 && r.y + r.h >= s.y + s.h - 1 && r.w < 1000).sort((a, b) => a.w * a.h - b.w * b.h)[0];
-const rightOf = (t, s) => {
+export const rightOf = (t, s) => {
   if (s.autoResize !== 'WIDTH_AND_HEIGHT' || /^\d+ \/ \d+$/.test(s.text) || (t.shapes || []).some(g => g.kind === 'pill' && g.slot === s.id)) return false;
   if (s.align === 'RIGHT' || s.x + s.w > 1080 - 96 - 60) return true;
   const bx = boxOf(t, s); return !!bx && bx.x + bx.w - (s.x + s.w) < 70 && s.x - bx.x > bx.w * 0.4;
