@@ -29,6 +29,20 @@ const availW = (t, s) => {
   if (s.align !== 'RIGHT' && nx.length) w = Math.min(w, Math.min(...nx) - s.x - 16);
   return Math.max(w, s.w);
 };
+// 오른쪽에 붙은 값 칸 (상자 오른쪽 끝·화면 오른쪽 여백에 닿은 너비 자동 칸): 오른쪽 끝을 고정하고 왼쪽으로 늘어남
+const boxOf = (t, s) => (t.rects || []).filter(r => r.fill && r.x <= s.x + 1 && r.y <= s.y + 1 && r.x + r.w >= s.x + s.w - 1 && r.y + r.h >= s.y + s.h - 1 && r.w < 1000).sort((a, b) => a.w * a.h - b.w * b.h)[0];
+const rightOf = (t, s) => {
+  if (s.autoResize !== 'WIDTH_AND_HEIGHT' || /^\d+ \/ \d+$/.test(s.text) || (t.shapes || []).some(g => g.kind === 'pill' && g.slot === s.id)) return false;
+  if (s.align === 'RIGHT' || s.x + s.w > 1080 - 96 - 60) return true;
+  const bx = boxOf(t, s); return !!bx && bx.x + bx.w - (s.x + s.w) < 70 && s.x - bx.x > bx.w * 0.4;
+};
+// 오른쪽 고정 칸이 왼쪽으로 쓸 수 있는 너비 (같은 줄 왼쪽 글 끝 또는 상자 왼쪽 여백까지)
+const availL = (t, s) => {
+  const bx = boxOf(t, s), right = s.x + s.w;
+  let left = bx ? bx.x + Math.min(48, Math.max(16, bx.x + bx.w - right)) : 96;
+  t.slots.forEach(o => { if (o !== s && o.y < s.y + s.h && o.y + o.h > s.y && o.x + o.w < s.x + 4) left = Math.max(left, o.x + o.w + 24); });
+  return Math.max(right - left, s.w);
+};
 export function figCard(name, vals) {
   const t = figOf(name), bg = pathToFileURL(join(FIG, name, 'bg.png')).href;
   const one = s => {
@@ -39,11 +53,12 @@ export function figCard(name, vals) {
     const nw = s.autoResize === 'WIDTH_AND_HEIGHT' || /^\d+ \/ \d+$/.test(s.text), va = s.valign === 'CENTER' ? 'center' : s.valign === 'BOTTOM' ? 'flex-end' : 'flex-start';
     const al = s.align === 'CENTER' ? 'center' : s.align === 'RIGHT' ? 'right' : s.align === 'JUSTIFIED' ? 'justify' : 'left';
     // 글자 칸 너비가 자동이면 왼쪽(가운데·오른쪽 정렬이면 그 기준) 고정, 길어지면 그쪽으로 늘어남
-    const ax = nw && al === 'right' ? `left:${s.x + s.w}px;transform:translateX(-100%) rotate(${-s.rot}deg);transform-origin:100% 0` : nw && al === 'center' ? `left:${s.x + s.w / 2}px;transform:translateX(-50%) rotate(${-s.rot}deg);transform-origin:50% 0` : `left:${s.x}px;transform:rotate(${-s.rot}deg);transform-origin:0 0`;
-    return `<div class="ft" data-id="${s.id}" data-nw="${nw ? 1 : 0}" style="${ax};top:${s.y}px;${nw ? 'white-space:pre' : `width:${s.w}px;white-space:pre-wrap`};min-height:${s.h}px;display:flex;flex-direction:column;justify-content:${va};text-align:${al};opacity:${s.opacity};${s.blur ? `filter:blur(${s.blur / 2}px);` : ''}${css(base)}"><div>${body}</div></div>`;
+    const ra = rightOf(t, s), th = -s.rot * Math.PI / 180;
+    const ax = ra ? `left:${s.x + s.w * Math.cos(th)}px;top:${s.y + s.w * Math.sin(th)}px;transform:rotate(${-s.rot}deg) translateX(-100%);transform-origin:0 0` : nw && al === 'right' ? `left:${s.x + s.w}px;transform:translateX(-100%) rotate(${-s.rot}deg);transform-origin:100% 0` : nw && al === 'center' ? `left:${s.x + s.w / 2}px;transform:translateX(-50%) rotate(${-s.rot}deg);transform-origin:50% 0` : `left:${s.x}px;transform:rotate(${-s.rot}deg);transform-origin:0 0`;
+    return `<div class="ft" data-id="${s.id}" data-nw="${nw ? 1 : 0}" data-ra="${ra ? 1 : 0}" style="${ra ? ax : ax + ';top:' + s.y + 'px'};${nw ? 'white-space:pre' : `width:${s.w}px;white-space:pre-wrap`};min-height:${s.h}px;display:flex;flex-direction:column;justify-content:${va};text-align:${al};opacity:${s.opacity};${s.blur ? `filter:blur(${s.blur / 2}px);` : ''}${css(base)}"><div>${body}</div></div>`;
   };
   const shp = (t.shapes || []).map((g, k) => (g.erase ? `<div style="position:absolute;left:${g.x - 2}px;top:${g.y - 2}px;width:${g.w + 4}px;height:${g.h + 4}px;background:${g.erase}"></div>` : '') + `<div class="fsh" data-k="${k}" style="left:${g.x}px;top:${g.y}px;width:${g.w}px;height:${g.h}px;border-radius:${g.rad}px;background:${g.fill}"></div>`).join('');
-  return `<script>window.__SHAPES=${JSON.stringify(t.shapes || [])};window.__SLOTS=${JSON.stringify(t.slots.map(x => ({ id: x.id, x: x.x, w: x.w, h: x.h, rot: x.rot, aw: availW(t, x) })))}</script><style>.fsh{position:absolute}</style>` + `<style>.fx{position:relative;width:1080px;height:1350px;overflow:hidden;background:url(${bg}) 0 0/1080px 1350px no-repeat}.ft{position:absolute;word-break:keep-all}.ft span{font-family:inherit}</style><div class="fx">${shp}${t.slots.map(one).join('')}</div>`;
+  return `<script>window.__SHAPES=${JSON.stringify(t.shapes || [])};window.__SLOTS=${JSON.stringify(t.slots.map(x => ({ id: x.id, x: x.x, w: x.w, h: x.h, rot: x.rot, aw: rightOf(t, x) ? availL(t, x) : availW(t, x), ra: rightOf(t, x) })))}</script><style>.fsh{position:absolute}</style>` + `<style>.fx{position:relative;width:1080px;height:1350px;overflow:hidden;background:url(${bg}) 0 0/1080px 1350px no-repeat}.ft{position:absolute;word-break:keep-all}.ft span{font-family:inherit}</style><div class="fx">${shp}${t.slots.map(one).join('')}</div>`;
 }
 
 // 페이지 안에서: 알약은 바뀐 글자 너비에 맞춤 · 막대는 값 크기에 비례 (가장 긴 막대 = 피그마의 가장 긴 막대 길이)
@@ -52,7 +67,7 @@ export const figFit = () => {
   const shrunk = [];
   (window.__SLOTS || []).forEach(sl => {
     const box = document.querySelector(`.ft[data-id="${sl.id}"]`); if (!box || Math.abs(sl.rot) > 0.5 || (window.__SHAPES || []).some(g => g.kind === 'pill' && g.slot === sl.id) || /^\s*\d+\s*\/\s*\d+\s*$/.test(box.textContent)) return;   // 쪽 번호도 그대로   // 태그(알약)는 바탕이 글자에 맞춰 늘어남
-    const nw = box.dataset.nw === '1', fs0 = parseFloat(getComputedStyle(box).fontSize), maxW = nw ? Math.max(sl.w, Math.min(sl.aw, 1080 - 60 - sl.x)) : sl.w, maxH = sl.h * 1.08 + 4;
+    const nw = box.dataset.nw === '1', fs0 = parseFloat(getComputedStyle(box).fontSize), maxW = nw ? (sl.ra ? sl.aw : Math.max(sl.w, Math.min(sl.aw, 1080 - 60 - sl.x))) : sl.w, maxH = sl.h * 1.08 + 4;
     const over = () => { const r = box.getBoundingClientRect(); return (nw && r.width > maxW) || (!nw && r.height > maxH); };
     if (!over()) return;
     let z = 1; const kids = [...box.querySelectorAll('*')].concat([box]).map(e => [e, parseFloat(getComputedStyle(e).fontSize), parseFloat(getComputedStyle(e).lineHeight)]);
