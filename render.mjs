@@ -85,4 +85,5 @@ for (let i = 0; i < draft.cards.length; i++) {
 }
 await browser.close();
 writeFileSync(join(outDir, 'metrics.json'), JSON.stringify(metrics));
+writeFileSync(join(outDir, 'info.json'), JSON.stringify({ fig: draft.cards.filter(c => c.fig).length, figErr: draft.figErr || '' }));
 console.log(JSON.stringify({ id: draft.id, files, metrics }, null, 2));
