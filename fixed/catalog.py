@@ -44,6 +44,14 @@ NUM = {
  '혜택·적용 조건 1': ['t5'], '베네핍 이용 안내 4': ['t3', 't5', 't7', 't9'], '브로커 이용 가이드 1': ['t3'],
 }
 
+# 틀에 그려진 아이콘 (주제와 맞을 때만 써야 함)
+ICON = {'플랫폼 활용 1': '계산기', '플랫폼 활용 3': '과녁', '혜택·적용 조건 3': '종(알림)', '혜택·적용 조건 4': '열쇠', '경제 캘린더 1': '달력', '베네핍 이용 안내 3': '말풍선'}
+
+def tone(name):
+    from PIL import Image, ImageStat
+    m = ImageStat.Stat(Image.open(os.path.join(ROOT, 'figma', name, 'bg.png')).convert('L')).mean[0]
+    return 'dark' if m < 100 else 'blue' if m < 170 else 'light'
+
 def sample(s):
     base = next((g for g in s['segs'] if g['t'].strip()), s['segs'][0])
     return ''.join('“%s”' % g['t'] if (g['color'] != base['color'] or g['weight'] != base['weight']) and g['t'].strip() else g['t'] for g in s['segs']).replace('“\n', '\n“').replace('\n”', '”\n')
@@ -60,7 +68,8 @@ for name, (group, pos, use, roles) in T.items():
         if s['autoResize'] != 'WIDTH_AND_HEIGHT': lim = max(mx, int(s['w'] / (size * 0.95)))   # 너비가 정해진 칸: 한글 한 자 ≈ 글씨 크기
         else: lim = mx + 1 if mx <= 4 else math.ceil(mx * 1.25)   # 너비 자동 칸: 예시보다 조금 더까지
         slots.append([sid, role, ex, len(lines), lim])
-    out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else ''), 'num': NUM.get(name, []), 's': slots})
+    tn, ic = tone(name), ICON.get(name, '')
+    out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else '') + (' · 남색 바탕' if tn == 'dark' else '') + (' · 아이콘: ' + ic if ic else ''), 'num': NUM.get(name, []), 'tone': tn, 'icon': ic, 's': slots})
 
 js = ('// 자동 생성 (renderer/fixed/catalog.py) · 직접 고치지 마세요\n'
       '// 피그마 틀 목록: n 틀 이름 · g 주제군 · pos cover/body/end · use 쓰임 · s [칸, 역할, 예시(“강조”), 줄 수, 줄당 최대 글자]\n'
