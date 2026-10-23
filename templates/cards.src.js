@@ -90,7 +90,7 @@ var BPCards = (function () {
       var last = r.pop();
       return '<div class="k CG">' + logo(1) + '<div class="kicker">' + esc(c.k || d.group || '') + '</div><h1>' + hi(c.t) + '</h1>' +
         '<div class="rcpt"><h4>' + esc(p[0] || '내역') + '</h4><div class="d">' + esc(c.n || '예시') + '</div>' +
-        r.map(function (x) { return '<div class="ln"><span>' + esc(x[0]) + '</span>' + esc(x.slice(1).join(' · ')) + '</div>'; }).join('') +
+        r.map(function (x) { return '<div class="ln"><span>' + esc(String(x[0]).replace(/\s*\([^)]*\)/g, '')) + '</span><b class="v">' + esc(x.slice(1).join(' · ')) + '</b></div>'; }).join('') +
         '<div class="ln tot"><span>' + esc(last[0]) + '</span><b class="blur">' + esc(last[1] || '') + '</b></div></div></div>';
     },
     'c-issue': function (c, d) {
@@ -140,6 +140,7 @@ var BPCards = (function () {
     },
     table: function (c) {
       var r = rowsOf(c.b); if (!r.length) return LAY.body(c);
+      if (r.length >= 3) { var keep = r[0].map(function (_, j) { var v = r.slice(1).map(function (x) { return x[j]; }); return v.some(function (y) { return y !== v[0]; }); }); if (keep.filter(Boolean).length >= 2) r = r.map(function (x) { return x.filter(function (_, j) { return keep[j]; }); }); }
       return '<h2>' + hi(c.t) + '</h2>' + desc(plainOf(c.b).join('\n')) + '<div class="tbl">' + r.map(function (x) { return '<div style="grid-template-columns:repeat(' + x.length + ',1fr)">' + x.map(function (y) { var s = star(y); return '<span' + (s[0] ? ' class="hi"' : '') + '>' + esc(s[1]) + '</span>'; }).join('') + '</div>'; }).join('') + '</div>' + note(c);
     },
     steps: function (c) {
@@ -168,13 +169,16 @@ var BPCards = (function () {
     warn: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="warn">' + lines(c.b).map(cells).map(function (x) { return '<div>' + esc(x[0]) + (x[1] ? '<em>' + esc(x[1]) + '</em>' : '') + '</div>'; }).join('') + '</div>' + note(c); },
     event: function (c) {
       var l = lines(c.b), w = cells(l[0] || ''), tm = String(w[1] || '').match(/\d{1,2}:\d{2}/) || String(c.b || '').match(/\d{1,2}:\d{2}/); w[1] = tm ? tm[0] : '';
+      if (!w[1]) { var kt = String(c.t || '').match(/(새벽|아침|오전|낮|오후|저녁|밤)?\s*(\d{1,2})시\s*(반|(\d{1,2})분)?/); if (kt) { var hh = +kt[2]; if (/오후|저녁|밤/.test(kt[1] || '') && hh < 12) hh += 12; w[1] = (hh < 10 ? '0' : '') + hh + ':' + (kt[3] === '반' ? '30' : kt[4] ? ('0' + kt[4]).slice(-2) : '00'); } }
       if (!/\d/.test(w[0] || '')) { var dt = String(c.b || '').match(/\d{1,2}\x2f\d{1,2}(\s*\(?[월화수목금토일]\)?)?/); w[0] = dt ? dt[0] : ''; }
       var r = l.slice(1).filter(function (x) { return x.indexOf('|') >= 0; }).map(cells), look = l.filter(function (x) { return /^[-·•]/.test(x); }).map(function (x) { return x.replace(/^[-·•]\s*/, ''); }).slice(0, 1);
       var get = function (k) { for (var i = 0; i < r.length; i++) if (k.test(r[i][0])) return r[i]; return null; };
       var fc = get(/예상/), pv = get(/이전/), base = get(/기준/), viz = '';
+      var first = function (x) { if (x) x[1] = String(x[1] || '').split(/[,·]/)[0].replace(/^[^\d\-+]*(?=[\d\-+])/, '').trim() || x[1]; return x; }; fc = first(fc); pv = first(pv);
       var nv = function (x) { var m = String(x || '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
       if (fc && pv && nv(fc[1]) != null && nv(pv[1]) != null) {
         var a = nv(pv[1]), b = nv(fc[1]), base50 = base && nv(base[1]) != null ? nv(base[1]) : null;
+        if (a === b && base50 == null) viz = '<div class="same">예상치가 이전과 같아요 <b>' + esc(fc[1]) + '</b></div>'; else
         if (base50 != null) {   // 기준선이 있는 지표 (PMI 등): 게이지
           var lo = Math.min(a, b, base50) - 5, hi2 = Math.max(a, b, base50) + 5, pos = function (v) { return Math.round((v - lo) / (hi2 - lo) * 100); };
           viz = '<div class="gauge"><div class="bar"><i class="base" style="left:' + pos(base50) + '%"><em>' + esc(String(base50)) + '</em></i><i class="pv" style="left:' + pos(a) + '%"></i><i class="fc" style="left:' + pos(b) + '%"></i></div><div class="leg"><span class="pv">이전 ' + esc(pv[1]) + '</span><span class="fc">예상 ' + esc(fc[1]) + '</span><span>' + esc(base50 + ' 위 = 확장 · 아래 = 위축') + '</span></div></div>';
@@ -221,7 +225,7 @@ var BPCards = (function () {
     var ls = lines(c.b), n = ls.length, longest = Math.max.apply(null, ls.map(function (x) { return x.length; }).concat([0])), total = ls.join('').length;
     if (L === 'stat' || L === 'myth') return 'cmp-center';
     if (L === 'big') return i % 2 ? 'cmp-center' : '';
-    if (L === 'calc') return 'cmp-bottom';
+    if (L === 'calc') return '';
     if (L === 'event') { var k = 0; for (var j = 1; j < i; j++) if ((d.cards[j] || {}).layout === 'event') k++; return k % 2 ? 'cmp-ev2' : ''; }
     if ((L === 'check' || L === 'e-checks') && n >= 3 && n <= 4 && longest <= 30) return 'cmp-grid';
     if (L === 'body' && n <= 3 && total <= 80 && (c.icon || OBJ[L])) return 'cmp-right';

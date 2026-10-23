@@ -230,3 +230,9 @@
 
 /* 2칸 타일: 항목이 홀수면 마지막 칸을 가로로 꽉 채움 (빈 칸 안 남게) */
 .P.cmp-grid .list > div:last-child:nth-child(odd), .P.cmp-grid .checks > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* 빨간 네모 수정: 영수증 값 한 줄 · 발표 장 같은 값 · 게이지 범례 한 줄씩 */
+.rcpt .ln .v { font: inherit; white-space: nowrap; }
+.P .same { margin-top: 40px; font-size: 44px; font-weight: 700; color: var(--sub); }
+.P .same b { color: var(--c); margin-left: 12px; }
+.P .gauge .leg { row-gap: 4px; }
