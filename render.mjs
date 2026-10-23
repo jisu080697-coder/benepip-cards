@@ -86,5 +86,6 @@ for (let i = 0; i < draft.cards.length; i++) {
 }
 await browser.close();
 writeFileSync(join(outDir, 'metrics.json'), JSON.stringify(metrics));
+writeFileSync(join(outDir, 'draft.json'), JSON.stringify({ id: draft.id, ver: draft.ver, group: draft.group, cards: draft.cards.map(c => ({ fig: c.fig, v: c.v })) }));   // 피그마 결과 보드로 옮길 때 쓰는 칸 글
 writeFileSync(join(outDir, 'info.json'), JSON.stringify({ fig: draft.cards.filter(c => c.fig).length, figErr: draft.figErr || '' }));
 console.log(JSON.stringify({ id: draft.id, files, metrics }, null, 2));
