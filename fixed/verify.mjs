@@ -63,5 +63,5 @@ for (const t of CAT) {
 }
 await b.close();
 writeFileSync(join(OUT, 'report.json'), JSON.stringify({ at: new Date().toISOString(), total: report.length, fail: fail.length, fails: fail, report }, null, 1));
-console.log(`검증 ${report.length}건 · 실패 ${fail.length}건`); fail.forEach(f => console.log('✗ ' + f));
+console.log(`검증 ${report.length}건 · 실패 ${fail.length}건`); fail.forEach(f => console.log((process.env.CI ? '::error title=틀 검증::' : '✗ ') + f));   // CI: 실행 화면에 오류 표시
 process.exit(fail.length ? 1 : 0);
