@@ -1,0 +1,34 @@
+﻿<!-- 비교 계산 장: 두 줄 비교 → 차이 큰 숫자 -->
+<style>
+.k { background: var(--blue-mist); }
+.box { left: 96px; top: 536px; width: 888px; height: 600px; border-radius: 44px; background: var(--navy); box-shadow: 0 30px 60px rgba(19, 33, 59, .22); }
+.calc3d { left: 836px; top: 372px; width: 180px; height: 180px; transform: rotate(12deg); filter: drop-shadow(0 20px 30px rgba(19, 33, 59, .3)); }
+.ra, .rb { left: 148px; width: 520px; height: 52px; font-size: 44px; line-height: 52px; font-weight: 800; color: #fff; }
+.sa, .sb { left: 148px; width: 520px; height: 40px; font-size: 32px; line-height: 40px; font-weight: 500; color: rgba(255, 255, 255, .55); }
+.va, .vb { right: 148px; width: 260px; height: 64px; text-align: right; font-size: 56px; line-height: 64px; font-weight: 800; color: #fff; letter-spacing: -.03em; }
+.ra { top: 600px; } .sa { top: 656px; } .va { top: 606px; }
+.rb { top: 752px; } .sb { top: 808px; } .vb { top: 758px; }
+.sep { left: 148px; top: 900px; width: 784px; height: 0; border-top: 3px dashed rgba(255, 255, 255, .25); }
+.rt { left: 148px; top: 976px; width: 400px; height: 52px; font-size: 42px; line-height: 52px; font-weight: 700; color: rgba(255, 255, 255, .85); }
+.vt { right: 148px; top: 932px; width: 500px; height: 150px; text-align: right; font-size: 136px; line-height: 150px; font-weight: 800; color: #8fa9ff; letter-spacing: -.05em; }
+.note { left: 96px; top: 1172px; width: 700px; height: 40px; font-size: 32px; line-height: 40px; font-weight: 600; color: var(--g5); }
+.pg { bottom: 40px; }
+</style>
+<div class="k">
+  <img class="logo" src="../../templates/benepip-logo.png">
+  <div class="chip" data-slot="chip" data-lines="1">총 비용 계산</div>
+  <div class="title" data-slot="title" data-lines="2">1랏 기준으로<br><b>환산해 보면</b></div>
+  <div class="box"></div>
+  <img class="calc3d" src="../../templates/icons3d/calculator.webp">
+  <div class="ra" data-slot="a" data-lines="1">스탠다드 계좌</div>
+  <div class="sa" data-slot="a_sub" data-lines="1">1.2pip × $10</div>
+  <div class="va" data-slot="a_v" data-lines="1">$12</div>
+  <div class="rb" data-slot="b" data-lines="1">로우 스프레드</div>
+  <div class="sb" data-slot="b_sub" data-lines="1">0.2pip × $10 + 수수료 $7</div>
+  <div class="vb" data-slot="b_v" data-lines="1">$9</div>
+  <div class="sep"></div>
+  <div class="rt" data-slot="t" data-lines="1">1랏당 차이</div>
+  <div class="vt" data-slot="t_v" data-lines="1">$3</div>
+  <div class="note" data-slot="note" data-lines="1">숫자는 예시예요. 브로커마다 달라요.</div>
+  <div class="pg" data-slot="pg" data-lines="1">3 / 5</div>
+</div>

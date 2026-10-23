@@ -1,0 +1,13 @@
+/* 고정 틀 공통 · 모든 위치·크기는 px 고정 (1080×1350) · 글자 칸은 [data-slot] */
+:root { --blue: #2455f5; --blue-deep: #1a3ccf; --blue-mid: #8fa9ff; --blue-soft: #eaf0ff; --blue-mist: #f4f7ff; --navy: #13213b; --g7: #333d4b; --g5: #6b7684; --g3: #b0b8c1; --g1: #f2f4f6; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1350px; font-family: 'Pretendard Variable', Pretendard, sans-serif; -webkit-font-smoothing: antialiased; color: var(--navy); word-break: keep-all; }
+.k { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: #fff; }
+.k > * { position: absolute; }
+[data-slot] { overflow: hidden; letter-spacing: -.03em; }
+[data-slot] b { font-weight: inherit; color: var(--hi, var(--blue)); }
+.logo { left: 96px; top: 96px; height: 54px; }
+.chip { left: 96px; top: 214px; width: 888px; height: 46px; font-size: 36px; line-height: 46px; font-weight: 700; color: var(--blue); }
+.title { left: 96px; top: 276px; width: 888px; height: 208px; font-size: 80px; line-height: 104px; font-weight: 800; letter-spacing: -.045em; }
+.pg { right: 96px; bottom: 74px; width: 140px; height: 40px; text-align: right; font-size: 32px; line-height: 40px; font-weight: 700; color: var(--g5); }
+.risk { left: 96px; bottom: 70px; width: 720px; height: 80px; font-size: 26px; line-height: 40px; font-weight: 500; color: var(--g5); }

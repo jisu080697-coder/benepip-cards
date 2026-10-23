@@ -11,6 +11,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const tplDir = join(here, 'templates');
 await import('./templates/cards.bundle.js');
 const BP = globalThis.BPCards;
+const FX = await import('./fixed/compose.mjs');
 const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
 const pageHtml = inner => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><base href="${pathToFileURL(tplDir).href}/"><link rel="stylesheet" href="${FONT}"><style>${BP.css}</style><script src="cards.bundle.js"></script></head><body>${inner}</body></html>`;
 
@@ -25,6 +26,18 @@ const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, de
 const files = [], metrics = [];
 for (let i = 0; i < draft.cards.length; i++) {
   const tmp = join(tplDir, `_tmp_${i}.html`);
+  // 고정 틀 카드 (tpl): 피그마·틀 배경 위에 글자만 · 크기 변화 없음
+  if (draft.cards[i].tpl && FX.hasTpl(draft.cards[i].tpl)) {
+    writeFileSync(tmp, `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONT}"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Pretendard Variable',Pretendard,sans-serif;-webkit-font-smoothing:antialiased}</style></head><body>${FX.fixedCard(draft, i)}</body></html>`);
+    await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    const fit = await page.evaluate(`(${FX.fitFixed.toString()})()`);
+    const over = fit.filter(x => x.z < 1 || x.clipped).map(x => x.slot), miss = fit.filter(x => x.empty && !/^(risk)$/.test(x.slot)).map(x => x.slot);
+    metrics.push({ n: i + 1, tpl: draft.cards[i].tpl, zoom: Math.min(1, ...fit.map(x => x.z)), empty: 0, clipped: fit.filter(x => x.clipped).length, tiny: 0, over, miss });
+    const file = join(outDir, `${String(i + 1).padStart(2, '0')}.jpg`);
+    await page.screenshot({ path: file, type: 'jpeg', quality: 95, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
+    files.push(file); rmSync(tmp); continue;
+  }
   writeFileSync(tmp, pageHtml(BP.card(draft, i)));
   await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);

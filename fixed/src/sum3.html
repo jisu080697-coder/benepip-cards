@@ -1,0 +1,37 @@
+<!-- 요약 장 (3개): 파란 바탕 · 번호 타일 세 줄 · 저장 유도 -->
+<style>
+.k { background: linear-gradient(165deg, #2f62ff 0%, #2455f5 45%, #1a3ccf 100%); color: #fff; }
+.glow { left: 600px; top: -160px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, .16), rgba(255, 255, 255, 0) 65%); }
+.chip { color: rgba(255, 255, 255, .78); }
+.title { color: #fff; --hi: #fff; }
+.title b { box-shadow: inset 0 -22px 0 rgba(255, 255, 255, .22); }
+.tile { left: 96px; width: 888px; height: 168px; border-radius: 36px; background: rgba(255, 255, 255, .12); }
+.num { left: 136px; width: 84px; height: 84px; border-radius: 50%; background: #fff; color: var(--blue); font-size: 42px; line-height: 84px; text-align: center; font-weight: 800; }
+.it { left: 252px; width: 690px; height: 52px; font-size: 44px; line-height: 52px; font-weight: 800; color: #fff; }
+.is { left: 252px; width: 690px; height: 40px; font-size: 32px; line-height: 40px; font-weight: 500; color: rgba(255, 255, 255, .75); }
+.t1 { top: 548px; } .n1 { top: 590px; } .i1 { top: 578px; } .s1 { top: 636px; }
+.t2 { top: 740px; } .n2 { top: 782px; } .i2 { top: 770px; } .s2 { top: 828px; }
+.t3 { top: 932px; } .n3 { top: 974px; } .i3 { top: 962px; } .s3 { top: 1020px; }
+.save { left: 96px; top: 1140px; height: 44px; font-size: 34px; line-height: 44px; font-weight: 800; color: #fff; }
+.save i { font-style: normal; display: inline-block; margin-right: 12px; }
+.risk { color: rgba(255, 255, 255, .6); }
+.pg { color: rgba(255, 255, 255, .7); }
+</style>
+<div class="k">
+  <div class="glow"></div>
+  <img class="logo" src="../../templates/benepip-logo-allwhite.png">
+  <div class="chip" data-slot="chip" data-lines="1">저장해두고 체크</div>
+  <div class="title" data-slot="title" data-lines="2">거래 비용 비교 전<br><b>이 3가지</b>를 봐요</div>
+  <div class="tile t1"></div><div class="num n1">1</div>
+  <div class="it i1" data-slot="i1" data-lines="1">평균 스프레드</div>
+  <div class="is s1" data-slot="i1_sub" data-lines="1">주요 상품의 평소 폭</div>
+  <div class="tile t2"></div><div class="num n2">2</div>
+  <div class="it i2" data-slot="i2" data-lines="1">랏당 수수료</div>
+  <div class="is s2" data-slot="i2_sub" data-lines="1">왕복인지 편도인지</div>
+  <div class="tile t3"></div><div class="num n3">3</div>
+  <div class="it i3" data-slot="i3" data-lines="1">롤오버 비용</div>
+  <div class="is s3" data-slot="i3_sub" data-lines="1">오래 들고 있으면 매일 쌓여요</div>
+  <div class="save"><i>↓</i>저장해두고 계좌 고를 때 꺼내 보세요</div>
+  <div class="risk" data-slot="risk" data-lines="2">거래에는 원금 손실 위험이 있어요.<br>혜택은 브로커·계좌 조건에 따라 달라요.</div>
+  <div class="pg" data-slot="pg" data-lines="1">5 / 5</div>
+</div>

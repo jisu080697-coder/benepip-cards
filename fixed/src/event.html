@@ -1,0 +1,42 @@
+﻿<!-- 발표 장: 큰 시각 · 영향 자산 · 이전/예상 · 볼 것 -->
+<style>
+.hero { left: 96px; top: 528px; width: 888px; height: 318px; border-radius: 44px; background: var(--blue); box-shadow: 0 30px 60px rgba(36, 85, 245, .25); }
+.hero-glow { left: 640px; top: 470px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(143, 169, 255, .55), rgba(143, 169, 255, 0) 70%); }
+.clock { left: 806px; top: 430px; width: 230px; height: 230px; transform: rotate(10deg); filter: drop-shadow(0 20px 30px rgba(19, 33, 59, .22)); }
+.time { left: 144px; top: 562px; width: 640px; height: 170px; font-size: 156px; line-height: 170px; font-weight: 800; color: #fff; letter-spacing: -.05em; font-variant-numeric: tabular-nums; }
+.date { left: 150px; top: 734px; width: 520px; height: 40px; font-size: 32px; line-height: 40px; font-weight: 700; color: rgba(255, 255, 255, .8); }
+.line { left: 144px; top: 786px; width: 792px; height: 2px; background: rgba(255, 255, 255, .25); }
+.as-l { left: 144px; top: 800px; height: 36px; font-size: 30px; line-height: 36px; font-weight: 600; color: rgba(255, 255, 255, .7); }
+.assets { left: 300px; top: 796px; width: 636px; height: 44px; font-size: 38px; line-height: 44px; font-weight: 800; color: #fff; }
+.bx { top: 878px; width: 434px; height: 190px; border-radius: 36px; background: var(--g1); }
+.bx.a { left: 96px; } .bx.b { left: 550px; background: #fff; box-shadow: inset 0 0 0 5px var(--blue); }
+.bl { top: 908px; height: 40px; font-size: 34px; line-height: 40px; font-weight: 700; color: var(--g5); }
+.bl.a { left: 140px; } .bl.b { left: 594px; color: var(--blue); }
+.prev, .fc { top: 954px; width: 360px; height: 96px; font-size: 80px; line-height: 96px; font-weight: 800; letter-spacing: -.04em; }
+.prev { left: 136px; color: var(--g7); } .fc { left: 590px; color: var(--blue); }
+.look-bx { left: 96px; top: 1096px; width: 888px; height: 146px; border-radius: 32px; background: var(--blue-mist); }
+.look-l { left: 140px; top: 1120px; height: 36px; font-size: 30px; line-height: 36px; font-weight: 800; color: var(--blue); }
+.look { left: 140px; top: 1164px; width: 800px; height: 52px; font-size: 40px; line-height: 52px; font-weight: 700; color: var(--navy); }
+.pg { bottom: 40px; }
+</style>
+<div class="k">
+  <img class="logo" src="../../templates/benepip-logo.png">
+  <div class="chip" data-slot="chip" data-lines="1">금요일 · 미국</div>
+  <div class="title" data-slot="title" data-lines="2">밤 10시 45분,<br>미국 <b>경기 체감</b>은?</div>
+  <div class="hero-glow"></div>
+  <div class="hero"></div>
+  <img class="clock" src="../../templates/icons3d/clock.webp">
+  <div class="time" data-slot="time" data-lines="1">22:45</div>
+  <div class="date" data-slot="date" data-lines="1">10/23 금 · 한국 시간</div>
+  <div class="line"></div>
+  <div class="as-l">영향 자산</div>
+  <div class="assets" data-slot="assets" data-lines="1">달러 · 금 · 미국 지수</div>
+  <div class="bx a"></div><div class="bx b"></div>
+  <div class="bl a">이전</div><div class="bl b">예상</div>
+  <div class="prev" data-slot="prev" data-lines="1">57.0</div>
+  <div class="fc" data-slot="fc" data-lines="1">55.4</div>
+  <div class="look-bx"></div>
+  <div class="look-l">발표 전후로 볼 것</div>
+  <div class="look" data-slot="look" data-lines="1">50보다 높으면 경기 확장으로 읽어요</div>
+  <div class="pg" data-slot="pg" data-lines="1">2 / 5</div>
+</div>

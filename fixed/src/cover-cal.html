@@ -1,0 +1,30 @@
+<!-- 경제 캘린더 표지: 질문형 제목 · 큰 3D 달력 · 이번 주 지표 상자 -->
+<style>
+.k { background: linear-gradient(160deg, #f4f7ff 0%, #e6edff 55%, #dfe7ff 100%); }
+.glow { left: 520px; top: 120px; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(circle, rgba(36, 85, 245, .18), rgba(36, 85, 245, 0) 68%); }
+.cal { left: 560px; top: 150px; width: 470px; height: 470px; transform: rotate(-9deg); filter: drop-shadow(0 40px 50px rgba(19, 33, 59, .22)); }
+.mast { left: 96px; top: 96px; width: 888px; height: 56px; border-bottom: 4px solid var(--navy); }
+.mast-t { left: 96px; top: 96px; font-size: 40px; line-height: 44px; font-weight: 800; letter-spacing: -.02em; }
+.mast-d { right: 96px; top: 102px; font-size: 30px; line-height: 36px; font-weight: 600; color: var(--g5); }
+.kick { left: 96px; top: 560px; width: 600px; height: 48px; font-size: 40px; line-height: 48px; font-weight: 700; color: var(--blue); }
+.title { top: 624px; height: 260px; font-size: 104px; line-height: 130px; letter-spacing: -.05em; }
+.card { left: 96px; top: 950px; width: 888px; height: 250px; border-radius: 40px; background: #fff; box-shadow: 0 24px 60px rgba(19, 33, 59, .1); }
+.c-l { left: 144px; top: 990px; height: 38px; font-size: 32px; line-height: 38px; font-weight: 700; color: var(--g5); }
+.range { right: 144px; top: 990px; width: 360px; height: 38px; text-align: right; font-size: 32px; line-height: 38px; font-weight: 800; color: var(--blue); }
+.list { left: 144px; top: 1046px; width: 792px; height: 112px; font-size: 42px; line-height: 56px; font-weight: 800; color: var(--navy); }
+.next { left: 96px; top: 1244px; font-size: 32px; line-height: 40px; font-weight: 700; color: var(--g5); }
+</style>
+<div class="k">
+  <div class="glow"></div>
+  <img class="cal" src="../../templates/icons3d/calendar.webp">
+  <div class="mast"></div>
+  <div class="mast-t">BenePip Weekly</div>
+  <div class="mast-d">한국 시간 기준</div>
+  <div class="kick" data-slot="chip" data-lines="1">이번 주 경제 캘린더</div>
+  <div class="title" data-slot="title" data-lines="2">이번 주 4번,<br><b>달러가 흔들릴</b> 시간</div>
+  <div class="card"></div>
+  <div class="c-l">이번 주 발표</div>
+  <div class="range" data-slot="range" data-lines="1">10/23(금)</div>
+  <div class="list" data-slot="list" data-lines="2">PMI 제조업 · PMI 서비스업<br>소비자 심리 · 물가 기대</div>
+  <div class="next">넘겨서 지표별로 보기 →</div>
+</div>
