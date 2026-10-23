@@ -1,0 +1,138 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Pretendard Variable', sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; background: #ddd; }
+.c { width: 1080px; height: 1350px; position: relative; overflow: hidden; margin: 0 0 40px; }
+.logo { position: absolute; left: 96px; top: 92px; height: 48px; }
+.pg { position: absolute; right: 96px; bottom: 80px; font-size: 30px; font-weight: 600; }
+
+/* ───── A. 토스형: 아주 큰 제목 · 상자 없이 큰 글자 줄 · 넓은 여백 ───── */
+.A { background: #fff; color: #191f28; }
+.A .k { position: absolute; left: 96px; top: 230px; font-size: 40px; font-weight: 700; color: #3182f6; }
+.A h1 { position: absolute; left: 96px; top: 300px; width: 888px; font-size: 108px; line-height: 1.24; font-weight: 800; letter-spacing: -0.04em; }
+.A h1 b { color: #3182f6; font-weight: 800; }
+.A h2 { position: absolute; left: 96px; top: 300px; width: 888px; font-size: 92px; line-height: 1.26; font-weight: 800; letter-spacing: -0.04em; }
+.A h2 b { color: #3182f6; }
+.A .sub { position: absolute; left: 96px; font-size: 44px; font-weight: 600; color: #6b7684; }
+.A .rows { position: absolute; left: 96px; right: 96px; }
+.A .row { display: flex; justify-content: space-between; align-items: baseline; padding: 34px 0; border-top: 2px solid #f2f4f6; }
+.A .row span { font-size: 44px; font-weight: 600; color: #6b7684; }
+.A .row b { font-size: 60px; font-weight: 800; letter-spacing: -0.02em; }
+.A .big { position: absolute; left: 90px; font-size: 230px; font-weight: 800; letter-spacing: -0.05em; line-height: 1; color: #3182f6; }
+.A .item { padding: 38px 0; border-top: 2px solid #f2f4f6; }
+.A .item b { display: block; font-size: 54px; font-weight: 800; letter-spacing: -0.03em; }
+.A .item span { display: block; margin-top: 12px; font-size: 40px; font-weight: 500; color: #6b7684; }
+.A .pg { color: #b0b8c1; }
+.A .tag { display: inline-block; font-size: 42px; font-weight: 700; color: #3182f6; background: #e8f3ff; border-radius: 18px; padding: 14px 26px; margin: 0 14px 18px 0; }
+
+/* ───── B. 매거진형: 위 색띠 · 초대형 숫자 · 굵은 제목 · 얇은 선 ───── */
+.B { background: #f4f1ea; color: #111; }
+.B .band { position: absolute; left: 0; right: 0; top: 0; height: 200px; background: #1a3ccf; }
+.B .band .k { position: absolute; left: 96px; top: 64px; font-size: 34px; font-weight: 800; color: #fff; letter-spacing: 0.08em; }
+.B .band .n { position: absolute; right: 96px; top: 64px; font-size: 34px; font-weight: 800; color: rgba(255,255,255,.6); }
+.B h1, .B h2 { position: absolute; left: 96px; width: 888px; font-weight: 900; letter-spacing: -0.045em; line-height: 1.16; }
+.B h1 { top: 280px; font-size: 120px; } .B h2 { top: 270px; font-size: 96px; }
+.B h1 b, .B h2 b { color: #1a3ccf; }
+.B .rule { position: absolute; left: 96px; right: 96px; height: 6px; background: #111; }
+.B .mega { position: absolute; left: 86px; font-size: 300px; font-weight: 900; letter-spacing: -0.06em; line-height: .9; color: #1a3ccf; }
+.B .lab { position: absolute; left: 96px; font-size: 34px; font-weight: 800; letter-spacing: 0.06em; color: #555; }
+.B .two { position: absolute; left: 96px; right: 96px; display: grid; grid-template-columns: 1fr 1fr; }
+.B .two div { padding: 26px 0 0; border-top: 3px solid #111; }
+.B .two div + div { padding-left: 40px; border-left: 3px solid #111; }
+.B .two span { font-size: 34px; font-weight: 800; color: #555; letter-spacing: 0.04em; }
+.B .two b { display: block; font-size: 110px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; }
+.B .two .on b { color: #1a3ccf; }
+.B .note { position: absolute; left: 96px; right: 96px; font-size: 46px; font-weight: 700; line-height: 1.4; }
+.B .list { position: absolute; left: 96px; right: 96px; counter-reset: n; }
+.B .list > div { display: grid; grid-template-columns: 130px 1fr; padding: 36px 0; border-top: 3px solid #111; }
+.B .list i { font-style: normal; font-size: 80px; font-weight: 900; color: #1a3ccf; line-height: 1; }
+.B .list b { font-size: 54px; font-weight: 900; letter-spacing: -0.03em; }
+.B .list span { display: block; margin-top: 10px; font-size: 38px; font-weight: 500; color: #555; }
+.B .pg { color: #555; }
+.B .chips { position: absolute; left: 96px; right: 96px; font-size: 48px; font-weight: 800; line-height: 1.6; }
+
+/* ───── C. 위젯 카드형: 연회색 바탕 · 흰 둥근 카드 · 카드마다 정보 하나 ───── */
+.C { background: #eef1f6; color: #13213b; }
+.C .k { position: absolute; left: 96px; top: 220px; font-size: 38px; font-weight: 700; color: #2455f5; }
+.C h1, .C h2 { position: absolute; left: 96px; width: 888px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.25; }
+.C h1 { top: 290px; font-size: 100px; } .C h2 { top: 286px; font-size: 84px; }
+.C h1 b, .C h2 b { color: #2455f5; }
+.C .w { position: absolute; background: #fff; border-radius: 48px; box-shadow: 0 20px 50px rgba(19,33,59,.08); padding: 44px 52px; }
+.C .w small { display: block; font-size: 34px; font-weight: 700; color: #8b95a1; }
+.C .w b { display: block; margin-top: 10px; font-size: 64px; font-weight: 800; letter-spacing: -0.03em; }
+.C .w.hero { background: #2455f5; color: #fff; } .C .w.hero small { color: rgba(255,255,255,.75); }
+.C .w.hero b { font-size: 170px; line-height: 1; letter-spacing: -0.05em; margin-top: 18px; }
+.C .w.blue b { color: #2455f5; }
+.C .w p { margin-top: 12px; font-size: 44px; font-weight: 700; line-height: 1.4; }
+.C .it { display: flex; gap: 34px; align-items: flex-start; }
+.C .it i { flex: none; width: 76px; height: 76px; border-radius: 50%; background: #eaf0ff; color: #2455f5; font-style: normal; font-size: 40px; font-weight: 800; display: grid; place-items: center; }
+.C .it b { font-size: 52px; margin: 0; } .C .it span { display: block; margin-top: 8px; font-size: 38px; font-weight: 500; color: #6b7684; }
+.C .ic { position: absolute; right: 70px; top: 120px; width: 300px; height: 300px; transform: rotate(-8deg); filter: drop-shadow(0 30px 40px rgba(19,33,59,.18)); }
+.C .pg { color: #8b95a1; }
+</style></head><body>
+
+<!-- A 표지 -->
+<div class="c A" id="A1"><img class="logo" src="../../templates/benepip-logo.png">
+  <div class="k">이번 주 경제 캘린더</div>
+  <h1>이번 주 4번,<br><b>달러가 흔들릴</b><br>시간이에요</h1>
+  <div class="sub" style="top:740px">10/23(금) 주요 경제 일정</div>
+  <div style="position:absolute;left:96px;right:96px;top:840px"><span class="tag">PMI 제조업</span><span class="tag">PMI 서비스업</span><span class="tag">소비자 심리</span><span class="tag">물가 기대</span></div>
+  <div class="sub" style="top:1190px;font-size:36px;color:#b0b8c1">넘겨서 지표별로 보기 →</div></div>
+<!-- A 발표 -->
+<div class="c A" id="A2"><img class="logo" src="../../templates/benepip-logo.png">
+  <div class="k">금요일 · 미국</div>
+  <h2>밤 10시 45분,<br>미국 <b>경기 체감</b>은?</h2>
+  <div class="big" style="top:560px">22:45</div>
+  <div class="sub" style="top:800px">10/23 금 · 한국 시간 · 달러 영향</div>
+  <div class="rows" style="top:900px"><div class="row"><span>이전</span><b>57.0</b></div><div class="row"><span>예상</span><b style="color:#3182f6">55.4</b></div><div class="row" style="border-bottom:2px solid #f2f4f6"><span>볼 것</span><b style="font-size:42px">50 위면 확장, 아래면 위축</b></div></div>
+  <div class="pg">2 / 5</div></div>
+<!-- A 목록 -->
+<div class="c A" id="A3"><img class="logo" src="../../templates/benepip-logo.png">
+  <div class="k">이러면 사라져요</div>
+  <h2>크레딧·수익,<br><b>같이 없어지는</b> 경우</h2>
+  <div class="rows" style="top:600px"><div class="item"><b>사용 기한이 지났어요</b><span>지급일부터 날짜를 세는 곳이 많아요</span></div><div class="item"><b>조건 전에 출금을 신청했어요</b><span>크레딧과 그 수익이 같이 빠질 수 있어요</span></div><div class="item" style="border-bottom:2px solid #f2f4f6"><b>여러 계좌로 받았어요</b><span>한 사람 한 번만 되는 경우가 대부분</span></div></div>
+  <div class="pg">3 / 4</div></div>
+
+<!-- B 표지 -->
+<div class="c B" id="B1"><div class="band"><div class="k">BENEPIP WEEKLY</div><div class="n">10.23 FRI</div></div>
+  <h1>이번 주 4번,<br><b>달러가</b><br><b>흔들려요</b></h1>
+  <div class="rule" style="top:830px"></div>
+  <div class="lab" style="top:870px">THIS WEEK</div>
+  <div class="chips" style="top:930px">PMI 제조업 · PMI 서비스업<br>소비자 심리 · 물가 기대</div>
+  <div class="lab" style="top:1200px;color:#1a3ccf">넘겨서 보기 →</div></div>
+<!-- B 발표 -->
+<div class="c B" id="B2"><div class="band"><div class="k">FRI · USA</div><div class="n">2 / 5</div></div>
+  <h2>미국 <b>경기 체감</b>은?</h2>
+  <div class="mega" style="top:420px">22:45</div>
+  <div class="lab" style="top:720px">10/23 금 · 한국 시간 · 달러</div>
+  <div class="two" style="top:800px"><div><span>이전</span><b>57.0</b></div><div class="on"><span>예상</span><b>55.4</b></div></div>
+  <div class="rule" style="top:1080px;height:3px"></div>
+  <div class="note" style="top:1110px">50 위면 확장, 아래면 위축이에요</div></div>
+<!-- B 목록 -->
+<div class="c B" id="B3"><div class="band"><div class="k">이러면 사라져요</div><div class="n">3 / 4</div></div>
+  <h2>크레딧·수익,<br><b>같이 없어지는</b> 경우</h2>
+  <div class="list" style="top:560px"><div><i>01</i><div><b>사용 기한이 지났어요</b><span>지급일부터 날짜를 세는 곳이 많아요</span></div></div><div><i>02</i><div><b>조건 전에 출금 신청</b><span>크레딧과 그 수익이 같이 빠질 수 있어요</span></div></div><div style="border-bottom:3px solid #111"><i>03</i><div><b>여러 계좌로 받았어요</b><span>한 사람 한 번만 되는 경우가 대부분</span></div></div></div></div>
+
+<!-- C 표지 -->
+<div class="c C" id="C1"><img class="logo" src="../../templates/benepip-logo.png"><img class="ic" src="../../templates/icons3d/calendar.webp">
+  <div class="k" style="top:460px">이번 주 경제 캘린더</div>
+  <h1 style="top:530px">이번 주 4번,<br><b>달러가 흔들릴</b> 시간</h1>
+  <div class="w" style="left:96px;right:96px;top:900px"><small>10/23(금) 주요 경제 일정</small><p style="font-size:50px;font-weight:800;margin-top:18px">PMI 제조업 · PMI 서비스업<br>소비자 심리 · 물가 기대</p></div></div>
+<!-- C 발표 -->
+<div class="c C" id="C2"><img class="logo" src="../../templates/benepip-logo.png">
+  <div class="k">금요일 · 미국</div>
+  <h2>밤 10시 45분,<br>미국 <b>경기 체감</b>은?</h2>
+  <div class="w hero" style="left:96px;right:96px;top:560px"><small>10/23 금 · 한국 시간 · 달러</small><b>22:45</b></div>
+  <div class="w" style="left:96px;width:428px;top:900px"><small>이전</small><b>57.0</b></div>
+  <div class="w blue" style="right:96px;width:428px;top:900px"><small>예상</small><b>55.4</b></div>
+  <div class="w" style="left:96px;right:96px;top:1090px;padding:36px 52px"><small>발표 전후로 볼 것</small><p>50 위면 확장, 아래면 위축이에요</p></div></div>
+<!-- C 목록 -->
+<div class="c C" id="C3"><img class="logo" src="../../templates/benepip-logo.png">
+  <div class="k">이러면 사라져요</div>
+  <h2>크레딧·수익,<br><b>같이 없어지는</b> 경우</h2>
+  <div class="w it" style="left:96px;right:96px;top:580px"><i>1</i><div><b>사용 기한이 지났어요</b><span>지급일부터 날짜를 세는 곳이 많아요</span></div></div>
+  <div class="w it" style="left:96px;right:96px;top:800px"><i>2</i><div><b>조건 전에 출금 신청</b><span>크레딧과 그 수익이 같이 빠질 수 있어요</span></div></div>
+  <div class="w it" style="left:96px;right:96px;top:1020px"><i>3</i><div><b>여러 계좌로 받았어요</b><span>한 사람 한 번만 되는 경우가 대부분</span></div></div>
+  <div class="pg" style="bottom:60px">3 / 4</div></div>
+</body></html>
