@@ -36,6 +36,14 @@ T = {
  '혜택·적용 조건 4': ('혜택·적용 조건', 'end', '3단계 순서 (할 일 + 설명)', {'t1': '머리말', 't2': '제목', 't4': '1 할 일', 't5': '1 설명', 't7': '2 할 일', 't8': '2 설명', 't10': '3 할 일', 't11': '3 설명'}),
 }
 
+# 숫자가 꼭 있어야 하는 칸 (없으면 이 틀을 고르면 안 됨)
+NUM = {
+ '거래비용·페이백 1': ['t5', 't7', 't10'], '거래비용·페이백 2': ['t3', 't5', 't8'], '거래비용·페이백 3': ['t3', 't6', 't8', 't10'],
+ '경제 캘린더 2': ['t4'], '경제 캘린더 3': ['t4'], '경제 캘린더 5': ['t7', 't10', 't13', 't16'],
+ '플랫폼 활용 2': ['t3', 't7', 't9', 't11'], '플랫폼 활용 4': ['t3', 't5', 't7', 't10'], '플랫폼 활용 5': ['t7', 't8', 't10', 't11', 't13', 't14', 't16', 't17'],
+ '혜택·적용 조건 1': ['t5'], '베네핍 이용 안내 4': ['t3', 't5', 't7', 't9'], '브로커 이용 가이드 1': ['t3'],
+}
+
 def sample(s):
     base = next((g for g in s['segs'] if g['t'].strip()), s['segs'][0])
     return ''.join('“%s”' % g['t'] if (g['color'] != base['color'] or g['weight'] != base['weight']) and g['t'].strip() else g['t'] for g in s['segs']).replace('“\n', '\n“').replace('\n”', '”\n')
@@ -52,7 +60,7 @@ for name, (group, pos, use, roles) in T.items():
         if s['autoResize'] != 'WIDTH_AND_HEIGHT': lim = max(mx, int(s['w'] / (size * 0.95)))   # 너비가 정해진 칸: 한글 한 자 ≈ 글씨 크기
         else: lim = mx + 1 if mx <= 4 else math.ceil(mx * 1.25)   # 너비 자동 칸: 예시보다 조금 더까지
         slots.append([sid, role, ex, len(lines), lim])
-    out.append({'n': name, 'g': group, 'pos': pos, 'use': use, 's': slots})
+    out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else ''), 'num': NUM.get(name, []), 's': slots})
 
 js = ('// 자동 생성 (renderer/fixed/catalog.py) · 직접 고치지 마세요\n'
       '// 피그마 틀 목록: n 틀 이름 · g 주제군 · pos cover/body/end · use 쓰임 · s [칸, 역할, 예시(“강조”), 줄 수, 줄당 최대 글자]\n'
