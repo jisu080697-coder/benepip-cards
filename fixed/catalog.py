@@ -54,14 +54,14 @@ def tone(name):
 
 import re
 # 칸 종류 (예시 글 모양으로 정함) → 생성 검사에서 모양을 강제
-def kind(role, ex):
+def kind(role, ex, need=True):
     e = ex.replace('“', '').replace('”', '').strip()
     if re.fullmatch(r'\d{1,2}', e): return 'digit'
     if re.fullmatch(r'\d{1,2}:\d{2}', e): return 'time'
     if re.match(r'\d{1,2}/\d{1,2}', e) and len(e) <= 9: return 'date'
     if e in '월화수목금토일' and len(e) == 1: return 'day'
     if re.search(r'이전 값|예상 값', role): return 'numq'
-    if re.search(r'값|큰 숫자', role) and '설명' not in role and re.search(r'\d', e): return 'num'
+    if need and re.search(r'값|큰 숫자', role) and '설명' not in role and re.search(r'\d', e): return 'num'
     return ''
 
 # 칸에 실제로 쓸 수 있는 너비
@@ -111,7 +111,7 @@ for name, (group, pos, use, roles) in T.items():
         lim = max(mx, int(safe_w(d, s) / size))   # 실제로 쓸 수 있는 너비 ÷ 글씨 크기 (한글 한 자 ≈ 글씨 크기)
         if sid in PILL.get(name, []): lim = mx + 2   # 태그: 줄 안에서 이어 붙으니 예시보다 조금만
         if role == '머리말': lim = min(lim, max(mx + 3, 12))   # 머리말: 오른쪽 아이콘 자리를 덮지 않게
-        slots.append([sid, role, ex, len(lines), lim, kind(role, ex)])
+        slots.append([sid, role, ex, len(lines), lim, kind(role, ex, sid in NUM.get(name, []))])
     tn, ic = tone(name), ICON.get(name, '')
     out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else '') + (' · 남색 바탕' if tn == 'dark' else '') + (' · 아이콘: ' + ic if ic else ''), 'num': NUM.get(name, []), 'tone': tn, 'icon': ic, 's': slots})
 
