@@ -48,7 +48,9 @@ for name, (group, pos, use, roles) in T.items():
     for sid, role in roles.items():
         s = by[sid]; ex = sample(s); lines = ex.split('\n')
         mx = max(len(l.replace('“', '').replace('”', '')) for l in lines)
-        lim = mx if mx <= 3 else math.ceil(mx * 1.1)   # 짧은 값(숫자 등)은 예시 길이까지만
+        size = next((g for g in s['segs'] if g['t'].strip()), s['segs'][0])['size']
+        if s['autoResize'] != 'WIDTH_AND_HEIGHT': lim = max(mx, int(s['w'] / (size * 0.95)))   # 너비가 정해진 칸: 한글 한 자 ≈ 글씨 크기
+        else: lim = mx + 1 if mx <= 4 else math.ceil(mx * 1.25)   # 너비 자동 칸: 예시보다 조금 더까지
         slots.append([sid, role, ex, len(lines), lim])
     out.append({'n': name, 'g': group, 'pos': pos, 'use': use, 's': slots})
 
