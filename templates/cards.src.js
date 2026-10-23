@@ -159,7 +159,7 @@ var BPCards = (function () {
     calc: function (c) {
       var r = rowsOf(c.b); if (!r.length) return LAY.body(c);
       var last = r.pop();
-      return '<h2>' + hi(c.t) + '</h2><div class="calc">' + r.map(function (x) { return '<div><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '<div class="eq"><span>' + esc(last[0]) + '</span><b>' + esc(last[1] || '') + '</b></div></div>' + note(c);
+      return '<h2>' + hi(c.t) + '</h2><div class="calc">' + r.map(function (x) { var m = String(x[0]).match(/^(.*?)\s*\(([^)]*)\)\s*$/); return '<div><span>' + esc(m ? m[1] : x[0]) + (m ? '<small>' + esc(m[2]) + '</small>' : '') + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '<div class="eq"><span>' + esc(last[0]) + '</span><b>' + esc(last[1] || '') + '</b></div></div>' + note(c);
     },
     ui: function (c) {
       var r = rowsOf(c.b), p = plainOf(c.b);
@@ -176,19 +176,15 @@ var BPCards = (function () {
       var fc = get(/예상/), pv = get(/이전/), base = get(/기준/), viz = '';
       var first = function (x) { if (x) x[1] = String(x[1] || '').split(/[,·]/)[0].replace(/^[^\d\-+]*(?=[\d\-+])/, '').trim() || x[1]; return x; }; fc = first(fc); pv = first(pv);
       var nv = function (x) { var m = String(x || '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
-      if (fc && pv && nv(fc[1]) != null && nv(pv[1]) != null) {
-        var a = nv(pv[1]), b = nv(fc[1]), base50 = base && nv(base[1]) != null ? nv(base[1]) : null;
-        if (a === b && base50 == null) viz = '<div class="same">예상치가 이전과 같아요 <b>' + esc(fc[1]) + '</b></div>'; else
-        if (base50 != null) {   // 기준선이 있는 지표 (PMI 등): 게이지
-          var lo = Math.min(a, b, base50) - 5, hi2 = Math.max(a, b, base50) + 5, pos = function (v) { return Math.round((v - lo) / (hi2 - lo) * 100); };
-          viz = '<div class="gauge"><div class="bar"><i class="base" style="left:' + pos(base50) + '%"><em>' + esc(String(base50)) + '</em></i><i class="pv" style="left:' + pos(a) + '%"></i><i class="fc" style="left:' + pos(b) + '%"></i></div><div class="leg"><span class="pv">이전 ' + esc(pv[1]) + '</span><span class="fc">예상 ' + esc(fc[1]) + '</span><span>' + esc(base50 + ' 위 = 확장 · 아래 = 위축') + '</span></div></div>';
-        } else {   // 물가·고용 등: 이전 → 예상 막대
-          var mx = Math.max(Math.abs(a), Math.abs(b)) || 1;
-          viz = '<div class="cmpbar"><div><span>이전</span><s style="width:' + Math.max(8, Math.round(Math.abs(a) / mx * 100)) + '%"></s><b>' + esc(pv[1]) + '</b></div><div class="on"><span>예상</span><s style="width:' + Math.max(8, Math.round(Math.abs(b) / mx * 100)) + '%"></s><b>' + esc(fc[1]) + '</b></div></div>';
-        }
+      // 이전 · 예상: 큰 숫자 두 칸 (기준선이 있으면 한 줄 설명)
+      if (fc || pv) {
+        var same = fc && pv && nv(fc[1]) != null && nv(fc[1]) === nv(pv[1]);
+        viz = '<div class="pf">' + (pv ? '<div><span>이전</span><b>' + esc(pv[1]) + '</b></div>' : '') + (fc ? '<div class="on"><span>예상' + (same ? ' <em>변화 없음</em>' : '') + '</span><b>' + esc(fc[1]) + '</b></div>' : '') + '</div>' +
+          (base && nv(base[1]) != null ? '<div class="pf-note">' + esc(nv(base[1]) + ' 위 = 확장 · 아래 = 위축') + '</div>' : '');
       }
-      var info = r.filter(function (x) { return !(viz && /예상|이전|기준/.test(x[0])); }).slice(0, 3);
-      return '<h2>' + hi(c.t) + '</h2><div class="ev"><div class="when"><small>' + esc(w[0] || '') + '</small><b>' + esc(w[1] || '') + '</b><span>한국 시간</span></div><div class="what' + (info.length <= 1 ? ' one' : '') + '">' + info.map(function (x) { return '<div><span>' + esc(x[0]) + '</span>' + esc(x[1] || '') + '</div>'; }).join('') + '</div></div>' + viz +
+      var info = r.filter(function (x) { return !/예상|이전|기준/.test(x[0]); }).slice(0, 2);
+      return '<h2>' + hi(c.t) + '</h2><div class="ev2"><small>' + esc([w[0], '한국 시간'].filter(Boolean).join(' · ')) + '</small><b>' + esc(w[1] || '') + '</b>' +
+        (info.length ? '<div class="as">' + info.map(function (x) { return '<span><em>' + esc(x[0]) + '</em>' + esc(x[1] || '') + '</span>'; }).join('') + '</div>' : '') + '</div>' + viz +
         (look.length ? '<div class="look"><h4>발표 전후로 볼 것</h4>' + look.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('') + '</div>' : '') + note(c);
     },
     check: function (c) { return '<h2>' + hi(c.t) + '</h2><div class="list">' + lines(c.b).map(cells).map(function (x) { return '<div><i>✓</i>' + esc(x[0]) + (x[1] ? '<em>' + esc(x[1]) + '</em>' : '') + '</div>'; }).join('') + '</div>' + note(c); },
@@ -305,6 +301,24 @@ var BPCards = (function () {
     var inner = parts.filter(function (e) { return e.tagName !== 'H2' && !/^(head)$/.test(e.className); });
     for (var z = 1; z > 0.7 && bottom() > limit; z -= 0.04) inner.forEach(function (e) { e.style.zoom = (z - 0.04).toFixed(2); });
     if (bottom() > limit) parts.forEach(function (e) { if (!e.style.zoom) e.style.zoom = '0.9'; });
+    // 빈 공간 채우기: 글씨 크기는 그대로, 제목 아래 주 내용의 칸(줄·상자) 높이를 늘려 아래까지 채움 · 메모·볼 것은 맨 아래에 붙음
+    if (!/cmp-(right|bottom)/.test(k.className) && !k.style.zoom && !parts.some(function (e) { return e.style.zoom; })) {
+      var h2 = k.querySelector(':scope > h2'), main = h2 && h2.nextElementSibling;
+      while (main && /^(desc|head)$/.test(main.className)) main = main.nextElementSibling;
+      if (main && /^(tbl|calc|recap|list|myth|steps|route)$/.test(String(main.className).split(' ')[0])) {
+        var rows = [].slice.call(main.children).filter(function (e) { return getComputedStyle(e).position !== 'absolute'; });
+        if (main.classList.contains('ev')) rows = [main];
+        if (rows.length < 2 && !main.classList.contains('ev')) rows = [main];
+        var lines = {}; rows.forEach(function (e) { lines[Math.round(e.getBoundingClientRect().top)] = 1; });
+        var nl2 = Object.keys(lines).length || 1, free = limit - 30 - bottom();
+        if (free > 60) {
+          var per = Math.min(free * 0.7 / nl2, nl2 > 1 ? 34 : 90);
+          rows.forEach(function (e) { var cs = getComputedStyle(e); e.style.paddingTop = (parseFloat(cs.paddingTop) + per / 2) + 'px'; e.style.paddingBottom = (parseFloat(cs.paddingBottom) + per / 2) + 'px'; });
+          if (bottom() > limit) rows.forEach(function (e) { e.style.paddingTop = e.style.paddingBottom = ''; });
+        }
+      }
+      k.classList.add('filled');
+    }
     // 구성별: 왼쪽 아래 사물이 있으면 그 위까지만 키움 · 위아래로 나눈 구성은 키우지 않음
     var cmpd = /cmp-(center|right|bottom|grid)/.test(k.className), cap = k.classList.contains('cmp-right') ? 900 : limit;
     // 글씨는 키우지 않음 (모든 장 같은 크기 체계) · 남는 공간은 아래에서 가운데 쪽으로 정리

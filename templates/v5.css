@@ -242,3 +242,65 @@
 .P.sum .recap i { grid-row: span 2; width: 76px !important; height: 76px; border-radius: 50%; background: #fff !important; color: var(--blue) !important; font-size: 38px !important; display: grid !important; place-items: center; }
 .P.sum .recap em { grid-column: 2; padding-left: 0 !important; margin: 0 !important; opacity: .82; }
 .P.sum .recap i { justify-content: center !important; align-content: center; text-align: center; line-height: 1 !important; padding: 0 !important; }
+
+/* 채우기: 주 내용은 제목 아래 넉넉히, 메모·볼 것은 맨 아래 · 큰 숫자는 더 크게 */
+.P > h2 + .ev, .P > h2 + .tbl, .P > h2 + .calc, .P > h2 + .myth, .P > h2 + .recap, .P > h2 + .grid { margin-top: 64px !important; }
+.P.filled > .look, .P.filled > .myth-sub { margin-top: auto !important; margin-bottom: 30px; }
+.P.filled > .look { background: var(--tint, rgba(43,92,255,.07)); border: none !important; border-radius: 32px; padding: 36px 44px !important; }
+.P .ev .when, .P .ev .what { border-radius: 36px; }
+.P .ev .when { justify-content: center; }
+.P .gauge .bar { height: 20px; border-radius: 10px; }
+.P .gauge .bar i.pv, .P .gauge .bar i.fc { width: 40px; height: 40px; }
+.P .same { font-size: 52px !important; }
+.P .same b { font-size: 88px; display: block; margin: 8px 0 0; letter-spacing: -.03em; }
+.P .calc .eq b { font-size: 96px; letter-spacing: -.03em; }
+.P .tbl div:not(:first-child) span:first-child { font-weight: 800; color: var(--c); }
+
+/* 발표 장 v2: 큰 시각 한 덩어리 + 이전·예상 큰 숫자 두 칸 + 맨 아래 볼 것 */
+.P .ev2 { margin-top: 60px; background: var(--blue); color: #fff; border-radius: 44px; padding: 44px 52px 48px; display: flex; flex-direction: column; box-shadow: 0 24px 50px rgba(43, 92, 255, .22); }
+.P.cmp-ev2 .ev2 { background: var(--navy); box-shadow: 0 24px 50px rgba(19, 33, 59, .2); }
+.P .ev2 small { font-size: 36px; font-weight: 700; opacity: .85; }
+.P .ev2 > b { font-size: 190px; line-height: 1; font-weight: 800; letter-spacing: -.05em; margin: 18px 0 0 -6px; font-variant-numeric: tabular-nums; }
+.P .ev2 .as { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; padding-top: 30px; border-top: 2px solid rgba(255,255,255,.25); }
+.P .ev2 .as span { font-size: 40px; font-weight: 800; }
+.P .ev2 .as em { font-style: normal; font-size: 34px; font-weight: 600; opacity: .75; margin-right: 18px; }
+.P .pf { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 26px; }
+.P .pf div { background: var(--gray-50, #f3f5f9); border-radius: 36px; padding: 34px 40px 38px; display: flex; flex-direction: column; gap: 6px; }
+.P.soft .pf div { background: #fff; }
+.P .pf div span { font-size: 36px; font-weight: 700; color: var(--mute); }
+.P .pf div b { font-size: 92px; font-weight: 800; letter-spacing: -.04em; line-height: 1.1; color: var(--gray-700, #4a5468); }
+.P .pf div.on { box-shadow: inset 0 0 0 5px var(--blue); }
+.P .pf div.on span { color: var(--blue); }
+.P .pf div.on b { color: var(--blue); }
+.P .pf em { font-style: normal; font-size: 28px; background: var(--blue-soft); color: var(--blue); border-radius: 20px; padding: 4px 14px; margin-left: 8px; vertical-align: 3px; }
+.P .pf-note { margin-top: 20px; font-size: 34px; font-weight: 600; color: var(--mute); }
+.P.filled.L-event > .look { margin-top: auto !important; margin-bottom: 30px; background: var(--gray-50, #f3f5f9); border: none !important; border-radius: 32px; padding: 34px 44px !important; }
+.P.L-event.soft > .look { background: #fff; }
+.P.L-event > .look h4 { color: var(--blue); }
+
+/* 계산 장: 항목 이름 크게, 계산식은 아래 작게 */
+.P .calc span small { display: block; font-size: 32px; font-weight: 500; opacity: .6; margin-top: 6px; letter-spacing: -.02em; }
+.P .calc div:not(.eq) { font-size: 52px !important; font-weight: 800; align-items: center; }
+.P .calc div:not(.eq) span { font-size: 42px; font-weight: 700; }
+/* 표: 줄마다 둥근 칸 · 첫 칸(시각) 크게 */
+.P .tbl { border-top: none !important; }
+.P .tbl div:first-child { border: none !important; padding: 0 40px; }
+.P .tbl div:first-child span { color: var(--mute); padding-bottom: 14px; }
+.P .tbl div:not(:first-child) { background: var(--gray-50, #f3f5f9); border: none !important; border-radius: 30px; padding: 0 40px; margin-top: 16px; align-items: center; }
+.P.soft .tbl div:not(:first-child) { background: #fff; }
+.P .tbl div:not(:first-child) span:first-child { font-size: 52px !important; letter-spacing: -.03em; }
+.P .tbl div:not(:first-child) span { border: none !important; }
+.P .tbl div:not(:first-child) span:not(:first-child) { font-weight: 700; }
+/* 발표 장 v2 크기 맞춤: 시각 옆에 날짜 · 한 장 안에 들어오게 */
+.P .ev2 { margin-top: 44px; padding: 34px 46px 38px; display: grid; grid-template-columns: 1fr auto; align-items: start; }
+.P .ev2 > b { grid-column: 1; grid-row: 1; font-size: 156px; margin: 0 0 0 -4px; }
+.P .ev2 small { grid-column: 2; grid-row: 1; margin-top: 18px; text-align: right; background: rgba(255,255,255,.16); border-radius: 22px; padding: 8px 20px; font-size: 32px; }
+.P .ev2 .as { grid-column: 1 / -1; margin-top: 22px; padding-top: 24px; }
+.P .pf { margin-top: 20px; }
+.P .pf div { padding: 26px 36px 28px; }
+.P .pf div b { font-size: 84px; }
+.P .pf-note { margin-top: 14px; }
+.P.L-event .look { padding-top: 28px; }
+.P .tbl div:not(:first-child) span { padding-top: 22px !important; padding-bottom: 22px !important; } .P .tbl div:not(:first-child) { margin-top: 12px; }
+.P .ev2 { margin-top: 36px; padding: 30px 44px 32px; } .P .ev2 > b { font-size: 140px; } .P .ev2 .as { margin-top: 16px; padding-top: 20px; } .P .pf div { padding: 22px 34px 24px; gap: 2px; } .P .pf div b { font-size: 76px; } .P .pf div:only-child { grid-column: 1 / -1; }
+.P.cmp-grid .list i { width: 64px !important; height: 64px !important; border-radius: 50% !important; background: var(--blue) !important; color: #fff !important; display: grid !important; place-items: center; font-size: 34px !important; font-style: normal; margin-bottom: 18px; }

@@ -19,7 +19,7 @@ const draft = JSON.parse(readFileSync(input, 'utf8'));
 const outDir = resolve(outArg || join(here, 'out', draft.id));
 mkdirSync(outDir, { recursive: true });
 
-const browser = await chromium.launch(process.env.CI ? {} : { channel: 'msedge', headless: false, args: ['--headless=new'] });
+const browser = await chromium.launch(process.env.PW_EXEC ? { executablePath: process.env.PW_EXEC } : process.env.CI ? {} : { channel: 'msedge', headless: false, args: ['--headless=new'] });
 // 인스타가 그대로 쓰는 최대 크기(1440×1800) · JPEG(인스타 API는 JPEG만 받음)
 const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 4 / 3 });
 const files = [], metrics = [];
