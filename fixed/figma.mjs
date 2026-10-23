@@ -87,5 +87,5 @@ export const figFit = () => {
     });
   }
   const bars = S.map((g, k) => Object.assign({ k }, g)).filter(g => g.kind === 'bar');
-  if (bars.length) { const W = Math.max(...bars.map(g => g.w)), mx = Math.max(...bars.map(g => num(g.slot) || 0)); bars.forEach(g => { const v = num(g.slot), b = el(g.k); if (!b) return; if (v == null || !mx) { b.style.display = 'none'; return; } b.style.width = Math.max(g.h, W * 0.08, W * v / mx) + 'px'; }); }
+  if (bars.length) { const W = Math.max(...bars.map(g => g.w)), mx = Math.max(...bars.map(g => num(g.slot) || 0)); bars.forEach(g => { const v = num(g.slot), b = el(g.k); if (!b) return; if (v == null || !mx) { b.style.display = 'none'; return; } b.style.width = Math.max(g.h * 2, W * 0.12, W * v / mx) + 'px'; }); }
 };
