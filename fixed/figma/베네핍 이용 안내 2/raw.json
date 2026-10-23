@@ -1,0 +1,354 @@
+{
+ "name": "베네핍 이용 안내 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "어디서 찾나요",
+   "text": "어디서 찾나요",
+   "x": 100,
+   "y": 238,
+   "w": 191,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "어디서 찾나요",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "회원 페이지 프로필에 있어요",
+   "text": "회원 페이지\n프로필에 있어요",
+   "x": 100,
+   "y": 305,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "회원 페이지\n",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "프로필",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "에 있어요",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "내 프로필",
+   "text": "내 프로필",
+   "x": 144,
+   "y": 619,
+   "w": 123,
+   "h": 40,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "내 프로필",
+     "size": 33.099998474121094,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 39.5,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "예시 화면",
+   "text": "예시 화면",
+   "x": 814,
+   "y": 619,
+   "w": 123,
+   "h": 40,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "예시 화면",
+     "size": 33.099998474121094,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 39.5,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "HONG GILDONG",
+   "text": "HONG GILDONG",
+   "x": 641,
+   "y": 714,
+   "w": 297,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "HONG GILDONG",
+     "size": 40.5,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 48.3,
+     "ls": -0.8100000023841858
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "이름",
+   "text": "이름",
+   "x": 144,
+   "y": 714,
+   "w": 70,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "이름",
+     "size": 40.5,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 48.3,
+     "ls": -0.8100000023841858
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "회원 번호 (UID)",
+   "text": "회원 번호 (UID)",
+   "x": 144,
+   "y": 830,
+   "w": 249,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "회원 번호 (UID)",
+     "size": 40.5,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 48.3,
+     "ls": -0.8100000023841858
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "8123 4567",
+   "text": "8123 4567",
+   "x": 734,
+   "y": 830,
+   "w": 203,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "8123 4567",
+     "size": 40.5,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 48.3,
+     "ls": -0.8100000023841858
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "승인",
+   "text": "승인",
+   "x": 867,
+   "y": 945,
+   "w": 70,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "승인",
+     "size": 40.5,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 48.3,
+     "ls": -0.8100000023841858
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "인증 상태",
+   "text": "인증 상태",
+   "x": 144,
+   "y": 945,
+   "w": 147,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "인증 상태",
+     "size": 40.5,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 48.3,
+     "ls": -0.8100000023841858
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "메뉴 이름은 브로커마다 달라요. Cl",
+   "text": "메뉴 이름은 브로커마다 달라요. Client ID로 적힌\n곳도 있어요.",
+   "x": 100,
+   "y": 1098,
+   "w": 892,
+   "h": 122,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "메뉴 이름은 브로커마다 달라요. Client ID로 적힌\n곳도 있어요.",
+     "size": 40.5,
+     "weight": 600,
+     "color": "rgba(51,61,75,1)",
+     "lh": 60.70000076293945,
+     "ls": -1.2100000381469727
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "2 / 4",
+   "text": "2 / 4",
+   "x": 923,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2 / 4",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 100,
+   "y": 579,
+   "w": 880,
+   "h": 483
+  },
+  {
+   "fill": null,
+   "x": 144,
+   "y": 619,
+   "w": 792,
+   "h": 67
+  },
+  {
+   "fill": null,
+   "x": 144,
+   "y": 686,
+   "w": 792,
+   "h": 105
+  },
+  {
+   "fill": "rgba(234,240,255,1)",
+   "x": 122,
+   "y": 802,
+   "w": 836,
+   "h": 104
+  }
+ ]
+}

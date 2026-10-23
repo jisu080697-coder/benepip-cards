@@ -1,0 +1,360 @@
+{
+ "name": "플랫폼 활용 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "기준 숫자",
+   "text": "기준 숫자",
+   "x": 475,
+   "y": 238,
+   "w": 130,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "기준 숫자",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "EUR/USD 1랏, 1pip 움직이",
+   "text": "EUR/USD 1랏,\n1pip 움직이면",
+   "x": 100,
+   "y": 305,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "EUR/USD 1랏,\n1pip 움직이면",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "10",
+   "text": "10",
+   "x": 340,
+   "y": 560,
+   "w": 287,
+   "h": 234,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "10",
+     "size": 260,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 234,
+     "ls": -15.600000381469727
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "달러",
+   "text": "달러",
+   "x": 629,
+   "y": 739,
+   "w": 111,
+   "h": 76,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "달러",
+     "size": 64,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 76.4,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "1랏 기준, 0.0001 움직이면 1",
+   "text": "1랏 기준, 0.0001 움직이면 10달러가 변해요.",
+   "x": 239,
+   "y": 862,
+   "w": 605,
+   "h": 54,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1랏 기준, 0.0001 움직이면 10달러가 변해요.",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 54,
+     "ls": -1.0800000429153442
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "0.01랏",
+   "text": "0.01랏",
+   "x": 100,
+   "y": 999,
+   "w": 122,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "0.01랏",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "0.1달러",
+   "text": "0.1달러",
+   "x": 854,
+   "y": 999,
+   "w": 128,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "0.1달러",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "0.1랏",
+   "text": "0.1랏",
+   "x": 100,
+   "y": 1086,
+   "w": 92,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "0.1랏",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "1달러",
+   "text": "1달러",
+   "x": 887,
+   "y": 1086,
+   "w": 95,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1달러",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "1랏",
+   "text": "1랏",
+   "x": 100,
+   "y": 1173,
+   "w": 58,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1랏",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "10달러",
+   "text": "10달러",
+   "x": 860,
+   "y": 1173,
+   "w": 122,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "10달러",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "2 / 5",
+   "text": "2 / 5",
+   "x": 924,
+   "y": 1232,
+   "w": 67,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.5)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "bar",
+   "slot": "t11",
+   "x": 332,
+   "y": 1180,
+   "w": 476,
+   "h": 40,
+   "rad": 20,
+   "fill": "rgba(255,255,255,0.16)"
+  },
+  {
+   "kind": "bar",
+   "slot": "t9",
+   "x": 332,
+   "y": 1093,
+   "w": 48,
+   "h": 40,
+   "rad": 20.0,
+   "fill": "rgba(255,255,255,0.16)",
+   "erase": "rgb(19,33,59)"
+  }
+ ],
+ "rects": [
+  {
+   "fill": null,
+   "x": 100,
+   "y": 959,
+   "w": 880,
+   "h": 267
+  },
+  {
+   "fill": "rgba(255,255,255,0.16)",
+   "x": 332,
+   "y": 1006,
+   "w": 19,
+   "h": 40
+  },
+  {
+   "fill": "rgba(255,255,255,0.16)",
+   "x": 332,
+   "y": 1093,
+   "w": 48,
+   "h": 40
+  },
+  {
+   "fill": "rgba(255,255,255,0.16)",
+   "x": 332,
+   "y": 1180,
+   "w": 476,
+   "h": 40
+  }
+ ]
+}

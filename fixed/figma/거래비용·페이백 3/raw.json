@@ -1,0 +1,346 @@
+{
+ "name": "거래비용·페이백 3",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "거래량별로 보면",
+   "text": "거래량별로 보면",
+   "x": 430,
+   "y": 238,
+   "w": 222,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래량별로 보면",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "한 달 거래량이 달라지면",
+   "text": "한 달 거래량이\n달라지면",
+   "x": 100,
+   "y": 305,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 달 거래량이\n달라지면",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "$90",
+   "text": "$90",
+   "x": 298,
+   "y": 560,
+   "w": 482,
+   "h": 234,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$90",
+     "size": 260,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 234,
+     "ls": -15.600000381469727
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "한 달 30랏, 랏당 $3 예시 기준",
+   "text": "한 달 30랏, 랏당 $3 예시 기준이에요.",
+   "x": 286,
+   "y": 862,
+   "w": 510,
+   "h": 54,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 달 30랏, 랏당 $3 예시 기준이에요.",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(51,61,75,1)",
+     "lh": 54,
+     "ls": -1.0800000429153442
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "10랏",
+   "text": "10랏",
+   "x": 100,
+   "y": 999,
+   "w": 86,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "10랏",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "$30",
+   "text": "$30",
+   "x": 899,
+   "y": 999,
+   "w": 83,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$30",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(51,61,75,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "30랏",
+   "text": "30랏",
+   "x": 100,
+   "y": 1086,
+   "w": 93,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "30랏",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "$90",
+   "text": "$90",
+   "x": 899,
+   "y": 1086,
+   "w": 83,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$90",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "60랏",
+   "text": "60랏",
+   "x": 100,
+   "y": 1173,
+   "w": 93,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "60랏",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "$180",
+   "text": "$180",
+   "x": 880,
+   "y": 1173,
+   "w": 102,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$180",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(51,61,75,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "3 / 5",
+   "text": "3 / 5",
+   "x": 923,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "bar",
+   "slot": "t10",
+   "x": 332,
+   "y": 1180,
+   "w": 476,
+   "h": 40,
+   "rad": 20,
+   "fill": "rgba(176,184,193,1)"
+  },
+  {
+   "kind": "bar",
+   "slot": "t6",
+   "x": 332,
+   "y": 1006,
+   "w": 81,
+   "h": 40,
+   "rad": 20.0,
+   "fill": "rgba(176,184,193,1)",
+   "erase": "rgb(243,246,255)"
+  },
+  {
+   "kind": "bar",
+   "slot": "t8",
+   "x": 332,
+   "y": 1093,
+   "w": 238,
+   "h": 40,
+   "rad": 20.0,
+   "fill": "rgba(36,85,245,1)",
+   "erase": "rgb(243,246,255)"
+  }
+ ],
+ "rects": [
+  {
+   "fill": null,
+   "x": 100,
+   "y": 959,
+   "w": 880,
+   "h": 267
+  },
+  {
+   "fill": "rgba(176,184,193,1)",
+   "x": 332,
+   "y": 1006,
+   "w": 81,
+   "h": 40
+  },
+  {
+   "fill": "rgba(36,85,245,1)",
+   "x": 332,
+   "y": 1093,
+   "w": 238,
+   "h": 40
+  },
+  {
+   "fill": "rgba(176,184,193,1)",
+   "x": 332,
+   "y": 1180,
+   "w": 476,
+   "h": 40
+  }
+ ]
+}

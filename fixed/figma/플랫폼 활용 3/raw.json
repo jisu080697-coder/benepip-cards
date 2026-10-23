@@ -1,0 +1,339 @@
+{
+ "name": "플랫폼 활용 3",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "계산 3단계",
+   "text": "계산 3단계",
+   "x": 100,
+   "y": 238,
+   "w": 153,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "계산 3단계",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "랏 → 달러 → 원화",
+   "text": "랏 → 달러 → 원화",
+   "x": 100,
+   "y": 305,
+   "w": 525,
+   "h": 104,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "랏 → 달러 → ",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "원화",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "01",
+   "text": "01",
+   "x": 100,
+   "y": 574,
+   "w": 68,
+   "h": 60,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "01",
+     "size": 60,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 60,
+     "ls": -2.4000000953674316
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "내 랏 크기 확인",
+   "text": "내 랏 크기 확인",
+   "x": 230,
+   "y": 584,
+   "w": 244,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "내 랏 크기 확인",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.7599999904632568
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "MT5 거래 탭의 볼륨 숫자",
+   "text": "MT5 거래 탭의 볼륨 숫자",
+   "x": 230,
+   "y": 651,
+   "w": 345,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "MT5 거래 탭의 볼륨 숫자",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.0800000429153442
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "02",
+   "text": "02",
+   "x": 100,
+   "y": 771,
+   "w": 76,
+   "h": 60,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.45,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "02",
+     "size": 60,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 60,
+     "ls": -2.4000000953674316
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "움직인 pip 수 곱하기",
+   "text": "움직인 pip 수 곱하기",
+   "x": 230,
+   "y": 781,
+   "w": 341,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "움직인 pip 수 곱하기",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.7599999904632568
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "랏 × pip 수 × 10달러",
+   "text": "랏 × pip 수 × 10달러",
+   "x": 230,
+   "y": 848,
+   "w": 288,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "랏 × pip 수 × 10달러",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.0800000429153442
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "03",
+   "text": "03",
+   "x": 100,
+   "y": 968,
+   "w": 78,
+   "h": 60,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.45,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "03",
+     "size": 60,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 60,
+     "ls": -2.4000000953674316
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "그날 환율 곱하기",
+   "text": "그날 환율 곱하기",
+   "x": 230,
+   "y": 978,
+   "w": 272,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "그날 환율 곱하기",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.7599999904632568
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "달러 계좌라면 원화로 바꿔 보기",
+   "text": "달러 계좌라면 원화로 바꿔 보기",
+   "x": 230,
+   "y": 1045,
+   "w": 423,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "달러 계좌라면 원화로 바꿔 보기",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.0800000429153442
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "3 / 5",
+   "text": "3 / 5",
+   "x": 923,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.5)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": null,
+   "x": 100,
+   "y": 538,
+   "w": 880,
+   "h": 594
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 737,
+   "w": 880,
+   "h": 197
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 934,
+   "w": 880,
+   "h": 197
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+ "name": "경제 캘린더 1",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip Weekly",
+   "text": "BenePip Weekly",
+   "x": 96,
+   "y": 100,
+   "w": 328,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip Weekly",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -0.8799999952316284
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "한국 시간",
+   "text": "한국 시간",
+   "x": 866,
+   "y": 115,
+   "w": 119,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한국 시간",
+     "size": 32,
+     "weight": 600,
+     "color": "rgba(51,61,75,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "이번 주 경제 캘린더",
+   "text": "이번 주 경제 캘린더",
+   "x": 96,
+   "y": 275,
+   "w": 282,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "이번 주 경제 캘린더",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -0.7599999904632568
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "이번 주 4번, 환율이 출렁일 시간",
+   "text": "이번 주 4번,\n환율이 출렁일 시간",
+   "x": 96,
+   "y": 347,
+   "w": 900,
+   "h": 242,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "이번 주 4번,\n",
+     "size": 96,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    },
+    {
+     "t": "환율이 출렁일 시간",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(36,85,245,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "10/21~10/23 주요 경제 일정",
+   "text": "10/21~10/23 주요 경제 일정",
+   "x": 96,
+   "y": 616,
+   "w": 497,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "10/21~10/23 주요 경제 일정",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(51,61,75,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "영국 물가",
+   "text": "영국 물가",
+   "x": 126,
+   "y": 741,
+   "w": 136,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "영국 물가",
+     "size": 38,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -1.1399999856948853
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "뉴질랜드 물가",
+   "text": "뉴질랜드 물가",
+   "x": 336,
+   "y": 741,
+   "w": 199,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "뉴질랜드 물가",
+     "size": 38,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -1.1399999856948853
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "미국 실업수당",
+   "text": "미국 실업수당",
+   "x": 610,
+   "y": 741,
+   "w": 199,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "미국 실업수당",
+     "size": 38,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -1.1399999856948853
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "미국 PMI",
+   "text": "미국 PMI",
+   "x": 126,
+   "y": 834,
+   "w": 137,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "미국 PMI",
+     "size": 38,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -1.1399999856948853
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "넘겨서 지표별로 보기 →",
+   "text": "넘겨서 지표별로 보기 →",
+   "x": 96,
+   "y": 1220,
+   "w": 320,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "넘겨서 지표별로 보기 →",
+     "size": 34,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "pill",
+   "slot": "t6",
+   "x": 96,
+   "y": 725,
+   "w": 194,
+   "h": 77,
+   "rad": 38.5,
+   "fill": "rgba(234,240,255,1)",
+   "padL": 30,
+   "padR": 28
+  },
+  {
+   "kind": "pill",
+   "slot": "t7",
+   "x": 306,
+   "y": 725,
+   "w": 258,
+   "h": 77,
+   "rad": 38.5,
+   "fill": "rgba(234,240,255,1)",
+   "padL": 30,
+   "padR": 29
+  },
+  {
+   "kind": "pill",
+   "slot": "t8",
+   "x": 580,
+   "y": 725,
+   "w": 258,
+   "h": 77,
+   "rad": 38.5,
+   "fill": "rgba(234,240,255,1)",
+   "padL": 30,
+   "padR": 29
+  },
+  {
+   "kind": "pill",
+   "slot": "t9",
+   "x": 96,
+   "y": 818,
+   "w": 196,
+   "h": 77,
+   "rad": 38.5,
+   "fill": "rgba(234,240,255,1)",
+   "padL": 30,
+   "padR": 29
+  }
+ ],
+ "rects": [
+  {
+   "fill": null,
+   "x": 96,
+   "y": 100,
+   "w": 888,
+   "h": 85
+  },
+  {
+   "fill": "rgba(234,240,255,1)",
+   "x": 96,
+   "y": 725,
+   "w": 194,
+   "h": 77
+  },
+  {
+   "fill": "rgba(234,240,255,1)",
+   "x": 306,
+   "y": 725,
+   "w": 258,
+   "h": 77
+  },
+  {
+   "fill": "rgba(234,240,255,1)",
+   "x": 580,
+   "y": 725,
+   "w": 258,
+   "h": 77
+  },
+  {
+   "fill": "rgba(234,240,255,1)",
+   "x": 96,
+   "y": 818,
+   "w": 196,
+   "h": 77
+  }
+ ]
+}

@@ -1,0 +1,290 @@
+{
+ "name": "거래비용·페이백 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "계산은 한 줄",
+   "text": "계산은 한 줄",
+   "x": 100,
+   "y": 905,
+   "w": 168,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "계산은 한 줄",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "거래량 × 랏당 금액이에요",
+   "text": "거래량 ×\n랏당 금액이에요",
+   "x": 100,
+   "y": 976,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래량 ×\n",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "랏당 금액",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "이에요",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "30랏",
+   "text": "30랏",
+   "x": 838,
+   "y": 304,
+   "w": 92,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "30랏",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "거래량",
+   "text": "거래량",
+   "x": 152,
+   "y": 304,
+   "w": 112,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래량",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "$3",
+   "text": "$3",
+   "x": 875,
+   "y": 401,
+   "w": 54,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$3",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "× 랏당 페이백 (예시)",
+   "text": "× 랏당 페이백 (예시)",
+   "x": 152,
+   "y": 401,
+   "w": 343,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "× 랏당 페이백 (예시)",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "한 달 페이백",
+   "text": "한 달 페이백",
+   "x": 152,
+   "y": 529,
+   "w": 202,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 달 페이백",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "$90",
+   "text": "$90",
+   "x": 843,
+   "y": 529,
+   "w": 86,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$90",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(143,180,255,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "랏당 금액은 예시예요. 브로커·계좌 ",
+   "text": "랏당 금액은 예시예요. 브로커·계좌 유형마다 달라요.",
+   "x": 96,
+   "y": 1221,
+   "w": 686,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "랏당 금액은 예시예요. 브로커·계좌 유형마다 달라요.",
+     "size": 34,
+     "weight": 500,
+     "color": "rgba(107,118,132,1)",
+     "lh": 47.599998474121094,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "2 / 5",
+   "text": "2 / 5",
+   "x": 924,
+   "y": 1232,
+   "w": 67,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": "rgba(19,33,59,1)",
+   "x": 100,
+   "y": 234,
+   "w": 880,
+   "h": 418
+  },
+  {
+   "fill": null,
+   "x": 152,
+   "y": 492,
+   "w": 776,
+   "h": 112
+  }
+ ]
+}

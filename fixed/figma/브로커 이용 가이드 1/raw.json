@@ -1,0 +1,226 @@
+{
+ "name": "브로커 이용 가이드 1",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BENEPIP BROKER GUIDE",
+   "text": "BENEPIP\nBROKER GUIDE",
+   "x": 96,
+   "y": 98,
+   "w": 900,
+   "h": 75,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BENEPIP\nBROKER GUIDE",
+     "size": 34,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 37.400001525878906,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "출금 신청 3일째, 왜 아직 안 올까",
+   "text": "출금 신청 3일째,\n왜 아직 안 올까?",
+   "x": 96,
+   "y": 308,
+   "w": 900,
+   "h": 242,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 신청 3일째,\n",
+     "size": 96,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    },
+    {
+     "t": "왜 아직 안 올까?",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(36,85,245,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "3",
+   "text": "3",
+   "x": 50,
+   "y": 560,
+   "w": 531,
+   "h": 820,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3",
+     "size": 820,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 820,
+     "ls": -49.20000076293945
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "인증",
+   "text": "인증",
+   "x": 869,
+   "y": 835,
+   "w": 79,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "인증",
+     "size": 46,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 54.9,
+     "ls": -1.3799999952316284
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "입금 수단",
+   "text": "입금 수단",
+   "x": 724,
+   "y": 954,
+   "w": 164,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "입금 수단",
+     "size": 46,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 54.9,
+     "ls": -1.3799999952316284
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "증거금",
+   "text": "증거금",
+   "x": 811,
+   "y": 1073,
+   "w": 117,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "증거금",
+     "size": 46,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 54.9,
+     "ls": -1.3799999952316284
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "pill",
+   "slot": "t4",
+   "x": 831,
+   "y": 813,
+   "w": 153,
+   "h": 99,
+   "rad": 34,
+   "fill": "rgba(255,255,255,1)",
+   "padL": 38,
+   "padR": 36
+  },
+  {
+   "kind": "pill",
+   "slot": "t5",
+   "x": 686,
+   "y": 932,
+   "w": 238,
+   "h": 99,
+   "rad": 34,
+   "fill": "rgba(255,255,255,1)",
+   "padL": 38,
+   "padR": 36
+  },
+  {
+   "kind": "pill",
+   "slot": "t6",
+   "x": 773,
+   "y": 1051,
+   "w": 191,
+   "h": 99,
+   "rad": 34,
+   "fill": "rgba(255,255,255,1)",
+   "padL": 38,
+   "padR": 36
+  }
+ ],
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 831,
+   "y": 813,
+   "w": 153,
+   "h": 99
+  },
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 686,
+   "y": 932,
+   "w": 238,
+   "h": 99
+  },
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 773,
+   "y": 1051,
+   "w": 191,
+   "h": 99
+  }
+ ]
+}

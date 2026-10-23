@@ -1,0 +1,347 @@
+{
+ "name": "브로커 이용 가이드 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "1",
+   "text": "1",
+   "x": 878,
+   "y": 117,
+   "w": 163,
+   "h": 340,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1",
+     "size": 340,
+     "weight": 800,
+     "color": "rgba(234,240,255,1)",
+     "lh": 340,
+     "ls": -20.399999618530273
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "인증이 승인이 아니에요",
+   "text": "인증이\n승인이 아니에요",
+   "x": 100,
+   "y": 318,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "인증이\n",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "승인이 아니에요",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "하나라도 검토 중이면 출금이 잠겨요.",
+   "text": "하나라도 검토 중이면 출금이 잠겨요.",
+   "x": 100,
+   "y": 559,
+   "w": 600,
+   "h": 69,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "하나라도 검토 중이면 출금이 잠겨요.",
+     "size": 44,
+     "weight": 500,
+     "color": "rgba(51,61,75,1)",
+     "lh": 68.19999694824219,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "신분증",
+   "text": "신분증",
+   "x": 146,
+   "y": 744,
+   "w": 112,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "신분증",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "승인",
+   "text": "승인",
+   "x": 860,
+   "y": 753,
+   "w": 52,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "승인",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "주소 증명",
+   "text": "주소 증명",
+   "x": 146,
+   "y": 855,
+   "w": 157,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "주소 증명",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "검토 중",
+   "text": "검토 중",
+   "x": 827,
+   "y": 864,
+   "w": 85,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "검토 중",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "출금",
+   "text": "출금",
+   "x": 146,
+   "y": 966,
+   "w": 75,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "잠김",
+   "text": "잠김",
+   "x": 860,
+   "y": 975,
+   "w": 52,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "잠김",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(240,68,82,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "2 / 5",
+   "text": "2 / 5",
+   "x": 924,
+   "y": 1232,
+   "w": 67,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "pill",
+   "slot": "t5",
+   "x": 840,
+   "y": 745,
+   "w": 92,
+   "h": 52,
+   "rad": 22,
+   "fill": "rgba(234,240,255,1)",
+   "padL": 20,
+   "padR": 20
+  },
+  {
+   "kind": "pill",
+   "slot": "t7",
+   "x": 807,
+   "y": 856,
+   "w": 125,
+   "h": 52,
+   "rad": 22,
+   "fill": "rgba(242,244,246,1)",
+   "padL": 20,
+   "padR": 20
+  },
+  {
+   "kind": "pill",
+   "slot": "t9",
+   "x": 840,
+   "y": 967,
+   "w": 92,
+   "h": 52,
+   "rad": 22,
+   "fill": "rgba(255,240,241,1)",
+   "padL": 20,
+   "padR": 20
+  }
+ ],
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 100,
+   "y": 676,
+   "w": 880,
+   "h": 411
+  },
+  {
+   "fill": null,
+   "x": 146,
+   "y": 716,
+   "w": 786,
+   "h": 111
+  },
+  {
+   "fill": "rgba(234,240,255,1)",
+   "x": 840,
+   "y": 745,
+   "w": 92,
+   "h": 52
+  },
+  {
+   "fill": null,
+   "x": 146,
+   "y": 827,
+   "w": 786,
+   "h": 111
+  },
+  {
+   "fill": "rgba(242,244,246,1)",
+   "x": 807,
+   "y": 856,
+   "w": 125,
+   "h": 52
+  },
+  {
+   "fill": "rgba(255,240,241,1)",
+   "x": 840,
+   "y": 967,
+   "w": 92,
+   "h": 52
+  }
+ ]
+}

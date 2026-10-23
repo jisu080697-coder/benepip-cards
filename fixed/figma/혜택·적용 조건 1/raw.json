@@ -1,0 +1,271 @@
+{
+ "name": "혜택·적용 조건 1",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "혜택·적용 조건",
+   "text": "혜택·적용 조건",
+   "x": 96,
+   "y": 224,
+   "w": 212,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "혜택·적용 조건",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -0.7599999904632568
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "가입 크레딧으로 번 수익, 출금 가능",
+   "text": "가입 크레딧으로\n번 수익, 출금\n가능할까?",
+   "x": 96,
+   "y": 294,
+   "w": 900,
+   "h": 363,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "가입 크레딧으로\n번 수익, ",
+     "size": 96,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    },
+    {
+     "t": "출금\n가능할까?",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(36,85,245,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "계좌 잔고",
+   "text": "계좌 잔고",
+   "x": 146,
+   "y": 776,
+   "w": 126,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "계좌 잔고",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "예시",
+   "text": "예시",
+   "x": 875,
+   "y": 776,
+   "w": 59,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "예시",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "$130.00",
+   "text": "$130.00",
+   "x": 146,
+   "y": 868,
+   "w": 380,
+   "h": 119,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$130.00",
+     "size": 100,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 119.3,
+     "ls": -4
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "크레딧 $100",
+   "text": "크레딧 $100",
+   "x": 146,
+   "y": 1117,
+   "w": 200,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "크레딧 $100",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 45.3,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "출금 안 돼요",
+   "text": "출금 안 돼요",
+   "x": 146,
+   "y": 1168,
+   "w": 164,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 안 돼요",
+     "size": 34,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "수익 $30",
+   "text": "수익 $30",
+   "x": 550,
+   "y": 1117,
+   "w": 148,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "수익 $30",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "조건 채우면 가능",
+   "text": "조건 채우면 가능",
+   "x": 550,
+   "y": 1168,
+   "w": 222,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.75,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "조건 채우면 가능",
+     "size": 34,
+     "weight": 600,
+     "color": "rgba(36,85,245,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 96,
+   "y": 730,
+   "w": 888,
+   "h": 524
+  },
+  {
+   "fill": null,
+   "x": 146,
+   "y": 776,
+   "w": 788,
+   "h": 66
+  },
+  {
+   "fill": null,
+   "x": 146,
+   "y": 1017,
+   "w": 607,
+   "h": 70
+  },
+  {
+   "fill": "rgba(36,85,245,1)",
+   "x": 753,
+   "y": 1017,
+   "w": 181,
+   "h": 70
+  }
+ ]
+}

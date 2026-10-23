@@ -12,6 +12,7 @@ const tplDir = join(here, 'templates');
 await import('./templates/cards.bundle.js');
 const BP = globalThis.BPCards;
 const FX = await import('./fixed/compose.mjs');
+const FG = await import('./fixed/figma.mjs');
 const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
 const pageHtml = inner => `<!doctype html><html lang="ko"><head><meta charset="utf-8"><base href="${pathToFileURL(tplDir).href}/"><link rel="stylesheet" href="${FONT}"><style>${BP.css}</style><script src="cards.bundle.js"></script></head><body>${inner}</body></html>`;
 
@@ -26,6 +27,21 @@ const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, de
 const files = [], metrics = [];
 for (let i = 0; i < draft.cards.length; i++) {
   const tmp = join(tplDir, `_tmp_${i}.html`);
+  // 피그마 틀 카드 (fig): 피그마에서 받은 배경 위 같은 자리·같은 글씨로 글자만 바꿈
+  if (draft.cards[i].fig && FG.hasFig(draft.cards[i].fig)) {
+    const c = draft.cards[i], v = Object.assign({}, c.v || {});
+    FG.figOf(c.fig).slots.forEach(x => { if (v[x.id] == null && /^\d+ \/ \d+$/.test(x.text)) v[x.id] = (i + 1) + ' / ' + draft.cards.length; });
+    writeFileSync(tmp, `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONT}"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Pretendard Variable',Pretendard,sans-serif;-webkit-font-smoothing:antialiased}</style></head><body>${FG.figCard(c.fig, v)}</body></html>`);
+    await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(`(${FG.figFit.toString()})()`);
+    // 피그마 칸보다 넓어지거나 줄이 늘어난 칸 (품질 관문이 글을 줄이게)
+    const over = await page.evaluate((slots) => slots.map(s => { const e = document.querySelector(`.ft[data-id="${s.id}"]`); if (!e) return null; const r = e.getBoundingClientRect(); return (r.width > s.w + 6 && Math.abs(s.rot) < 0.5) || r.height > s.h + 6 ? s.id : null; }).filter(Boolean), FG.figOf(c.fig).slots);
+    metrics.push({ n: i + 1, fig: c.fig, zoom: 1, empty: 0, clipped: 0, tiny: 0, over });
+    const file = join(outDir, `${String(i + 1).padStart(2, '0')}.jpg`);
+    await page.screenshot({ path: file, type: 'jpeg', quality: 95, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
+    files.push(file); rmSync(tmp); continue;
+  }
   // 고정 틀 카드 (tpl): 피그마·틀 배경 위에 글자만 · 크기 변화 없음
   if (draft.cards[i].tpl && FX.hasTpl(draft.cards[i].tpl)) {
     writeFileSync(tmp, `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONT}"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Pretendard Variable',Pretendard,sans-serif;-webkit-font-smoothing:antialiased}</style></head><body>${FX.fixedCard(draft, i)}</body></html>`);

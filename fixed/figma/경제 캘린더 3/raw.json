@@ -1,0 +1,432 @@
+{
+ "name": "경제 캘린더 3",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "목요일 · 미국",
+   "text": "목요일 · 미국",
+   "x": 100,
+   "y": 238,
+   "w": 178,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "목요일 · 미국",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "밤 9시 반, 미국 고용 흐름",
+   "text": "밤 9시 반,\n미국 고용 흐름",
+   "x": 100,
+   "y": 305,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "밤 9시 반,\n",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": "미국 고용",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    },
+    {
+     "t": " 흐름",
+     "size": 80,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.400000095367432
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "10/22 목",
+   "text": "10/22 목",
+   "x": 696,
+   "y": 609,
+   "w": 123,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.8,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "10/22 목",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "21:30",
+   "text": "21:30",
+   "x": 696,
+   "y": 658,
+   "w": 225,
+   "h": 88,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "21:30",
+     "size": 88,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 88,
+     "ls": -3.5199999809265137
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "한국 시간",
+   "text": "한국 시간",
+   "x": 696,
+   "y": 775,
+   "w": 111,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.75,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한국 시간",
+     "size": 30,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "달러",
+   "text": "달러",
+   "x": 140,
+   "y": 705,
+   "w": 92,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "달러",
+     "size": 54,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 64.4,
+     "ls": -2.1600000858306885
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "영향 통화",
+   "text": "영향 통화",
+   "x": 140,
+   "y": 652,
+   "w": 125,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "영향 통화",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 42.9,
+     "ls": -2.1600000858306885
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "이전",
+   "text": "이전",
+   "x": 100,
+   "y": 899,
+   "w": 59,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "이전",
+     "size": 34,
+     "weight": 800,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "19.9만 건",
+   "text": "19.9만 건",
+   "x": 803,
+   "y": 893,
+   "w": 177,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "19.9만 건",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "예상",
+   "text": "예상",
+   "x": 100,
+   "y": 977,
+   "w": 59,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "예상",
+     "size": 34,
+     "weight": 800,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "20.5만 건",
+   "text": "20.5만 건",
+   "x": 796,
+   "y": 971,
+   "w": 185,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "20.5만 건",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(36,85,245,1)",
+     "lh": 52.5,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "발표 전후로 볼 것",
+   "text": "발표 전후로 볼 것",
+   "x": 100,
+   "y": 1085,
+   "w": 242,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "발표 전후로 볼 것",
+     "size": 36,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 42.9,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "layer": "늘어나면 고용 둔화 신호로 읽어요",
+   "text": "늘어나면 고용 둔화 신호로 읽어요",
+   "x": 124,
+   "y": 1150,
+   "w": 550,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "늘어나면 고용 둔화 신호로 읽어요",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 61.599998474121094,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t14",
+   "layer": "3 / 5",
+   "text": "3 / 5",
+   "x": 923,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "bar",
+   "slot": "t9",
+   "x": 232,
+   "y": 891,
+   "w": 520,
+   "h": 56,
+   "rad": 16,
+   "fill": "rgba(176,184,193,1)"
+  },
+  {
+   "kind": "bar",
+   "slot": "t11",
+   "x": 232,
+   "y": 969,
+   "w": 536,
+   "h": 56,
+   "rad": 16,
+   "fill": "rgba(36,85,245,1)"
+  }
+ ],
+ "rects": [
+  {
+   "fill": "rgba(19,33,59,1)",
+   "x": 660,
+   "y": 569,
+   "w": 320,
+   "h": 282
+  },
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 100,
+   "y": 569,
+   "w": 538,
+   "h": 282
+  },
+  {
+   "fill": "rgba(176,184,193,1)",
+   "x": 232,
+   "y": 891,
+   "w": 520,
+   "h": 56
+  },
+  {
+   "fill": "rgba(36,85,245,1)",
+   "x": 232,
+   "y": 969,
+   "w": 536,
+   "h": 56
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 1051,
+   "w": 880,
+   "h": 157
+  }
+ ]
+}
