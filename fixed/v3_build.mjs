@@ -10,7 +10,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url)), root = join(here, '..'), tpl = join(root, 'templates');
 const DRY = process.argv.includes('--dry'), OUT = join(here, DRY ? 'v3_out' : 'figma');
 await import('../templates/cards.bundle.js');
-const BP = globalThis.BPCards, V3 = readFileSync(join(here, 'v3.css'), 'utf8');
+const BP = globalThis.BPCards, V3 = process.env.V3_PLAIN ? '' : readFileSync(join(here, 'v3.css'), 'utf8');   // V3_PLAIN: 지금 카드 코드 그대로 (시안 v2 모양)
+const ONLY = (process.env.V3_ONLY || '').split(',').filter(Boolean);   // 이 틀만 다시 만들기
 const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
 const SETS = [['pay', '거래비용·페이백'], ['benefit', '혜택·적용 조건'], ['guide', '브로커 이용 가이드'], ['bene', '베네핍 이용 안내'], ['platform', '플랫폼 활용'], ['cal', '경제 캘린더']];
 
@@ -113,6 +114,7 @@ for (const [id, name] of SETS) {
   const d = JSON.parse(readFileSync(join(root, 'samples', 'v3', id + '.json'), 'utf8'));
   for (let i = 0; i < d.cards.length; i++) {
     const nm = `${name} ${i + 1}`, f = join(tpl, `_v3b_${i}.html`);
+    if (ONLY.length && !ONLY.includes(nm)) continue;
     writeFileSync(f, `<!doctype html><html lang="ko"><head><meta charset="utf-8"><base href="${pathToFileURL(tpl).href}/"><link rel="stylesheet" href="${FONT}"><style>${BP.css}\n${V3}</style><script src="cards.bundle.js"></script></head><body style="margin:0">${BP.card(d, i)}</body></html>`);
     await p.goto(pathToFileURL(f).href, { waitUntil: 'networkidle' });
     await p.evaluate(() => document.fonts.ready);
