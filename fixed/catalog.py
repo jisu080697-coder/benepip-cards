@@ -100,6 +100,7 @@ def sample(s):
     return ''.join('“%s”' % g['t'] if (g['color'] != base['color'] or g['weight'] != base['weight']) and g['t'].strip() else g['t'] for g in s['segs']).replace('“\n', '\n“').replace('\n”', '”\n')
 
 PILL = {}
+LIM = json.load(open(os.path.join(ROOT, 'limits.json'), encoding='utf-8')) if os.path.exists(os.path.join(ROOT, 'limits.json')) else {}
 out = []
 for name, (group, pos, use, roles) in T.items():
     d = json.load(open(os.path.join(ROOT, 'figma', name, 'raw.json'), encoding='utf-8'))
@@ -110,11 +111,13 @@ for name, (group, pos, use, roles) in T.items():
         s = by[sid]; ex = sample(s); lines = ex.split('\n')
         mx = math.ceil(max(wlen(l) for l in lines))
         size = next((g for g in s['segs'] if g['t'].strip()), s['segs'][0])['size']
-        lim = max(mx, int(safe_w(d, s) / (size * 1.04)))   # 실제로 쓸 수 있는 너비 ÷ 글씨 크기 (한글 한 자 ≈ 글씨 크기)
+        cal = LIM.get(name, {}).get(sid)   # 실제 렌더로 잰 한 줄 최대 글자 (calibrate.mjs)
+        lim = cal['lim'] if cal else max(mx, int(safe_w(d, s) / (size * 1.04)))
+        if cal and s['autoResize'] != 'WIDTH_AND_HEIGHT': lines = ['x'] * cal['lines']   # 너비 정해진 칸: 시안 높이에 들어가는 줄 수
         if sid in PILL.get(name, []): lim = mx + 2   # 태그: 줄 안에서 이어 붙으니 예시보다 조금만
         if role == '머리말': lim = min(lim, max(mx + 3, 12))   # 머리말: 오른쪽 아이콘 자리를 덮지 않게
         k = kind(role, ex, sid in NUM.get(name, []))
-        if k in ('num', 'numq'): lim = max(min(lim, mx + 2), mx + 1)   # 숫자 값은 자릿수가 늘 수 있게 ($90 → $1,800)
+        if k in ('num', 'numq'): lim = cal['limNum'] if cal and 'limNum' in cal else max(min(lim, mx + 2), mx + 1)   # 숫자 값: 숫자로 잰 한도   # 숫자 값은 자릿수가 늘 수 있게 ($90 → $1,800)
         slots.append([sid, role, ex, len(lines), lim, k])
     tn, ic = tone(name), ICON.get(name, '')
     out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else '') + (' · 남색 바탕' if tn == 'dark' else '') + (' · 아이콘: ' + ic if ic else ''), 'num': NUM.get(name, []), 'tone': tn, 'icon': ic, 's': slots})
@@ -122,5 +125,8 @@ for name, (group, pos, use, roles) in T.items():
 js = ('// 자동 생성 (renderer/fixed/catalog.py) · 직접 고치지 마세요\n'
       '// 피그마 틀 목록: n 틀 이름 · g 주제군 · pos cover/body/end · use 쓰임 · s [칸, 역할, 예시(“강조”), 줄 수, 줄당 최대 글자, 종류(digit 숫자 하나·time HH:MM·date 날짜·day 요일 한 글자·num 숫자 포함·numq 숫자 또는 미정)]\n'
       'const FIG_TPL_ = ' + json.dumps(out, ensure_ascii=False) + ';\n')
-open(os.path.join(ROOT, '..', '..', 'backend', 'FigTpl.gs'), 'w', encoding='utf-8').write(js)
+bk = os.path.join(ROOT, '..', '..', 'backend')
+if os.path.isdir(bk): open(os.path.join(bk, 'FigTpl.gs'), 'w', encoding='utf-8').write(js)
+# 렌더러 저장소에도 같은 목록 (자동 검증 verify.mjs 가 씀)
+json.dump(out, open(os.path.join(ROOT, 'catalog.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 print(len(out), '틀', sum(len(t['s']) for t in out), '칸')

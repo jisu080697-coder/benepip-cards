@@ -35,10 +35,10 @@ for (let i = 0; i < draft.cards.length; i++) {
     await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(`(${FG.figFit.toString()})()`);
-    // 피그마 칸보다 넓어지거나 줄이 늘어난 칸 (품질 관문이 글을 줄이게)
-    const over = await page.evaluate((slots) => slots.map(s => { const e = document.querySelector(`.ft[data-id="${s.id}"]`); if (!e) return null; const r = e.getBoundingClientRect(); return (r.width > s.w + 6 && Math.abs(s.rot) < 0.5) || r.height > s.h + 6 ? s.id : null; }).filter(Boolean), FG.figOf(c.fig).slots);
-    const shrunk = await page.evaluate(() => window.__SHRUNK || []);
-    metrics.push({ n: i + 1, fig: c.fig, zoom: Math.min(1, ...shrunk.map(x => x.z)), empty: 0, clipped: 0, tiny: 0, over: shrunk.map(x => x.id), wide: over });
+    // 실제 렌더 결과로 칸 넘침 판정 (글씨 크기는 그대로 · 넘친 칸은 품질 검사가 그 칸 글만 다시 쓰게)
+    const meas = await page.evaluate(`(${FG.figMeasure.toString()})()`);
+    const bad = meas.filter(x => x.over);
+    metrics.push({ n: i + 1, fig: c.fig, zoom: 1, empty: 0, clipped: 0, tiny: 0, over: bad.map(x => x.id), why: Object.fromEntries(bad.map(x => [x.id, x.why])), lines: Object.fromEntries(meas.map(x => [x.id, x.lines])) });
     const file = join(outDir, `${String(i + 1).padStart(2, '0')}.jpg`);
     await page.screenshot({ path: file, type: 'jpeg', quality: 95, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
     files.push(file); rmSync(tmp); continue;

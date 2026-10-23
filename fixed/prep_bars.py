@@ -10,7 +10,7 @@ for name in sorted(os.listdir(root)):
     if not os.path.exists(p): continue
     d = json.load(open(p, encoding='utf-8'))
     have = {s['slot'] for s in d.get('shapes', []) if s['kind'] == 'bar'}
-    rs = [r for r in d.get('rects', []) if r.get('fill') and 6 <= r['h'] <= 90 and r['w'] >= 40]
+    rs = [r for r in d.get('rects', []) if r.get('fill') and 6 <= r['h'] <= 90 and r['w'] >= 12]
     bg = Image.open(os.path.join(root, name, 'bg.png')).convert('RGB'); sc = bg.width / d['w']
     added = 0
     for r in rs:

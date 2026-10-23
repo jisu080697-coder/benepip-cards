@@ -1,0 +1,33 @@
+# 28개 틀 자동 검증: 틀(fixed/) · 렌더러를 바꿀 때마다 시안 글·짧은·보통·긴 글로 그려 넘침·글씨 크기·피그마 원본 일치 확인
+# 결과 이미지·report.json 은 실행 결과(Artifacts)에 올림 · 실패하면 이 실행이 빨간색
+name: verify-templates
+on:
+  push:
+    paths: ['fixed/**', 'render.mjs', '.github/workflows/verify.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: 렌더러 준비
+        run: npm ci
+      - name: 28개 틀 검증
+        env:
+          CI: 'true'
+          PW_CHANNEL: chrome
+        run: node fixed/verify.mjs
+      - name: 결과 올리기
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-${{ github.sha }}
+          path: fixed/verify_out
+          retention-days: 30

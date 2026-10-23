@@ -27,6 +27,8 @@ const availW = (t, s) => {
   const row = o => o.y < s.y + s.h && o.y + o.h > s.y && o.x > s.x + 4;
   const nx = t.slots.filter(o => o !== s && row(o)).map(o => o.x).concat((t.rects || []).filter(r => row(r) && r.x > s.x + 20 && r.w < 600).map(r => r.x));
   if (s.align !== 'RIGHT' && nx.length) w = Math.min(w, Math.min(...nx) - s.x - 16);
+  // 가운데 정렬 칸: 가운데를 기준으로 양쪽으로 늘어남 → 상자(없으면 화면 여백 96)까지의 가까운 쪽 × 2
+  if (s.align === 'CENTER') { const cx = s.x + s.w / 2, L = bx ? bx.x + 16 : 96, R = bx ? bx.x + bx.w - 16 : 1080 - 96; w = 2 * Math.min(cx - L, R - cx); }
   return Math.max(w, s.w);
 };
 // 오른쪽에 붙은 값 칸 (상자 오른쪽 끝·화면 오른쪽 여백에 닿은 너비 자동 칸): 오른쪽 끝을 고정하고 왼쪽으로 늘어남
@@ -41,6 +43,11 @@ const availL = (t, s) => {
   const bx = boxOf(t, s), right = s.x + s.w;
   let left = bx ? bx.x + Math.min(48, Math.max(16, bx.x + bx.w - right)) : 96;
   t.slots.forEach(o => { if (o !== s && o.y < s.y + s.h && o.y + o.h > s.y && o.x + o.w < s.x + 4) left = Math.max(left, o.x + o.w + 24); });
+  // 같은 줄 왼쪽 도형(막대·빈칸 상자 등) 끝까지
+  (t.rects || []).forEach(r => { if (r.y < s.y + s.h && r.y + r.h > s.y && r.x + r.w < s.x + 4 && r.x > (bx ? bx.x : 0) + 1) left = Math.max(left, r.x + r.w + 16); });
+  // 막대는 값에 따라 가장 긴 막대 길이까지 늘어날 수 있음
+  const bw = Math.max(0, ...(t.shapes || []).filter(g => g.kind === 'bar').map(g => g.w));
+  (t.shapes || []).forEach(g => { if (g.kind === 'bar' && g.y < s.y + s.h && g.y + g.h > s.y && g.x < s.x) left = Math.max(left, g.x + bw + 16); });
   return Math.max(right - left, s.w);
 };
 export function figCard(name, vals) {
@@ -61,21 +68,26 @@ export function figCard(name, vals) {
   return `<script>window.__SHAPES=${JSON.stringify(t.shapes || [])};window.__SLOTS=${JSON.stringify(t.slots.map(x => ({ id: x.id, x: x.x, w: x.w, h: x.h, rot: x.rot, aw: rightOf(t, x) ? availL(t, x) : availW(t, x), ra: rightOf(t, x) })))}</script><style>.fsh{position:absolute}</style>` + `<style>.fx{position:relative;width:1080px;height:1350px;overflow:hidden;background:url(${bg}) 0 0/1080px 1350px no-repeat}.ft{position:absolute;word-break:keep-all}.ft span{font-family:inherit}</style><div class="fx">${shp}${t.slots.map(one).join('')}</div>`;
 }
 
+// 페이지 안에서: 칸마다 실제로 그린 결과를 잼 · 넘친 칸(너비·줄 수가 시안 칸을 넘음)을 돌려줌
+// 너비 자동 칸: 쓸 수 있는 너비(상자·옆 칸·화면 여백까지) · 너비가 정해진 칸: 시안의 높이(줄 수)까지 · 태그·쪽 번호는 제외
+export const figMeasure = () => {
+  const S = window.__SHAPES || [], out = [];
+  (window.__SLOTS || []).forEach(sl => {
+    const box = document.querySelector(`.ft[data-id="${sl.id}"]`); if (!box) return;
+    const txt = box.textContent; if (!txt.trim() || /^\s*\d+\s*\/\s*\d+\s*$/.test(txt)) return;
+    const pill = S.some(g => g.kind === 'pill' && g.slot === sl.id), nw = box.dataset.nw === '1', inner = box.firstElementChild;
+    const cs = getComputedStyle(box), lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2, lines = Math.max(1, Math.round(inner.offsetHeight / lh)), maxL = Math.max(1, Math.round(sl.h / lh));
+    let why = '';
+    if (nw && !pill && inner.offsetWidth > sl.aw + 2) why = '너비 ' + Math.round(inner.offsetWidth) + '/' + Math.round(sl.aw) + 'px';
+    else if (lines > maxL) why = lines + '줄 → ' + maxL + '줄까지';
+    out.push({ id: sl.id, lines, over: !!why, why });
+  });
+  return out;
+};
+
 // 페이지 안에서: 알약은 바뀐 글자 너비에 맞춤 · 막대는 값 크기에 비례 (가장 긴 막대 = 피그마의 가장 긴 막대 길이)
 export const figFit = () => {
-  // 피그마 칸보다 많이 길어진 글은 그 칸만 줄여 겹치지 않게 (최소 80%) · 줄인 칸은 품질 검사가 글을 줄이게 알림
-  const shrunk = [];
-  (window.__SLOTS || []).forEach(sl => {
-    const box = document.querySelector(`.ft[data-id="${sl.id}"]`); if (!box || Math.abs(sl.rot) > 0.5 || (window.__SHAPES || []).some(g => g.kind === 'pill' && g.slot === sl.id) || /^\s*\d+\s*\/\s*\d+\s*$/.test(box.textContent)) return;   // 쪽 번호도 그대로   // 태그(알약)는 바탕이 글자에 맞춰 늘어남
-    const nw = box.dataset.nw === '1', fs0 = parseFloat(getComputedStyle(box).fontSize), maxW = nw ? (sl.ra ? sl.aw : Math.max(sl.w, Math.min(sl.aw, 1080 - 60 - sl.x))) : sl.w, maxH = sl.h * 1.08 + 4;
-    const over = () => { const r = box.getBoundingClientRect(); return (nw && r.width > maxW) || (!nw && r.height > maxH); };
-    if (!over()) return;
-    let z = 1; const kids = [...box.querySelectorAll('*')].concat([box]).map(e => [e, parseFloat(getComputedStyle(e).fontSize), parseFloat(getComputedStyle(e).lineHeight)]);
-    while (over() && z > 0.8) { z -= 0.04; kids.forEach(([e, f, l]) => { e.style.fontSize = (f * z) + 'px'; if (l) e.style.lineHeight = (l * z) + 'px'; }); }
-    if (over() && nw) { box.style.whiteSpace = 'pre-wrap'; box.style.width = maxW + 'px'; }   // 그래도 길면 칸 너비 안에서 줄바꿈 (화면 밖으로 안 나가게)
-    shrunk.push({ id: sl.id, z: +z.toFixed(2) });
-  });
-  window.__SHRUNK = shrunk;
+  // 글씨 크기·위치는 절대 바꾸지 않음 (넘침은 figMeasure 가 재서 기록 → 글을 다시 씀)
   const S = window.__SHAPES || [], el = k => document.querySelector(`.fsh[data-k="${k}"]`), tx = id => document.querySelector(`.ft[data-id="${id}"] > div`);
   const num = id => { const e = tx(id); const m = e && e.textContent.replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? Math.abs(parseFloat(m[0])) : null; };
   S.forEach((g, k) => { if (g.kind !== 'pill') return; const e = tx(g.slot), b = el(k); if (!e || !b) return; if (!e.textContent.trim()) { b.style.display = 'none'; return; } const r = e.getBoundingClientRect(), w = r.width + g.padL + g.padR;
