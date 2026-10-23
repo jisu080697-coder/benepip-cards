@@ -38,6 +38,18 @@ export const rightOf = (t, s) => {
   if (s.align === 'RIGHT' || s.x + s.w > 1080 - 96 - 60) return true;
   const bx = boxOf(t, s); return !!bx && bx.x + bx.w - (s.x + s.w) < 70 && s.x - bx.x > bx.w * 0.4;
 };
+// 따라붙는 칸: 큰 글(숫자) 바로 오른쪽에 붙은 작은 글(단위) → 숫자 길이가 바뀌면 단위도 따라 움직임 · 둘이 가운데 묶음이면 묶음째 가운데 유지
+export const followers = t => {
+  const out = {};
+  t.slots.forEach(s => {
+    if (s.autoResize !== 'WIDTH_AND_HEIGHT' || Math.abs(s.rot) > 0.5) return;
+    const L = t.slots.find(o => o !== s && o.autoResize === 'WIDTH_AND_HEIGHT' && Math.abs(o.rot) < 0.5 && o.h > s.h * 1.5 && Math.abs(o.x + o.w - s.x) <= 40 && s.y + s.h / 2 > o.y && s.y + s.h / 2 < o.y + o.h);
+    if (!L) return;
+    const cx = (L.x + s.x + s.w) / 2;
+    out[s.id] = { lead: L.id, gap: +(s.x - (L.x + L.w)).toFixed(1), center: Math.abs(cx - 540) < 60 ? cx : null };
+  });
+  return out;
+};
 // 오른쪽 고정 칸이 왼쪽으로 쓸 수 있는 너비 (같은 줄 왼쪽 글 끝 또는 상자 왼쪽 여백까지)
 const availL = (t, s) => {
   const bx = boxOf(t, s), right = s.x + s.w;
@@ -65,7 +77,7 @@ export function figCard(name, vals) {
     return `<div class="ft" data-id="${s.id}" data-nw="${nw ? 1 : 0}" data-ra="${ra ? 1 : 0}" style="${ra ? ax : ax + ';top:' + s.y + 'px'};${nw ? 'white-space:pre' : `width:${s.w}px;white-space:pre-wrap`};min-height:${s.h}px;display:flex;flex-direction:column;justify-content:${va};text-align:${al};opacity:${s.opacity};${s.blur ? `filter:blur(${s.blur / 2}px);` : ''}${css(base)}"><div>${body}</div></div>`;
   };
   const shp = (t.shapes || []).map((g, k) => (g.erase ? `<div style="position:absolute;left:${g.x - 2}px;top:${g.y - 2}px;width:${g.w + 4}px;height:${g.h + 4}px;background:${g.erase}"></div>` : '') + `<div class="fsh" data-k="${k}" style="left:${g.x}px;top:${g.y}px;width:${g.w}px;height:${g.h}px;border-radius:${g.rad}px;background:${g.fill}"></div>`).join('');
-  return `<script>window.__SHAPES=${JSON.stringify(t.shapes || [])};window.__SLOTS=${JSON.stringify(t.slots.map(x => ({ id: x.id, x: x.x, w: x.w, h: x.h, rot: x.rot, aw: rightOf(t, x) ? availL(t, x) : availW(t, x), ra: rightOf(t, x) })))}</script><style>.fsh{position:absolute}</style>` + `<style>.fx{position:relative;width:1080px;height:1350px;overflow:hidden;background:url(${bg}) 0 0/1080px 1350px no-repeat}.ft{position:absolute;word-break:keep-all}.ft span{font-family:inherit}</style><div class="fx">${shp}${t.slots.map(one).join('')}</div>`;
+  return `<script>window.__SHAPES=${JSON.stringify(t.shapes || [])};window.__SLOTS=${JSON.stringify(t.slots.map(x => ({ id: x.id, x: x.x, w: x.w, h: x.h, rot: x.rot, aw: rightOf(t, x) ? availL(t, x) : availW(t, x), ra: rightOf(t, x), y: x.y, fol: followers(t)[x.id] || null })))}</script><style>.fsh{position:absolute}</style>` + `<style>.fx{position:relative;width:1080px;height:1350px;overflow:hidden;background:url(${bg}) 0 0/1080px 1350px no-repeat}.ft{position:absolute;word-break:keep-all}.ft span{font-family:inherit}</style><div class="fx">${shp}${t.slots.map(one).join('')}</div>`;
 }
 
 // 페이지 안에서: 칸마다 실제로 그린 결과를 잼 · 넘친 칸(너비·줄 수가 시안 칸을 넘음)을 돌려줌
@@ -82,6 +94,17 @@ export const figMeasure = () => {
     else if (lines > maxL) why = lines + '줄 → ' + maxL + '줄까지';
     out.push({ id: sl.id, lines, over: !!why, why });
   });
+  const SL = window.__SLOTS || [], R = id => { const e = document.querySelector(`.ft[data-id="${id}"] > div`); return e && e.textContent.trim() ? e.getBoundingClientRect() : null; };
+  SL.forEach(a => SL.forEach(b => {
+    if (a.id >= b.id || (a.fol && a.fol.lead === b.id) || (b.fol && b.fol.lead === a.id)) return;
+    if (a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h) return;   // 시안에서도 겹치던 칸
+    const p = R(a.id), q = R(b.id); if (!p || !q) return;
+    const vy = Math.min(p.bottom, q.bottom) - Math.max(p.top, q.top); if (vy < Math.min(p.height, q.height) * 0.5) return;
+    if (p.left < q.right + 8 && q.left < p.right + 8) {
+      const lab = a.ra ? b : b.ra ? a : (p.width > q.width ? a : b), o = out.find(x => x.id === lab.id);
+      if (o && !o.over) { o.over = true; o.why = '옆 글과 겹침'; }
+    }
+  }));
   return out;
 };
 
@@ -113,6 +136,13 @@ export const figFit = () => {
       x += w + gap;
     });
   }
+  (window.__SLOTS || []).forEach(sl => {
+    if (!sl.fol) return;
+    const L = document.querySelector(`.ft[data-id="${sl.fol.lead}"]`), U = document.querySelector(`.ft[data-id="${sl.id}"]`); if (!L || !U) return;
+    const lw = L.firstElementChild.getBoundingClientRect().width, uw = U.firstElementChild.getBoundingClientRect().width;
+    const lx = sl.fol.center != null ? sl.fol.center - (lw + sl.fol.gap + uw) / 2 : parseFloat(L.style.left);
+    L.style.left = lx + 'px'; L.style.transform = 'none'; U.style.left = (lx + lw + sl.fol.gap) + 'px'; U.style.transform = 'none';
+  });
   const bars = S.map((g, k) => Object.assign({ k }, g)).filter(g => g.kind === 'bar');
   if (bars.length) { const W = Math.max(...bars.map(g => g.w)), mx = Math.max(...bars.map(g => num(g.slot) || 0)); bars.forEach(g => { const v = num(g.slot), b = el(g.k); if (!b) return; if (v == null || !mx) { b.style.display = 'none'; return; } b.style.width = Math.max(g.h * 2, W * 0.12, W * v / mx) + 'px'; }); }
 };

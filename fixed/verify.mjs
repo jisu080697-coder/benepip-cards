@@ -54,7 +54,8 @@ for (const t of CAT) {
         let s = 0; for (let i = 0; i < A.length; i += 4) s += (Math.abs(A[i] - C[i]) + Math.abs(A[i + 1] - C[i + 1]) + Math.abs(A[i + 2] - C[i + 2])) / 3; return +(s / (W * H)).toFixed(2);
       }, ['data:image/jpeg;base64,' + readFileSync(shot).toString('base64'), 'data:image/png;base64,' + readFileSync(join(FIG, t.n, 'full.png')).toString('base64')]);   // 파일 주소는 캔버스에서 막혀서 데이터로
     }
-    const over = meas.filter(x => x.over && (how === 'sample' || t.s.some(s => s[0] === x.id)));
+    // long(모든 칸을 한도까지)은 칸마다 따로 잰 한도라 옆 칸끼리 겹칠 수 있음 → 겹침은 실제 글에서 잡아 다시 쓰게 하고, 여기서는 칸 자체 넘침만 봄
+    const over = meas.filter(x => x.over && (how === 'sample' || t.s.some(s => s[0] === x.id)) && !(how === 'long' && x.why === '옆 글과 겹침'));
     const ok = !over.length && !moved.length && (diff == null || diff <= DIFF_MAX);
     report.push({ tpl: t.n, how, ok, over: over.map(x => x.id + ' ' + x.why), moved, diff });
     if (!ok) fail.push(`${t.n} · ${how}: ${[over.length ? '넘침 ' + over.map(x => x.id + ' ' + x.why).join(', ') : '', moved.length ? '글씨 크기 바뀜 ' + moved.join(',') : '', diff > DIFF_MAX ? '원본과 차이 ' + diff : ''].filter(Boolean).join(' / ')}`);

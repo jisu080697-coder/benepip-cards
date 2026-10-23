@@ -7,7 +7,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, unlinkSync } from
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { rightOf } from './figma.mjs';
+import { rightOf, followers } from './figma.mjs';
 
 const RD = dirname(dirname(fileURLToPath(import.meta.url))), FIG = join(RD, 'fixed', 'figma'), CARDS = join(RD, 'cards');
 const SINCE = Number(process.env.SINCE || Date.now() - 2 * 3600e3);
@@ -26,13 +26,14 @@ function post(id, ver) {
     const val = id => { const m = String((c.v && c.v[id]) ?? '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? Math.abs(parseFloat(m[0])) : null; };
     const bars = (raw.shapes || []).filter(g => g.kind === 'bar'), BW = Math.max(0, ...bars.map(g => g.w)), mx = Math.max(0, ...bars.map(g => val(g.slot) || 0));
     const barOut = bars.map(g => { const v = val(g.slot); return { x: g.x, y: g.y, w: g.w, nw: v == null || !mx ? 0 : Math.max(g.h * 2, BW * 0.12, BW * v / mx) }; });
+    const fol = followers(raw);
     return { fig: c.fig, bars: barOut, slots: raw.slots.map(s => {
       const base = s.segs[0], em = s.segs.find(g => g.color !== base.color || g.weight !== base.weight);
       let v = c.v && c.v[s.id];
       if (v == null && /^\d+ \/ \d+$/.test(s.text)) v = (i + 1) + ' / ' + list.length;
       if (v == null) return null;
       const p = (raw.shapes || []).find(x => x.kind === 'pill' && x.slot === s.id);
-      return { o: s.text, v: String(v), ra: rightOf(raw, s), em: em ? { c: em.color, w: em.weight } : null, pill: p ? { x: p.x, y: p.y, w: p.w, l: p.padL, r: p.padR } : null };
+      return { id: s.id, fol: fol[s.id] || null, o: s.text, v: String(v), ra: rightOf(raw, s), em: em ? { c: em.color, w: em.weight } : null, pill: p ? { x: p.x, y: p.y, w: p.w, l: p.padL, r: p.padR } : null };
     }).filter(Boolean) };
   }) };
 }
