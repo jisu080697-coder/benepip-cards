@@ -236,3 +236,9 @@
 .P .same { margin-top: 40px; font-size: 44px; font-weight: 700; color: var(--sub); }
 .P .same b { color: var(--c); margin-left: 12px; }
 .P .gauge .leg { row-gap: 4px; }
+/* 마지막 요약 장(파랑): 항목마다 타일 · 왼쪽 흰 원 번호 · 오른쪽에 제목과 설명을 위아래로 정렬 */
+.P.sum .recap { gap: 18px !important; border-top: none !important; margin-top: 56px; }
+.P.sum .recap div { display: grid !important; grid-template-columns: 76px 1fr; column-gap: 30px; row-gap: 6px; align-items: center; background: rgba(255, 255, 255, .12) !important; border: none !important; border-radius: 30px !important; padding: 32px 40px !important; }
+.P.sum .recap i { grid-row: span 2; width: 76px !important; height: 76px; border-radius: 50%; background: #fff !important; color: var(--blue) !important; font-size: 38px !important; display: grid !important; place-items: center; }
+.P.sum .recap em { grid-column: 2; padding-left: 0 !important; margin: 0 !important; opacity: .82; }
+.P.sum .recap i { justify-content: center !important; align-content: center; text-align: center; line-height: 1 !important; padding: 0 !important; }
