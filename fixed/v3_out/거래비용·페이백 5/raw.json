@@ -1,0 +1,254 @@
+{
+ "name": "거래비용·페이백 5",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "layer": "내 숫자로",
+   "text": "내 숫자로",
+   "x": 100,
+   "y": 238,
+   "w": 138.3,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "내 숫자로",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -0.76
+    }
+   ],
+   "id": "t1"
+  },
+  {
+   "layer": "캡처해두고\n빈칸만 채워 보세요",
+   "text": "캡처해두고\n빈칸만 채워 보세요",
+   "x": 100,
+   "y": 306,
+   "w": 880,
+   "h": 207.5,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "캡처해두고\n",
+     "size": 84,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    },
+    {
+     "t": "빈칸",
+     "size": 84,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    },
+    {
+     "t": "만 채워 보세요",
+     "size": 84,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    }
+   ],
+   "id": "t2"
+  },
+  {
+   "layer": "한 달 거래량 (랏)",
+   "text": "한 달 거래량 (랏)",
+   "x": 144,
+   "y": 635.7,
+   "w": 281,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 달 거래량 (랏)",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(107,118,132,1)",
+     "lh": 52.5,
+     "ls": -1.32
+    }
+   ],
+   "id": "t3"
+  },
+  {
+   "layer": "× 랏당 페이백 ($)",
+   "text": "× 랏당 페이백 ($)",
+   "x": 144,
+   "y": 826,
+   "w": 298.9,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "× 랏당 페이백 ($)",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(107,118,132,1)",
+     "lh": 52.5,
+     "ls": -1.32
+    }
+   ],
+   "id": "t4"
+  },
+  {
+   "layer": "= 한 달 페이백",
+   "text": "= 한 달 페이백",
+   "x": 144,
+   "y": 1016.2,
+   "w": 239,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "= 한 달 페이백",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(255,255,255,0.7)",
+     "lh": 52.5,
+     "ls": -1.32
+    }
+   ],
+   "id": "t5"
+  },
+  {
+   "layer": "랏당 금액은 베네핍 브로커 페이지에서",
+   "text": "랏당 금액은 베네핍 브로커 페이지에서 확인해요.",
+   "x": 96,
+   "y": 1135.4,
+   "w": 640.2,
+   "h": 40,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "랏당 금액은 베네핍 브로커 페이지에서 확인해요.",
+     "size": 34,
+     "weight": 500,
+     "color": "rgba(107,118,132,1)",
+     "lh": 47.6,
+     "ls": 0
+    }
+   ],
+   "id": "t6"
+  },
+  {
+   "layer": "거래에는 원금 손실 위험이 있어요. ",
+   "text": "거래에는 원금 손실 위험이 있어요. 혜택·페이백은 브로커와 계좌 조건에 따라 달라요.",
+   "x": 96,
+   "y": 1188,
+   "w": 754,
+   "h": 79.5,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래에는 원금 손실 위험이 있어요. 혜택·페이백은 브로커와 계좌 조건에 따라 달라요.",
+     "size": 30,
+     "weight": 500,
+     "color": "rgba(107,118,132,1)",
+     "lh": 43.5,
+     "ls": -0.6
+    }
+   ],
+   "id": "t7"
+  },
+  {
+   "layer": "5 / 5",
+   "text": "5 / 5",
+   "x": 923.2,
+   "y": 1232,
+   "w": 68.8,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "5 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ],
+   "id": "t8"
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "x": 100,
+   "y": 578,
+   "w": 880,
+   "h": 168.3,
+   "fill": "rgba(255,255,255,1)",
+   "rad": 34,
+   "rot": 0
+  },
+  {
+   "x": 100,
+   "y": 768.3,
+   "w": 880,
+   "h": 168.3,
+   "fill": "rgba(255,255,255,1)",
+   "rad": 34,
+   "rot": 0
+  },
+  {
+   "x": 100,
+   "y": 958.6,
+   "w": 880,
+   "h": 168.3,
+   "fill": "rgba(36,85,245,1)",
+   "rad": 34,
+   "rot": 0
+  }
+ ],
+ "src": "v3"
+}

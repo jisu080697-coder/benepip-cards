@@ -1,0 +1,278 @@
+{
+ "name": "거래비용·페이백 1",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "layer": "페이백 계산 사례",
+   "text": "페이백 계산 사례",
+   "x": 96,
+   "y": 224,
+   "w": 242.6,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백 계산 사례",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.78)",
+     "lh": 45.3,
+     "ls": -0.76
+    }
+   ],
+   "id": "t1"
+  },
+  {
+   "layer": "한 달 30랏 거래하면\n페이백은 얼마",
+   "text": "한 달 30랏 거래하면\n페이백은 얼마?",
+   "x": 96,
+   "y": 294,
+   "w": 888,
+   "h": 235,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 달 30랏 거래하면\n",
+     "size": 96,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 121,
+     "ls": -4.8
+    },
+    {
+     "t": "페이백은 얼마?",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 121,
+     "ls": -4.8
+    }
+   ],
+   "id": "t2"
+  },
+  {
+   "layer": "10월 페이백 내역",
+   "text": "10월 페이백 내역",
+   "x": 483.1,
+   "y": 783.9,
+   "w": 246.7,
+   "h": 43,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "10월 페이백 내역",
+     "size": 36,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 42.9,
+     "ls": 0
+    }
+   ],
+   "id": "t3"
+  },
+  {
+   "layer": "예시 · 브로커 A",
+   "text": "예시 · 브로커 A",
+   "x": 500.7,
+   "y": 835.9,
+   "w": 206,
+   "h": 40,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "예시 · 브로커 A",
+     "size": 34,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 40.6,
+     "ls": 0
+    }
+   ],
+   "id": "t4"
+  },
+  {
+   "layer": "거래량",
+   "text": "거래량",
+   "x": 258.6,
+   "y": 890.3,
+   "w": 107.1,
+   "h": 50,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래량",
+     "size": 42,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 50.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t6"
+  },
+  {
+   "layer": "30랏",
+   "text": "30랏",
+   "x": 853.9,
+   "y": 921.5,
+   "w": 87.9,
+   "h": 50,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "30랏",
+     "size": 42,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 50.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t5"
+  },
+  {
+   "layer": "랏당 페이백",
+   "text": "랏당 페이백",
+   "x": 253.3,
+   "y": 991.1,
+   "w": 185.9,
+   "h": 50,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "랏당 페이백",
+     "size": 42,
+     "weight": 600,
+     "color": "rgba(107,118,132,1)",
+     "lh": 50.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t8"
+  },
+  {
+   "layer": "$3",
+   "text": "$3",
+   "x": 884.3,
+   "y": 1024.2,
+   "w": 52.2,
+   "h": 50,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "$3",
+     "size": 42,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 50.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t7"
+  },
+  {
+   "layer": "합계",
+   "text": "합계",
+   "x": 248,
+   "y": 1092,
+   "w": 72.1,
+   "h": 50,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "합계",
+     "size": 42,
+     "weight": 800,
+     "color": "rgba(107,118,132,1)",
+     "lh": 50.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t9"
+  },
+  {
+   "layer": "$90.00",
+   "text": "$90.00",
+   "x": 783.2,
+   "y": 1120,
+   "w": 148,
+   "h": 50,
+   "rot": -3.0000011085596214,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 26,
+   "segs": [
+    {
+     "t": "$90.00",
+     "size": 42,
+     "weight": 900,
+     "color": "rgba(36,85,245,1)",
+     "lh": 50.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t10"
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "x": 213.5,
+   "y": 719.7,
+   "w": 790,
+   "h": 494,
+   "fill": "rgba(255,255,255,1)",
+   "rad": 30,
+   "rot": 3.0000011085596214
+  }
+ ],
+ "src": "v3"
+}

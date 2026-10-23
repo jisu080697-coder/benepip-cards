@@ -1,0 +1,343 @@
+{
+ "name": "혜택·적용 조건 4",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "layer": "그럼 언제?",
+   "text": "그럼 언제?",
+   "x": 100,
+   "y": 238,
+   "w": 158,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "그럼 언제?",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 45.3,
+     "ls": -0.76
+    }
+   ],
+   "id": "t1"
+  },
+  {
+   "layer": "출금 버튼은\n이 순서 다음에",
+   "text": "출금 버튼은\n이 순서 다음에",
+   "x": 100,
+   "y": 306,
+   "w": 660,
+   "h": 207.5,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 버튼은\n",
+     "size": 84,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    },
+    {
+     "t": "이 순서 다음에",
+     "size": 84,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    }
+   ],
+   "id": "t2"
+  },
+  {
+   "layer": "01",
+   "text": "01",
+   "x": 100,
+   "y": 602,
+   "w": 66.9,
+   "h": 71,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "01",
+     "size": 60,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 60,
+     "ls": -2.4
+    }
+   ],
+   "id": "t3"
+  },
+  {
+   "layer": "거래량 조건 채우기",
+   "text": "거래량 조건 채우기",
+   "x": 230,
+   "y": 612,
+   "w": 308.4,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래량 조건 채우기",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.76
+    }
+   ],
+   "id": "t4"
+  },
+  {
+   "layer": "회원 페이지에서 확인",
+   "text": "회원 페이지에서 확인",
+   "x": 230,
+   "y": 680,
+   "w": 383,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "회원 페이지에서 확인",
+     "size": 48,
+     "weight": 500,
+     "color": "rgba(51,61,75,1)",
+     "lh": 69.6,
+     "ls": -1.44
+    }
+   ],
+   "id": "t5"
+  },
+  {
+   "layer": "02",
+   "text": "02",
+   "x": 100,
+   "y": 784.6,
+   "w": 75.3,
+   "h": 71,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.45,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "02",
+     "size": 60,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 60,
+     "ls": -2.4
+    }
+   ],
+   "id": "t6"
+  },
+  {
+   "layer": "기한 안인지 확인",
+   "text": "기한 안인지 확인",
+   "x": 230,
+   "y": 794.6,
+   "w": 272.1,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "기한 안인지 확인",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.76
+    }
+   ],
+   "id": "t7"
+  },
+  {
+   "layer": "지급일부터 며칠째인지",
+   "text": "지급일부터 며칠째인지",
+   "x": 230,
+   "y": 862.6,
+   "w": 412.7,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "지급일부터 며칠째인지",
+     "size": 48,
+     "weight": 500,
+     "color": "rgba(51,61,75,1)",
+     "lh": 69.6,
+     "ls": -1.44
+    }
+   ],
+   "id": "t8"
+  },
+  {
+   "layer": "03",
+   "text": "03",
+   "x": 100,
+   "y": 967.2,
+   "w": 76.9,
+   "h": 71,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.45,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "03",
+     "size": 60,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 60,
+     "ls": -2.4
+    }
+   ],
+   "id": "t9"
+  },
+  {
+   "layer": "수익만 출금 신청",
+   "text": "수익만 출금 신청",
+   "x": 230,
+   "y": 977.2,
+   "w": 272.1,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "수익만 출금 신청",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.76
+    }
+   ],
+   "id": "t10"
+  },
+  {
+   "layer": "크레딧은 출금 때 빠져요",
+   "text": "크레딧은 출금 때 빠져요",
+   "x": 230,
+   "y": 1045.2,
+   "w": 433.3,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "크레딧은 출금 때 빠져요",
+     "size": 48,
+     "weight": 500,
+     "color": "rgba(51,61,75,1)",
+     "lh": 69.6,
+     "ls": -1.44
+    }
+   ],
+   "id": "t11"
+  },
+  {
+   "layer": "거래에는 원금 손실 위험이 있어요. ",
+   "text": "거래에는 원금 손실 위험이 있어요. 혜택·페이백은 브로커와 계좌 조건에 따라 달라요.",
+   "x": 96,
+   "y": 1188,
+   "w": 754,
+   "h": 79.5,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래에는 원금 손실 위험이 있어요. 혜택·페이백은 브로커와 계좌 조건에 따라 달라요.",
+     "size": 30,
+     "weight": 500,
+     "color": "rgba(107,118,132,1)",
+     "lh": 43.5,
+     "ls": -0.6
+    }
+   ],
+   "id": "t12"
+  },
+  {
+   "layer": "4 / 4",
+   "text": "4 / 4",
+   "x": 921.3,
+   "y": 1232,
+   "w": 70.7,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "4 / 4",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ],
+   "id": "t13"
+  }
+ ],
+ "shapes": [],
+ "rects": [],
+ "src": "v3"
+}

@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-export const FIG = join(dirname(fileURLToPath(import.meta.url)), 'figma');
+export const FIG = process.env.FIG_DIR || join(dirname(fileURLToPath(import.meta.url)), 'figma');
 export const hasFig = name => existsSync(join(FIG, String(name || ''), 'raw.json'));
 export const figOf = name => JSON.parse(readFileSync(join(FIG, name, 'raw.json'), 'utf8'));
 const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -22,7 +22,7 @@ export const sampleOf = s => { const { base } = styleOf(s); return s.segs.map(g 
 // 글자 칸이 들어 있는 가장 작은 상자 안에서 쓸 수 있는 너비 (상자 왼쪽 여백만큼 오른쪽도 비움) · 상자가 없으면 화면 오른쪽 여백까지
 const availW = (t, s) => {
   const bx = (t.rects || []).filter(r => r.fill && r.x <= s.x + 1 && r.y <= s.y + 1 && r.x + r.w >= s.x + s.w - 1 && r.y + r.h >= s.y + s.h - 1 && r.w < 1000).sort((a, b) => a.w * a.h - b.w * b.h)[0];
-  let w = bx ? bx.x + bx.w - s.x - Math.max(16, s.x - bx.x) : 1080 - 96 - s.x;
+  let w = bx ? bx.x + bx.w - s.x - Math.min(48, Math.max(16, s.x - bx.x)) : 1080 - 96 - s.x;   // 상자 오른쪽 여백 = 왼쪽 여백 (최대 48)
   // 같은 줄 오른쪽 글·도형 앞까지 (표 칸·빈칸 상자)
   const row = o => o.y < s.y + s.h && o.y + o.h > s.y && o.x > s.x + 4;
   const nx = t.slots.filter(o => o !== s && row(o)).map(o => o.x).concat((t.rects || []).filter(r => row(r) && r.x > s.x + 20 && r.w < 600).map(r => r.x));

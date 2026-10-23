@@ -1,0 +1,350 @@
+{
+ "name": "브로커 이용 가이드 3",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "layer": "2",
+   "text": "2",
+   "x": 830,
+   "y": 117,
+   "w": 192,
+   "h": 406,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2",
+     "size": 340,
+     "weight": 800,
+     "color": "rgba(234,240,255,1)",
+     "lh": 340,
+     "ls": -20.4
+    }
+   ],
+   "id": "t1"
+  },
+  {
+   "layer": "입금한 수단과\n다른 곳으로 신청했어요",
+   "text": "입금한 수단과\n다른 곳으로 신청했어요",
+   "x": 100,
+   "y": 317,
+   "w": 880,
+   "h": 207.5,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "입금한 수단과\n",
+     "size": 84,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    },
+    {
+     "t": "다른 곳",
+     "size": 84,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    },
+    {
+     "t": "으로 신청했어요",
+     "size": 84,
+     "weight": 600,
+     "color": "rgba(19,33,59,1)",
+     "lh": 107.5,
+     "ls": -4.62
+    }
+   ],
+   "id": "t2"
+  },
+  {
+   "layer": "입금한 길로 먼저 돌려받는 게 원칙이",
+   "text": "입금한 길로 먼저 돌려받는 게 원칙이에요.",
+   "x": 100,
+   "y": 566,
+   "w": 652.4,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "입금한 길로 먼저 돌려받는 게 원칙이에요.",
+     "size": 42,
+     "weight": 500,
+     "color": "rgba(51,61,75,1)",
+     "lh": 65.1,
+     "ls": -1.26
+    }
+   ],
+   "id": "t3"
+  },
+  {
+   "layer": "카드로 입금",
+   "text": "카드로 입금",
+   "x": 146,
+   "y": 762.2,
+   "w": 211.9,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "카드로 입금",
+     "size": 48,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 57.3,
+     "ls": -1.44
+    }
+   ],
+   "id": "t4"
+  },
+  {
+   "layer": "카드로 환불",
+   "text": "카드로 환불",
+   "x": 775.4,
+   "y": 773.2,
+   "w": 138.6,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "카드로 환불",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ],
+   "id": "t5"
+  },
+  {
+   "layer": "해외 송금 입금",
+   "text": "해외 송금 입금",
+   "x": 146,
+   "y": 906.4,
+   "w": 261.6,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "해외 송금 입금",
+     "size": 48,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 57.3,
+     "ls": -1.44
+    }
+   ],
+   "id": "t6"
+  },
+  {
+   "layer": "같은 계좌",
+   "text": "같은 계좌",
+   "x": 801.4,
+   "y": 917.4,
+   "w": 112.6,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "같은 계좌",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ],
+   "id": "t7"
+  },
+  {
+   "layer": "전자지갑 입금",
+   "text": "전자지갑 입금",
+   "x": 146,
+   "y": 1050.5,
+   "w": 251.9,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "전자지갑 입금",
+     "size": 48,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 57.3,
+     "ls": -1.44
+    }
+   ],
+   "id": "t8"
+  },
+  {
+   "layer": "같은 지갑",
+   "text": "같은 지갑",
+   "x": 801.4,
+   "y": 1061.5,
+   "w": 112.6,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "같은 지갑",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 35.8,
+     "ls": 0
+    }
+   ],
+   "id": "t9"
+  },
+  {
+   "layer": "3 / 5",
+   "text": "3 / 5",
+   "x": 922.8,
+   "y": 1232,
+   "w": 69.2,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ],
+   "id": "t10"
+  }
+ ],
+ "shapes": [
+  {
+   "kind": "pill",
+   "slot": "t5",
+   "x": 755.4,
+   "y": 765.2,
+   "w": 176.6,
+   "h": 52,
+   "rad": 22,
+   "fill": "rgba(242,244,246,1)",
+   "padL": 20,
+   "padR": 18
+  },
+  {
+   "kind": "pill",
+   "slot": "t7",
+   "x": 781.4,
+   "y": 909.4,
+   "w": 150.6,
+   "h": 52,
+   "rad": 22,
+   "fill": "rgba(242,244,246,1)",
+   "padL": 20,
+   "padR": 18
+  },
+  {
+   "kind": "pill",
+   "slot": "t9",
+   "x": 781.4,
+   "y": 1053.5,
+   "w": 150.6,
+   "h": 52,
+   "rad": 22,
+   "fill": "rgba(242,244,246,1)",
+   "padL": 20,
+   "padR": 18
+  }
+ ],
+ "rects": [
+  {
+   "x": 100,
+   "y": 680.1,
+   "w": 880,
+   "h": 510.5,
+   "fill": "rgba(255,255,255,1)",
+   "rad": 40,
+   "rot": 0
+  },
+  {
+   "x": 755.4,
+   "y": 765.2,
+   "w": 176.6,
+   "h": 52,
+   "fill": "rgba(242,244,246,1)",
+   "rad": 22,
+   "rot": 0
+  },
+  {
+   "x": 781.4,
+   "y": 909.4,
+   "w": 150.6,
+   "h": 52,
+   "fill": "rgba(242,244,246,1)",
+   "rad": 22,
+   "rot": 0
+  },
+  {
+   "x": 781.4,
+   "y": 1053.5,
+   "w": 150.6,
+   "h": 52,
+   "fill": "rgba(242,244,246,1)",
+   "rad": 22,
+   "rot": 0
+  }
+ ],
+ "src": "v3"
+}

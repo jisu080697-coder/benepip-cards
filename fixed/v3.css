@@ -1,0 +1,23 @@
+/* 틀 v3 규칙 (예시 글로 틀을 만들 때만 덧씌움 · 결과는 fixed/figma 틀이 됨)
+   1) 모든 본문 장: 머리말·제목은 같은 자리·같은 크기 (배치 변형은 v3_preview 가 끔)
+   2) 본문 글씨 한 단계 크게 (휴대폰에서 읽히게): 본문 48 · 보조 38 · 설명 42
+   3) 내용 묶음은 화면 아래까지 고르게 (v3_preview 의 채우기) */
+.P h2 { font-size: 84px !important; line-height: 1.28 !important; }
+.P .desc { font-size: 42px !important; }
+.P .tbl div:not(:first-child) span, .P .vs p, .P .qa p, .P .calc div, .P .look p, .P .bars div, .P .cmpbar div,
+.P .myth p, .P .tl b, .P .flow .fq, .P .ui .row, .P .msg-ko, .P .lrow b, .P .ev .what div, .P .steps span, .P .list div,
+.P .route span, .P .uic .lrow b, .P .recap div { font-size: 48px !important; }
+.P .tbl div:first-child span, .P .look h4, .P .tl span, .P .tl-span div, .P .flow .fa, .P .flow .fa small, .P .gauge .leg,
+.P .ev .what div span, .P .ui .bar, .P .stat-cap, .P .list em, .P .steps em, .P .recap em, .P .route small, .P .calc span small { font-size: 38px !important; }
+.P .chip { font-size: 38px !important; }
+.P .pf div b { font-size: 92px !important; }
+.P .pf div span, .P .pf-note { font-size: 38px !important; }
+.P .ev2 small { font-size: 34px !important; }
+.P .ev2 .as span { font-size: 44px !important; } .P .ev2 .as em { font-size: 36px !important; }
+/* 어두운 장의 표: 줄 바탕을 어둡게 (흰 줄 위 흰 글자 방지) */
+.P.dark .tbl div:not(:first-child) { background: rgba(255, 255, 255, .08) !important; }
+.P.dark .tbl div:not(:first-child) span { color: #fff !important; }
+.P.dark .tbl div:not(:first-child) span:first-child { color: #8fa9ff !important; }
+/* 발표 장: '영향 통화' 이름표와 값은 따로 (칸 나누기) */
+.P .ev2 .as span { display: inline-flex; align-items: baseline; gap: 18px; }
+.P .ev2 .as em { margin-right: 0 !important; }
