@@ -9,7 +9,7 @@ const here = dirname(fileURLToPath(import.meta.url)), src = join(here, 'src'), o
 const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : readdirSync(src).filter(f => f.endsWith('.html')).map(f => f.slice(0, -5));
 const base = readFileSync(join(src, 'base.css'), 'utf8');
-const browser = await chromium.launch(process.env.PW_EXEC ? { executablePath: process.env.PW_EXEC } : process.env.CI ? {} : { channel: 'msedge', headless: false, args: ['--headless=new'] });
+const browser = await chromium.launch(process.env.PW_EXEC ? { executablePath: process.env.PW_EXEC } : process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : process.env.CI ? {} : { channel: 'msedge', headless: false, args: ['--headless=new'] });
 const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 4 / 3 });
 for (const id of ids) {
   const dir = join(out, id); mkdirSync(dir, { recursive: true });

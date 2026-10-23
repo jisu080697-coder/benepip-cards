@@ -14,15 +14,16 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: 한글 글꼴(대체용) 설치
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+          cache: npm
+      # 브라우저는 실행기에 이미 깔린 크롬을 씀 (다운로드·apt 설치가 느린 날 멈추지 않게) · 글꼴은 Pretendard 웹폰트
       - name: 렌더러 준비
-        run: npm ci && npx playwright-core install --with-deps chromium
+        run: npm ci
       - name: 초안 저장
         if: github.event_name == 'repository_dispatch'
         env:
@@ -34,6 +35,7 @@ jobs:
       - name: 카드 렌더링
         env:
           CI: 'true'
+          PW_CHANNEL: chrome
         run: node render.mjs draft.json "cards/$(node -p "const d=require('./draft.json');d.id+'/'+(d.ver||'v0')")"
       - name: 이미지 올리기
         run: |
