@@ -52,27 +52,71 @@ def tone(name):
     m = ImageStat.Stat(Image.open(os.path.join(ROOT, 'figma', name, 'bg.png')).convert('L')).mean[0]
     return 'dark' if m < 100 else 'blue' if m < 170 else 'light'
 
+import re
+# 칸 종류 (예시 글 모양으로 정함) → 생성 검사에서 모양을 강제
+def kind(role, ex):
+    e = ex.replace('“', '').replace('”', '').strip()
+    if re.fullmatch(r'\d{1,2}', e): return 'digit'
+    if re.fullmatch(r'\d{1,2}:\d{2}', e): return 'time'
+    if re.match(r'\d{1,2}/\d{1,2}', e) and len(e) <= 9: return 'date'
+    if e in '월화수목금토일' and len(e) == 1: return 'day'
+    if re.search(r'이전 값|예상 값', role): return 'numq'
+    if re.search(r'값|큰 숫자', role) and '설명' not in role and re.search(r'\d', e): return 'num'
+    return ''
+
+# 칸에 실제로 쓸 수 있는 너비
+# - 글을 꼭 감싼 상자(말풍선·작은 박스: 상자가 예시 글 크기에 맞춰 그려짐) 안 → 예시 글 너비만큼
+# - 큰 상자 안 → 상자 오른쪽 여백 전까지 · 상자 밖 → 화면 오른쪽 여백(96px) 전까지
+# - 너비가 정해진 칸 → 그 너비
+def safe_w(d, s):
+    if s['autoResize'] != 'WIDTH_AND_HEIGHT':
+        bx = container(d, s)
+        return s['w'] if not bx or not tight(bx, s) else s['w'] * 1.05
+    bx = container(d, s)
+    if bx and tight(bx, s): return s['w'] * 1.08
+    w = bx['x'] + bx['w'] - s['x'] - max(16, s['x'] - bx['x']) if bx else (s['x'] + s['w'] - 96 if s['align'] == 'RIGHT' else 1080 - 96 - s['x'])
+    # 같은 줄 오른쪽에 다른 글이 있으면 그 앞까지 (표·타임라인 칸)
+    if s['align'] != 'RIGHT':
+        nb = [o['x'] for o in d['slots'] if o is not s and o['x'] > s['x'] + 4 and o['y'] < s['y'] + s['h'] and o['y'] + o['h'] > s['y']]
+        if nb: w = min(w, min(nb) - s['x'] - 20)
+        # 같은 줄 오른쪽 도형(빈칸 상자·막대·아이콘 자리)이 있으면 그 앞까지
+        rb = [r['x'] for r in d.get('rects', []) if r['x'] > s['x'] + 20 and r['y'] < s['y'] + s['h'] and r['y'] + r['h'] > s['y'] and r['w'] < 600]
+        if rb: w = min(w, min(rb) - s['x'] - 16)
+    return max(w, s['w'])
+
+def container(d, s):
+    c = [r for r in d.get('rects', []) if r.get('fill') and r['x'] <= s['x'] + 1 and r['y'] <= s['y'] + 1 and r['x'] + r['w'] >= s['x'] + s['w'] - 1 and r['y'] + r['h'] >= s['y'] + s['h'] - 1 and r['w'] < 1000]
+    return min(c, key=lambda r: r['w'] * r['h']) if c else None
+
+def tight(r, s): return r['w'] - s['w'] < 150 and r['h'] - s['h'] < 110
+
+# 글자 폭 (한글 1 · 영문·숫자·기호·공백 0.6) → 생성 검사(Fig.gs figLen_)와 같은 셈
+def wlen(t): return sum(1 if ord(ch) > 0x2E80 else 0.6 for ch in t.replace('“', '').replace('”', ''))
+
 def sample(s):
     base = next((g for g in s['segs'] if g['t'].strip()), s['segs'][0])
     return ''.join('“%s”' % g['t'] if (g['color'] != base['color'] or g['weight'] != base['weight']) and g['t'].strip() else g['t'] for g in s['segs']).replace('“\n', '\n“').replace('\n”', '”\n')
 
+PILL = {}
 out = []
 for name, (group, pos, use, roles) in T.items():
     d = json.load(open(os.path.join(ROOT, 'figma', name, 'raw.json'), encoding='utf-8'))
     by = {s['id']: s for s in d['slots']}
+    PILL[name] = [g['slot'] for g in d.get('shapes', []) if g['kind'] == 'pill']
     slots = []
     for sid, role in roles.items():
         s = by[sid]; ex = sample(s); lines = ex.split('\n')
-        mx = max(len(l.replace('“', '').replace('”', '')) for l in lines)
+        mx = math.ceil(max(wlen(l) for l in lines))
         size = next((g for g in s['segs'] if g['t'].strip()), s['segs'][0])['size']
-        if s['autoResize'] != 'WIDTH_AND_HEIGHT': lim = max(mx, int(s['w'] / (size * 0.95)))   # 너비가 정해진 칸: 한글 한 자 ≈ 글씨 크기
-        else: lim = mx + 1 if mx <= 4 else math.ceil(mx * 1.25)   # 너비 자동 칸: 예시보다 조금 더까지
-        slots.append([sid, role, ex, len(lines), lim])
+        lim = max(mx, int(safe_w(d, s) / size))   # 실제로 쓸 수 있는 너비 ÷ 글씨 크기 (한글 한 자 ≈ 글씨 크기)
+        if sid in PILL.get(name, []): lim = mx + 2   # 태그: 줄 안에서 이어 붙으니 예시보다 조금만
+        if role == '머리말': lim = min(lim, max(mx + 3, 12))   # 머리말: 오른쪽 아이콘 자리를 덮지 않게
+        slots.append([sid, role, ex, len(lines), lim, kind(role, ex)])
     tn, ic = tone(name), ICON.get(name, '')
     out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else '') + (' · 남색 바탕' if tn == 'dark' else '') + (' · 아이콘: ' + ic if ic else ''), 'num': NUM.get(name, []), 'tone': tn, 'icon': ic, 's': slots})
 
 js = ('// 자동 생성 (renderer/fixed/catalog.py) · 직접 고치지 마세요\n'
-      '// 피그마 틀 목록: n 틀 이름 · g 주제군 · pos cover/body/end · use 쓰임 · s [칸, 역할, 예시(“강조”), 줄 수, 줄당 최대 글자]\n'
+      '// 피그마 틀 목록: n 틀 이름 · g 주제군 · pos cover/body/end · use 쓰임 · s [칸, 역할, 예시(“강조”), 줄 수, 줄당 최대 글자, 종류(digit 숫자 하나·time HH:MM·date 날짜·day 요일 한 글자·num 숫자 포함·numq 숫자 또는 미정)]\n'
       'const FIG_TPL_ = ' + json.dumps(out, ensure_ascii=False) + ';\n')
 open(os.path.join(ROOT, '..', '..', 'backend', 'FigTpl.gs'), 'w', encoding='utf-8').write(js)
 print(len(out), '틀', sum(len(t['s']) for t in out), '칸')
