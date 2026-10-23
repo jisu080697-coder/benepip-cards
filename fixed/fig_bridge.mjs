@@ -12,8 +12,8 @@ const RD = dirname(dirname(fileURLToPath(import.meta.url))), FIG = join(RD, 'fix
 const SINCE = Number(process.env.SINCE || Date.now() - 2 * 3600e3);
 const git = (...a) => execFileSync('git', a, { cwd: RD, stdio: ['ignore', 'pipe', 'pipe'] }).toString();
 const giving = {};   // 플러그인에 넘긴 지 10분 안 된 것은 다시 넘기지 않음
-let pulled = 0;
-const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now(); try { git('pull', '-q', '--rebase'); } catch (e) { console.log('git pull 실패', String(e.message).slice(0, 120)); } };
+let pulled = 0, seen = 0;
+const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now(); try { git('pull', '-q', '--rebase', '--autostash'); } catch (e) { console.log('git pull 실패', String(e.message).slice(0, 120)); } };
 
 // 렌더 결과 → 플러그인이 채울 정보 (칸은 시안 글로 찾음 · 강조 “ ” 모양 · 알약 크기 · 쪽 번호)
 function post(id, ver) {
@@ -54,13 +54,14 @@ function save(m) {
   writeFileSync(join(dir, 'figma.json'), JSON.stringify({ at: new Date().toISOString(), n: m.imgs.length, edited: !!m.edited }));
   git('add', '-A', join('cards', m.id, m.ver));
   git('commit', '-q', '-m', 'figma ' + m.id + (m.edited ? ' (피그마에서 고침)' : ''));
-  for (let k = 0; k < 3; k++) { try { git('pull', '-q', '--rebase'); git('push', '-q'); return; } catch (e) { if (k === 2) throw e; } }
+  for (let k = 0; k < 3; k++) { try { git('pull', '-q', '--rebase', '--autostash'); git('push', '-q'); return; } catch (e) { if (k === 2) throw e; } }
 }
 
 const handler = (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); res.setHeader('Access-Control-Allow-Private-Network', 'true');
+  if (req.url !== '/pending' || req.method !== 'GET') console.log(new Date().toLocaleTimeString('ko-KR'), req.method, req.url);
   if (req.method === 'OPTIONS') return res.end();
-  if (req.method === 'GET' && req.url === '/pending') { try { res.end(JSON.stringify(pending())); } catch (e) { res.statusCode = 500; res.end(String(e.message)); } return; }
+  if (req.method === 'GET' && req.url === '/pending') { seen++ || console.log('플러그인 연결됨'); try { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(pending())); } catch (e) { res.statusCode = 500; res.end(String(e.message)); } return; }
   if (req.method === 'POST' && req.url === '/done') {
     let body = ''; req.setEncoding('utf8'); req.on('data', d => { body += d; });
     req.on('end', () => { try { const m = JSON.parse(body); save(m); console.log(new Date().toLocaleTimeString('ko-KR'), '올림', m.id, m.imgs.length + '장', m.edited ? '(고친 것)' : ''); res.end('ok'); } catch (e) { console.log('실패', e.message); res.statusCode = 400; res.end(String(e.message)); } });
