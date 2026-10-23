@@ -111,7 +111,9 @@ for name, (group, pos, use, roles) in T.items():
         lim = max(mx, int(safe_w(d, s) / size))   # 실제로 쓸 수 있는 너비 ÷ 글씨 크기 (한글 한 자 ≈ 글씨 크기)
         if sid in PILL.get(name, []): lim = mx + 2   # 태그: 줄 안에서 이어 붙으니 예시보다 조금만
         if role == '머리말': lim = min(lim, max(mx + 3, 12))   # 머리말: 오른쪽 아이콘 자리를 덮지 않게
-        slots.append([sid, role, ex, len(lines), lim, kind(role, ex, sid in NUM.get(name, []))])
+        k = kind(role, ex, sid in NUM.get(name, []))
+        if k in ('num', 'numq'): lim = max(lim, mx + 2)   # 숫자 값은 자릿수가 늘 수 있게 ($90 → $1,800)
+        slots.append([sid, role, ex, len(lines), lim, k])
     tn, ic = tone(name), ICON.get(name, '')
     out.append({'n': name, 'g': group, 'pos': pos, 'use': use + (' · 숫자 필요' if name in NUM else '') + (' · 남색 바탕' if tn == 'dark' else '') + (' · 아이콘: ' + ic if ic else ''), 'num': NUM.get(name, []), 'tone': tn, 'icon': ic, 's': slots})
 
