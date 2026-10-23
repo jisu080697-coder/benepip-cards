@@ -25,3 +25,22 @@ edit('거래비용·페이백 1', rcpt)
 # 쪽 번호가 마지막 값에 붙은 장: 쪽 번호를 아래로
 for n, k in [('거래비용·페이백 3', 't11'), ('플랫폼 활용 2', 't12')]:
     edit(n, lambda by, d, k=k: by[k].update(y=by[k]['y'] + 22))
+
+# 본문 장 제목 통일: 크기 80 · 줄 간격 104 · 기본 굵기 700 · 강조 800 (강조 색: 밝은 바탕 파랑, 어두운 바탕 밝은 파랑)
+#  강조 모양이 없던 틀(가운데 제목 등)에도 강조 모양을 넣음 → AI가 “ ”로 감싼 말은 어느 장이든 같은 모양
+def title_rule(name):
+    p = os.path.join(ROOT, name, 'raw.json'); d = json.load(open(p, encoding='utf-8'))
+    if d.get('polished2'): return
+    for s in d['slots']:
+        if s['rot'] or not s['segs'] or s['y'] > 700 or max(g['size'] for g in s['segs']) != 80: continue
+        dark = s['segs'][0]['color'].startswith('rgba(255,255,255')
+        base = s['segs'][0]['color']; hic = 'rgba(91,127,255,1)' if dark else 'rgba(36,85,245,1)'
+        for g in s['segs']:
+            g.update(size=80, lh=104, ls=-4.4)
+            g['weight'] = 800 if g['color'] != base else 700
+        if not any(g['color'] != base for g in s['segs']):
+            s['segs'].append({'t': '', 'size': 80, 'weight': 800, 'color': hic, 'lh': 104, 'ls': -4.4})
+    d['polished2'] = 1
+    json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1); print('제목 통일', name)
+for n in sorted(os.listdir(ROOT)):
+    if os.path.exists(os.path.join(ROOT, n, 'raw.json')): title_rule(n)
