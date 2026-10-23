@@ -37,7 +37,8 @@ for (let i = 0; i < draft.cards.length; i++) {
     await page.evaluate(`(${FG.figFit.toString()})()`);
     // 피그마 칸보다 넓어지거나 줄이 늘어난 칸 (품질 관문이 글을 줄이게)
     const over = await page.evaluate((slots) => slots.map(s => { const e = document.querySelector(`.ft[data-id="${s.id}"]`); if (!e) return null; const r = e.getBoundingClientRect(); return (r.width > s.w + 6 && Math.abs(s.rot) < 0.5) || r.height > s.h + 6 ? s.id : null; }).filter(Boolean), FG.figOf(c.fig).slots);
-    metrics.push({ n: i + 1, fig: c.fig, zoom: 1, empty: 0, clipped: 0, tiny: 0, over });
+    const shrunk = await page.evaluate(() => window.__SHRUNK || []);
+    metrics.push({ n: i + 1, fig: c.fig, zoom: Math.min(1, ...shrunk.map(x => x.z)), empty: 0, clipped: 0, tiny: 0, over: shrunk.map(x => x.id), wide: over });
     const file = join(outDir, `${String(i + 1).padStart(2, '0')}.jpg`);
     await page.screenshot({ path: file, type: 'jpeg', quality: 95, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
     files.push(file); rmSync(tmp); continue;
