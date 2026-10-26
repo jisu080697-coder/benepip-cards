@@ -72,6 +72,9 @@ const handler = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); res.setHeader('Access-Control-Allow-Private-Network', 'true');
   if (req.url !== '/pending' || req.method !== 'GET') console.log(new Date().toLocaleTimeString('ko-KR'), req.method, req.url);
   if (req.method === 'OPTIONS') return res.end();
+  // 피그마 원본 틀 고침 목록 (제목 크기 등 · 플러그인이 다르면 고침)
+  if (req.method === 'GET' && req.url === '/tplfix') { const f = join(RD, 'fixed', 'title_fix.json'); res.setHeader('Content-Type', 'application/json'); res.end(existsSync(f) ? readFileSync(f, 'utf8') : '{"fixes":[]}'); return; }
+  if (req.method === 'POST' && req.url === '/tplfixed') { let b = ''; req.on('data', d => { b += d; }); req.on('end', () => { console.log(new Date().toLocaleTimeString('ko-KR'), '피그마 틀 고침', b); res.end('ok'); }); return; }
   if (req.method === 'GET' && req.url === '/pending') { seen++ || console.log('플러그인 연결됨'); pending().then(p => { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(p)); }).catch(e => { res.statusCode = 500; res.end(String(e.message)); }); return; }
   if (req.method === 'POST' && req.url === '/done') {
     let body = ''; req.setEncoding('utf8'); req.on('data', d => { body += d; });

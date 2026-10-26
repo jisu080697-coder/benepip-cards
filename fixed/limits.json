@@ -6,7 +6,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 13,
+   "lim": 12,
    "limNum": 10.8,
    "lines": 2
   },
@@ -58,7 +58,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -115,7 +115,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -172,7 +172,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -249,7 +249,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -284,6 +284,58 @@
    "lines": 1
   }
  },
+ "거래비용·페이백 6": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 18,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
  "경제 캘린더 1": {
   "t1": {
    "lim": 23,
@@ -301,7 +353,7 @@
    "lines": 1
   },
   "t4": {
-   "lim": 13,
+   "lim": 12,
    "limNum": 10.8,
    "lines": 2
   },
@@ -343,7 +395,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -415,7 +467,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -559,7 +611,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -654,1265 +706,6 @@
    "lines": 1
   }
  },
- "베네핍 이용 안내 1": {
-  "t1": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 20,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 23,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 20,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 23,
-   "limNum": 10.8,
-   "lines": 1
-  }
- },
- "베네핍 이용 안내 2": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 23,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 17,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 20,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 23,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t12": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "베네핍 이용 안내 3": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t5": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 18,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "베네핍 이용 안내 4": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 8,
-   "limNum": 6.6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 8,
-   "limNum": 6.6,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 8,
-   "limNum": 6.6,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 7,
-   "limNum": 5.4,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t13": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t14": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 1": {
-  "t1": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 1,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 3,
-   "limNum": 1.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 3,
-   "limNum": 3,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 2": {
-  "t1": {
-   "lim": 4,
-   "limNum": 3,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 22,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 3,
-   "limNum": 1.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 20,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 4,
-   "limNum": 3,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 22,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 3,
-   "limNum": 1.8,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 3": {
-  "t1": {
-   "lim": 4,
-   "limNum": 3,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 18,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 4": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 1,
-   "limNum": 0.6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 1,
-   "limNum": 0.6,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 11,
-   "limNum": 9,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 5": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 4
-  },
-  "t4": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t6": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "플랫폼 활용 1": {
-  "t1": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  }
- },
- "플랫폼 활용 2": {
-  "t1": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 1,
-   "limNum": 1.2,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 7,
-   "limNum": 6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 7,
-   "limNum": 5.4,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 7,
-   "limNum": 5.4,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 7,
-   "limNum": 5.4,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "플랫폼 활용 3": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t3": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "플랫폼 활용 4": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 12,
-   "limNum": 10.2,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 14,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 17,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t13": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t14": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 7,
-   "limNum": 5.4,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "플랫폼 활용 5": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 12,
-   "limNum": 10.2,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t13": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t14": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t15": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t16": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t17": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t18": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t19": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "혜택·적용 조건 1": {
-  "t1": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 3
-  },
-  "t3": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 14,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 14,
-   "limNum": 10.8,
-   "lines": 1
-  }
- },
- "혜택·적용 조건 2": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 12,
-   "limNum": 10.2,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t13": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t14": {
-   "lim": 9,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t15": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "혜택·적용 조건 3": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 27,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "혜택·적용 조건 4": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t13": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 6": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t3": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 28,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 7": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t5": {
-   "lim": 19,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 18,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 8": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 8,
-   "limNum": 6.6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 8,
-   "limNum": 6.6,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 6,
-   "limNum": 4.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 8,
-   "limNum": 6.6,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 7,
-   "limNum": 5.4,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t13": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t14": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 9": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 11,
-   "limNum": 9.6,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 12,
-   "limNum": 10.2,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 9,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t9": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t11": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t12": {
-   "lim": 8,
-   "limNum": 7.2,
-   "lines": 1
-  },
-  "t13": {
-   "lim": 8,
-   "limNum": 7.8,
-   "lines": 1
-  },
-  "t14": {
-   "lim": 9,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t15": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "브로커 이용 가이드 10": {
-  "t1": {
-   "lim": 34,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 1,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 3,
-   "limNum": 1.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 6,
-   "limNum": 4.2,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 3,
-   "limNum": 3,
-   "lines": 1
-  }
- },
  "공용 1": {
   "t1": {
    "lim": 19,
@@ -1920,7 +713,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -1982,7 +775,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2049,7 +842,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2139,6 +932,122 @@
    "lines": 1
   }
  },
+ "공용 4": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t5": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "공용 5": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 6": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
  "공용 남색 1": {
   "t1": {
    "lim": 33,
@@ -2146,7 +1055,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 12,
+   "lim": 11,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2176,6 +1085,63 @@
    "lines": 1
   }
  },
+ "공용 남색 10": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
  "공용 남색 2": {
   "t1": {
    "lim": 33,
@@ -2183,7 +1149,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2255,7 +1221,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2332,7 +1298,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 12,
+   "lim": 11,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2379,7 +1345,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 12,
+   "lim": 11,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2446,7 +1412,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2498,7 +1464,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 12,
+   "lim": 11,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2534,7 +1500,7 @@
   },
   "t9": {
    "lim": 11,
-   "limNum": 9,
+   "limNum": 9.6,
    "lines": 1
   },
   "t10": {
@@ -2555,7 +1521,7 @@
    "lines": 1
   },
   "t2": {
-   "lim": 15,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2625,9 +1591,88 @@
    "lines": 1
   }
  },
- "거래비용·페이백 6": {
+ "공용 남색 9": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t5": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "베네핍 이용 안내 1": {
   "t1": {
    "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "베네핍 이용 안내 2": {
+  "t1": {
+   "lim": 33,
    "limNum": 10.8,
    "lines": 1
   },
@@ -2637,17 +1682,688 @@
    "lines": 2
   },
   "t3": {
-   "lim": 17,
+   "lim": 25,
    "limNum": 10.8,
    "lines": 1
   },
   "t4": {
-   "lim": 17,
+   "lim": 25,
    "limNum": 10.8,
    "lines": 1
   },
   "t5": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "베네핍 이용 안내 3": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t5": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
    "lim": 18,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "베네핍 이용 안내 4": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 8,
+   "limNum": 6.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 8,
+   "limNum": 6.6,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 8,
+   "limNum": 6.6,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t14": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "베네핍 이용 안내 5": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 1": {
+  "t1": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 1,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 3,
+   "limNum": 1.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 3,
+   "limNum": 3,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 10": {
+  "t1": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 1,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 3,
+   "limNum": 1.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 3,
+   "limNum": 3,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 2": {
+  "t1": {
+   "lim": 4,
+   "limNum": 3,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 22,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 3,
+   "limNum": 1.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 4,
+   "limNum": 3,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 22,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 3,
+   "limNum": 1.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 3": {
+  "t1": {
+   "lim": 4,
+   "limNum": 3,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 18,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 4": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 1,
+   "limNum": 0.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 1,
+   "limNum": 0.6,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 5": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 4
+  },
+  "t4": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t6": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "브로커 이용 가이드 6": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t3": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "플랫폼 활용 1": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "플랫폼 활용 2": {
+  "t1": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 1,
+   "limNum": 1.2,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 7,
+   "limNum": 6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "플랫폼 활용 3": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t3": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "플랫폼 활용 4": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 14,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 15,
    "limNum": 10.8,
    "lines": 1
   },
@@ -2657,34 +2373,163 @@
    "lines": 1
   },
   "t7": {
-   "lim": 15,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 20,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t9": {
    "lim": 17,
    "limNum": 10.8,
    "lines": 1
   },
-  "t10": {
+  "t13": {
    "lim": 19,
    "limNum": 10.8,
    "lines": 1
+  },
+  "t14": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
   }
  },
- "혜택·적용 조건 5": {
+ "플랫폼 활용 5": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t14": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t15": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t16": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t17": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t18": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t19": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "플랫폼 활용 6": {
   "t1": {
    "lim": 31,
    "limNum": 10.8,
    "lines": 1
   },
   "t2": {
-   "lim": 13,
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "혜택·적용 조건 1": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
    "limNum": 10.8,
    "lines": 3
   },
@@ -2724,14 +2569,91 @@
    "lines": 1
   }
  },
- "베네핍 이용 안내 5": {
+ "혜택·적용 조건 2": {
   "t1": {
-   "lim": 31,
+   "lim": 33,
    "limNum": 10.8,
    "lines": 1
   },
   "t2": {
    "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t14": {
+   "lim": 9,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t15": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "혜택·적용 조건 3": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 11,
    "limNum": 10.8,
    "lines": 2
   },
@@ -2741,193 +2663,65 @@
    "lines": 1
   },
   "t4": {
-   "lim": 20,
+   "lim": 33,
    "limNum": 10.8,
    "lines": 1
   },
   "t5": {
-   "lim": 23,
+   "lim": 27,
    "limNum": 10.8,
    "lines": 1
   },
   "t6": {
-   "lim": 25,
+   "lim": 33,
    "limNum": 10.8,
    "lines": 1
   },
   "t7": {
-   "lim": 20,
+   "lim": 27,
    "limNum": 10.8,
    "lines": 1
   },
   "t8": {
-   "lim": 23,
-   "limNum": 10.8,
-   "lines": 1
-  }
- },
- "플랫폼 활용 6": {
-  "t1": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  }
- },
- "공용 4": {
-  "t1": {
    "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 24,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t5": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 30,
-   "limNum": 10.8,
-   "lines": 1
-  }
- },
- "공용 5": {
-  "t1": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 13,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 3,
-   "limNum": 2.4,
-   "lines": 1
-  }
- },
- "공용 6": {
-  "t1": {
-   "lim": 33,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t2": {
-   "lim": 12,
-   "limNum": 10.8,
-   "lines": 2
-  },
-  "t3": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t4": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t5": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t6": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t7": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t8": {
-   "lim": 31,
    "limNum": 10.8,
    "lines": 1
   },
   "t9": {
-   "lim": 25,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t10": {
-   "lim": 31,
-   "limNum": 10.8,
-   "lines": 1
-  },
-  "t11": {
    "lim": 3,
    "limNum": 2.4,
    "lines": 1
   }
  },
- "공용 남색 10": {
+ "혜택·적용 조건 4": {
   "t1": {
    "lim": 33,
    "limNum": 10.8,
    "lines": 1
   },
   "t2": {
-   "lim": 12,
+   "lim": 11,
    "limNum": 10.8,
    "lines": 2
   },
   "t3": {
-   "lim": 25,
-   "limNum": 10.8,
+   "lim": 3,
+   "limNum": 2.4,
    "lines": 1
   },
   "t4": {
-   "lim": 31,
+   "lim": 25,
    "limNum": 10.8,
    "lines": 1
   },
   "t5": {
-   "lim": 25,
+   "lim": 30,
    "limNum": 10.8,
    "lines": 1
   },
   "t6": {
-   "lim": 31,
-   "limNum": 10.8,
+   "lim": 3,
+   "limNum": 2.4,
    "lines": 1
   },
   "t7": {
@@ -2936,59 +2730,79 @@
    "lines": 1
   },
   "t8": {
-   "lim": 31,
+   "lim": 30,
    "limNum": 10.8,
    "lines": 1
   },
   "t9": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t10": {
    "lim": 25,
    "limNum": 10.8,
    "lines": 1
   },
-  "t10": {
-   "lim": 31,
+  "t11": {
+   "lim": 30,
    "limNum": 10.8,
    "lines": 1
   },
-  "t11": {
+  "t12": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t13": {
    "lim": 3,
    "limNum": 2.4,
    "lines": 1
   }
  },
- "공용 남색 9": {
+ "혜택·적용 조건 5": {
   "t1": {
-   "lim": 33,
+   "lim": 31,
    "limNum": 10.8,
    "lines": 1
   },
   "t2": {
    "lim": 12,
    "limNum": 10.8,
-   "lines": 2
+   "lines": 3
   },
   "t3": {
-   "lim": 24,
+   "lim": 27,
    "limNum": 10.8,
    "lines": 1
   },
   "t4": {
    "lim": 24,
    "limNum": 10.8,
-   "lines": 2
+   "lines": 1
   },
   "t5": {
-   "lim": 3,
-   "limNum": 2.4,
+   "lim": 11,
+   "limNum": 9.6,
    "lines": 1
   },
   "t6": {
-   "lim": 30,
+   "lim": 13,
    "limNum": 10.8,
    "lines": 1
   },
   "t7": {
-   "lim": 30,
+   "lim": 14,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 14,
    "limNum": 10.8,
    "lines": 1
   }
