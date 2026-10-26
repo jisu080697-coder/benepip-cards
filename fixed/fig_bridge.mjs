@@ -38,7 +38,7 @@ async function post(id, ver) {
       if (v == null && /^\d+ \/ \d+$/.test(s.text)) v = (i + 1) + ' / ' + list.length;
       if (v == null) return null;
       const p = (raw.shapes || []).find(x => x.kind === 'pill' && x.slot === s.id);
-      return { id: s.id, fol: fol[s.id] || null, o: s.text, v: String(v), ra: rightOf(raw, s), em: em ? { c: em.color, w: em.weight } : null, pill: p ? { x: p.x, y: p.y, w: p.w, l: p.padL, r: p.padR } : null };
+      return { id: s.id, x: s.x, y: s.y, fol: fol[s.id] || null, o: s.text, v: String(v), ra: rightOf(raw, s), em: em ? { c: em.color, w: em.weight } : null, pill: p ? { x: p.x, y: p.y, w: p.w, l: p.padL, r: p.padR } : null };
     }).filter(Boolean) };
   }) };
 }

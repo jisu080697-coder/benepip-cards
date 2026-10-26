@@ -1,18 +1,19 @@
 // 칸 글자 한도 재기 (실제 렌더 기준): 틀마다 각 칸에 한글 글(띄어쓰기 포함)을 늘려 가며 그려
 // 시안 칸을 넘지 않는 최대 길이(한글 1 · 그 밖 0.6 으로 센 값)와 줄 수를 fixed/limits.json 에 저장 → catalog.py 가 씀
-// 사용: node fixed/calibrate.mjs
+// 사용: node fixed/calibrate.mjs   (ONLY="틀 이름,틀 이름" 이면 그 틀만 다시 재서 기존 limits.json 에 합침)
 import { chromium } from 'playwright-core';
-import { readdirSync, writeFileSync, rmSync } from 'node:fs';
+import { readdirSync, writeFileSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { FIG, figCard } from './figma.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
-const names = readdirSync(FIG).filter(n => !n.startsWith('.'));
+const ONLY = process.env.ONLY ? process.env.ONLY.split(',').map(x => x.trim()) : null;
+const names = readdirSync(FIG).filter(n => !n.startsWith('.') && (!ONLY || ONLY.includes(n)));
 const b = await chromium.launch(process.env.PW_EXEC ? { executablePath: process.env.PW_EXEC } : process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : { channel: 'msedge', headless: false, args: ['--headless=new'] });
 const p = await b.newPage({ viewport: { width: 1080, height: 1350 } });
-const out = {};
+const out = ONLY && existsSync(join(here, 'limits.json')) ? JSON.parse(readFileSync(join(here, 'limits.json'), 'utf8')) : {};
 for (const n of names) {
   const tmp = join(FIG, n, '_cal.html');
   writeFileSync(tmp, `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONT}"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Pretendard Variable',Pretendard,sans-serif}</style></head><body>${figCard(n)}</body></html>`);

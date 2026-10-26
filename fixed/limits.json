@@ -2624,5 +2624,373 @@
    "limNum": 2.4,
    "lines": 1
   }
+ },
+ "거래비용·페이백 6": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 18,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "혜택·적용 조건 5": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 3
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 14,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 14,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "베네핍 이용 안내 5": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 23,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "플랫폼 활용 6": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "공용 4": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t5": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
+ },
+ "공용 5": {
+  "t1": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 6": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 10": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 9": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t5": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  }
  }
 }

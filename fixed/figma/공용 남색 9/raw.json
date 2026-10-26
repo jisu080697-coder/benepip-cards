@@ -1,0 +1,208 @@
+{
+ "name": "공용 남색 9",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "자주 묻는 것",
+   "text": "자주 묻는 것",
+   "x": 100,
+   "y": 238,
+   "w": 168,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "자주 묻는 것",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "연결하다가 막히는 순간",
+   "text": "연결하다가\n막히는 순간",
+   "x": 100,
+   "y": 305,
+   "w": 672,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "연결하다가\n막히는 순간",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "UID를 넣었는데 확인 중이에요",
+   "text": "페이백은 수익이 나야 받아요",
+   "x": 144,
+   "y": 694,
+   "w": 502,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백은 수익이 나야 받아요",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 63.79999923706055,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "브로커 쪽 확인이 필요해요. 보통 영",
+   "text": "손익과 관계없이 거래한 랏 수만큼\n지급돼요. 손실 난 거래도 포함이에요.",
+   "x": 144,
+   "y": 966,
+   "w": 792,
+   "h": 128,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "손익과 관계없이 거래한 랏 수만큼\n지급돼요. 손실 난 거래도 포함이에요.",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 63.79999923706055,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "3 / 4",
+   "text": "3 / 4",
+   "x": 922,
+   "y": 1232,
+   "w": 69,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 4",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "자주 묻는 것",
+   "text": "흔한 오해",
+   "x": 144,
+   "y": 632,
+   "w": 168,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "흔한 오해",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "자주 묻는 것",
+   "text": "사실은",
+   "x": 144,
+   "y": 904,
+   "w": 168,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "사실은",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "x": 100,
+   "y": 590,
+   "w": 880,
+   "h": 232,
+   "fill": "rgba(255,255,255,0.06)"
+  },
+  {
+   "x": 100,
+   "y": 862,
+   "w": 880,
+   "h": 296,
+   "fill": "rgba(36,85,245,1)"
+  }
+ ],
+ "polished2": 1
+}

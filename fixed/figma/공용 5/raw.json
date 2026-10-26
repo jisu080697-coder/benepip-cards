@@ -1,0 +1,127 @@
+{
+ "name": "공용 5",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "페이백 계산 사례",
+   "text": "페이백 계산 사례",
+   "x": 96,
+   "y": 520,
+   "w": 242,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백 계산 사례",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.78)",
+     "lh": 45.3,
+     "ls": -0.7599999904632568
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "한 달 30랏 거래하면 페이백은 얼마",
+   "text": "한 달 30랏 거래하면\n페이백은 얼마?",
+   "x": 96,
+   "y": 590,
+   "w": 900,
+   "h": 242,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 달 30랏 거래하면\n",
+     "size": 96,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    },
+    {
+     "t": "페이백은 얼마?",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 121,
+     "ls": -4.800000190734863
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "MT5 거래 탭의 볼륨 숫자",
+   "text": "MT5 거래 탭의 볼륨 숫자",
+   "x": 96,
+   "y": 900,
+   "w": 345,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "MT5 거래 탭의 볼륨 숫자",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.0800000429153442
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "3 / 5",
+   "text": "3 / 5",
+   "x": 922,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.5)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "x": 96,
+   "y": 470,
+   "w": 72,
+   "h": 8,
+   "fill": "rgba(255,255,255,1)"
+  }
+ ],
+ "polished": 1,
+ "polished2": 1
+}
