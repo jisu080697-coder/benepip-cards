@@ -92,7 +92,8 @@ ICON = {'플랫폼 활용 1': '계산기', '플랫폼 활용 3': '과녁', '혜�
 
 def tone(name):
     from PIL import Image, ImageStat
-    m = ImageStat.Stat(Image.open(os.path.join(ROOT, 'figma', name, 'bg.png')).convert('L')).mean[0]
+    im = Image.open(os.path.join(ROOT, 'figma', name, 'bg.png')).convert('RGB'); r, g, b = ImageStat.Stat(im).mean; m = ImageStat.Stat(im.convert('L')).mean[0]
+    if b - r > 90 and m > 60: return 'blue'   # 파란 바탕 (예: 한 문장 크게) · 남색과 구분
     return 'dark' if m < 100 else 'blue' if m < 170 else 'light'
 
 import re
