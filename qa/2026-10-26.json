@@ -1,0 +1,1286 @@
+{
+ "day": "2026-10-26",
+ "avg": 8.8,
+ "pass": 24,
+ "total": 35,
+ "top": {
+  "기타": 25,
+  "칸 넘침": 1
+ },
+ "rows": [
+  {
+   "id": "n1792984288037i",
+   "group": "브로커 이용 가이드",
+   "recipe": "reasons",
+   "topic": "첫 출금 전에 준비할 서류는?",
+   "layouts": [
+    "c-num",
+    "reason",
+    "reason",
+    "route",
+    "e-msg"
+   ],
+   "state": "수정 필요",
+   "score": 7,
+   "round": 2,
+   "problems": [
+    "1장 t2: 1장 t2(제목 (질문·숫자)) 질문 칸은 물음표로 끝나는 실제 질문으로",
+    "4장 t3: 4장 t3(영문 메시지 (4줄)) \"Hello, I have s…\" 상자가 비어 보여요 → 시안처럼 4줄, 첫 줄 24자 안팎으로 꽉 채워요 (칸 채움)"
+   ],
+   "hist": [
+    {
+     "ver": "v1792984290465",
+     "score": 7,
+     "issues": 2
+    },
+    {
+     "ver": "v1792984427933",
+     "score": 8,
+     "issues": 2
+    },
+    {
+     "ver": "v1792984566415",
+     "score": 7,
+     "issues": 2
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984288037i/v1792984566415/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984288037i/v1792984566415/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984288037i/v1792984566415/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984288037i/v1792984566415/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792984488258i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "베네핍 페이백 지급일, 한눈에 보기",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792984490480",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984488258i/v1792984490480/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984488258i/v1792984490480/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984488258i/v1792984490480/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792984488258i/v1792984490480/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792985091907i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "주말에 입금하면 언제 반영될까?",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "수정 필요",
+   "score": 8,
+   "round": 2,
+   "problems": [
+    "1장 t2: 1장 t2(제목 (질문·숫자)) 질문 칸은 물음표로 끝나는 실제 질문으로"
+   ],
+   "hist": [
+    {
+     "ver": "v1792985103959",
+     "score": 8,
+     "issues": 1
+    },
+    {
+     "ver": "v1792985329275",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1792985447454",
+     "score": 8,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985091907i/v1792985447454/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985091907i/v1792985447454/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985091907i/v1792985447454/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985091907i/v1792985447454/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792985253632i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "연결 확인 중일 때 기다리는 기간은?",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "4장 t11: 4장 t11(전 결과) \"7/1 신청부터 7/2 거래도 “적…\" 15자 → 13자까지"
+   ],
+   "hist": [
+    {
+     "ver": "v1792985257147",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1792985388440",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1792985511635",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985253632i/v1792985511635/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985253632i/v1792985511635/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985253632i/v1792985511635/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985253632i/v1792985511635/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792985678262i",
+   "group": "거래비용·페이백",
+   "recipe": "calc",
+   "topic": "변동 스프레드가 넓어지는 시간대는?",
+   "layouts": [
+    "c-receipt",
+    "calc",
+    "stat",
+    "vs",
+    "e-fill"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "1장 t2: 1장 t2(제목 (질문·숫자)) 질문 칸은 물음표로 끝나는 실제 질문으로",
+    "3장 t5: 3장 t5(1 이름) \"주요 지표 발표\" 7.2자 → 7자까지",
+    "3장 t7: 3장 t7(2 이름) \"런던/뉴욕 마감\" 7.2자 → 7자까지",
+    "3장 t9: 3장 t9(3 이름) \"아시아 개장 직후\" 8.2자 → 7자까지"
+   ],
+   "hist": [
+    {
+     "ver": "v1792985680296",
+     "score": 9,
+     "issues": 3
+    },
+    {
+     "ver": "v1792991945466",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1792992113183",
+     "score": 9,
+     "issues": 2
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985678262i/v1792992113183/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985678262i/v1792992113183/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985678262i/v1792992113183/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985678262i/v1792992113183/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792985678262i/v1792992113183/05.jpg"
+   ]
+  },
+  {
+   "id": "n1792992039197i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "계좌 유형 고르기: 스탠다드 vs ECN",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 1,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792992042240",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1792992377344",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992039197i/v1792992377344/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992039197i/v1792992377344/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992039197i/v1792992377344/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992039197i/v1792992377344/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792992201420i",
+   "group": "혜택·적용 조건",
+   "recipe": "myth",
+   "topic": "기존 계좌로도 가입 혜택을 받을 수 있을까?",
+   "layouts": [
+    "c-plain",
+    "body",
+    "myth",
+    "table",
+    "steps",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792992203929",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992201420i/v1792992203929/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992201420i/v1792992203929/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992201420i/v1792992203929/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992201420i/v1792992203929/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792992809587i",
+   "group": "플랫폼 활용",
+   "recipe": "setup",
+   "topic": "MT5에서 원하는 가격에 주문을 체결하는 방법",
+   "layouts": [
+    "c-edit",
+    "vs",
+    "ui",
+    "qa",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 2,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792992814244",
+     "score": 7,
+     "issues": 2
+    },
+    {
+     "ver": "v1792997744802",
+     "score": 8,
+     "issues": 1
+    },
+    {
+     "ver": "v1792997866580",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992809587i/v1792997866580/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992809587i/v1792997866580/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792992809587i/v1792997866580/03.jpg"
+   ]
+  },
+  {
+   "id": "n1792993222958i",
+   "group": "플랫폼 활용",
+   "recipe": "setup",
+   "topic": "MT5, 주문 유형별 활용법과 설정 팁",
+   "layouts": [
+    "c-edit",
+    "vs",
+    "ui",
+    "qa",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792993226796",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993222958i/v1792993226796/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993222958i/v1792993226796/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993222958i/v1792993226796/03.jpg"
+   ]
+  },
+  {
+   "id": "n1792993379709i",
+   "group": "거래비용·페이백",
+   "recipe": "compare",
+   "topic": "왕복 수수료와 편도 수수료, 어떻게 다를까?",
+   "layouts": [
+    "c-receipt",
+    "myth",
+    "calc",
+    "big",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792993381817",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993379709i/v1792993381817/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993379709i/v1792993381817/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993379709i/v1792993381817/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993379709i/v1792993381817/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792993689585i",
+   "group": "혜택·적용 조건",
+   "recipe": "myth",
+   "topic": "보너스와 페이백, 같이 받을 수 있을까?",
+   "layouts": [
+    "c-balance",
+    "body",
+    "myth",
+    "table",
+    "steps",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 1,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792993691349",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1792997806934",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993689585i/v1792997806934/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993689585i/v1792997806934/02.jpg"
+   ]
+  },
+  {
+   "id": "n1792993797152i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "계좌를 새로 만들면 다시 연결해야 할까?",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "4장 t1: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t2: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t3: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t4: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t5: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t6: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t7: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요",
+    "4장 t8: 4장 \"베네핍 이용 안내 4\" t3·t5·t7·t9 칸에 시안 예시 숫자(10, 10, 10, 10)를 그대로 썼어요 → 초안 사실이나 계산 규칙 숫자로 바꾸고, 없으면 이 틀을 빼요"
+   ],
+   "hist": [
+    {
+     "ver": "v1792993799906",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1792993977923",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1792994090537",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993797152i/v1792994090537/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993797152i/v1792994090537/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993797152i/v1792994090537/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993797152i/v1792994090537/04.jpg"
+   ]
+  },
+  {
+   "id": "n1792993917556i",
+   "group": "플랫폼 활용",
+   "recipe": "calc",
+   "topic": "증거금 수준(%) 보는 법과 뜻",
+   "layouts": [
+    "c-edit",
+    "stat",
+    "steps",
+    "calc",
+    "table"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 2,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1792993920722",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1792994105618",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1792994268785",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993917556i/v1792994268785/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993917556i/v1792994268785/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993917556i/v1792994268785/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1792993917556i/v1792994268785/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793000039739i",
+   "group": "혜택·적용 조건",
+   "recipe": "myth",
+   "topic": "거래량 조건 채우기, 몇 랏이면 될까?",
+   "layouts": [
+    "c-plain",
+    "body",
+    "myth",
+    "table",
+    "steps",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793000042072",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000039739i/v1793000042072/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000039739i/v1793000042072/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000039739i/v1793000042072/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000039739i/v1793000042072/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000039739i/v1793000042072/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793000143692i",
+   "group": "베네핍 이용 안내",
+   "recipe": "roles",
+   "topic": "페이백이 안 들어왔을 때 확인할 3가지",
+   "layouts": [
+    "c-state",
+    "vs",
+    "myth",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793000145597",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000143692i/v1793000145597/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000143692i/v1793000145597/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000143692i/v1793000145597/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000143692i/v1793000145597/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793000354289i",
+   "group": "플랫폼 활용",
+   "recipe": "calc",
+   "topic": "증거금 수준(%) 보는 법과 뜻",
+   "layouts": [
+    "c-edit",
+    "stat",
+    "steps",
+    "calc",
+    "table"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 2,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793000356898",
+     "score": 8,
+     "issues": 2
+    },
+    {
+     "ver": "v1793000627341",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793000762394",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000354289i/v1793000762394/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000354289i/v1793000762394/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000354289i/v1793000762394/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000354289i/v1793000762394/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793000530804i",
+   "group": "거래비용·페이백",
+   "recipe": "compare",
+   "topic": "페이백은 수익일까, 할인일까?",
+   "layouts": [
+    "c-receipt",
+    "myth",
+    "calc",
+    "big",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793000533372",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000530804i/v1793000533372/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000530804i/v1793000533372/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000530804i/v1793000533372/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000530804i/v1793000533372/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793000872246i",
+   "group": "베네핍 이용 안내",
+   "recipe": "roles",
+   "topic": "베네핍 페이백 지급일, 한눈에 보기",
+   "layouts": [
+    "c-state",
+    "qa",
+    "check",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793000877008",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000872246i/v1793000877008/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000872246i/v1793000877008/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000872246i/v1793000877008/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000872246i/v1793000877008/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793000993868i",
+   "group": "플랫폼 활용",
+   "recipe": "setup",
+   "topic": "트레일링 스톱, 어떻게 걸까?",
+   "layouts": [
+    "c-edit",
+    "vs",
+    "ui",
+    "qa",
+    "e-checks"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "2장 t4: 2장 t4(답1) \"아니요, 트레일링 스톱은\n플…\" 상자가 비어 보여요 → 시안처럼 2줄, 첫 줄 20자 안팎으로 꽉 채워요 (칸 채움)"
+   ],
+   "hist": [
+    {
+     "ver": "v1793000996589",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1793001236076",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793001352295",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000993868i/v1793001352295/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000993868i/v1793001352295/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000993868i/v1793001352295/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000993868i/v1793001352295/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793000993868i/v1793001352295/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793001129784i",
+   "group": "거래비용·페이백",
+   "recipe": "compare",
+   "topic": "페이백은 수익일까, 할인일까?",
+   "layouts": [
+    "c-receipt",
+    "myth",
+    "calc",
+    "big",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 8,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793001134915",
+     "score": 8,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001129784i/v1793001134915/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001129784i/v1793001134915/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001129784i/v1793001134915/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001129784i/v1793001134915/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793001299060i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "계좌 유형 고르기: 스탠다드 vs ECN",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793001301656",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001299060i/v1793001301656/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001299060i/v1793001301656/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001299060i/v1793001301656/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001299060i/v1793001301656/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793001413050i",
+   "group": "혜택·적용 조건",
+   "recipe": "credit",
+   "topic": "거래량 조건 채우기, 몇 랏이면 될까?",
+   "layouts": [
+    "c-plain",
+    "table",
+    "warn",
+    "steps"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793001415846",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001413050i/v1793001415846/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001413050i/v1793001415846/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001413050i/v1793001415846/03.jpg"
+   ]
+  },
+  {
+   "id": "n1793001544266i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "언제 연결했는지가 적립 시작일인 이유",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 1,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793001547547",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1793001770092",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001544266i/v1793001770092/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001544266i/v1793001770092/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001544266i/v1793001770092/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001544266i/v1793001770092/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793001679697i",
+   "group": "플랫폼 활용",
+   "recipe": "setup",
+   "topic": "대기 주문 4가지, 언제 무엇을 쓸까?",
+   "layouts": [
+    "c-edit",
+    "vs",
+    "ui",
+    "qa",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 2,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793001683436",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793001914845",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793002075396",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001679697i/v1793002075396/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001679697i/v1793002075396/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001679697i/v1793002075396/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001679697i/v1793002075396/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001679697i/v1793002075396/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793001854725i",
+   "group": "거래비용·페이백",
+   "recipe": "calc",
+   "topic": "롤오버(스왑) 비용, 하룻밤에 얼마?",
+   "layouts": [
+    "c-receipt",
+    "calc",
+    "stat",
+    "vs",
+    "e-fill"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793001857334",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001854725i/v1793001857334/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001854725i/v1793001857334/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001854725i/v1793001857334/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001854725i/v1793001857334/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793001854725i/v1793001857334/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793002005938i",
+   "group": "브로커 이용 가이드",
+   "recipe": "compare-account",
+   "topic": "계좌 유형 고르기: 스탠다드 vs ECN",
+   "layouts": [
+    "c-num",
+    "vs",
+    "table",
+    "e-checks"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "1장 t2: 1장 \"브로커 이용 가이드 1\" 큰 숫자는 태그 수와 같은 3여야 해요 (이유 3개) → 이유가 3개가 아니면 제목·태그를 3개에 맞춰 다시 써요",
+    "1장 t3: 1장 \"브로커 이용 가이드 1\" 큰 숫자는 태그 수와 같은 3여야 해요 (이유 3개) → 이유가 3개가 아니면 제목·태그를 3개에 맞춰 다시 써요",
+    "1장 t4: 1장 \"브로커 이용 가이드 1\" 큰 숫자는 태그 수와 같은 3여야 해요 (이유 3개) → 이유가 3개가 아니면 제목·태그를 3개에 맞춰 다시 써요",
+    "1장 t5: 1장 \"브로커 이용 가이드 1\" 큰 숫자는 태그 수와 같은 3여야 해요 (이유 3개) → 이유가 3개가 아니면 제목·태그를 3개에 맞춰 다시 써요",
+    "1장 t6: 1장 \"브로커 이용 가이드 1\" 큰 숫자는 태그 수와 같은 3여야 해요 (이유 3개) → 이유가 3개가 아니면 제목·태그를 3개에 맞춰 다시 써요"
+   ],
+   "hist": [
+    {
+     "ver": "v1793002008479",
+     "score": 9,
+     "issues": 2
+    },
+    {
+     "ver": "v1793002197569",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793002429022",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002005938i/v1793002429022/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002005938i/v1793002429022/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002005938i/v1793002429022/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002005938i/v1793002429022/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793002151880i",
+   "group": "혜택·적용 조건",
+   "recipe": "myth",
+   "topic": "거래량 조건 채우기, 몇 랏이면 될까?",
+   "layouts": [
+    "c-plain",
+    "body",
+    "myth",
+    "table",
+    "steps",
+    "e-checks"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "3장 t2: 3장 t2(제목) 2줄 → 1줄까지"
+   ],
+   "hist": [
+    {
+     "ver": "v1793002153702",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793002443431",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793002726129",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002151880i/v1793002726129/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002151880i/v1793002726129/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002151880i/v1793002726129/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002151880i/v1793002726129/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793002374771i",
+   "group": "플랫폼 활용",
+   "recipe": "calc",
+   "topic": "0.5랏으로 20pip, 원화로 얼마일까?",
+   "layouts": [
+    "c-edit",
+    "stat",
+    "steps",
+    "calc",
+    "table"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793002381572",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002374771i/v1793002381572/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002374771i/v1793002381572/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002374771i/v1793002381572/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002374771i/v1793002381572/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793002374771i/v1793002381572/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793003054088i",
+   "group": "브로커 이용 가이드",
+   "recipe": "howto",
+   "topic": "고객센터에 문의할 때 꼭 넣을 정보",
+   "layouts": [
+    "c-num",
+    "steps",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "1장 t2: 실제 그림에서 넘침 · 3줄 → 2줄까지 → 더 짧게"
+   ],
+   "hist": [
+    {
+     "ver": "v1793003056592",
+     "score": 9,
+     "issues": 4
+    },
+    {
+     "ver": "v1793003272225",
+     "score": 9,
+     "issues": 3
+    },
+    {
+     "ver": "v1793003390776",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003054088i/v1793003390776/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003054088i/v1793003390776/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003054088i/v1793003390776/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003054088i/v1793003390776/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003054088i/v1793003390776/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793003341077i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "UID 안 넣고 거래하면 페이백은 0원?",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "3장 t4: 3장 t4(답1) \"브로커가 확인 중이며 보통\n…\" 상자가 비어 보여요 → 시안처럼 2줄, 첫 줄 20자 안팎으로 꽉 채워요 (칸 채움)"
+   ],
+   "hist": [
+    {
+     "ver": "v1793003343588",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793003600425",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793003869536",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003341077i/v1793003869536/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003341077i/v1793003869536/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003341077i/v1793003869536/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003341077i/v1793003869536/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793003944398i",
+   "group": "거래비용·페이백",
+   "recipe": "calc",
+   "topic": "거래량 10랏·50랏·100랏, 페이백 차이는?",
+   "layouts": [
+    "c-receipt",
+    "calc",
+    "stat",
+    "vs",
+    "e-fill"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 1,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793003946411",
+     "score": 8,
+     "issues": 1
+    },
+    {
+     "ver": "v1793004166261",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003944398i/v1793004166261/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003944398i/v1793004166261/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003944398i/v1793004166261/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003944398i/v1793004166261/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793003944398i/v1793004166261/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793004294975i",
+   "group": "혜택·적용 조건",
+   "recipe": "credit",
+   "topic": "기존 계좌로도 가입 혜택을 받을 수 있을까?",
+   "layouts": [
+    "c-plain",
+    "table",
+    "warn",
+    "e-checks"
+   ],
+   "state": "수정 필요",
+   "score": 9,
+   "round": 2,
+   "problems": [
+    "1장 t5: 1장 t5(합계 값) 칸이 비었어요"
+   ],
+   "hist": [
+    {
+     "ver": "v1793004300966",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793004478697",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793004651035",
+     "score": 9,
+     "issues": 1
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004294975i/v1793004651035/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004294975i/v1793004651035/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004294975i/v1793004651035/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004294975i/v1793004651035/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793004406412i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "언제 연결했는지가 적립 시작일인 이유",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793004408924",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004406412i/v1793004408924/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004406412i/v1793004408924/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004406412i/v1793004408924/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004406412i/v1793004408924/04.jpg"
+   ]
+  },
+  {
+   "id": "n1793004572571i",
+   "group": "플랫폼 활용",
+   "recipe": "calc",
+   "topic": "0.1랏으로 30pip 움직이면 얼마일까?",
+   "layouts": [
+    "c-edit",
+    "stat",
+    "steps",
+    "calc",
+    "table"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 2,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793004575689",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793004709882",
+     "score": 8,
+     "issues": 1
+    },
+    {
+     "ver": "v1793004842753",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004572571i/v1793004842753/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004572571i/v1793004842753/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004572571i/v1793004842753/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004572571i/v1793004842753/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004572571i/v1793004842753/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793004902856i",
+   "group": "베네핍 이용 안내",
+   "recipe": "roles",
+   "topic": "페이백 내역과 거래 내역 맞춰 보는 법",
+   "layouts": [
+    "c-state",
+    "vs",
+    "myth",
+    "e-checks"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793004912155",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004902856i/v1793004912155/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004902856i/v1793004912155/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004902856i/v1793004912155/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004902856i/v1793004912155/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793004902856i/v1793004912155/05.jpg"
+   ]
+  }
+ ],
+ "gemini": {
+  "n": 472,
+  "by": {
+   "조사·주제": 156,
+   "초안": 105,
+   "틀 채우기": 38,
+   "칸 다시 쓰기": 101,
+   "이미지 채점": 72
+  }
+ }
+}
