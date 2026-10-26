@@ -1,0 +1,366 @@
+{
+ "name": "공용 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "답",
+   "text": "답",
+   "x": 100,
+   "y": 238,
+   "w": 32,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "답",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(36,85,245,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "0.5랏으로 20pip 움직였다면",
+   "text": "0.5랏으로\n20pip 움직였다면",
+   "x": 100,
+   "y": 305,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "0.5랏으로\n",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "20pip",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(36,85,245,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": " 움직였다면",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(19,33,59,1)",
+     "lh": 104,
+     "ls": -4.4
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "0.5 × 20 × 10",
+   "text": "0.5 × 20 × 10",
+   "x": 623,
+   "y": 643,
+   "w": 307,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "0.5 × 20 × 10",
+     "size": 52,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 62,
+     "ls": -1.559999942779541
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "랏 × pip × 10달러",
+   "text": "랏 × pip × 10달러",
+   "x": 152,
+   "y": 650,
+   "w": 292,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "랏 × pip × 10달러",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 50.1,
+     "ls": -1.559999942779541
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "100달러",
+   "text": "100달러",
+   "x": 750,
+   "y": 750,
+   "w": 180,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "100달러",
+     "size": 52,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 62,
+     "ls": -1.559999942779541
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "달러 손익",
+   "text": "달러 손익",
+   "x": 152,
+   "y": 757,
+   "w": 149,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "달러 손익",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 50.1,
+     "ls": -1.559999942779541
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "1,380원",
+   "text": "1,380원",
+   "x": 752,
+   "y": 873,
+   "w": 178,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1,380원",
+     "size": 52,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 62,
+     "ls": -1.559999942779541
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "layer": "× 환율",
+   "text": "× 환율",
+   "x": 152,
+   "y": 857,
+   "w": 106,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "× 환율",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(107,118,132,1)",
+     "lh": 50.1,
+     "ls": -1.559999942779541
+    }
+   ]
+  },
+  {
+   "id": "t14",
+   "layer": "예시",
+   "text": "예시",
+   "x": 152,
+   "y": 913,
+   "w": 55,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.6,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "예시",
+     "size": 32,
+     "weight": 500,
+     "color": "rgba(107,118,132,1)",
+     "lh": 38.2,
+     "ls": -0.6399999856948853
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "원화로",
+   "text": "원화로",
+   "x": 152,
+   "y": 1057,
+   "w": 112,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "원화로",
+     "size": 44,
+     "weight": 800,
+     "color": "rgba(19,33,59,1)",
+     "lh": 52.5,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "약 138,000원",
+   "text": "약 138,000원",
+   "x": 369,
+   "y": 1026,
+   "w": 562,
+   "h": 115,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "약 138,000원",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(36,85,245,1)",
+     "lh": 114.5,
+     "ls": -2.880000114440918
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "환율은 예시예요.",
+   "text": "환율은 예시예요.",
+   "x": 96,
+   "y": 1221,
+   "w": 223,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "환율은 예시예요.",
+     "size": 34,
+     "weight": 500,
+     "color": "rgba(139,149,161,1)",
+     "lh": 47.599998474121094,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "4 / 5",
+   "text": "4 / 5",
+   "x": 922,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "4 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(139,149,161,1)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,0.06)",
+   "x": 100,
+   "y": 573,
+   "w": 880,
+   "h": 637
+  },
+  {
+   "fill": null,
+   "x": 152,
+   "y": 989,
+   "w": 776,
+   "h": 173
+  }
+ ],
+ "polished2": 1
+}

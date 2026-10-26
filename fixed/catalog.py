@@ -145,6 +145,18 @@ def sample(s):
 PILL = {}
 LIM = json.load(open(os.path.join(ROOT, 'limits.json'), encoding='utf-8')) if os.path.exists(os.path.join(ROOT, 'limits.json')) else {}
 out = []
+# 공용 틀: 다른 주제군 본문 틀의 밝은/남색 버전 (2026-10-26 사용자 승인) · 원본 틀의 역할·조건·숫자 칸을 그대로 씀
+SHARED = {'공용 1': '플랫폼 활용 2', '공용 2': '플랫폼 활용 4', '공용 3': '플랫폼 활용 5',
+          '공용 남색 1': '베네핍 이용 안내 3', '공용 남색 2': '베네핍 이용 안내 4', '공용 남색 3': '혜택·적용 조건 2', '공용 남색 4': '혜택·적용 조건 3',
+          '공용 남색 5': '혜택·적용 조건 4', '공용 남색 6': '브로커 이용 가이드 2', '공용 남색 7': '브로커 이용 가이드 4', '공용 남색 8': '거래비용·페이백 4'}
+for n, src in SHARED.items():
+    T[n] = ('공용', 'body', T[src][2], T[src][3])
+    if src in FIT: FIT[n] = FIT[src]
+    if src in NUM: NUM[n] = NUM[src]
+    if src in ICON: ICON[n] = ICON[src]
+# 브로커 7·8·9 는 베네핍 3·4·혜택 2 와 같은 틀이라 공용으로 쓰면 겹침 → 뺌
+for n in ('브로커 이용 가이드 7', '브로커 이용 가이드 8', '브로커 이용 가이드 9'): T.pop(n, None)
+
 for name, (group, pos, use, roles) in T.items():
     d = json.load(open(os.path.join(ROOT, 'figma', name, 'raw.json'), encoding='utf-8'))
     by = {s['id']: s for s in d['slots']}

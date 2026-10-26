@@ -1,0 +1,365 @@
+{
+ "name": "공용 남색 5",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "그럼 언제?",
+   "text": "그럼 언제?",
+   "x": 100,
+   "y": 238,
+   "w": 149,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "그럼 언제?",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "출금 버튼은 이 순서 다음에",
+   "text": "출금 버튼은\n이 순서 다음에",
+   "x": 100,
+   "y": 305,
+   "w": 672,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 버튼은\n",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "이 순서 다음에",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "01",
+   "text": "01",
+   "x": 100,
+   "y": 604,
+   "w": 65,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "01",
+     "size": 57.599998474121094,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 57.599998474121094,
+     "ls": -2.299999952316284
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "거래량 조건 채우기",
+   "text": "거래량 조건 채우기",
+   "x": 225,
+   "y": 614,
+   "w": 296,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래량 조건 채우기",
+     "size": 42.20000076293945,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 50.3,
+     "ls": -1.690000057220459
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "회원 페이지에서 확인",
+   "text": "회원 페이지에서 확인",
+   "x": 225,
+   "y": 677,
+   "w": 276,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "회원 페이지에서 확인",
+     "size": 34.599998474121094,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 50.099998474121094,
+     "ls": -1.0399999618530273
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "02",
+   "text": "02",
+   "x": 100,
+   "y": 791,
+   "w": 73,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.45,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "02",
+     "size": 57.599998474121094,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 57.599998474121094,
+     "ls": -2.299999952316284
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "기한 안인지 확인",
+   "text": "기한 안인지 확인",
+   "x": 225,
+   "y": 801,
+   "w": 261,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "기한 안인지 확인",
+     "size": 42.20000076293945,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 50.3,
+     "ls": -1.690000057220459
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "지급일부터 며칠째인지",
+   "text": "지급일부터 며칠째인지",
+   "x": 225,
+   "y": 865,
+   "w": 298,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "지급일부터 며칠째인지",
+     "size": 34.599998474121094,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 50.099998474121094,
+     "ls": -1.0399999618530273
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "03",
+   "text": "03",
+   "x": 100,
+   "y": 979,
+   "w": 75,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.45,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "03",
+     "size": 57.599998474121094,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 57.599998474121094,
+     "ls": -2.299999952316284
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "수익만 출금 신청",
+   "text": "수익만 출금 신청",
+   "x": 225,
+   "y": 989,
+   "w": 261,
+   "h": 50,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "수익만 출금 신청",
+     "size": 42.20000076293945,
+     "weight": 800,
+     "color": "rgba(255,255,255,1)",
+     "lh": 50.3,
+     "ls": -1.690000057220459
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "크레딧은 출금 때 빠져요",
+   "text": "크레딧은 출금 때 빠져요",
+   "x": 225,
+   "y": 1052,
+   "w": 312,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "크레딧은 출금 때 빠져요",
+     "size": 34.599998474121094,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 50.099998474121094,
+     "ls": -1.0399999618530273
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "거래에는 원금 손실 위험이 있어요. ",
+   "text": "거래에는 원금 손실 위험이 있어요. 혜택·페이백은 브로커와 계좌\n조건에 따라 달라요.",
+   "x": 96,
+   "y": 1188,
+   "w": 766,
+   "h": 87,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래에는 원금 손실 위험이 있어요. 혜택·페이백은 브로커와 계좌\n조건에 따라 달라요.",
+     "size": 30,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 43.5,
+     "ls": -0.6000000238418579
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "layer": "4 / 4",
+   "text": "4 / 4",
+   "x": 921,
+   "y": 1232,
+   "w": 69,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "4 / 4",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": null,
+   "x": 100,
+   "y": 570,
+   "w": 880,
+   "h": 564
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 760,
+   "w": 880,
+   "h": 187
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 947,
+   "w": 880,
+   "h": 187
+  }
+ ],
+ "polished2": 1
+}

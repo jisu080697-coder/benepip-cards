@@ -1,0 +1,274 @@
+{
+ "name": "공용 남색 4",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "이러면 사라져요",
+   "text": "이러면 사라져요",
+   "x": 100,
+   "y": 238,
+   "w": 222,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "이러면 사라져요",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "수익까지 같이 없어지는 경우",
+   "text": "수익까지\n같이 없어지는 경우",
+   "x": 100,
+   "y": 305,
+   "w": 672,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "수익까지\n",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "같이 없어지는",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": " 경우",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "사용 기한이 지났어요",
+   "text": "사용 기한이 지났어요",
+   "x": 100,
+   "y": 616,
+   "w": 350,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "사용 기한이 지났어요",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 63.79999923706055,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "지급일부터 날짜를 세는 곳이 많아요",
+   "text": "지급일부터 날짜를 세는 곳이 많아요",
+   "x": 100,
+   "y": 685,
+   "w": 479,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "지급일부터 날짜를 세는 곳이 많아요",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "조건 전에 출금을 신청했어요",
+   "text": "조건 전에 출금을 신청했어요",
+   "x": 100,
+   "y": 808,
+   "w": 470,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "조건 전에 출금을 신청했어요",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 63.79999923706055,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "크레딧과 그 수익이 같이 빠질 수 있",
+   "text": "크레딧과 그 수익이 같이 빠질 수 있어요",
+   "x": 100,
+   "y": 877,
+   "w": 523,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "크레딧과 그 수익이 같이 빠질 수 있어요",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "여러 계좌로 받았어요",
+   "text": "여러 계좌로 받았어요",
+   "x": 100,
+   "y": 1000,
+   "w": 350,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "여러 계좌로 받았어요",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 63.79999923706055,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "한 사람 한 번만 되는 경우가 대부분",
+   "text": "한 사람 한 번만 되는 경우가 대부분",
+   "x": 100,
+   "y": 1069,
+   "w": 464,
+   "h": 53,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "한 사람 한 번만 되는 경우가 대부분",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(255,255,255,0.72)",
+     "lh": 52.20000076293945,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "3 / 4",
+   "text": "3 / 4",
+   "x": 922,
+   "y": 1232,
+   "w": 69,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 4",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": null,
+   "x": 100,
+   "y": 573,
+   "w": 880,
+   "h": 578
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 767,
+   "w": 880,
+   "h": 192
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 959,
+   "w": 880,
+   "h": 192
+  }
+ ],
+ "polished": 1,
+ "polished2": 1
+}

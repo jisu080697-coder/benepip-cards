@@ -1,0 +1,460 @@
+{
+ "name": "공용 남색 8",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "헷갈리는 것",
+   "text": "헷갈리는 것",
+   "x": 100,
+   "y": 238,
+   "w": 161,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "헷갈리는 것",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(91,127,255,1)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "페이백은 수익일까, 할인일까?",
+   "text": "페이백은 수익일까,\n할인일까?",
+   "x": 100,
+   "y": 305,
+   "w": 892,
+   "h": 208,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백은 ",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "수익",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "일까,\n",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "할인",
+     "size": 80,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    },
+    {
+     "t": "일까?",
+     "size": 80,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 104,
+     "ls": -4.4
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "페이백",
+   "text": "페이백",
+   "x": 100,
+   "y": 615,
+   "w": 126,
+   "h": 60,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백",
+     "size": 50,
+     "weight": 800,
+     "color": "rgba(91,127,255,1)",
+     "lh": 59.7,
+     "ls": -2
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "거래 비용 할인",
+   "text": "거래 비용 할인",
+   "x": 100,
+   "y": 683,
+   "w": 199,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래 비용 할인",
+     "size": 36,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "거래할 때마다",
+   "text": "거래할 때마다",
+   "x": 100,
+   "y": 846,
+   "w": 231,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래할 때마다",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 61.599998474121094,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "언제 생겨요",
+   "text": "언제 생겨요",
+   "x": 100,
+   "y": 789,
+   "w": 158,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "언제 생겨요",
+     "size": 36,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 50.400001525878906,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "그래도 쌓여요",
+   "text": "그래도 쌓여요",
+   "x": 100,
+   "y": 1034,
+   "w": 231,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "그래도 쌓여요",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 61.599998474121094,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "손실 나면",
+   "text": "손실 나면",
+   "x": 100,
+   "y": 977,
+   "w": 128,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "손실 나면",
+     "size": 36,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 50.400001525878906,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "수익",
+   "text": "수익",
+   "x": 580,
+   "y": 615,
+   "w": 85,
+   "h": 60,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "수익",
+     "size": 50,
+     "weight": 800,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 59.7,
+     "ls": -2
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "거래로 번 돈",
+   "text": "거래로 번 돈",
+   "x": 580,
+   "y": 683,
+   "w": 169,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래로 번 돈",
+     "size": 36,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 42.9,
+     "ls": -0.7200000286102295
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "이익이 났을 때만",
+   "text": "이익이 났을 때만",
+   "x": 580,
+   "y": 846,
+   "w": 277,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "이익이 났을 때만",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 61.599998474121094,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "언제 생겨요",
+   "text": "언제 생겨요",
+   "x": 580,
+   "y": 789,
+   "w": 158,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "언제 생겨요",
+     "size": 36,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 50.400001525878906,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "layer": "없어요",
+   "text": "없어요",
+   "x": 580,
+   "y": 1034,
+   "w": 112,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "없어요",
+     "size": 44,
+     "weight": 600,
+     "color": "rgba(255,255,255,1)",
+     "lh": 61.599998474121094,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t14",
+   "layer": "손실 나면",
+   "text": "손실 나면",
+   "x": 580,
+   "y": 977,
+   "w": 128,
+   "h": 51,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "손실 나면",
+     "size": 36,
+     "weight": 600,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 50.400001525878906,
+     "ls": -1.3200000524520874
+    }
+   ]
+  },
+  {
+   "id": "t15",
+   "layer": "4 / 5",
+   "text": "4 / 5",
+   "x": 922,
+   "y": 1232,
+   "w": 68,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "4 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,0.6)",
+     "lh": 38.2,
+     "ls": 0
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": null,
+   "x": 100,
+   "y": 573,
+   "w": 880,
+   "h": 553
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 750,
+   "w": 408,
+   "h": 188
+  },
+  {
+   "fill": null,
+   "x": 100,
+   "y": 938,
+   "w": 408,
+   "h": 188
+  },
+  {
+   "fill": null,
+   "x": 540,
+   "y": 577,
+   "w": 440,
+   "h": 549
+  },
+  {
+   "fill": null,
+   "x": 580,
+   "y": 750,
+   "w": 400,
+   "h": 188
+  },
+  {
+   "fill": null,
+   "x": 580,
+   "y": 938,
+   "w": 400,
+   "h": 188
+  }
+ ],
+ "polished2": 1
+}

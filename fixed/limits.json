@@ -1912,5 +1912,717 @@
    "limNum": 3,
    "lines": 1
   }
+ },
+ "공용 1": {
+  "t1": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 1,
+   "limNum": 1.2,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 7,
+   "limNum": 6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 28,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 6,
+   "limNum": 4.2,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 2": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 14,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t14": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 31,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 3": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t14": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t15": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t16": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t17": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t18": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t19": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 1": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 24,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t5": {
+   "lim": 19,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 18,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 2": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 8,
+   "limNum": 6.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 8,
+   "limNum": 6.6,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 6,
+   "limNum": 4.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 8,
+   "limNum": 6.6,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 7,
+   "limNum": 5.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t14": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 3": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 9,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 8,
+   "limNum": 7.2,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 8,
+   "limNum": 7.8,
+   "lines": 1
+  },
+  "t14": {
+   "lim": 9,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t15": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 4": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 5": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 25,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 30,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 34,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t13": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 6": {
+  "t1": {
+   "lim": 4,
+   "limNum": 3,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 27,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 22,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 3,
+   "limNum": 1.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 20,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 4,
+   "limNum": 3,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 22,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 3,
+   "limNum": 1.8,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 7": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 12,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 1,
+   "limNum": 0.6,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 1,
+   "limNum": 0.6,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 11,
+   "limNum": 9,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
+ },
+ "공용 남색 8": {
+  "t1": {
+   "lim": 33,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t2": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 2
+  },
+  "t3": {
+   "lim": 12,
+   "limNum": 10.2,
+   "lines": 1
+  },
+  "t4": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t5": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t6": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t7": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t8": {
+   "lim": 17,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t9": {
+   "lim": 11,
+   "limNum": 9.6,
+   "lines": 1
+  },
+  "t10": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t11": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t12": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t13": {
+   "lim": 13,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t14": {
+   "lim": 15,
+   "limNum": 10.8,
+   "lines": 1
+  },
+  "t15": {
+   "lim": 3,
+   "limNum": 2.4,
+   "lines": 1
+  }
  }
 }
