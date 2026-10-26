@@ -14,7 +14,7 @@ const SINCE = Number(process.env.SINCE || Date.now() - 2 * 3600e3);
 const git = (...a) => execFileSync('git', a, { cwd: RD, stdio: ['ignore', 'pipe', 'pipe'] }).toString();
 const giving = {};   // 플러그인에 넘긴 지 10분 안 된 것은 다시 넘기지 않음
 let pulled = 0, seen = 0;
-const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now(); try { git('pull', '-q', '--rebase', '--autostash'); } catch (e) { console.log('git pull 실패', String(e.message).slice(0, 120)); } };
+const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now(); try { git('pull', '-q', '--rebase', '--autostash', 'origin', 'main'); } catch (e) { console.log('git pull 실패', String(e.message).slice(0, 120)); } };
 
 // 렌더 결과 → 플러그인이 채울 정보 (칸은 시안 글로 찾음 · 강조 “ ” 모양 · 알약 크기 · 쪽 번호)
 function post(id, ver) {
@@ -60,7 +60,7 @@ function save(m) {
   writeFileSync(join(dir, 'figma.json'), JSON.stringify({ at: new Date().toISOString(), n: m.imgs.length, edited: !!m.edited }));
   git('add', '-A', join('cards', m.id, m.ver));
   git('commit', '-q', '-m', 'figma ' + m.id + (m.edited ? ' (피그마에서 고침)' : ''));
-  for (let k = 0; k < 3; k++) { try { git('pull', '-q', '--rebase', '--autostash'); git('push', '-q'); return; } catch (e) { if (k === 2) throw e; } }
+  for (let k = 0; k < 3; k++) { try { git('pull', '-q', '--rebase', '--autostash', 'origin', 'main'); git('push', '-q'); return; } catch (e) { if (k === 2) throw e; } }
 }
 
 const handler = (req, res) => {
@@ -75,5 +75,6 @@ const handler = (req, res) => {
   }
   res.statusCode = 404; res.end();
 };
-createServer(handler).listen(8766, '127.0.0.1', () => console.log('피그마 자동 반영 대기 localhost:8766 · ' + new Date(SINCE).toLocaleString('ko-KR') + ' 이후 결과'));
+// 이미 켜져 있으면(자동 실행이 겹치면) 조용히 끝냄
+createServer(handler).on('error', e => { if (e.code === 'EADDRINUSE') process.exit(0); throw e; }).listen(8766, '127.0.0.1', () => console.log('피그마 자동 반영 대기 localhost:8766 · ' + new Date(SINCE).toLocaleString('ko-KR') + ' 이후 결과'));
 createServer(handler).listen(8766, '::1').on('error', () => {});
