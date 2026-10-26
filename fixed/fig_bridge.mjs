@@ -24,7 +24,7 @@ const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now()
 async function post(id, ver) {
   const { rightOf, followers } = await rules();
   const d = JSON.parse(readFileSync(join(CARDS, id, ver, 'cards.json'), 'utf8'));
-  const list = d.cards.filter(c => c.fig);
+  const list = d.cards.filter(c => c.fig && existsSync(join(FIG, c.fig, 'raw.json')));   // 없는 틀 이름(AI가 지어낸 것)은 빼고 나머지로
   return { id, ver, group: d.group, cards: list.map((c, i) => {
     const raw = JSON.parse(readFileSync(join(FIG, c.fig, 'raw.json'), 'utf8'));
     // 숫자 막대: 렌더러(figFit)와 같은 셈 · 가장 큰 값이 가장 긴 막대, 최소 길이 max(높이×2, 12%)
@@ -80,6 +80,9 @@ const handler = (req, res) => {
   }
   res.statusCode = 404; res.end();
 };
+// 이 파일이 바뀌면 스스로 끝냄 → 시작 스크립트(fig_bridge_start.cmd)가 새 코드로 다시 켬
+const ME = fileURLToPath(import.meta.url), MEt = statSync(ME).mtimeMs;
+setInterval(() => { try { if (statSync(ME).mtimeMs !== MEt) { console.log('연결 프로그램 코드가 바뀌어 다시 켜요'); process.exit(0); } } catch (e) { } }, 30e3);
 // 이미 켜져 있으면(자동 실행이 겹치면) 조용히 끝냄
 createServer(handler).on('error', e => { if (e.code === 'EADDRINUSE') process.exit(0); throw e; }).listen(8766, '127.0.0.1', () => console.log('피그마 자동 반영 대기 localhost:8766 · ' + new Date(SINCE).toLocaleString('ko-KR') + ' 이후 결과'));
 createServer(handler).listen(8766, '::1').on('error', () => {});
