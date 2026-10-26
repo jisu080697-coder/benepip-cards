@@ -7,7 +7,11 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, unlinkSync } from
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { rightOf, followers } from './figma.mjs';
+import { statSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
+// 배치 규칙(figma.mjs)이 바뀌면 다시 불러옴 (연결 프로그램을 다시 켜지 않아도 됨)
+let FM = null, FMt = 0;
+const rules = async () => { const f = join(dirname(fileURLToPath(import.meta.url)), 'figma.mjs'), t = statSync(f).mtimeMs; if (!FM || t !== FMt) { FM = await import(pathToFileURL(f).href + '?t=' + t); FMt = t; } return FM; };
 
 const RD = dirname(dirname(fileURLToPath(import.meta.url))), FIG = join(RD, 'fixed', 'figma'), CARDS = join(RD, 'cards');
 const SINCE = Number(process.env.SINCE || Date.now() - 2 * 3600e3);
@@ -17,7 +21,8 @@ let pulled = 0, seen = 0;
 const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now(); try { git('pull', '-q', '--rebase', '--autostash', 'origin', 'main'); } catch (e) { console.log('git pull 실패', String(e.message).slice(0, 120)); } };
 
 // 렌더 결과 → 플러그인이 채울 정보 (칸은 시안 글로 찾음 · 강조 “ ” 모양 · 알약 크기 · 쪽 번호)
-function post(id, ver) {
+async function post(id, ver) {
+  const { rightOf, followers } = await rules();
   const d = JSON.parse(readFileSync(join(CARDS, id, ver, 'cards.json'), 'utf8'));
   const list = d.cards.filter(c => c.fig);
   return { id, ver, group: d.group, cards: list.map((c, i) => {
@@ -37,7 +42,7 @@ function post(id, ver) {
     }).filter(Boolean) };
   }) };
 }
-function pending() {
+async function pending() {
   pull();
   const out = [];
   for (const id of existsSync(CARDS) ? readdirSync(CARDS) : []) {
@@ -47,7 +52,7 @@ function pending() {
     const dir = join(CARDS, id, ver);
     if (!existsSync(join(dir, 'cards.json')) || existsSync(join(dir, 'figma.json'))) continue;
     if (giving[id + ver] && Date.now() - giving[id + ver] < 600e3) continue;
-    try { out.push(post(id, ver)); giving[id + ver] = Date.now(); } catch (e) { console.log('건너뜀', id, ver, e.message); }
+    try { out.push(await post(id, ver)); giving[id + ver] = Date.now(); } catch (e) { console.log('건너뜀', id, ver, e.message); }
     if (out.length >= 3) break;   // 한 번에 3개씩
   }
   return out;
@@ -67,7 +72,7 @@ const handler = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); res.setHeader('Access-Control-Allow-Private-Network', 'true');
   if (req.url !== '/pending' || req.method !== 'GET') console.log(new Date().toLocaleTimeString('ko-KR'), req.method, req.url);
   if (req.method === 'OPTIONS') return res.end();
-  if (req.method === 'GET' && req.url === '/pending') { seen++ || console.log('플러그인 연결됨'); try { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(pending())); } catch (e) { res.statusCode = 500; res.end(String(e.message)); } return; }
+  if (req.method === 'GET' && req.url === '/pending') { seen++ || console.log('플러그인 연결됨'); pending().then(p => { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(p)); }).catch(e => { res.statusCode = 500; res.end(String(e.message)); }); return; }
   if (req.method === 'POST' && req.url === '/done') {
     let body = ''; req.setEncoding('utf8'); req.on('data', d => { body += d; });
     req.on('end', () => { try { const m = JSON.parse(body); save(m); console.log(new Date().toLocaleTimeString('ko-KR'), '올림', m.id, m.imgs.length + '장', m.edited ? '(고친 것)' : ''); res.end('ok'); } catch (e) { console.log('실패', e.message); res.statusCode = 400; res.end(String(e.message)); } });

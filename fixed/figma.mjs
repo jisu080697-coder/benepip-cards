@@ -35,8 +35,11 @@ const availW = (t, s) => {
 const boxOf = (t, s) => (t.rects || []).filter(r => r.fill && r.x <= s.x + 1 && r.y <= s.y + 1 && r.x + r.w >= s.x + s.w - 1 && r.y + r.h >= s.y + s.h - 1 && r.w < 1000).sort((a, b) => a.w * a.h - b.w * b.h)[0];
 export const rightOf = (t, s) => {
   if (s.autoResize !== 'WIDTH_AND_HEIGHT' || /^\d+ \/ \d+$/.test(s.text) || (t.shapes || []).some(g => g.kind === 'pill' && g.slot === s.id)) return false;
-  if (s.align === 'RIGHT' || s.x + s.w > 1080 - 96 - 60) return true;
-  const bx = boxOf(t, s); return !!bx && bx.x + bx.w - (s.x + s.w) < 70 && s.x - bx.x > bx.w * 0.4;
+  if (s.align === 'RIGHT') return true;
+  const bx = boxOf(t, s);
+  if (bx && s.x - bx.x < 60) return false;   // 상자 왼쪽 안쪽 여백에서 시작하는 글은 왼쪽 정렬 (시안 글이 길어 오른쪽 끝에 닿아도)
+  if (s.x + s.w > 1080 - 96 - 60) return true;
+  return !!bx && bx.x + bx.w - (s.x + s.w) < 70 && s.x - bx.x > bx.w * 0.4;
 };
 // 따라붙는 칸: 큰 글(숫자) 바로 오른쪽에 붙은 작은 글(단위) → 숫자 길이가 바뀌면 단위도 따라 움직임 · 둘이 가운데 묶음이면 묶음째 가운데 유지
 export const followers = t => {
