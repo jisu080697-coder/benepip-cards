@@ -5,12 +5,103 @@
  "slots": [
   {
    "id": "t1",
-   "layer": "BenePip | 경제·투자",
-   "text": "BenePip  |  경제·투자",
-   "x": 88,
-   "y": 92,
-   "w": 328,
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(42,79,224,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "BenePip과 알아보는",
+   "text": "BenePip과 알아보는",
+   "x": 129,
+   "y": 210.5,
+   "w": 298,
    "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip과 알아보는",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(42,79,224,1)",
+     "lh": 42.5,
+     "ls": -0.51
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "금리 발표 날 계좌 점검 이렇게 해요",
+   "text": "금리 발표 날\n계좌 점검\n이렇게 해요",
+   "x": 80,
+   "y": 296,
+   "w": 723,
+   "h": 513,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리 발표 날\n",
+     "size": 150,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 171,
+     "ls": -6
+    },
+    {
+     "t": "계좌 점검\n",
+     "size": 150,
+     "weight": 900,
+     "color": "rgba(255,225,77,1)",
+     "lh": 171,
+     "ls": -6
+    },
+    {
+     "t": "이렇게 해요",
+     "size": 150,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 171,
+     "ls": -6
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "FOMC 전후로 꼭 볼 3가지",
+   "text": "FOMC 전후로 꼭 볼 3가지",
+   "x": 88,
+   "y": 837,
+   "w": 520,
+   "h": 65,
    "rot": 0,
    "align": "LEFT",
    "valign": "TOP",
@@ -19,87 +110,12 @@
    "blur": 0,
    "segs": [
     {
-     "t": "BenePip  |  경제·투자",
-     "size": 36,
-     "weight": 700,
-     "color": "rgba(255,255,255,1)",
-     "lh": 42.9,
-     "ls": -1.08
-    }
-   ]
-  },
-  {
-   "id": "t2",
-   "layer": "금리 발표 날 해외선물 계좌 점검 순서",
-   "text": "금리 발표 날\n해외선물 계좌\n점검 순서",
-   "x": 82,
-   "y": 162,
-   "w": 750,
-   "h": 474,
-   "rot": 0,
-   "align": "LEFT",
-   "valign": "TOP",
-   "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 1,
-   "blur": 0,
-   "segs": [
-    {
-     "t": "금리 발표 날\n해외선물 계좌\n점검 순서",
-     "size": 136,
-     "weight": 900,
-     "color": "rgba(255,255,255,1)",
-     "lh": 157.8,
-     "ls": -5.44
-    }
-   ]
-  },
-  {
-   "id": "t3",
-   "layer": "FOMC 전후로 볼 3가지",
-   "text": "FOMC 전후로 볼 3가지",
-   "x": 88,
-   "y": 666,
-   "w": 440,
-   "h": 58,
-   "rot": 0,
-   "align": "LEFT",
-   "valign": "TOP",
-   "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 0.85,
-   "blur": 0,
-   "segs": [
-    {
-     "t": "FOMC 전후로 볼 3가지",
-     "size": 48,
+     "t": "FOMC 전후로 꼭 볼 3가지",
+     "size": 50,
      "weight": 500,
      "color": "rgba(255,255,255,1)",
-     "lh": 57.3,
-     "ls": -1.44
-    }
-   ]
-  },
-  {
-   "id": "t4",
-   "layer": "넘겨서 보기 →",
-   "text": "넘겨서 보기  →",
-   "x": 125,
-   "y": 1200,
-   "w": 206,
-   "h": 41,
-   "rot": 0,
-   "align": "LEFT",
-   "valign": "TOP",
-   "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 1,
-   "blur": 0,
-   "segs": [
-    {
-     "t": "넘겨서 보기  →",
-     "size": 34,
-     "weight": 700,
-     "color": "rgba(255,255,255,1)",
-     "lh": 40.6,
-     "ls": -1.02
+     "lh": 65,
+     "ls": -1
     }
    ]
   }

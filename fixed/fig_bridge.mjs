@@ -22,12 +22,12 @@ const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now()
 
 // 경제·투자 틀 색·아이콘 (v.th = '색:아이콘' · Fig.gs figTheme_) → 틀의 기본 파랑을 바꿀 색과 색 맞춘 3D 아이콘 (fixed/assets/3d/tint/<색>/<아이콘>.png · 내 컴퓨터에만)
 // from: 틀에 칠해진 기본색 (표지 파랑 · 본문 연파랑 · 강조 노랑) → to: 그 주제 색 · 'text' 는 글자색만 (노란 알약 바탕은 그대로)
-const THEMES = { blue: '3D6BF2', green: '16B865', orange: 'FF7A2F', teal: '0FA89E', purple: '7B4DF2', pink: 'F0506E' };
+const THEMES = { blue: '2A4FE0', green: '0E9F5A', orange: 'EE6A1F', teal: '0A8F87', purple: '6A3DE8', pink: 'E23E62' };
 const light = h => h.match(/../g).map(x => Math.round(parseInt(x, 16) * 0.8 + 255 * 0.2).toString(16).padStart(2, '0')).join('').toUpperCase();
 function theme(th) {
   const [col, icon] = String(th || '').split(':'); if (!THEMES[col]) return {};
   const f = join(dirname(fileURLToPath(import.meta.url)), 'assets', '3d', 'tint', col, icon + '.png');
-  return { th: { map: [['3D6BF2', THEMES[col]], ['6489F5', light(THEMES[col])], ['FFE45C', col === 'orange' ? '14205A' : 'FFE45C', 'text']] }, icon64: existsSync(f) ? readFileSync(f).toString('base64') : null };
+  return { th: { map: [['2A4FE0', THEMES[col]], ['5572E6', light(THEMES[col])], ['FFE14D', col === 'orange' ? '0F1F6B' : 'FFE14D', 'text']] }, icon64: existsSync(f) ? readFileSync(f).toString('base64') : null };
 }
 // 렌더 결과 → 플러그인이 채울 정보 (칸은 시안 글로 찾음 · 강조 “ ” 모양 · 알약 크기 · 쪽 번호)
 async function post(id, ver) {

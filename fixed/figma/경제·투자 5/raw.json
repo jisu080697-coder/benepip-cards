@@ -5,37 +5,37 @@
  "slots": [
   {
    "id": "t1",
-   "layer": "BenePip | 경제·투자",
-   "text": "BenePip  |  경제·투자",
-   "x": 88,
-   "y": 84,
-   "w": 297,
-   "h": 43,
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
    "rot": 0,
    "align": "LEFT",
    "valign": "TOP",
    "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 0.85,
+   "opacity": 1,
    "blur": 0,
    "segs": [
     {
-     "t": "BenePip  |  경제·투자",
-     "size": 32,
-     "weight": 700,
-     "color": "rgba(255,255,255,1)",
-     "lh": 43.2,
-     "ls": -0.64
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(42,79,224,1)",
+     "lh": 33.6,
+     "ls": -0.28
     }
    ]
   },
   {
    "id": "t2",
-   "layer": "발표 날엔 이 3가지만 기억하세요",
-   "text": "발표 날엔\n이 3가지만 기억하세요",
+   "layer": "자산별 영향 TIP",
+   "text": "자산별 영향 TIP",
    "x": 88,
-   "y": 740,
+   "y": 170,
    "w": 904,
-   "h": 188,
+   "h": 115,
    "rot": 0,
    "align": "CENTER",
    "valign": "TOP",
@@ -44,63 +44,30 @@
    "blur": 0,
    "segs": [
     {
-     "t": "발표 날엔\n이 ",
-     "size": 76,
+     "t": "자산별 영향 ",
+     "size": 96,
      "weight": 900,
      "color": "rgba(255,255,255,1)",
-     "lh": 94.2,
-     "ls": -1.52
+     "lh": 115.2,
+     "ls": -2.88
     },
     {
-     "t": "3가지",
-     "size": 76,
+     "t": "TIP",
+     "size": 96,
      "weight": 900,
-     "color": "rgba(255,228,92,1)",
-     "lh": 94.2,
-     "ls": -1.52
-    },
-    {
-     "t": "만 기억하세요",
-     "size": 76,
-     "weight": 900,
-     "color": "rgba(255,255,255,1)",
-     "lh": 94.2,
-     "ls": -1.52
+     "color": "rgba(255,225,77,1)",
+     "lh": 115.2,
+     "ls": -2.88
     }
    ]
   },
   {
    "id": "t3",
-   "layer": "① 발표 시각 확인 ② 계좌 순서대로 점검 ③ 직후 무리한 진입 피하기",
-   "text": "① 발표 시각 확인\n② 계좌 순서대로 점검\n③ 직후 무리한 진입 피하기",
-   "x": 88,
-   "y": 960,
-   "w": 904,
-   "h": 162,
-   "rot": 0,
-   "align": "CENTER",
-   "valign": "TOP",
-   "autoResize": "HEIGHT",
-   "opacity": 0.85,
-   "blur": 0,
-   "segs": [
-    {
-     "t": "① 발표 시각 확인\n② 계좌 순서대로 점검\n③ 직후 무리한 진입 피하기",
-     "size": 36,
-     "weight": 500,
-     "color": "rgba(255,255,255,1)",
-     "lh": 54,
-     "ls": -0.72
-    }
-   ]
-  },
-  {
-   "id": "t4",
-   "layer": "저장하고 거래 전에 꺼내 보기 →",
-   "text": "저장하고 거래 전에 꺼내 보기 →",
-   "x": 302.5,
-   "y": 1194,
-   "w": 475,
+   "layer": "달러",
+   "text": "달러",
+   "x": 173.5,
+   "y": 460.5,
+   "w": 63,
    "h": 43,
    "rot": 0,
    "align": "LEFT",
@@ -110,41 +77,245 @@
    "blur": 0,
    "segs": [
     {
-     "t": "저장하고 거래 전에 꺼내 보기 →",
-     "size": 36,
+     "t": "달러",
+     "size": 34,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 42.5,
+     "ls": -0.51
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "금리 인상 → 달러 강세 경향",
+   "text": "금리 인상 → 달러 강세 경향",
+   "x": 320,
+   "y": 456,
+   "w": 442,
+   "h": 52,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리 인상 → 달러 강세 경향",
+     "size": 40,
      "weight": 700,
-     "color": "rgba(17,26,51,1)",
-     "lh": 43.2,
-     "ls": 0
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
     }
    ]
   },
   {
    "id": "t5",
-   "layer": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
-   "text": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+   "layer": "지수",
+   "text": "지수",
+   "x": 173.5,
+   "y": 650.5,
+   "w": 63,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "지수",
+     "size": 34,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 42.5,
+     "ls": -0.51
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "금리 인상 → 주가 지수에 부담",
+   "text": "금리 인상 → 주가 지수에 부담",
+   "x": 320,
+   "y": 646,
+   "w": 478,
+   "h": 52,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리 인상 → 주가 지수에 부담",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "금",
+   "text": "금",
+   "x": 189,
+   "y": 840.5,
+   "w": 32,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금",
+     "size": 34,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 42.5,
+     "ls": -0.51
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "금리 인상 → 금 가격에 부담",
+   "text": "금리 인상 → 금 가격에 부담",
+   "x": 320,
+   "y": 836,
+   "w": 442,
+   "h": 52,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리 인상 → 금 가격에 부담",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "원유",
+   "text": "원유",
+   "x": 173.5,
+   "y": 1030.5,
+   "w": 63,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "원유",
+     "size": 34,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 42.5,
+     "ls": -0.51
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "경기 전망에 따라 방향이 달라요",
+   "text": "경기 전망에 따라 방향이 달라요",
+   "x": 320,
+   "y": 1026,
+   "w": 502,
+   "h": 52,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "경기 전망에 따라 방향이 달라요",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "* 일반적인 경향이며, 실제 움직임은 시장 상황에 따라 달라요.",
+   "text": "* 일반적인 경향이며, 실제 움직임은 시장 상황에 따라 달라요.",
    "x": 88,
-   "y": 1270,
+   "y": 1190,
    "w": 904,
-   "h": 34,
+   "h": 36,
    "rot": 0,
    "align": "CENTER",
    "valign": "TOP",
    "autoResize": "HEIGHT",
-   "opacity": 0.55,
+   "opacity": 0.75,
    "blur": 0,
    "segs": [
     {
-     "t": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
-     "size": 26,
+     "t": "* 일반적인 경향이며, 실제 움직임은 시장 상황에 따라 달라요.",
+     "size": 28,
      "weight": 400,
      "color": "rgba(255,255,255,1)",
-     "lh": 33.8,
-     "ls": -0.52
+     "lh": 36.4,
+     "ls": -0.56
     }
    ]
   }
  ],
  "shapes": [],
- "rects": []
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,0.12)",
+   "x": 88,
+   "y": 400,
+   "w": 904,
+   "h": 164
+  },
+  {
+   "fill": "rgba(255,255,255,0.12)",
+   "x": 88,
+   "y": 590,
+   "w": 904,
+   "h": 164
+  },
+  {
+   "fill": "rgba(255,255,255,0.12)",
+   "x": 88,
+   "y": 780,
+   "w": 904,
+   "h": 164
+  },
+  {
+   "fill": "rgba(255,255,255,0.12)",
+   "x": 88,
+   "y": 970,
+   "w": 904,
+   "h": 164
+  }
+ ]
 }

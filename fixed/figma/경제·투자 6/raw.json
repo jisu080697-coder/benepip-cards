@@ -1,0 +1,150 @@
+{
+ "name": "경제·투자 6",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(42,79,224,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "금리 발표 날, BenePip과 함께 하세요!",
+   "text": "금리 발표 날, BenePip과 함께 하세요!",
+   "x": 88,
+   "y": 300,
+   "w": 904,
+   "h": 65,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리 발표 날, ",
+     "size": 50,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 65,
+     "ls": -1
+    },
+    {
+     "t": "BenePip",
+     "size": 50,
+     "weight": 900,
+     "color": "rgba(255,225,77,1)",
+     "lh": 65,
+     "ls": -1
+    },
+    {
+     "t": "과 함께 하세요!",
+     "size": 50,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 65,
+     "ls": -1
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "페이백 받기",
+   "text": "페이백 받기",
+   "x": 88,
+   "y": 390,
+   "w": 904,
+   "h": 187,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백 받기",
+     "size": 170,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 187,
+     "ls": -8.5
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "프로필 링크에서 확인하기 →",
+   "text": "프로필 링크에서 확인하기  →",
+   "x": 327.5,
+   "y": 655.5,
+   "w": 425,
+   "h": 45,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "프로필 링크에서 확인하기  →",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 45,
+     "ls": -0.54
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+   "text": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+   "x": 88,
+   "y": 1280,
+   "w": 600,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 0.6,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+     "size": 26,
+     "weight": 400,
+     "color": "rgba(255,255,255,1)",
+     "lh": 33.8,
+     "ls": -0.52
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

@@ -5,62 +5,70 @@
  "slots": [
   {
    "id": "t1",
-   "layer": "BenePip | 경제·투자",
-   "text": "BenePip  |  경제·투자",
-   "x": 88,
-   "y": 84,
-   "w": 297,
-   "h": 43,
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
    "rot": 0,
    "align": "LEFT",
    "valign": "TOP",
    "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 0.85,
+   "opacity": 1,
    "blur": 0,
    "segs": [
     {
-     "t": "BenePip  |  경제·투자",
-     "size": 32,
-     "weight": 700,
-     "color": "rgba(255,255,255,1)",
-     "lh": 43.2,
-     "ls": -0.64
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(42,79,224,1)",
+     "lh": 33.6,
+     "ls": -0.28
     }
    ]
   },
   {
    "id": "t2",
-   "layer": "2 / 5",
-   "text": "2 / 5",
-   "x": 929,
-   "y": 84,
-   "w": 63,
-   "h": 43,
+   "layer": "발표 전에 꼭 알아둘 기본",
+   "text": "발표 전에 꼭 알아둘 기본",
+   "x": 88,
+   "y": 170,
+   "w": 375,
+   "h": 49,
    "rot": 0,
    "align": "LEFT",
    "valign": "TOP",
    "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 0.6,
+   "opacity": 1,
    "blur": 0,
    "segs": [
     {
-     "t": "2 / 5",
-     "size": 32,
+     "t": "발표 전에 꼭 알아둘 ",
+     "size": 38,
      "weight": 700,
      "color": "rgba(255,255,255,1)",
-     "lh": 43.2,
-     "ls": -0.64
+     "lh": 49.4,
+     "ls": -0.76
+    },
+    {
+     "t": "기본",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(255,225,77,1)",
+     "lh": 49.4,
+     "ls": -0.76
     }
    ]
   },
   {
    "id": "t3",
-   "layer": "POINT 1",
-   "text": "POINT 1",
-   "x": 476.5,
-   "y": 192,
-   "w": 127,
-   "h": 38,
+   "layer": "FOMC 발표가 중요한 이유",
+   "text": "FOMC 발표가\n중요한 이유",
+   "x": 88,
+   "y": 230,
+   "w": 547,
+   "h": 230,
    "rot": 0,
    "align": "LEFT",
    "valign": "TOP",
@@ -69,78 +77,136 @@
    "blur": 0,
    "segs": [
     {
-     "t": "POINT 1",
-     "size": 32,
-     "weight": 700,
-     "color": "rgba(61,107,242,1)",
-     "lh": 38.4,
-     "ls": 0
+     "t": "FOMC 발표가\n",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 115.2,
+     "ls": -2.88
+    },
+    {
+     "t": "중요한 이유",
+     "size": 96,
+     "weight": 900,
+     "color": "rgba(255,225,77,1)",
+     "lh": 115.2,
+     "ls": -2.88
     }
    ]
   },
   {
    "id": "t4",
-   "layer": "발표 시각부터 먼저 확인해요",
-   "text": "발표 시각부터\n먼저 확인해요",
+   "layer": "FOMC란?",
+   "text": "FOMC란?",
    "x": 88,
-   "y": 256,
-   "w": 904,
-   "h": 214,
+   "y": 520,
+   "w": 184,
+   "h": 57,
    "rot": 0,
-   "align": "CENTER",
+   "align": "LEFT",
    "valign": "TOP",
-   "autoResize": "HEIGHT",
+   "autoResize": "WIDTH_AND_HEIGHT",
    "opacity": 1,
    "blur": 0,
    "segs": [
     {
-     "t": "발표 ",
-     "size": 88,
-     "weight": 900,
-     "color": "rgba(255,255,255,1)",
-     "lh": 107.4,
-     "ls": -1.76
-    },
-    {
-     "t": "시각",
-     "size": 88,
-     "weight": 900,
-     "color": "rgba(255,228,92,1)",
-     "lh": 107.4,
-     "ls": -1.76
-    },
-    {
-     "t": "부터\n먼저 확인해요",
-     "size": 88,
-     "weight": 900,
-     "color": "rgba(255,255,255,1)",
-     "lh": 107.4,
-     "ls": -1.76
+     "t": "FOMC란?",
+     "size": 44,
+     "weight": 700,
+     "color": "rgba(255,225,77,1)",
+     "lh": 57.2,
+     "ls": -0.88
     }
    ]
   },
   {
    "id": "t5",
-   "layer": "FOMC 금리 결정은 한국 시간 새벽에 나와요. 발표 직전·직후엔 가격이 크게 흔들려요.",
-   "text": "FOMC 금리 결정은 한국 시간 새벽에 나와요.\n발표 직전·직후엔 가격이 크게 흔들려요.",
+   "layer": "미국 중앙은행이 기준금리를 정하는 회의예요. 결과는 한국 시간 새벽에 발표돼요.",
+   "text": "미국 중앙은행이 기준금리를 정하는 회의예요.\n결과는 한국 시간 새벽에 발표돼요.",
    "x": 88,
-   "y": 1110,
+   "y": 590,
    "w": 904,
-   "h": 120,
+   "h": 114,
    "rot": 0,
-   "align": "CENTER",
+   "align": "LEFT",
    "valign": "TOP",
    "autoResize": "HEIGHT",
    "opacity": 1,
    "blur": 0,
    "segs": [
     {
-     "t": "FOMC 금리 결정은 한국 시간 새벽에 나와요.\n발표 직전·직후엔 가격이 크게 흔들려요.",
-     "size": 40,
-     "weight": 500,
+     "t": "미국 중앙은행이 기준금리를 정하는 회의예요.\n결과는 한국 시간 새벽에 발표돼요.",
+     "size": 38,
+     "weight": 400,
      "color": "rgba(255,255,255,1)",
-     "lh": 60,
-     "ls": -0.8
+     "lh": 57,
+     "ls": -0.76
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "금리가 바뀌면 달러·지수·금이 함께 움직여서 해외선물 가격이 크게 흔들릴 수 있어요.",
+   "text": "금리가 바뀌면 달러·지수·금이 함께 움직여서\n해외선물 가격이 크게 흔들릴 수 있어요.",
+   "x": 88,
+   "y": 760,
+   "w": 904,
+   "h": 114,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리가 바뀌면 달러·지수·금이 함께 움직여서\n해외선물 가격이 크게 흔들릴 수 있어요.",
+     "size": 38,
+     "weight": 400,
+     "color": "rgba(255,255,255,1)",
+     "lh": 57,
+     "ls": -0.76
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "그래서 발표 시각부터 확인해야 해요.",
+   "text": "그래서 발표 시각부터 확인해야 해요.",
+   "x": 88,
+   "y": 880,
+   "w": 904,
+   "h": 59,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "그래서 ",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 58.8,
+     "ls": -0.84
+    },
+    {
+     "t": "발표 시각",
+     "size": 42,
+     "weight": 900,
+     "color": "rgba(255,225,77,1)",
+     "lh": 58.8,
+     "ls": -0.84
+    },
+    {
+     "t": "부터 확인해야 해요.",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 58.8,
+     "ls": -0.84
     }
    ]
   }
