@@ -15,7 +15,7 @@
    "align": "LEFT",
    "valign": "TOP",
    "autoResize": "WIDTH_AND_HEIGHT",
-   "opacity": 1,
+   "opacity": 0,
    "blur": 0,
    "segs": [
     {
