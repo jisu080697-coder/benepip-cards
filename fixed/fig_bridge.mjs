@@ -20,6 +20,15 @@ const giving = {};   // 플러그인에 넘긴 지 10분 안 된 것은 다시 �
 let pulled = 0, seen = 0;
 const pull = () => { if (Date.now() - pulled < 50e3) return; pulled = Date.now(); try { git('pull', '-q', '--rebase', '--autostash', 'origin', 'main'); } catch (e) { console.log('git pull 실패', String(e.message).slice(0, 120)); } };
 
+// 경제·투자 틀 색·아이콘 (v.th = '색:아이콘' · Fig.gs figTheme_) → 틀의 기본 파랑을 바꿀 색과 색 맞춘 3D 아이콘 (fixed/assets/3d/tint/<색>/<아이콘>.png · 내 컴퓨터에만)
+// from: 틀에 칠해진 기본색 (표지 파랑 · 본문 연파랑 · 강조 노랑) → to: 그 주제 색 · 'text' 는 글자색만 (노란 알약 바탕은 그대로)
+const THEMES = { blue: '3D6BF2', green: '16B865', orange: 'FF7A2F', teal: '0FA89E', purple: '7B4DF2', pink: 'F0506E' };
+const light = h => h.match(/../g).map(x => Math.round(parseInt(x, 16) * 0.8 + 255 * 0.2).toString(16).padStart(2, '0')).join('').toUpperCase();
+function theme(th) {
+  const [col, icon] = String(th || '').split(':'); if (!THEMES[col]) return {};
+  const f = join(dirname(fileURLToPath(import.meta.url)), 'assets', '3d', 'tint', col, icon + '.png');
+  return { th: { map: [['3D6BF2', THEMES[col]], ['6489F5', light(THEMES[col])], ['FFE45C', col === 'orange' ? '14205A' : 'FFE45C', 'text']] }, icon64: existsSync(f) ? readFileSync(f).toString('base64') : null };
+}
 // 렌더 결과 → 플러그인이 채울 정보 (칸은 시안 글로 찾음 · 강조 “ ” 모양 · 알약 크기 · 쪽 번호)
 async function post(id, ver) {
   const { rightOf, followers } = await rules();
@@ -32,7 +41,7 @@ async function post(id, ver) {
     const bars = (raw.shapes || []).filter(g => g.kind === 'bar'), BW = Math.max(0, ...bars.map(g => g.w)), mx = Math.max(0, ...bars.map(g => val(g.slot) || 0));
     const barOut = bars.map(g => { const v = val(g.slot); return { x: g.x, y: g.y, w: g.w, nw: v == null || !mx ? 0 : Math.max(g.h * 2, BW * 0.12, BW * v / mx) }; });
     const fol = followers(raw);
-    return { fig: c.fig, bars: barOut, slots: raw.slots.map(s => {
+    return { fig: c.fig, bars: barOut, ...theme(c.v && c.v.th), slots: raw.slots.map(s => {
       const base = s.segs[0], em = s.segs.find(g => g.color !== base.color || g.weight !== base.weight);
       let v = c.v && c.v[s.id];
       if (v == null && /^\d+ \/ \d+$/.test(s.text)) v = (i + 1) + ' / ' + list.length;

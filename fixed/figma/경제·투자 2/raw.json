@@ -1,0 +1,142 @@
+{
+ "name": "경제·투자 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip | 경제·투자",
+   "text": "BenePip  |  경제·투자",
+   "x": 88,
+   "y": 84,
+   "w": 297,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.85,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip  |  경제·투자",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 43.2,
+     "ls": -0.64
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "2 / 5",
+   "text": "2 / 5",
+   "x": 929,
+   "y": 84,
+   "w": 63,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.6,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 43.2,
+     "ls": -0.64
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "POINT 1",
+   "text": "POINT 1",
+   "x": 476.5,
+   "y": 192,
+   "w": 127,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "POINT 1",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(61,107,242,1)",
+     "lh": 38.4,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "발표 시각부터 먼저 확인해요",
+   "text": "발표 시각부터\n먼저 확인해요",
+   "x": 88,
+   "y": 256,
+   "w": 904,
+   "h": 214,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "발표 시각",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,228,92,1)",
+     "lh": 107.4,
+     "ls": -1.76
+    },
+    {
+     "t": "부터\n먼저 확인해요",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 107.4,
+     "ls": -1.76
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "FOMC 금리 결정은 한국 시간 새벽에 나와요. 발표 직전·직후엔 가격이 크게 흔들려요.",
+   "text": "FOMC 금리 결정은 한국 시간 새벽에 나와요.\n발표 직전·직후엔 가격이 크게 흔들려요.",
+   "x": 88,
+   "y": 1110,
+   "w": 904,
+   "h": 120,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "FOMC 금리 결정은 한국 시간 새벽에 나와요.\n발표 직전·직후엔 가격이 크게 흔들려요.",
+     "size": 40,
+     "weight": 500,
+     "color": "rgba(255,255,255,1)",
+     "lh": 60,
+     "ls": -0.8
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

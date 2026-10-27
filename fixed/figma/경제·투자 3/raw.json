@@ -1,0 +1,372 @@
+{
+ "name": "경제·투자 3",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip | 경제·투자",
+   "text": "BenePip  |  경제·투자",
+   "x": 88,
+   "y": 84,
+   "w": 297,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.85,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip  |  경제·투자",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 43.2,
+     "ls": -0.64
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "3 / 5",
+   "text": "3 / 5",
+   "x": 929,
+   "y": 84,
+   "w": 63,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.6,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3 / 5",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 43.2,
+     "ls": -0.64
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "POINT 2",
+   "text": "POINT 2",
+   "x": 476.5,
+   "y": 192,
+   "w": 127,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "POINT 2",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(20,32,90,1)",
+     "lh": 38.4,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "계좌는 이 순서로 점검하세요",
+   "text": "계좌는 이 순서로\n점검하세요",
+   "x": 88,
+   "y": 256,
+   "w": 904,
+   "h": 214,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "계좌는 ",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 107.4,
+     "ls": -1.76
+    },
+    {
+     "t": "이 순서로\n",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,228,92,1)",
+     "lh": 107.4,
+     "ls": -1.76
+    },
+    {
+     "t": "점검하세요",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 107.4,
+     "ls": -1.76
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "1",
+   "text": "1",
+   "x": 150,
+   "y": 600,
+   "w": 88,
+   "h": 88,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 44,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "증거금 여유",
+   "text": "증거금 여유",
+   "x": 272,
+   "y": 596,
+   "w": 218,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "증거금 여유",
+     "size": 46,
+     "weight": 700,
+     "color": "rgba(17,26,51,1)",
+     "lh": 55.2,
+     "ls": -0.92
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "변동이 커지면 필요 증거금이 늘 수 있어요",
+   "text": "변동이 커지면 필요 증거금이 늘 수 있어요",
+   "x": 272,
+   "y": 660,
+   "w": 563,
+   "h": 44,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "변동이 커지면 필요 증거금이 늘 수 있어요",
+     "size": 34,
+     "weight": 400,
+     "color": "rgba(91,100,120,1)",
+     "lh": 44.2,
+     "ls": -0.68
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "2",
+   "text": "2",
+   "x": 150,
+   "y": 800,
+   "w": 88,
+   "h": 88,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 44,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "스프레드",
+   "text": "스프레드",
+   "x": 272,
+   "y": 796,
+   "w": 167,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "스프레드",
+     "size": 46,
+     "weight": 700,
+     "color": "rgba(17,26,51,1)",
+     "lh": 55.2,
+     "ls": -0.92
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "발표 전후로 평소보다 넓어질 수 있어요",
+   "text": "발표 전후로 평소보다 넓어질 수 있어요",
+   "x": 272,
+   "y": 860,
+   "w": 525,
+   "h": 44,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "발표 전후로 평소보다 넓어질 수 있어요",
+     "size": 34,
+     "weight": 400,
+     "color": "rgba(91,100,120,1)",
+     "lh": 44.2,
+     "ls": -0.68
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "3",
+   "text": "3",
+   "x": 150,
+   "y": 1000,
+   "w": 88,
+   "h": 88,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 44,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "손절 주문",
+   "text": "손절 주문",
+   "x": 272,
+   "y": 996,
+   "w": 177,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "손절 주문",
+     "size": 46,
+     "weight": 700,
+     "color": "rgba(17,26,51,1)",
+     "lh": 55.2,
+     "ls": -0.92
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "layer": "미끄러짐(슬리피지)까지 감안해 두기",
+   "text": "미끄러짐(슬리피지)까지 감안해 두기",
+   "x": 272,
+   "y": 1060,
+   "w": 496,
+   "h": 44,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "미끄러짐(슬리피지)까지 감안해 두기",
+     "size": 34,
+     "weight": 400,
+     "color": "rgba(91,100,120,1)",
+     "lh": 44.2,
+     "ls": -0.68
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": [
+  {
+   "fill": "rgba(255,255,255,1)",
+   "x": 88,
+   "y": 520,
+   "w": 904,
+   "h": 700
+  },
+  {
+   "fill": "rgba(230,234,243,1)",
+   "x": 150,
+   "y": 750,
+   "w": 780,
+   "h": 2
+  },
+  {
+   "fill": "rgba(230,234,243,1)",
+   "x": 150,
+   "y": 950,
+   "w": 780,
+   "h": 2
+  }
+ ]
+}

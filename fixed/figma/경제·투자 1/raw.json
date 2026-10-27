@@ -1,0 +1,109 @@
+{
+ "name": "경제·투자 1",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip | 경제·투자",
+   "text": "BenePip  |  경제·투자",
+   "x": 88,
+   "y": 92,
+   "w": 328,
+   "h": 43,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.9,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip  |  경제·투자",
+     "size": 36,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 42.9,
+     "ls": -1.08
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "금리 발표 날 해외선물 계좌 점검 순서",
+   "text": "금리 발표 날\n해외선물 계좌\n점검 순서",
+   "x": 82,
+   "y": 162,
+   "w": 750,
+   "h": 474,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금리 발표 날\n해외선물 계좌\n점검 순서",
+     "size": 136,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 157.8,
+     "ls": -5.44
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "FOMC 전후로 볼 3가지",
+   "text": "FOMC 전후로 볼 3가지",
+   "x": 88,
+   "y": 666,
+   "w": 440,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 0.85,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "FOMC 전후로 볼 3가지",
+     "size": 48,
+     "weight": 500,
+     "color": "rgba(255,255,255,1)",
+     "lh": 57.3,
+     "ls": -1.44
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "넘겨서 보기 →",
+   "text": "넘겨서 보기  →",
+   "x": 125,
+   "y": 1200,
+   "w": 206,
+   "h": 41,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "넘겨서 보기  →",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 40.6,
+     "ls": -1.02
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}
