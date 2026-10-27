@@ -1,0 +1,212 @@
+{
+ "day": "2026-10-27",
+ "avg": 9,
+ "pass": 6,
+ "total": 6,
+ "top": {},
+ "rows": [
+  {
+   "id": "n1793080869976i",
+   "group": "경제·투자 이슈",
+   "recipe": "레시피 id",
+   "topic": "지수가 급락할 때 CFD 트레이더가 먼저 볼 것",
+   "layouts": [
+    "c-num",
+    "big",
+    "check",
+    "vs",
+    "e-sum"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 1,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793080873149",
+     "score": 9,
+     "issues": 1
+    },
+    {
+     "ver": "v1793081412020",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793080869976i/v1793081412020/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793080869976i/v1793081412020/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793080869976i/v1793081412020/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793080869976i/v1793081412020/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793080869976i/v1793081412020/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793081017270i",
+   "group": "경제·투자 이슈",
+   "recipe": "레시피 id",
+   "topic": "금리가 오르면 금(골드) 가격은 왜 움직일까?",
+   "layouts": [
+    "c-num",
+    "big",
+    "check",
+    "vs",
+    "e-sum"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793081019693",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081017270i/v1793081019693/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081017270i/v1793081019693/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081017270i/v1793081019693/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081017270i/v1793081019693/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081017270i/v1793081019693/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793081143023i",
+   "group": "경제·투자 이슈",
+   "recipe": "레시피 id",
+   "topic": "유가 급등, 원유 CFD 증거금은 왜 늘어날까?",
+   "layouts": [
+    "c-num",
+    "big",
+    "check",
+    "vs",
+    "e-sum"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793081146759",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081143023i/v1793081146759/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081143023i/v1793081146759/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081143023i/v1793081146759/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081143023i/v1793081146759/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793081143023i/v1793081146759/05.jpg"
+   ]
+  },
+  {
+   "id": "n1793084025329i",
+   "group": "경제·투자 이슈",
+   "recipe": "안전자산이란? 금·엔화·달러가 오르는 날",
+   "topic": "안전자산이란? 금·엔화·달러가 오르는 날",
+   "layouts": [
+    "c-num",
+    "body",
+    "check",
+    "qa",
+    "table",
+    "e-sum"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793084027954",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084025329i/v1793084027954/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084025329i/v1793084027954/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084025329i/v1793084027954/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084025329i/v1793084027954/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084025329i/v1793084027954/05.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084025329i/v1793084027954/06.jpg"
+   ]
+  },
+  {
+   "id": "n1793084155249i",
+   "group": "경제·투자 이슈",
+   "recipe": "레시피 id",
+   "topic": "주말 갭, 월요일 아침 가격이 튀는 이유",
+   "layouts": [
+    "c-num",
+    "body",
+    "reason",
+    "qa",
+    "table",
+    "table"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793084157593",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084155249i/v1793084157593/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084155249i/v1793084157593/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084155249i/v1793084157593/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084155249i/v1793084157593/04.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084155249i/v1793084157593/05.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793084155249i/v1793084157593/06.jpg"
+   ]
+  },
+  {
+   "id": "n1793085560837i",
+   "group": "베네핍 이용 안내",
+   "recipe": "howto",
+   "topic": "페이백 내역과 거래 내역 맞춰 보는 법",
+   "layouts": [
+    "c-state",
+    "ui",
+    "qa",
+    "e-timeline"
+   ],
+   "state": "통과",
+   "score": 9,
+   "round": 0,
+   "problems": [],
+   "hist": [
+    {
+     "ver": "v1793085562912",
+     "score": 9,
+     "issues": 0
+    }
+   ],
+   "images": [
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793085560837i/v1793085562912/01.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793085560837i/v1793085562912/02.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793085560837i/v1793085562912/03.jpg",
+    "https://raw.githubusercontent.com/jisu080697-coder/benepip-cards/main/cards/n1793085560837i/v1793085562912/04.jpg"
+   ]
+  }
+ ],
+ "gemini": {
+  "n": 362,
+  "by": {
+   "조사·주제": 149,
+   "초안": 86,
+   "틀 채우기": 30,
+   "칸 다시 쓰기": 64,
+   "이미지 채점": 33
+  }
+ }
+}
