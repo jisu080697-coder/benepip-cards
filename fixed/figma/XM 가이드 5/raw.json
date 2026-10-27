@@ -1,0 +1,392 @@
+{
+ "name": "XM 가이드 5",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "카드 vs 은행 출금 차이",
+   "text": "카드 vs 은행\n출금 차이",
+   "x": 88,
+   "y": 150,
+   "w": 444,
+   "h": 212,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "카드 vs 은행\n출금 ",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    },
+    {
+     "t": "차이",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "카드",
+   "text": "카드",
+   "x": 237.5,
+   "y": 480.5,
+   "w": 81,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "카드",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 55,
+     "ls": -0.66
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "은행",
+   "text": "은행",
+   "x": 761.5,
+   "y": 480.5,
+   "w": 81,
+   "h": 55,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "은행",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 55,
+     "ls": -0.66
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "VS",
+   "text": "VS",
+   "x": 488,
+   "y": 456,
+   "w": 104,
+   "h": 104,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "VS",
+     "size": 40,
+     "weight": 900,
+     "color": "rgba(227,32,43,1)",
+     "lh": 40,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "입금한 금액 환불",
+   "text": "입금한 금액 환불",
+   "x": 88,
+   "y": 660,
+   "w": 380,
+   "h": 52,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "입금한 금액 환불",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "수익금 출금",
+   "text": "수익금 출금",
+   "x": 612,
+   "y": 660,
+   "w": 380,
+   "h": 52,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "수익금 출금",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "대상",
+   "text": "대상",
+   "x": 512.5,
+   "y": 671,
+   "w": 55,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "대상",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(180,180,190,1)",
+     "lh": 37.5,
+     "ls": -0.45
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "먼저 처리",
+   "text": "먼저 처리",
+   "x": 88,
+   "y": 830,
+   "w": 380,
+   "h": 52,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "먼저 처리",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "그다음 처리",
+   "text": "그다음 처리",
+   "x": 612,
+   "y": 830,
+   "w": 380,
+   "h": 52,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "그다음 처리",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "순서",
+   "text": "순서",
+   "x": 512.5,
+   "y": 841,
+   "w": 55,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "순서",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(180,180,190,1)",
+     "lh": 37.5,
+     "ls": -0.45
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "layer": "비교적 빨라요",
+   "text": "비교적 빨라요",
+   "x": 88,
+   "y": 1000,
+   "w": 380,
+   "h": 52,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "비교적 빨라요",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "layer": "더 걸릴 수 있어요",
+   "text": "더 걸릴 수 있어요",
+   "x": 612,
+   "y": 1000,
+   "w": 380,
+   "h": 52,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "더 걸릴 수 있어요",
+     "size": 40,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 52,
+     "ls": -0.8
+    }
+   ]
+  },
+  {
+   "id": "t14",
+   "layer": "시간",
+   "text": "시간",
+   "x": 512.5,
+   "y": 1011,
+   "w": 55,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "시간",
+     "size": 30,
+     "weight": 700,
+     "color": "rgba(180,180,190,1)",
+     "lh": 37.5,
+     "ls": -0.45
+    }
+   ]
+  },
+  {
+   "id": "t15",
+   "layer": "* 조건은 XM 공식 안내 기준으로 확인하세요.",
+   "text": "* 조건은 XM 공식 안내 기준으로 확인하세요.",
+   "x": 88,
+   "y": 1150,
+   "w": 904,
+   "h": 36,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "* 조건은 XM 공식 안내 기준으로 확인하세요.",
+     "size": 28,
+     "weight": 400,
+     "color": "rgba(180,180,190,1)",
+     "lh": 36.4,
+     "ls": -0.56
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

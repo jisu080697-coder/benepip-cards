@@ -1,0 +1,292 @@
+{
+ "name": "XM 가이드 3",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "출금 전 체크 4가지",
+   "text": "출금 전\n체크 4가지",
+   "x": 88,
+   "y": 150,
+   "w": 385,
+   "h": 212,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 전\n",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    },
+    {
+     "t": "체크 4가지",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "01",
+   "text": "01",
+   "x": 128,
+   "y": 494,
+   "w": 87,
+   "h": 72,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "01",
+     "size": 72,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 72,
+     "ls": -1.44
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "본인 명의 계좌인지 확인",
+   "text": "본인 명의\n계좌인지 확인",
+   "x": 128,
+   "y": 600,
+   "w": 237,
+   "h": 110,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "본인 명의\n계좌인지 확인",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 54.6,
+     "ls": -0.84
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "02",
+   "text": "02",
+   "x": 596,
+   "y": 494,
+   "w": 87,
+   "h": 72,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "02",
+     "size": 72,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 72,
+     "ls": -1.44
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "입금한 수단 먼저 확인",
+   "text": "입금한 수단\n먼저 확인",
+   "x": 596,
+   "y": 600,
+   "w": 199,
+   "h": 110,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "입금한 수단\n먼저 확인",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 54.6,
+     "ls": -0.84
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "03",
+   "text": "03",
+   "x": 128,
+   "y": 824,
+   "w": 87,
+   "h": 72,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "03",
+     "size": 72,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 72,
+     "ls": -1.44
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "열린 포지션 증거금 확인",
+   "text": "열린 포지션\n증거금 확인",
+   "x": 128,
+   "y": 930,
+   "w": 199,
+   "h": 110,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "열린 포지션\n증거금 확인",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 54.6,
+     "ls": -0.84
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "04",
+   "text": "04",
+   "x": 596,
+   "y": 824,
+   "w": 87,
+   "h": 72,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "04",
+     "size": 72,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 72,
+     "ls": -1.44
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "처리 시간 여유 두기",
+   "text": "처리 시간\n여유 두기",
+   "x": 596,
+   "y": 930,
+   "w": 161,
+   "h": 110,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "처리 시간\n여유 두기",
+     "size": 42,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 54.6,
+     "ls": -0.84
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "하나라도 놓치면 출금이 늦어질 수 있어요",
+   "text": "하나라도 놓치면 출금이 늦어질 수 있어요",
+   "x": 88,
+   "y": 1150,
+   "w": 904,
+   "h": 47,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "하나라도 놓치면 출금이 늦어질 수 있어요",
+     "size": 36,
+     "weight": 500,
+     "color": "rgba(180,180,190,1)",
+     "lh": 46.8,
+     "ls": -0.72
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

@@ -1,0 +1,300 @@
+{
+ "name": "XM 가이드 2",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "출금 신청 3단계로 끝",
+   "text": "출금 신청\n3단계로 끝",
+   "x": 88,
+   "y": 150,
+   "w": 385,
+   "h": 212,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 신청\n",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    },
+    {
+     "t": "3단계",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    },
+    {
+     "t": "로 끝",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "STEP 01",
+   "text": "STEP 01",
+   "x": 210,
+   "y": 470,
+   "w": 129,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "STEP 01",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,68,80,1)",
+     "lh": 38.4,
+     "ls": 0.64
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "회원 영역에 로그인",
+   "text": "회원 영역에 로그인",
+   "x": 210,
+   "y": 518,
+   "w": 398,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "회원 영역에 로그인",
+     "size": 52,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 62.4,
+     "ls": -1.04
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "MyXM 계정으로 들어가요",
+   "text": "MyXM 계정으로 들어가요",
+   "x": 210,
+   "y": 594,
+   "w": 390,
+   "h": 49,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "MyXM 계정으로 들어가요",
+     "size": 38,
+     "weight": 400,
+     "color": "rgba(180,180,190,1)",
+     "lh": 49.4,
+     "ls": -0.76
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "STEP 02",
+   "text": "STEP 02",
+   "x": 210,
+   "y": 760,
+   "w": 129,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "STEP 02",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,68,80,1)",
+     "lh": 38.4,
+     "ls": 0.64
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "출금 수단 선택",
+   "text": "출금 수단 선택",
+   "x": 210,
+   "y": 808,
+   "w": 304,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 수단 선택",
+     "size": 52,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 62.4,
+     "ls": -1.04
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "입금한 수단이 먼저예요",
+   "text": "입금한 수단이 먼저예요",
+   "x": 210,
+   "y": 884,
+   "w": 359,
+   "h": 49,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "입금한 수단이 먼저예요",
+     "size": 38,
+     "weight": 400,
+     "color": "rgba(180,180,190,1)",
+     "lh": 49.4,
+     "ls": -0.76
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "STEP 03",
+   "text": "STEP 03",
+   "x": 210,
+   "y": 1050,
+   "w": 129,
+   "h": 38,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "STEP 03",
+     "size": 32,
+     "weight": 700,
+     "color": "rgba(255,68,80,1)",
+     "lh": 38.4,
+     "ls": 0.64
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "금액 입력 후 신청",
+   "text": "금액 입력 후 신청",
+   "x": 210,
+   "y": 1098,
+   "w": 362,
+   "h": 62,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "금액 입력 후 신청",
+     "size": 52,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 62.4,
+     "ls": -1.04
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "처리 알림을 확인해요",
+   "text": "처리 알림을 확인해요",
+   "x": 210,
+   "y": 1174,
+   "w": 325,
+   "h": 49,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "처리 알림을 확인해요",
+     "size": 38,
+     "weight": 400,
+     "color": "rgba(180,180,190,1)",
+     "lh": 49.4,
+     "ls": -0.76
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

@@ -1,0 +1,300 @@
+{
+ "name": "XM 가이드 6",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "XM 거래, BenePip과 함께!",
+   "text": "XM 거래, BenePip과 함께!",
+   "x": 88,
+   "y": 370,
+   "w": 904,
+   "h": 65,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "XM 거래, ",
+     "size": 50,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 65,
+     "ls": -1
+    },
+    {
+     "t": "BenePip",
+     "size": 50,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 65,
+     "ls": -1
+    },
+    {
+     "t": "과 함께!",
+     "size": 50,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 65,
+     "ls": -1
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "페이백 받기",
+   "text": "페이백 받기",
+   "x": 88,
+   "y": 450,
+   "w": 904,
+   "h": 176,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "페이백 받기",
+     "size": 160,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 176,
+     "ls": -8
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "1",
+   "text": "1",
+   "x": 198,
+   "y": 725,
+   "w": 60,
+   "h": 60,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "1",
+     "size": 30,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 30,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "BenePip 가입",
+   "text": "BenePip 가입",
+   "x": 88,
+   "y": 805,
+   "w": 280,
+   "h": 44,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip 가입",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 44.2,
+     "ls": -0.68
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "2",
+   "text": "2",
+   "x": 510,
+   "y": 725,
+   "w": 60,
+   "h": 60,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "2",
+     "size": 30,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 30,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "XM 계좌 연결",
+   "text": "XM 계좌 연결",
+   "x": 400,
+   "y": 805,
+   "w": 280,
+   "h": 44,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "XM 계좌 연결",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 44.2,
+     "ls": -0.68
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "3",
+   "text": "3",
+   "x": 822,
+   "y": 725,
+   "w": 60,
+   "h": 60,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "CENTER",
+   "autoResize": "NONE",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "3",
+     "size": 30,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 30,
+     "ls": 0
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "거래마다 페이백",
+   "text": "거래마다 페이백",
+   "x": 712,
+   "y": 805,
+   "w": 280,
+   "h": 44,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "거래마다 페이백",
+     "size": 34,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 44.2,
+     "ls": -0.68
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "프로필 링크에서 시작하기 →",
+   "text": "프로필 링크에서 시작하기  →",
+   "x": 315.5,
+   "y": 976,
+   "w": 449,
+   "h": 48,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "프로필 링크에서 시작하기  →",
+     "size": 38,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 47.5,
+     "ls": -0.57
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "layer": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+   "text": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+   "x": 88,
+   "y": 1270,
+   "w": 904,
+   "h": 34,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 0.7,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "본 콘텐츠는 정보 제공용이며 투자 권유가 아닙니다.",
+     "size": 26,
+     "weight": 400,
+     "color": "rgba(180,180,190,1)",
+     "lh": 33.8,
+     "ls": -0.52
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

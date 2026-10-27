@@ -1,0 +1,267 @@
+{
+ "name": "XM 가이드 4",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "자주 묻는 출금 질문",
+   "text": "자주 묻는\n출금 질문",
+   "x": 88,
+   "y": 150,
+   "w": 334,
+   "h": 212,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "자주 묻는\n",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    },
+    {
+     "t": "출금 질문",
+     "size": 88,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 105.6,
+     "ls": -2.64
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "Q.",
+   "text": "Q.",
+   "x": 88,
+   "y": 450,
+   "w": 72,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "Q.",
+     "size": 64,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 64,
+     "ls": -1.28
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layer": "출금 수수료가 있나요?",
+   "text": "출금 수수료가 있나요?",
+   "x": 180,
+   "y": 458,
+   "w": 434,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "출금 수수료가 있나요?",
+     "size": 48,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 57.6,
+     "ls": -0.96
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "layer": "A.",
+   "text": "A.",
+   "x": 128,
+   "y": 590,
+   "w": 44,
+   "h": 44,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "A.",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(227,32,43,1)",
+     "lh": 44,
+     "ls": -0.88
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "layer": "대부분 무료지만 수단·은행에 따라 수수료가 생길 수 있어요.",
+   "text": "대부분 무료지만 수단·은행에 따라\n수수료가 생길 수 있어요.",
+   "x": 200,
+   "y": 588,
+   "w": 760,
+   "h": 110,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "대부분 무료지만 수단·은행에 따라\n수수료가 생길 수 있어요.",
+     "size": 38,
+     "weight": 500,
+     "color": "rgba(20,20,24,1)",
+     "lh": 55.1,
+     "ls": -0.76
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "layer": "Q.",
+   "text": "Q.",
+   "x": 88,
+   "y": 820,
+   "w": 72,
+   "h": 64,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "Q.",
+     "size": 64,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 64,
+     "ls": -1.28
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "layer": "보너스도 출금되나요?",
+   "text": "보너스도 출금되나요?",
+   "x": 180,
+   "y": 828,
+   "w": 424,
+   "h": 58,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "보너스도 출금되나요?",
+     "size": 48,
+     "weight": 700,
+     "color": "rgba(255,255,255,1)",
+     "lh": 57.6,
+     "ls": -0.96
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "layer": "A.",
+   "text": "A.",
+   "x": 128,
+   "y": 960,
+   "w": 44,
+   "h": 44,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "A.",
+     "size": 44,
+     "weight": 900,
+     "color": "rgba(227,32,43,1)",
+     "lh": 44,
+     "ls": -0.88
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "layer": "보너스 자체는 출금할 수 없고, 거래로 생긴 수익은 출금할 수 있어요.",
+   "text": "보너스 자체는 출금할 수 없고,\n거래로 생긴 수익은 출금할 수 있어요.",
+   "x": 200,
+   "y": 958,
+   "w": 760,
+   "h": 110,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "보너스 자체는 출금할 수 없고,\n거래로 생긴 수익은 출금할 수 있어요.",
+     "size": 38,
+     "weight": 500,
+     "color": "rgba(20,20,24,1)",
+     "lh": 55.1,
+     "ls": -0.76
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}

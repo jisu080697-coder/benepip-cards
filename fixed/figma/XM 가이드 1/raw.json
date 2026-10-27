@@ -1,0 +1,100 @@
+{
+ "name": "XM 가이드 1",
+ "w": 1080,
+ "h": 1350,
+ "slots": [
+  {
+   "id": "t1",
+   "layer": "BenePip",
+   "text": "BenePip",
+   "x": 879,
+   "y": 64,
+   "w": 117,
+   "h": 34,
+   "rot": 0,
+   "align": "LEFT",
+   "valign": "TOP",
+   "autoResize": "WIDTH_AND_HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "BenePip",
+     "size": 28,
+     "weight": 900,
+     "color": "rgba(20,20,24,1)",
+     "lh": 33.6,
+     "ls": -0.28
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layer": "XM 출금 이렇게 신청해요",
+   "text": "XM 출금\n이렇게\n신청해요",
+   "x": 88,
+   "y": 360,
+   "w": 904,
+   "h": 480,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "XM 출금\n",
+     "size": 140,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 159.6,
+     "ls": -5.6
+    },
+    {
+     "t": "이렇게\n",
+     "size": 140,
+     "weight": 900,
+     "color": "rgba(255,68,80,1)",
+     "lh": 159.6,
+     "ls": -5.6
+    },
+    {
+     "t": "신청해요",
+     "size": 140,
+     "weight": 900,
+     "color": "rgba(255,255,255,1)",
+     "lh": 159.6,
+     "ls": -5.6
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layer": "처음 출금 전 꼭 확인하세요",
+   "text": "처음 출금 전 꼭 확인하세요",
+   "x": 88,
+   "y": 904,
+   "w": 904,
+   "h": 60,
+   "rot": 0,
+   "align": "CENTER",
+   "valign": "TOP",
+   "autoResize": "HEIGHT",
+   "opacity": 1,
+   "blur": 0,
+   "segs": [
+    {
+     "t": "처음 출금 전 꼭 확인하세요",
+     "size": 46,
+     "weight": 500,
+     "color": "rgba(180,180,190,1)",
+     "lh": 59.8,
+     "ls": -0.92
+    }
+   ]
+  }
+ ],
+ "shapes": [],
+ "rects": []
+}
