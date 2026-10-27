@@ -103,7 +103,7 @@ def kind(role, ex, need=True):
     if re.fullmatch(r'\d{1,2}', e): return 'digit'
     if re.fullmatch(r'\d{1,2}:\d{2}', e): return 'time'
     if re.match(r'\d{1,2}/\d{1,2}', e) and len(e) <= 9: return 'date'
-    if e in '월화수목금토일' and len(e) == 1: return 'day'
+    if e in '월화수목금토일' and len(e) == 1 and '요일' in role: return 'day'   # '금'(금 라벨) 을 금요일로 착각하지 않게
     if re.search(r'이전 값|예상 값', role): return 'numq'
     if need and re.search(r'값|큰 숫자', role) and '설명' not in role and re.search(r'\d', e): return 'num'
     return ''
