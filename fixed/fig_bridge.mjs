@@ -71,7 +71,7 @@ function save(m) {
   if (!existsSync(dir)) throw new Error('폴더 없음 ' + m.id + '/' + m.ver);
   readdirSync(dir).filter(f => /^\d+\.(jpe?g|png)$/i.test(f)).forEach(f => unlinkSync(join(dir, f)));
   m.imgs.forEach((b, i) => writeFileSync(join(dir, String(i + 1).padStart(2, '0') + '.jpg'), Buffer.from(b, 'base64')));
-  writeFileSync(join(dir, 'figma.json'), JSON.stringify({ at: new Date().toISOString(), n: m.imgs.length, edited: !!m.edited }));
+  writeFileSync(join(dir, 'figma.json'), JSON.stringify({ at: new Date().toISOString(), n: m.imgs.length, edited: !!m.edited, node: m.node || '' }));   // node: 피그마 결과 섹션 (검수 화면 "피그마에서 고치기" 링크)
   git('add', '-A', join('cards', m.id, m.ver));
   git('commit', '-q', '-m', 'figma ' + m.id + (m.edited ? ' (피그마에서 고침)' : ''));
   for (let k = 0; k < 3; k++) { try { git('pull', '-q', '--rebase', '--autostash', 'origin', 'main'); git('push', '-q'); return; } catch (e) { if (k === 2) throw e; } }
