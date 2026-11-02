@@ -5,7 +5,7 @@
 //   brokertally = 스펙 시트 (검정 · 줄 · JetBrains Mono 정보 칸)
 //   fxlantern  = 뉴스룸 금빛 명조 (TODAY'S MARKET / GLOBAL WATCH 배경)
 import { chromium } from 'playwright-core';
-import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -96,7 +96,7 @@ export async function renderThumb(req, out, browser) {
   });
   mkdirSync(dirname(out), { recursive: true });
   await page.screenshot({ path: out, type: 'jpeg', quality: 90 });
-  await page.close();
+  await page.close(); rmSync(tmp, { force: true });
   return { fit };
 }
 
