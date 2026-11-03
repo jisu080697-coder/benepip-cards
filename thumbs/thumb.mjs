@@ -1,7 +1,7 @@
 // 포스트 대표 이미지 렌더러: 요청 JSON → 실제 크롬으로 1200×630(×1.5) JPEG
 // 사용: node thumbs/thumb.mjs req.json 출력.jpg
 // 사이트별 틀 (피그마 '포스트 대표 이미지' 확정안 · 2026-11-02)
-//   allthatfx  = 보도 사진형 (사진 전체 + 아래 흰 굵은 제목)
+//   allthatfx  = 실사 사진 + 굵은 한글 제목 (세 카테고리 같은 구조 · 2026-11-03)
 //   brokertally = 스펙 시트 (검정 · 줄 · JetBrains Mono 정보 칸)
 //   fxlantern  = 뉴스룸 금빛 명조 (TODAY'S MARKET / GLOBAL WATCH 배경)
 import { chromium } from 'playwright-core';
@@ -18,22 +18,24 @@ const MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'O
 const lines = t => esc(t).replace(/\n/g, '<br>');
 
 const SITES = {
+  // ALL THAT FX · 세 카테고리 같은 구조 (2026-11-03 사용자: AI 티 빼고 실제 금융 매체처럼) = 실사 사진 + 굵은 한글 제목
+  //   장식 없음 (영문 라벨·외곽선 글자·모눈·빛·번호·세로선 X) · 왼쪽 위 로고 | 카테고리 · 오른쪽 위 날짜 · 아래 어두운 그라데이션 하나
   allthatfx: r => {
-    const [y, m, d] = r.date.split('-');
+    const [y, m, d] = r.date.split('-'), cat = String(r.cat || '');
     const ph = r.photo && !/^(file|https?):/.test(r.photo) ? pathToFileURL(resolve(here, '..', r.photo)).href : r.photo;   // 저장소 안 경로(thumbs/…/photo.jpg)도 받음
     const bg = ph ? `<img class="ph" src="${esc(ph)}">` : '';
     return `<style>
-      .f{background:linear-gradient(135deg,#0b1260,#000342)}
+      .f{background:#0b1030;color:#fff}
       .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-      .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,3,40,.55) 0,rgba(0,3,40,0) 26%,rgba(0,3,40,0) 32%,rgba(0,3,51,.93) 100%)}
-      .top{position:absolute;left:64px;right:64px;top:50px;display:flex;align-items:center;color:#fff}
-      .top svg{width:26px;height:24px;margin-right:10px}.top b{font:700 20px 'Noto Sans KR';letter-spacing:.02em}.top em{margin-left:auto;font:500 15px 'Noto Sans KR';font-style:normal;opacity:.75}
-      .bot{position:absolute;left:64px;right:110px;bottom:64px;color:#fff}
-      .cat{display:flex;align-items:center;font:700 19px 'Noto Sans KR';margin-bottom:16px}.cat:before{content:'';width:4px;height:22px;background:#3D63FF;margin-right:10px}
-      .t{font:900 56px/1.24 'Noto Sans KR';letter-spacing:-.03em;word-break:keep-all;text-shadow:0 2px 16px rgba(0,0,40,.35)}
+      .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 40%,rgba(0,0,0,.78) 100%)}
+      .top{position:absolute;left:60px;right:60px;top:44px;display:flex;align-items:center;font:500 18px 'Noto Sans KR';text-shadow:0 1px 6px rgba(0,0,0,.35)}
+      .top svg{width:24px;height:22px;margin-right:9px}.top b{font:700 19px 'Noto Sans KR';letter-spacing:.02em}
+      .top span{margin-left:14px;padding-left:14px;border-left:1px solid rgba(255,255,255,.55);font-weight:500}
+      .top em{margin-left:auto;font-style:normal;opacity:.85}
+      .t{position:absolute;left:60px;right:90px;bottom:56px;font:800 62px/1.22 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all;text-shadow:0 2px 14px rgba(0,0,0,.35)}
     </style>${bg}<div class="sh"></div>
-    <div class="top"><svg viewBox="0 0 35 32"><path fill="#fff" d="${COMPASS}"/></svg><b>ALL THAT FX</b><em>${y}. ${m}. ${d}</em></div>
-    <div class="bot"><div class="cat">${esc(r.cat)}</div><div class="t fit" data-max="3">${lines(r.head)}</div></div>`;
+    <div class="top"><svg viewBox="0 0 35 32"><path fill="#fff" d="${COMPASS}"/></svg><b>ALL THAT FX</b>${cat ? `<span>${esc(cat)}</span>` : ''}<em>${y}. ${m}. ${d}</em></div>
+    <div class="t fit" data-max="2" data-min="0.75">${lines(r.head)}</div>`;
   },
   brokertally: r => {
     const cols = [['CATEGORY', r.cat, 1], ['BROKER', r.broker || '—'], ['TOPIC', r.topic || '—', 1], ['DATE', r.date.replace(/-/g, '.')]];
@@ -76,10 +78,44 @@ const SITES = {
     <div class="box"><div class="cat">${esc(r.cat)}</div><div class="t fit" data-max="2" data-min="0.6">${lines(r.head)}</div></div>
     <div class="ft">FXLantern  ·  ${MONTH[Number(m) - 1]} ${Number(d)}, ${y}</div>`;
   },
+  // ── 실사 사진 변형 (2026-11-03 시안 · req.style === 'photo' 일 때만 · 기본은 위 기존 틀) ──
+  // Brokertally: 왼쪽 검정 칸(로고·카테고리·제목) + 오른쪽 실사 사진 · 둘째 줄 하늘색 · 장식 없음
+  brokertally_photo: r => {
+    const [l1, ...rest] = String(r.head).split('\n'), ph = r.photo && !/^(file|https?):/.test(r.photo) ? pathToFileURL(resolve(here, '..', r.photo)).href : r.photo;
+    return `<style>
+      .f{background:#0A0B0E;color:#fff}
+      .ph{position:absolute;left:560px;top:0;width:640px;height:630px;object-fit:cover;filter:saturate(.85) brightness(.85)}
+      .fd{position:absolute;left:560px;top:0;width:150px;height:630px;background:linear-gradient(90deg,#0A0B0E,rgba(10,11,14,0))}
+      .top{position:absolute;left:64px;top:56px;display:flex;align-items:center;gap:14px}
+      .top svg{width:18px;height:22px}.top b{font:700 20px 'JetBrains Mono'}
+      .top span{font:500 16px 'Noto Sans KR';color:#A8C9FA;padding-left:14px;border-left:1px solid rgba(255,255,255,.25)}
+      .t{position:absolute;left:64px;width:500px;bottom:112px;font:700 50px/1.3 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all}
+      .t span{color:#A8C9FA}
+      .d{position:absolute;left:64px;bottom:56px;font:400 14px 'JetBrains Mono';color:#7F7F8F;letter-spacing:.08em}
+    </style>${ph ? `<img class="ph" src="${esc(ph)}"><div class="fd"></div>` : ''}
+    <div class="top"><svg viewBox="0 0 24 28"><path d="M2 0h20v8H10v4h10v8H10v8H2z" fill="#fff"/></svg><b>Brokertally</b>${r.cat ? `<span>${esc(r.cat)}</span>` : ''}</div>
+    <div class="t fit" data-max="3" data-min="0.75">${esc(l1)}${rest.length ? '<br><span>' + lines(rest.join('\n')) + '</span>' : ''}</div>
+    <div class="d">${esc(r.date.replace(/-/g, '.'))}</div>`;
+  },
+  // FXLantern: 어두운 실사 사진 전체 + 가운데 금빛 명조 제목 · 연두는 카테고리 글자에만 아주 작게
+  fxlantern_photo: r => {
+    const [y, m, d] = r.date.split('-'), ph = r.photo && !/^(file|https?):/.test(r.photo) ? pathToFileURL(resolve(here, '..', r.photo)).href : r.photo;
+    return `<style>
+      .f{background:#0e0d0a}
+      .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.62)}
+      .sh{position:absolute;inset:0;background:radial-gradient(ellipse 72% 62% at 50% 52%,rgba(8,8,5,.78),rgba(8,8,5,.3) 72%,rgba(8,8,5,.45))}
+      .box{position:absolute;left:110px;right:110px;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+      .cat{font:500 17px 'Noto Serif KR';letter-spacing:.14em;color:#D1F10B;margin-bottom:20px}
+      .t{font:700 56px/1.36 'Noto Serif KR';letter-spacing:-.02em;word-break:keep-all;background:linear-gradient(180deg,#F6E7C4,#E0C287 60%,#C9A266);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
+      .ft{position:absolute;left:0;right:0;bottom:30px;text-align:center;font:400 15px Montaga;color:rgba(232,207,153,.75);letter-spacing:.06em}
+    </style>${ph ? `<img class="ph" src="${esc(ph)}">` : ''}<div class="sh"></div>
+    <div class="box"><div class="cat">${esc(r.cat || '')}</div><div class="t fit" data-max="2" data-min="0.7">${lines(r.head)}</div></div>
+    <div class="ft">FXLantern  ·  ${MONTH[Number(m) - 1]} ${Number(d)}, ${y}</div>`;
+  },
 };
 
 export async function renderThumb(req, out, browser) {
-  const make = SITES[req.site];
+  const make = (req.style === 'photo' && SITES[req.site + '_photo']) || SITES[req.site];
   if (!make) throw new Error('대표 이미지 틀이 없는 사이트: ' + req.site);
   const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>*{margin:0;padding:0;box-sizing:border-box}body{width:1200px;height:630px;-webkit-font-smoothing:antialiased}.t{text-wrap:balance}.f{position:relative;width:1200px;height:630px;overflow:hidden}</style></head><body><div class="f">${make(req)}</div></body></html>`;
   const tmp = join(here, `_tmp_${process.pid}.html`); writeFileSync(tmp, html);
