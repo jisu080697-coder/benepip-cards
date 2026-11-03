@@ -27,12 +27,12 @@ const SITES = {
     return `<style>
       .f{background:#0b1030;color:#fff}
       .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-      .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 40%,rgba(0,0,0,.78) 100%)}
+      .ph{filter:saturate(.85) brightness(.9)} .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0,rgba(0,0,0,.08) 24%,rgba(0,0,0,.12) 38%,rgba(0,0,0,.72) 66%,rgba(0,0,0,.9) 100%),linear-gradient(90deg,rgba(0,0,0,.45) 0,rgba(0,0,0,0) 62%)}
       .top{position:absolute;left:60px;right:60px;top:44px;display:flex;align-items:center;font:500 18px 'Noto Sans KR';text-shadow:0 1px 6px rgba(0,0,0,.35)}
       .top svg{width:24px;height:22px;margin-right:9px}.top b{font:700 19px 'Noto Sans KR';letter-spacing:.02em}
       .top span{margin-left:14px;padding-left:14px;border-left:1px solid rgba(255,255,255,.55);font-weight:500}
       .top em{margin-left:auto;font-style:normal;opacity:.85}
-      .t{position:absolute;left:60px;right:90px;bottom:56px;font:800 62px/1.22 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+      .t{position:absolute;left:60px;right:90px;bottom:56px;font:800 62px/1.22 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all;text-shadow:0 2px 18px rgba(0,0,0,.55)}
     </style>${bg}<div class="sh"></div>
     <div class="top"><svg viewBox="0 0 35 32"><path fill="#fff" d="${COMPASS}"/></svg><b>ALL THAT FX</b>${cat ? `<span>${esc(cat)}</span>` : ''}<em>${y}. ${m}. ${d}</em></div>
     <div class="t fit" data-max="2" data-min="0.75">${lines(r.head)}</div>`;
