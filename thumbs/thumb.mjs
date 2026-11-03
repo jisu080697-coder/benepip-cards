@@ -48,7 +48,7 @@ const SITES = {
       .cols{position:absolute;left:72px;right:72px;top:470px;height:92px;display:grid;grid-template-columns:repeat(4,1fr)}
       .cols div{padding:24px 0 0 24px;border-left:1px solid rgba(255,255,255,.16)}.cols div:first-child{padding-left:0;border-left:none}
       .cols small{display:block;font:400 13px 'JetBrains Mono';color:#7F7F8F;letter-spacing:.1em;margin-bottom:8px}
-      .cols b{font:500 20px 'JetBrains Mono';color:#E6E8EC}.cols b.k{font-family:'Noto Sans KR'}
+      .cols b{display:block;font:500 20px 'JetBrains Mono';color:#E6E8EC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:12px}.cols b.k{font-family:'Noto Sans KR'}
     </style>
     <div class="top"><svg viewBox="0 0 24 28"><path d="M2 0h20v8H10v4h10v8H10v8H2z" fill="#fff"/></svg><b>Brokertally</b><em>FX BROKER FINDER</em></div>
     <div class="rule" style="top:116px"></div>
@@ -73,7 +73,7 @@ const SITES = {
     <div class="e" style="left:127.5px;background:linear-gradient(90deg,#0e0d0a,rgba(14,13,10,0))"></div>
     <div class="e" style="left:952.5px;background:linear-gradient(270deg,#0e0d0a,rgba(14,13,10,0))"></div>
     <div class="sh"></div>
-    <div class="box"><div class="cat">${esc(r.cat)}</div><div class="t fit" data-max="${img === 'fxl_global.jpg' ? 2 : 3}">${lines(r.head)}</div></div>
+    <div class="box"><div class="cat">${esc(r.cat)}</div><div class="t fit" data-max="2" data-min="0.6">${lines(r.head)}</div></div>
     <div class="ft">FXLantern  ·  ${MONTH[Number(m) - 1]} ${Number(d)}, ${y}</div>`;
   },
 };
@@ -81,7 +81,7 @@ const SITES = {
 export async function renderThumb(req, out, browser) {
   const make = SITES[req.site];
   if (!make) throw new Error('대표 이미지 틀이 없는 사이트: ' + req.site);
-  const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>*{margin:0;padding:0;box-sizing:border-box}body{width:1200px;height:630px;-webkit-font-smoothing:antialiased}.f{position:relative;width:1200px;height:630px;overflow:hidden}</style></head><body><div class="f">${make(req)}</div></body></html>`;
+  const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>*{margin:0;padding:0;box-sizing:border-box}body{width:1200px;height:630px;-webkit-font-smoothing:antialiased}.t{text-wrap:balance}.f{position:relative;width:1200px;height:630px;overflow:hidden}</style></head><body><div class="f">${make(req)}</div></body></html>`;
   const tmp = join(here, `_tmp_${process.pid}.html`); writeFileSync(tmp, html);
   const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1.5 });
   await page.goto(pathToFileURL(tmp).href, { waitUntil: 'networkidle' });
@@ -91,7 +91,10 @@ export async function renderThumb(req, out, browser) {
     const t = document.querySelector('.fit'); if (!t) return 1;
     const max = Number(t.dataset.max || 3), base = parseFloat(getComputedStyle(t).fontSize); let s = base;
     const over = () => Math.round(t.getBoundingClientRect().height / parseFloat(getComputedStyle(t).lineHeight)) > max;
-    while (over() && s > base * 0.7) { s -= 2; t.style.fontSize = s + 'px'; }
+    const min = Number(t.dataset.min || 0.7);
+    while (over() && s > base * min) { s -= 2; t.style.fontSize = s + 'px'; }
+    // 정보 칸(Brokertally): 칸보다 길면 글씨를 줄임 (최소 14px)
+    document.querySelectorAll('.cols b').forEach(b => { let f = parseFloat(getComputedStyle(b).fontSize); while (b.scrollWidth > b.clientWidth && f > 14) { f -= 1; b.style.fontSize = f + 'px'; } });
     return s / base;
   });
   mkdirSync(dirname(out), { recursive: true });
