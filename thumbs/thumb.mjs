@@ -1,4 +1,5 @@
 // 포스트 대표 이미지 렌더러: 요청 JSON → 실제 크롬으로 1200×630(×1.5) JPEG
+// 2026-11-11: 사이트 목록 카드가 양옆을 약 70px씩 잘라 보여 줌 → 글자·로고·날짜는 양옆 120px 안쪽에만
 // 사용: node thumbs/thumb.mjs req.json 출력.jpg
 // 사이트별 틀 (피그마 '포스트 대표 이미지' 확정안 · 2026-11-02)
 //   allthatfx  = 실사 사진 + 굵은 한글 제목 (세 카테고리 같은 구조 · 2026-11-03)
@@ -28,11 +29,11 @@ const SITES = {
       .f{background:#0b1030;color:#fff}
       .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
       .ph{filter:saturate(.85) brightness(.9)} .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0,rgba(0,0,0,.08) 24%,rgba(0,0,0,.12) 38%,rgba(0,0,0,.72) 66%,rgba(0,0,0,.9) 100%),linear-gradient(90deg,rgba(0,0,0,.45) 0,rgba(0,0,0,0) 62%)}
-      .top{position:absolute;left:60px;right:60px;top:44px;display:flex;align-items:center;font:500 18px 'Noto Sans KR';text-shadow:0 1px 6px rgba(0,0,0,.35)}
+      .top{position:absolute;left:120px;right:120px;top:44px;display:flex;align-items:center;font:500 18px 'Noto Sans KR';text-shadow:0 1px 6px rgba(0,0,0,.35)}
       .top svg{width:24px;height:22px;margin-right:9px}.top b{font:700 19px 'Noto Sans KR';letter-spacing:.02em}
       .top span{margin-left:14px;padding-left:14px;border-left:1px solid rgba(255,255,255,.55);font-weight:500}
       .top em{margin-left:auto;font-style:normal;opacity:.85}
-      .t{position:absolute;left:60px;right:90px;bottom:56px;font:800 62px/1.22 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+      .t{position:absolute;left:120px;right:120px;bottom:56px;font:800 62px/1.22 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all;text-shadow:0 2px 18px rgba(0,0,0,.55)}
     </style>${bg}<div class="sh"></div>
     <div class="top"><svg viewBox="0 0 35 32"><path fill="#fff" d="${COMPASS}"/></svg><b>ALL THAT FX</b>${cat ? `<span>${esc(cat)}</span>` : ''}<em>${y}. ${m}. ${d}</em></div>
     <div class="t fit" data-max="2" data-min="0.75">${lines(r.head)}</div>`;
@@ -42,12 +43,12 @@ const SITES = {
     const [l1, ...rest] = String(r.head).split('\n');
     return `<style>
       .f{background:#0A0B0E;color:#fff}
-      .top{position:absolute;left:72px;right:72px;top:58px;display:flex;align-items:center}
+      .top{position:absolute;left:120px;right:120px;top:58px;display:flex;align-items:center}
       .top svg{width:20px;height:24px;margin-right:12px}.top b{font:700 22px 'JetBrains Mono'}.top em{margin-left:auto;font:400 14px 'JetBrains Mono';font-style:normal;color:#7F7F8F;letter-spacing:.08em}
-      .rule{position:absolute;left:72px;right:72px;height:1px;background:rgba(255,255,255,.16)}
-      .t{position:absolute;left:72px;right:100px;top:150px;font:700 60px/1.26 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all}
+      .rule{position:absolute;left:120px;right:120px;height:1px;background:rgba(255,255,255,.16)}
+      .t{position:absolute;left:120px;right:120px;top:150px;font:700 60px/1.26 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all}
       .t span{color:#A8C9FA}
-      .cols{position:absolute;left:72px;right:72px;top:470px;height:92px;display:grid;grid-template-columns:repeat(4,1fr)}
+      .cols{position:absolute;left:120px;right:120px;top:470px;height:92px;display:grid;grid-template-columns:repeat(4,1fr)}
       .cols div{padding:24px 0 0 24px;border-left:1px solid rgba(255,255,255,.16)}.cols div:first-child{padding-left:0;border-left:none}
       .cols small{display:block;font:400 13px 'JetBrains Mono';color:#7F7F8F;letter-spacing:.1em;margin-bottom:8px}
       .cols b{display:block;font:500 20px 'JetBrains Mono';color:#E6E8EC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:12px}.cols b.k{font-family:'Noto Sans KR'}
@@ -69,7 +70,7 @@ const SITES = {
       .box{position:absolute;left:120px;width:960px;top:${img === 'fxl_global.jpg' ? 128 : 112}px;height:${img === 'fxl_global.jpg' ? 230 : 270}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
       .cat{font:500 18px 'Noto Serif KR';letter-spacing:.12em;color:#D1F10B;margin-bottom:18px}
       .t{font:700 54px/1.36 'Noto Serif KR';letter-spacing:-.02em;word-break:keep-all;background:linear-gradient(180deg,#FAE8BD,#E3C27F 55%,#BD9454);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}
-      .ft{position:absolute;left:40px;bottom:24px;font:400 15px Montaga;color:rgba(232,207,153,.7)}
+      .ft{position:absolute;left:130px;bottom:24px;font:400 15px Montaga;color:rgba(232,207,153,.7)}
     </style>
     <img class="bg" src="${pathToFileURL(join(here, 'assets', img)).href}">
     <div class="e" style="left:127.5px;background:linear-gradient(90deg,#0e0d0a,rgba(14,13,10,0))"></div>
@@ -86,12 +87,12 @@ const SITES = {
       .f{background:#0A0B0E;color:#fff}
       .ph{position:absolute;left:560px;top:0;width:640px;height:630px;object-fit:cover;filter:saturate(.85) brightness(.85)}
       .fd{position:absolute;left:560px;top:0;width:150px;height:630px;background:linear-gradient(90deg,#0A0B0E,rgba(10,11,14,0))}
-      .top{position:absolute;left:64px;top:56px;display:flex;align-items:center;gap:14px}
+      .top{position:absolute;left:120px;top:56px;display:flex;align-items:center;gap:14px}
       .top svg{width:18px;height:22px}.top b{font:700 20px 'JetBrains Mono'}
       .top span{font:500 16px 'Noto Sans KR';color:#A8C9FA;padding-left:14px;border-left:1px solid rgba(255,255,255,.25)}
-      .t{position:absolute;left:64px;width:500px;bottom:112px;font:700 50px/1.3 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all}
+      .t{position:absolute;left:120px;width:460px;bottom:112px;font:700 50px/1.3 'Noto Sans KR';letter-spacing:-.035em;word-break:keep-all}
       .t span{color:#A8C9FA}
-      .d{position:absolute;left:64px;bottom:56px;font:400 14px 'JetBrains Mono';color:#7F7F8F;letter-spacing:.08em}
+      .d{position:absolute;left:120px;bottom:56px;font:400 14px 'JetBrains Mono';color:#7F7F8F;letter-spacing:.08em}
     </style>${ph ? `<img class="ph" src="${esc(ph)}"><div class="fd"></div>` : ''}
     <div class="top"><svg viewBox="0 0 24 28"><path d="M2 0h20v8H10v4h10v8H10v8H2z" fill="#fff"/></svg><b>Brokertally</b>${r.cat ? `<span>${esc(r.cat)}</span>` : ''}</div>
     <div class="t fit" data-max="3" data-min="0.75">${esc(l1)}${rest.length ? '<br><span>' + lines(rest.join('\n')) + '</span>' : ''}</div>
@@ -104,7 +105,7 @@ const SITES = {
       .f{background:#0e0d0a}
       .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.62)}
       .sh{position:absolute;inset:0;background:radial-gradient(ellipse 72% 62% at 50% 52%,rgba(8,8,5,.78),rgba(8,8,5,.3) 72%,rgba(8,8,5,.45))}
-      .box{position:absolute;left:110px;right:110px;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+      .box{position:absolute;left:130px;right:130px;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
       .cat{font:500 17px 'Noto Serif KR';letter-spacing:.14em;color:#D1F10B;margin-bottom:20px}
       .t{font:700 56px/1.36 'Noto Serif KR';letter-spacing:-.02em;word-break:keep-all;background:linear-gradient(180deg,#F6E7C4,#E0C287 60%,#C9A266);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
       .ft{position:absolute;left:0;right:0;bottom:30px;text-align:center;font:400 15px Montaga;color:rgba(232,207,153,.75);letter-spacing:.06em}
