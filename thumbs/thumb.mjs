@@ -41,8 +41,13 @@ const SITES = {
   brokertally: r => {
     const cols = [['CATEGORY', r.cat, 1], ['BROKER', r.broker || '—'], ['TOPIC', r.topic || '—', 1], ['DATE', r.date.replace(/-/g, '.')]];
     const [l1, ...rest] = String(r.head).split('\n');
+    // 2026-11-19 사용자: 글자만이라 밋밋 → 오른쪽에 PC 도우미가 ChatGPT로 그린 파랑 3D 아이콘 (없으면 예전 그대로)
+    const ic = r.icon && !/^(file|https?):/.test(r.icon) ? pathToFileURL(resolve(here, '..', r.icon)).href : r.icon;
     return `<style>
       .f{background:#0A0B0E;color:#fff}
+      .ic{position:absolute;right:120px;top:134px;width:318px;height:318px;object-fit:contain;filter:drop-shadow(0 18px 40px rgba(60,110,220,.28))}
+      .glow{position:absolute;right:90px;top:120px;width:380px;height:340px;background:radial-gradient(closest-side,rgba(80,130,240,.22),rgba(80,130,240,0))}
+      ${ic ? '.t{right:470px !important}' : ''}
       .top{position:absolute;left:120px;right:120px;top:58px;display:flex;align-items:center}
       .top svg{width:20px;height:24px;margin-right:12px}.top b{font:700 22px 'JetBrains Mono'}.top em{margin-left:auto;font:400 14px 'JetBrains Mono';font-style:normal;color:#7F7F8F;letter-spacing:.08em}
       .rule{position:absolute;left:120px;right:120px;height:1px;background:rgba(255,255,255,.16)}
@@ -55,6 +60,7 @@ const SITES = {
     </style>
     <div class="top"><svg viewBox="0 0 24 28"><path d="M2 0h20v8H10v4h10v8H10v8H2z" fill="#fff"/></svg><b>Brokertally</b><em>FX BROKER FINDER</em></div>
     <div class="rule" style="top:116px"></div>
+    ${ic ? `<div class="glow"></div><img class="ic" src="${esc(ic)}">` : ''}
     <div class="t fit" data-max="3">${esc(l1)}${rest.length ? '<br><span>' + lines(rest.join('\n')) + '</span>' : ''}</div>
     <div class="rule" style="top:470px"></div>
     <div class="cols">${cols.map(([k, v, ko]) => `<div><small>${k}</small><b class="${ko ? 'k' : ''}">${esc(v)}</b></div>`).join('')}</div>
