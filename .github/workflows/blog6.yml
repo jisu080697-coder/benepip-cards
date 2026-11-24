@@ -1,0 +1,41 @@
+# 네이버 블로그 카드 v6 렌더링 (2026-11-24): 앱 스크립트(NbV6.gs)가 요청을 보내면 실제 크롬 + Pretendard로 JPEG를 만들어 저장소에 올림
+# 호출: { "event_type": "blog6", "client_payload": { "id", "ver", "req": { kind, date, L, cover, …, ph:{cover:'blog_slots/…'} } } }
+# 결과: cards_blog/{id}/{ver}/p1.jpg … pN.jpg
+name: render-blog6
+on:
+  repository_dispatch:
+    types: [blog6]
+permissions:
+  contents: write
+concurrency:
+  group: blog6-${{ github.event.client_payload.id || github.run_id }}
+  cancel-in-progress: false
+jobs:
+  blog6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: 렌더러 준비
+        run: npm ci
+      - name: 요청 저장
+        env:
+          REQ: ${{ toJson(github.event.client_payload.req) }}
+        run: printf '%s' "$REQ" > req.json
+      - name: 카드 렌더링
+        env:
+          CI: 'true'
+          PW_CHANNEL: chrome
+          OUT: cards_blog/${{ github.event.client_payload.id }}/${{ github.event.client_payload.ver }}
+        run: node blog/b6/blog6.mjs req.json "$OUT"
+      - name: 이미지 올리기
+        run: |
+          git config user.name "benepip-renderer"
+          git config user.email "renderer@users.noreply.github.com"
+          git add cards_blog
+          git commit -m "blog6 ${{ github.event.client_payload.id }}" || echo "변경 없음"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep $((i * 5)); done
