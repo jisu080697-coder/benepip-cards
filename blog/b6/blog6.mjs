@@ -34,8 +34,8 @@ window.addEventListener('load', () => { document.querySelectorAll('[data-max]').
 </script></head><body>${body}</body></html>`;
 const img = (p, extra) => p ? `<img class="ph" src="${esc(src(p))}"${extra ? ` style="${extra}"` : ''}>` : '';
 const numAt = (x, y, k) => `<div class="bar" style="left:${x + 19}px;top:${y - 26}px"></div><div class="num" style="left:${x}px;top:${y}px">${String(k).padStart(2, '0')}</div>`;
-const bubble = (x, y, txt) => `<div class="a" style="left:${x}px;top:${y}px;width:765px;height:215px;border-radius:40px;background:rgba(255,255,255,.88);display:flex;align-items:center;justify-content:center;text-align:center;padding:0 70px;color:#111"><div class="body32" data-max="180" data-min="24">${ac(txt)}</div></div>
-  <svg class="a" style="left:${x + 70}px;top:${y + 213}px" width="44" height="34" viewBox="0 0 44 34"><path d="M0 0 H44 L6 34 Z" fill="rgba(255,255,255,.88)"/></svg>`;
+const bubble = (x, y, txt, right) => `<div class="a" style="left:${x}px;top:${y}px;width:765px;height:215px;border-radius:40px;background:rgba(255,255,255,.88);display:flex;align-items:center;justify-content:center;text-align:center;padding:0 70px;color:#111"><div class="body32" data-max="180" data-min="24">${ac(txt)}</div></div>
+  <svg class="a" style="left:${right ? x + 765 - 114 : x + 70}px;top:${y + 213}px" width="44" height="34" viewBox="0 0 44 34"><path d="${right ? 'M0 0 H44 L38 34 Z' : 'M0 0 H44 L6 34 Z'}" fill="rgba(255,255,255,.88)"/></svg>`;   // right = 꼬리 오른쪽 (2026-11-24 사용자: 두 말풍선 좌우 대칭)
 const pct = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1) + '%';
 const fmt = v => Number(v).toLocaleString('en-US', { maximumFractionDigits: v >= 1000 ? 0 : 2 });
 
@@ -62,7 +62,7 @@ function chart(r, k) {
 }
 // 말풍선 2개 (핵심 사실)
 const bub = (r, k) => base(`${img(r.ph.bubble)}<div class="a" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.4) 55%,rgba(0,0,0,.82) 100%)"></div><div class="frame"></div><div class="brand">MOMANTIC</div>
-  ${bubble(156, 128, r.bubble.b1)}${bubble(158, 428, r.bubble.b2)}
+  ${bubble(112, 128, r.bubble.b1)}${bubble(203, 428, r.bubble.b2, true)}
   <div class="a big" data-max="240" data-min="60" style="left:112px;top:770px;width:700px">${ac(r.bubble.t)}</div>${numAt(848, 868, k)}`);
 // 좌우 나눔 (왜·배경)
 const split = (r, k) => base(`<div class="a" style="left:0;top:0;width:617px;height:1080px;overflow:hidden">${img(r.ph.split)}<div class="a" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,.85) 100%)"></div></div>
