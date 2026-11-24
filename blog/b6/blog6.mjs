@@ -19,7 +19,7 @@ const ac = (s, cls) => esc(s).replace(/\*([^*\n]+)\*/g, `<b class="${cls || 'o'}
 const src = p => !p ? '' : /^(https?|file|data):/.test(p) ? p : pathToFileURL(resolve(here, '..', '..', p)).href;
 const base = (body, bg = '#000') => `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="${FONT}"><style>
 *{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;height:1080px;overflow:hidden}
-body{position:relative;background:${bg};font-family:'Pretendard Variable',Pretendard,sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;letter-spacing:-.03em;color:${W}}
+body{position:relative;background:${bg};font-family:'Pretendard Variable',Pretendard,sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;text-wrap:balance;letter-spacing:-.03em;color:${W}}
 .a{position:absolute}.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .big{font-size:93px;line-height:1.24;font-weight:400}.big b{font-weight:800}
 b.o{color:${O};font-weight:800}b.k{color:#111;font-weight:800}
