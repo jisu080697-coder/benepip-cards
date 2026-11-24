@@ -61,17 +61,17 @@ function chart(r, k) {
   ${numAt(108, 866, k)}`);
 }
 // 말풍선 2개 (핵심 사실)
-const bub = (r, k) => base(`${img(r.ph.bubble)}<div class="a" style="inset:0;background:rgba(0,0,0,.35)"></div><div class="frame"></div><div class="brand">MOMANTIC</div>
+const bub = (r, k) => base(`${img(r.ph.bubble)}<div class="a" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.4) 55%,rgba(0,0,0,.82) 100%)"></div><div class="frame"></div><div class="brand">MOMANTIC</div>
   ${bubble(156, 128, r.bubble.b1)}${bubble(158, 428, r.bubble.b2)}
   <div class="a big" data-max="240" data-min="60" style="left:112px;top:770px;width:700px">${ac(r.bubble.t)}</div>${numAt(848, 868, k)}`);
 // 좌우 나눔 (왜·배경)
-const split = (r, k) => base(`<div class="a" style="left:0;top:0;width:617px;height:1080px;overflow:hidden">${img(r.ph.split)}<div class="a" style="inset:0;background:rgba(0,0,0,.35)"></div></div>
+const split = (r, k) => base(`<div class="a" style="left:0;top:0;width:617px;height:1080px;overflow:hidden">${img(r.ph.split)}<div class="a" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,.85) 100%)"></div></div>
   <div class="a" style="left:617px;top:0;width:463px;height:1080px;background:${O}"></div><div class="brand">MOMANTIC</div>
   ${numAt(112, 105, k)}<div class="a" style="left:1019px;top:242px;width:4px;height:473px;background:${W}"></div>
   <div class="a big" data-max="240" data-min="60" style="left:112px;top:770px;width:490px">${ac(r.split.t)}</div>
   <div class="a" data-max="290" data-min="22" style="left:669px;top:740px;width:339px;text-align:right;font-size:30px;line-height:1.5">${ac(r.split.x, 'k')}</div>`, O);
 // 사선 (독자에게 생기는 일)
-const diag = (r, k) => base(`${img(r.ph.diag)}<div class="a" style="inset:0;background:rgba(40,20,0,.35)"></div>
+const diag = (r, k) => base(`${img(r.ph.diag)}<div class="a" style="inset:0;background:rgba(30,15,0,.45)"></div>
   <svg class="a" style="left:0;top:0" width="1080" height="1080"><path d="M0 300 L1080 1080 L0 1080 Z" fill="${O}"/></svg><div class="brand">MOMANTIC</div>
   <div class="a" style="left:954px;top:57px;width:68px;height:4px;background:${W}"></div><div class="a" style="left:1019px;top:57px;width:4px;height:470px;background:${W}"></div>
   ${numAt(818, 144, k)}
